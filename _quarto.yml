@@ -3,13 +3,6 @@ project:
   render:
     - "**/*.qmd"
     - "!**/resources/*.qmd"
-  resources:
-    - files/
-    - talks/
-    - images/
-    - projects/banners/
-    - blog/banners/
-    - fonts/
 
 website:
   image: images/card.png
