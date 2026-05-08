@@ -1,0 +1,15 @@
+<div class="section-outer section-green">
+ <div class="section-header">
+  <span class="section-header-text">In this section, we will discuss the handy tools that can speed up your agentic engineering.</span>
+ </div>
+ <div class="section-grid section-grid-2">
+  <div class="section-card">
+   <div class="section-card-icon"><i data-lucide="monitor"></i></div>
+   <div class="section-label">Software</div>
+  </div>
+  <div class="section-card">
+   <div class="section-card-icon"><i data-lucide="puzzle"></i></div>
+   <div class="section-label">Extensions</div>
+  </div>
+ </div>
+</div>

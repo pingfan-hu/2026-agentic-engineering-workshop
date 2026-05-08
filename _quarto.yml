@@ -1,0 +1,87 @@
+project:
+  type: website
+  render:
+    - "**/*.qmd"
+    - "!**/resources/*.qmd"
+  resources:
+    - files/
+    - talks/
+    - images/
+    - projects/banners/
+    - blog/banners/
+    - fonts/
+
+website:
+  image: images/card.png
+  favicon: images/favicon.png
+  description: 2026 agentic engineering workshop by John Helveston and Pingfan Hu, George Washington University
+  site-url: https://ae.pingfanhu.com
+  repo-url: https://github.com/pingfan-hu/2026-agentic-engineering-workshop
+  back-to-top-navigation: false
+  twitter-card: true
+  open-graph:
+    locale: en_US
+    image: images/card.png
+  page-footer:
+    center: "© 2026 [Dr. John Helveston](https://www.jhelvy.com) & [Pingfan Hu](https://pingfanhu.com)"
+    border: true
+    background: light
+  search:
+    location: navbar
+    type: overlay
+    copy-button: true
+
+  navbar:
+    left:
+      - icon: house-door
+        href: index.qmd
+        text: Home
+      - icon: mortarboard
+        href: claude-code-basics.qmd
+        text: Claude Code Basics
+      - icon: tools
+        href: handy-tools.qmd
+        text: Handy Tools
+      - icon: diagram-3
+        href: workflow-construction.qmd
+        text: Workflow Construction
+
+    right:
+      - icon: github
+        href: https://github.com/pingfan-hu/2026-agentic-engineering-workshop
+        target: _blank
+
+format:
+  html:
+    toc: true
+    toc-depth: 5
+    toc-location: left
+    lightbox: true
+    highlight-style:
+      light: styles/code-dark.theme
+      dark: styles/code-light.theme
+    code-copy: true
+    theme:
+      light: [flatly, styles/styles.scss]
+      dark: [darkly, styles/styles.scss]
+    embed-resources: false
+    link-external-newwindow: true
+    link-external-icon: false
+    link-external-filter: '^(?:http:|https:)\/\/(?:www\.)?pingfanhu\.com'
+    include-after-body:
+      text: |
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+        <script>if (typeof lucide !== 'undefined') lucide.createIcons();</script>
+        <script src="/styles/styles.js"></script>
+
+knitr: 
+  opts_chunk: 
+    comment: "#>"
+    fig.align: "center"
+    fig.show: "hold"
+    fig.asp: 0.618
+    fig.retna: 3
+    out.width: 80%
+
+execute:
+  warning: false

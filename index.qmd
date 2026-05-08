@@ -1,0 +1,33 @@
+---
+title: "2026 Summer Workshop - Agentic Engineering"
+description: "2026 agentic engineering workshop by John Helveston and Pingfan Hu, George Washington University"
+open-graph:
+  image: images/card.png
+toc: false
+grid:                                  
+  sidebar-width: 0px
+  margin-width: 0px
+---
+
+<hr>
+
+```{=html}
+<div class="affiliation">
+ <img src="images/gwu-seal.svg" alt="George Washington University seal" class="affiliation-logo">
+ <span class="affiliation-text">The George Washington University</span>
+</div>
+```
+
+<hr>
+
+## Part 1: Claude Code Basics
+
+{{< include resources/part-1-overview.qmd >}}
+
+## Part 2: Handy Tools
+
+{{< include resources/part-2-overview.qmd >}}
+
+## Part 3: Workflow Construction
+
+{{< include resources/part-3-overview.qmd >}}

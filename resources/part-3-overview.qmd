@@ -1,0 +1,19 @@
+<div class="section-outer section-blue">
+ <div class="section-header">
+  <span class="section-header-text">In this section, we will discuss how to reconstruct your workflow using agentic engineering.</span>
+ </div>
+ <div class="section-grid section-grid-3">
+  <div class="section-card">
+   <div class="section-card-icon"><i data-lucide="file-text"></i></div>
+   <div class="section-label">Organize Your Language</div>
+  </div>
+  <div class="section-card">
+   <div class="section-card-icon"><i data-lucide="network"></i></div>
+   <div class="section-label">Build Your Architecture</div>
+  </div>
+  <div class="section-card">
+   <div class="section-card-icon"><i data-lucide="sparkles"></i></div>
+   <div class="section-label">Quick Production Showcases</div>
+  </div>
+ </div>
+</div>

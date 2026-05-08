@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:communications.gwu.edu)",
+      "WebFetch(domain:worldvectorlogo.com)",
+      "Bash(curl -sL \"https://cdn.worldvectorlogo.com/logos/the-george-washington-university-5.svg\" -o /tmp/gwu-logo-1.svg)",
+      "Read(//tmp/**)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/commons/1/12/George_Washington_Athletics_logo.svg\" -o /tmp/gwu-athletics.svg)",
+      "Bash(curl -sLI \"https://upload.wikimedia.org/wikipedia/commons/0/0e/George_Washington_University_seal.svg\")",
+      "Bash(curl -sLI \"https://upload.wikimedia.org/wikipedia/en/0/0e/George_Washington_University_seal.svg\")",
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/en/d/d8/George_Washington_University_seal.svg\" -o /tmp/gwu-seal.svg)"
+    ]
+  }
+}

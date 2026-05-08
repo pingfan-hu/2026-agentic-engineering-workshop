@@ -1,0 +1,12 @@
+.DS_Store
+/.quarto/
+.Rproj.user
+.Rhistory
+_site
+site_libs
+# Claude Code: commit settings.local.json (permissions/hooks only, no secrets)
+# Ignore only machine-local or generated Claude files if needed in future
+
+.env
+/.luarc.json
+**/*.quarto_ipynb
