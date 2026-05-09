@@ -683,36 +683,59 @@ body.quarto-dark nav.sidebar.sidebar-navigation:not(.rollup) { background-color:
   .navbar-gw-link { display: none !important; }
 }
 
-// Slim down the navbar a touch — Bootstrap defaults to ~0.5rem y-padding
 nav.navbar {
-  padding-top: 0.4rem !important;
-  padding-bottom: 0.4rem !important;
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
   min-height: 0;
 }
 
-.navbar-nav {
-  .nav-link {
+// Shared hover/active "block" effect for left-side nav items and right-side tools.
+// Quarto renders `tools:` entries as `.quarto-navbar-tools > a` (or
+// `.quarto-navbar-tool`), which bypasses the `.nav-link` selectors — so they
+// must be listed explicitly here.
+.navbar-nav .nav-link,
+.quarto-navbar-tools > a,
+.quarto-navbar-tools > .quarto-navbar-tool {
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 8px;
-    padding: 0.4rem 0.85rem !important;
-    transition: background-color 0.15s ease, color 0.15s ease;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.14);
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    &.active {
-      background-color: rgba(255, 255, 255, 0.22);
-      color: #ffffff;
-    }
-
-    &:active {
-      background-color: rgba(255, 255, 255, 0.30);
-    }
   }
 
+  &.active {
+    background-color: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.30);
+  }
+}
+
+.navbar-nav .nav-link {
+  padding: 0.2rem 0.55rem !important;
+}
+
+.quarto-navbar-tools > a,
+.quarto-navbar-tools > .quarto-navbar-tool {
+  padding: 0.2rem 0.45rem !important;
+  margin: 0 0.05rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.quarto-navbar-tools {
+  display: flex !important;
+  align-items: center;
+}
+
+.navbar-nav {
   @media (min-width: 768px) {
     flex-wrap: nowrap !important;
     white-space: nowrap;
@@ -720,7 +743,7 @@ nav.navbar {
 
     // Spacing + dividers between left-nav items (skip right-side .ms-auto group)
     &:not(.ms-auto) {
-      gap: 2rem;
+      gap: 1rem;
 
       .nav-item + .nav-item {
         position: relative;
@@ -728,11 +751,11 @@ nav.navbar {
         &::before {
           content: '';
           position: absolute;
-          left: -1rem;
+          left: -0.5rem;
           top: 50%;
           transform: translateY(-50%);
           width: 1px;
-          height: 1.25rem;
+          height: 1rem;
           background-color: rgba(255, 255, 255, 0.35);
           pointer-events: none;
         }
