@@ -24,10 +24,7 @@ website:
     center: "© 2026 [Pingfan Hu](https://pingfanhu.com) & [Dr. John Helveston](https://www.jhelvy.com)"
     border: true
     background: light
-  search:
-    location: navbar
-    type: overlay
-    copy-button: true
+  search: false
 
   navbar:
     left:
