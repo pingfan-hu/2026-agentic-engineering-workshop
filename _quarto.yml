@@ -21,7 +21,7 @@ website:
     locale: en_US
     image: images/card.png
   page-footer:
-    center: "© 2026 [Dr. John Helveston](https://www.jhelvy.com) & [Pingfan Hu](https://pingfanhu.com)"
+    center: "© 2026 [Pingfan Hu](https://pingfanhu.com) & [Dr. John Helveston](https://www.jhelvy.com)"
     border: true
     background: light
   search:
