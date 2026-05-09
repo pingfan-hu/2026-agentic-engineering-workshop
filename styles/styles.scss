@@ -621,12 +621,26 @@ body.quarto-dark nav.sidebar.sidebar-navigation:not(.rollup) { background-color:
 .sidebar-title { color: #ECF0F1; }
 
 .navbar-nav {
-  a {
+  .nav-link {
     text-decoration: none;
-    transition: transform 0.2s ease;
-    will-change: transform;
-    backface-visibility: hidden;
-    &:hover { text-decoration: none; color: #ffffffff; transform: scale(1.15); }
+    border-radius: 8px;
+    padding: 0.4rem 0.85rem !important;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    &.active {
+      background-color: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.30);
+    }
   }
 
   @media (min-width: 768px) {
@@ -658,7 +672,6 @@ body.quarto-dark nav.sidebar.sidebar-navigation:not(.rollup) { background-color:
 
   @media (max-width: 767.98px) {
     &.ms-auto { display: none !important; }
-    a { transform-origin: left center; }
   }
 }
 
@@ -688,6 +701,7 @@ footer.footer .nav-footer { padding: 0 !important; }
   min-height: unset !important;
   margin: 0 !important;
   order: unset !important;
+  white-space: nowrap;
 }
 
 // ---- Hide page descriptions (kept in metadata for SEO) ----
