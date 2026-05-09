@@ -677,6 +677,12 @@ body.quarto-dark nav.sidebar.sidebar-navigation:not(.rollup) { background-color:
   }
 }
 
+// Hide the GW logo on very narrow viewports (phones in portrait) where the
+// navbar content otherwise wraps and overlaps the page below.
+@media (max-width: 575.98px) {
+  .navbar-gw-link { display: none !important; }
+}
+
 .navbar-nav {
   .nav-link {
     text-decoration: none;
