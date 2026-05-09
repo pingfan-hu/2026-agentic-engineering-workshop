@@ -12,7 +12,15 @@
       "Bash(curl -sLI \"https://upload.wikimedia.org/wikipedia/en/0/0e/George_Washington_University_seal.svg\")",
       "WebFetch(domain:en.wikipedia.org)",
       "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/en/d/d8/George_Washington_University_seal.svg\" -o /tmp/gwu-seal.svg)",
-      "Bash(curl -s \"https://cdn.jsdelivr.net/gh/posit-dev/supported-by-posit/js/badge.min.js\")"
+      "Bash(curl -s \"https://cdn.jsdelivr.net/gh/posit-dev/supported-by-posit/js/badge.min.js\")",
+      "Bash(sips -s format png /private/tmp/generated-dc969e4e-e7a5-47d7-9046-e32a47a7f8a1.jpg --out /Users/pingfan/Documents/GitHub/talks/2026-agentic-engineering-workshop/images/card.png)",
+      "Bash(rm /private/tmp/generated-dc969e4e-e7a5-47d7-9046-e32a47a7f8a1.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/pingfan/Documents/GitHub/talks/2026-agentic-engineering-workshop/images/card.png)",
+      "Bash(sips -s format png /private/tmp/generated-7b2af6e3-71eb-45bd-b5d9-cedf125f524f.jpg --out /Users/pingfan/Documents/GitHub/talks/2026-agentic-engineering-workshop/images/card.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/pingfan/Documents/GitHub/talks/2026-agentic-engineering-workshop/images/favicon.png)",
+      "Bash(python3 -c \"import cairosvg\")",
+      "Bash(python3 -c \"from PIL import Image\")",
+      "Bash(brew install *)"
     ]
   }
 }
