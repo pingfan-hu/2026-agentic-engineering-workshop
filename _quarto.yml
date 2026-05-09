@@ -11,10 +11,12 @@ website:
   image: images/card.png
   favicon: images/favicon.png
   description: 2026 agentic engineering workshop by John Helveston and Pingfan Hu, George Washington University
-  site-url: https://ae.pingfanhu.com
+  site-url: https://pingfan-hu.github.io/2026-agentic-engineering-workshop
   repo-url: https://github.com/pingfan-hu/2026-agentic-engineering-workshop
   back-to-top-navigation: false
-  twitter-card: true
+  twitter-card:
+    image: images/card.png
+    card-style: summary_large_image
   open-graph:
     locale: en_US
     image: images/card.png
@@ -45,7 +47,7 @@ website:
     tools:
       - icon: github
         href: https://github.com/pingfan-hu/2026-agentic-engineering-workshop
-        text: GitHub repository
+        target: _blank
 
 format:
   html:
