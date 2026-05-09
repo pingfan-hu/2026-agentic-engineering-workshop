@@ -111,7 +111,7 @@ document.addEventListener('click', function (e) {
     link.rel = 'noopener';
     link.setAttribute('aria-label', 'The George Washington University');
     var img = document.createElement('img');
-    img.src = '/images/gwu-logo.png';
+    img.src = 'images/gwu-logo.png';
     img.alt = 'The George Washington University';
     link.appendChild(img);
     container.appendChild(link);

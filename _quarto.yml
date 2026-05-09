@@ -42,10 +42,10 @@ website:
         href: workflow-construction.qmd
         text: Workflow Construction
 
-    right:
+    tools:
       - icon: github
         href: https://github.com/pingfan-hu/2026-agentic-engineering-workshop
-        target: _blank
+        text: GitHub repository
 
 format:
   html:
