@@ -683,6 +683,13 @@ body.quarto-dark nav.sidebar.sidebar-navigation:not(.rollup) { background-color:
   .navbar-gw-link { display: none !important; }
 }
 
+// Slim down the navbar a touch — Bootstrap defaults to ~0.5rem y-padding
+nav.navbar {
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+  min-height: 0;
+}
+
 .navbar-nav {
   .nav-link {
     text-decoration: none;
