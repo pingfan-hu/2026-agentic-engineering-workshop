@@ -3,8 +3,11 @@ project:
   render:
     - "**/*.qmd"
     - "!**/resources/*.qmd"
+  resources:
+    - images/
 
 website:
+  title: "Agentic Engineering"
   image: images/card.png
   favicon: images/favicon.png
   description: 2026 agentic engineering workshop by John Helveston and Pingfan Hu, George Washington University

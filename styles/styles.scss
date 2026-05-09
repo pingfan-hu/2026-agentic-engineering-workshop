@@ -1,5 +1,5 @@
 /*-- scss:defaults --*/
-$primary: #5654A2;
+$primary: #013D5B;
 $code-color: #ED6D46;
 
 /*-- scss:rules --*/
@@ -49,10 +49,27 @@ main.content h2 {
   margin: 0.5em 0;
 }
 
-.affiliation-logo {
-  width: 48px;
-  height: 48px;
+.affiliation-logo-link {
+  display: inline-flex;
   flex-shrink: 0;
+  transition: transform 0.2s ease, filter 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(1.08);
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: scale(0.96);
+    filter: brightness(0.92);
+  }
+}
+
+.affiliation-logo {
+  height: 56px;
+  width: auto;
+  display: block;
 }
 
 .affiliation-text {
@@ -64,15 +81,15 @@ p {
 }
 
 blockquote {
-  background-color: #DDDCEC;
+  background-color: #D5E0E8;
   padding: 10px;
-  border-color: #5654A2;
+  border-color: #013D5B;
   border-radius: 5px;
 }
 
 // Keep separate — combined selector breaks in some browsers
-::selection      { background-color: #D6C2DD; color: #694696; }
-::-moz-selection { background-color: #D6C2DD; color: #694696; }
+::selection      { background-color: #C2D5DD; color: #013D5B; }
+::-moz-selection { background-color: #C2D5DD; color: #013D5B; }
 
 // Selection color inside code blocks — prevents Chrome from inheriting body selection color
 // Light mode uses token-dark palette; dark mode uses token-light palette
@@ -88,9 +105,9 @@ code, pre, .sourceCode {
 }
 
 :not(pre) > code {
-  background-color: #EEEDF8 !important;
-  color: #5654A2 !important;
-  border: 1px solid #D4D3EE !important;
+  background-color: #E5F0F7 !important;
+  color: #013D5B !important;
+  border: 1px solid #C8DAE8 !important;
   border-radius: 5px !important;
   padding: 0.1em 0.4em !important;
   font-size: 0.88em !important;
@@ -309,7 +326,7 @@ table {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #5654A2;
+  border: 2px solid #013D5B;
 }
 
 // ---- Intro Links ----
@@ -324,9 +341,9 @@ table {
   margin: 5px 4px;
   padding: 5px 14px;
   border-radius: 20px;
-  border: 1.5px solid #5654A2;
-  background: #EEEDF8;
-  color: #5654A2;
+  border: 1.5px solid #013D5B;
+  background: #E5F0F7;
+  color: #013D5B;
   font-family: 'Maple Mono', monospace;
   font-size: 0.82em;
   text-decoration: none;
@@ -335,7 +352,7 @@ table {
   transition: background 0.15s ease, color 0.15s ease;
 
   &:hover {
-    background: #5654A2;
+    background: #013D5B;
     color: #F8F7F0;
     text-decoration: none;
   }
@@ -346,7 +363,7 @@ table {
 .lnk-outer {
   width: 100%;
   margin: 1em 0;
-  border: 1.5px solid #5654A2;
+  border: 1.5px solid #013D5B;
   border-radius: 14px;
   overflow: hidden;
 }
@@ -354,7 +371,7 @@ table {
 .lnk-row {
   display: grid;
   grid-template-columns: 28% 1fr;
-  border-top: 1px solid #D4D3EE;
+  border-top: 1px solid #C8DAE8;
   background: #F8F7F0;
 
   &:first-child { border-top: none; }
@@ -366,7 +383,7 @@ table {
   padding: 12px 16px;
   font-family: 'Maple Mono', monospace;
   font-size: 0.85em;
-  border-right: 1px solid #D4D3EE;
+  border-right: 1px solid #C8DAE8;
 }
 
 .lnk-chips {
@@ -390,9 +407,9 @@ table {
 }
 
 .lnk-purple {
-  .lnk-label { color: #5654A2; background: #EEEDF8; }
-  .lnk-btn   { border-color: #5654A2; color: #5654A2; background: #EEEDF8; }
-  .lnk-btn:hover { background: #5654A2; color: #F8F7F0; text-decoration: none; }
+  .lnk-label { color: #013D5B; background: #E5F0F7; }
+  .lnk-btn   { border-color: #013D5B; color: #013D5B; background: #E5F0F7; }
+  .lnk-btn:hover { background: #013D5B; color: #F8F7F0; text-decoration: none; }
 }
 
 .lnk-blue {
@@ -417,7 +434,7 @@ table {
   .lnk-row { grid-template-columns: 1fr; }
   .lnk-label {
     border-right: none;
-    border-bottom: 1px solid #D4D3EE;
+    border-bottom: 1px solid #C8DAE8;
     padding: 8px 14px;
   }
   .lnk-chips { padding: 10px 14px; }
@@ -427,7 +444,7 @@ table {
 
 .quarto-post {
   position: relative;
-  border: 1.5px solid #D4D3EE !important;
+  border: 1.5px solid #C8DAE8 !important;
   border-radius: 14px;
   padding: 1.25rem 1.5rem;
   margin-bottom: 1.25rem;
@@ -437,8 +454,8 @@ table {
               transform 0.2s ease;
 
   &:hover {
-    border-color: #5654A2 !important;
-    box-shadow: 0 8px 24px rgba(86, 84, 162, 0.13);
+    border-color: #013D5B !important;
+    box-shadow: 0 8px 24px rgba(1, 61, 91, 0.13);
     transform: translateY(-4px);
   }
 
@@ -487,8 +504,8 @@ table {
               transform 0.2s ease;
 
   &:hover {
-    border-color: #5654A2 !important;
-    box-shadow: 0 8px 24px rgba(86, 84, 162, 0.13);
+    border-color: #013D5B !important;
+    box-shadow: 0 8px 24px rgba(1, 61, 91, 0.13);
     transform: translateY(-4px);
   }
 }
@@ -499,8 +516,8 @@ table {
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    box-shadow: 0 4px 12px rgba(86, 84, 162, 0.15);
-    border-color: #5654A2;
+    box-shadow: 0 4px 12px rgba(1, 61, 91, 0.15);
+    border-color: #013D5B;
   }
 }
 
@@ -523,8 +540,8 @@ table {
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    box-shadow: 0 4px 12px rgba(86, 84, 162, 0.15);
-    border-color: #5654A2;
+    box-shadow: 0 4px 12px rgba(1, 61, 91, 0.15);
+    border-color: #013D5B;
   }
 }
 
@@ -549,7 +566,7 @@ table {
   flex: 1;
 
   a {
-    color: #5654A2;
+    color: #013D5B;
     text-decoration: none;
     &:hover { text-decoration: underline; }
   }
@@ -580,16 +597,16 @@ table {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  border: 1px solid #5654A2;
+  border: 1px solid #013D5B;
   border-radius: 4px;
-  color: #5654A2;
+  color: #013D5B;
   background-color: white;
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
 
   &:hover {
-    background-color: #5654A2;
+    background-color: #013D5B;
     text-decoration: none;
     color: white;
   }
@@ -619,6 +636,46 @@ body.quarto-dark #quarto-sidebar-toc-left,
 body.quarto-dark nav.sidebar.sidebar-navigation:not(.rollup) { background-color: #1a1f2e !important; }
 
 .sidebar-title { color: #ECF0F1; }
+
+// Show site title only when navbar is collapsed (mobile)
+@media (min-width: 992px) {
+  .navbar-brand-container,
+  .navbar .navbar-brand { display: none !important; }
+}
+
+// GW logo injected by JS into .navbar-container so flex `order` pushes it to the end.
+// Negative top/bottom margins (per Quarto's Posit-badge approach) keep the logo from
+// inflating the navbar height — the image renders larger than the navbar's natural
+// content height but doesn't contribute to vertical sizing.
+.navbar-gw-link {
+  order: 9999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -100px;
+  margin-bottom: -100px;
+  margin-left: 8px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.30);
+    transform: scale(0.97);
+  }
+
+  img {
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+}
 
 .navbar-nav {
   .nav-link {
@@ -736,8 +793,8 @@ div.quarto-about-trestles .about-entity .description {
 
   &:hover {
     transform: scale(1.10) !important;
-    color: #5654A2 !important;
-    background-color: rgba(86, 84, 162, 0.1) !important;
+    color: #013D5B !important;
+    background-color: rgba(1, 61, 91, 0.1) !important;
   }
 
   i, .bi { font-size: 1.2rem !important; margin: 0 !important; }
@@ -758,13 +815,13 @@ div.quarto-about-trestles .about-entity .description {
 .section-outer {
   width: 100%;
   margin: 1em 0;
-  border: 1.5px solid #5654A2;
+  border: 1.5px solid #013D5B;
   border-radius: 14px;
   overflow: hidden;
 }
 
 .section-header {
-  background: #5654A2;
+  background: #013D5B;
   padding: 14px 18px;
   text-align: center;
 }
@@ -779,7 +836,7 @@ div.quarto-about-trestles .about-entity .description {
 .section-grid {
   display: grid;
   background: #F8F7F0;
-  border-top: 1px solid #D4D3EE;
+  border-top: 1px solid #C8DAE8;
 
   &.section-grid-2 { grid-template-columns: repeat(2, 1fr); }
   &.section-grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -792,13 +849,13 @@ div.quarto-about-trestles .about-entity .description {
   align-items: center;
   padding: 22px 16px;
   text-align: center;
-  border-right: 1px solid #D4D3EE;
+  border-right: 1px solid #C8DAE8;
   transition: background 0.15s ease;
 
   &:last-child { border-right: none; }
 
   &:hover {
-    background: #F0EFF8;
+    background: #EDF2F6;
 
     .section-card-icon { background: #F8F7F0; }
   }
@@ -808,7 +865,7 @@ div.quarto-about-trestles .about-entity .description {
   width: 48px;
   height: 48px;
   border-radius: 10px;
-  background: #EEEDF8;
+  background: #E5F0F7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -818,7 +875,7 @@ div.quarto-about-trestles .about-entity .description {
   svg {
     width: 22px;
     height: 22px;
-    color: #5654A2;
+    color: #013D5B;
     stroke-width: 1.8;
   }
 }
@@ -827,7 +884,7 @@ div.quarto-about-trestles .about-entity .description {
   font-family: 'Maple Mono', monospace;
   font-size: 0.85em;
   font-weight: bold;
-  color: #5654A2;
+  color: #013D5B;
   line-height: 1.4;
 }
 
@@ -844,7 +901,7 @@ div.quarto-about-trestles .about-entity .description {
     align-items: center;
     text-align: left;
     border-right: none;
-    border-bottom: 1px solid #D4D3EE;
+    border-bottom: 1px solid #C8DAE8;
     padding: 14px 18px;
     gap: 0 14px;
 
@@ -862,6 +919,7 @@ $section-themes: (
   'orange': (#CA6F1E, #FEF5E7, #F5CBA7, #FBEAD3),
   'green':  (#1E8449, #E9F7EF, #A9DFBF, #DCF0E3),
   'blue':   (#2471A3, #EBF5FB, #A9CCE3, #D4E8F4),
+  'purple': (#5654A2, #EEEDF8, #D4D3EE, #F0EFF8),
 );
 
 @each $name, $colors in $section-themes {
@@ -924,8 +982,8 @@ body.quarto-dark {
   :not(pre) > code { background-color: rgba(255, 255, 255, 0.1); }
 
   blockquote {
-    background-color: #292746;
-    border-color: #7c7ac4;
+    background-color: #152935;
+    border-color: #7DA5BD;
   }
 
   thead {
@@ -938,8 +996,8 @@ body.quarto-dark {
     border-color: var(--bs-border-color);
 
     &:hover {
-      box-shadow: 0 4px 12px rgba(124, 122, 196, 0.2);
-      border-color: #7c7ac4;
+      box-shadow: 0 4px 12px rgba(125, 165, 189, 0.2);
+      border-color: #7DA5BD;
     }
   }
 
@@ -953,8 +1011,8 @@ body.quarto-dark {
     border-color: var(--bs-border-color);
 
     &:hover {
-      box-shadow: 0 4px 12px rgba(124, 122, 196, 0.2);
-      border-color: #7c7ac4;
+      box-shadow: 0 4px 12px rgba(125, 165, 189, 0.2);
+      border-color: #7DA5BD;
     }
   }
 
@@ -965,39 +1023,39 @@ body.quarto-dark {
 
   .presentation-button {
     background-color: transparent;
-    border-color: #7c7ac4;
-    color: #7c7ac4;
+    border-color: #7DA5BD;
+    color: #7DA5BD;
 
     &:hover {
-      background-color: #7c7ac4;
+      background-color: #7DA5BD;
       color: #111;
     }
   }
 
   .quarto-grid-item:hover {
-    border-color: #7c7ac4 !important;
-    box-shadow: 0 8px 24px rgba(124, 122, 196, 0.2);
+    border-color: #7DA5BD !important;
+    box-shadow: 0 8px 24px rgba(125, 165, 189, 0.2);
   }
 
   .quarto-post {
     background-color: #1e2433;
-    border-color: #3a3858 !important;
+    border-color: #384A57 !important;
 
     &:hover {
-      border-color: #7c7ac4 !important;
-      box-shadow: 0 8px 24px rgba(124, 122, 196, 0.2);
+      border-color: #7DA5BD !important;
+      box-shadow: 0 8px 24px rgba(125, 165, 189, 0.2);
     }
   }
 
   // Section grid
-  .section-outer { border-color: #7c7ac4; }
-  .section-header { background: #3a3858; }
+  .section-outer { border-color: #7DA5BD; }
+  .section-header { background: #384A57; }
   .section-grid {
     background: #1e2433;
-    border-top-color: #3a3858;
+    border-top-color: #384A57;
   }
   .section-card {
-    border-right-color: #3a3858;
+    border-right-color: #384A57;
 
     &:hover {
       background: #232b3e;
@@ -1005,13 +1063,13 @@ body.quarto-dark {
     }
   }
   .section-card-icon {
-    background: #2a2f44;
-    svg { color: #b8b6e0; }
+    background: #1F3340;
+    svg { color: #A4C9DC; }
   }
-  .section-label { color: #b8b6e0; }
+  .section-label { color: #A4C9DC; }
 
   @media (max-width: 720px) {
-    .section-card { border-bottom-color: #3a3858; }
+    .section-card { border-bottom-color: #384A57; }
   }
 
   // Color variants — primary, tint (icon bg + label/icon color), border, hover
@@ -1019,6 +1077,7 @@ body.quarto-dark {
     'orange': (#e89c5e, #4a3520, #5e3e1f, #2c2620),
     'green':  (#5dbd84, #1f3e2a, #1f5e3e, #1e2622),
     'blue':   (#5e9ec5, #1f2f3e, #1f3e5e, #1e2229),
+    'purple': (#7c7ac4, #2c2840, #3a3858, #1e1d2c),
   );
 
   @each $name, $colors in $section-themes-dark {

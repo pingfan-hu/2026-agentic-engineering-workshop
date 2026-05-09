@@ -13,21 +13,23 @@ grid:
 
 ```{=html}
 <div class="affiliation">
- <img src="images/gwu-seal.svg" alt="George Washington University seal" class="affiliation-logo">
+ <a class="affiliation-logo-link" href="https://trustworthyai.gwu.edu" target="_blank" rel="noopener">
+  <img src="images/gw-tai-logo.png" alt="GW TAI Logo" class="affiliation-logo">
+ </a>
  <span class="affiliation-text">The George Washington University</span>
 </div>
 ```
 
 <hr>
 
-## Part 1: Claude Code Basics
+## Part 1: [Claude Code Basics](claude-code-basics.qmd)
 
 {{< include resources/part-1-overview.qmd >}}
 
-## Part 2: Handy Tools
+## Part 2: [Handy Tools](handy-tools.qmd)
 
 {{< include resources/part-2-overview.qmd >}}
 
-## Part 3: Workflow Construction
+## Part 3: [Workflow Construction](workflow-construction.qmd)
 
 {{< include resources/part-3-overview.qmd >}}

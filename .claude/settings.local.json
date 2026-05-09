@@ -11,7 +11,8 @@
       "Bash(curl -sLI \"https://upload.wikimedia.org/wikipedia/commons/0/0e/George_Washington_University_seal.svg\")",
       "Bash(curl -sLI \"https://upload.wikimedia.org/wikipedia/en/0/0e/George_Washington_University_seal.svg\")",
       "WebFetch(domain:en.wikipedia.org)",
-      "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/en/d/d8/George_Washington_University_seal.svg\" -o /tmp/gwu-seal.svg)"
+      "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/en/d/d8/George_Washington_University_seal.svg\" -o /tmp/gwu-seal.svg)",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/gh/posit-dev/supported-by-posit/js/badge.min.js\")"
     ]
   }
 }

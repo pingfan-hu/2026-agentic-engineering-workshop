@@ -96,3 +96,29 @@ document.addEventListener('show.bs.tooltip', function (e) {
 document.addEventListener('click', function (e) {
   if (e.target.closest('.code-copy-button')) e.target.closest('.code-copy-button').blur();
 });
+
+// ---- GW Seal Logo (navbar far-right) ----
+// Inject directly into .navbar-container so `order: 9999` (in CSS) pushes it
+// past the search/toggle group, matching how quarto.org places its Posit logo.
+(function () {
+  function injectGwLogo() {
+    var container = document.querySelector('nav.navbar .navbar-container');
+    if (!container || container.querySelector('.navbar-gw-link')) return;
+    var link = document.createElement('a');
+    link.className = 'navbar-gw-link';
+    link.href = 'https://www.gwu.edu';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.setAttribute('aria-label', 'The George Washington University');
+    var img = document.createElement('img');
+    img.src = '/images/gwu-logo.png';
+    img.alt = 'The George Washington University';
+    link.appendChild(img);
+    container.appendChild(link);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectGwLogo);
+  } else {
+    injectGwLogo();
+  }
+})();
