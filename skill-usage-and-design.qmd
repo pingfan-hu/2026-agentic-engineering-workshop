@@ -1,0 +1,20 @@
+---
+title: "Skill Usage and Design"
+---
+
+```{=html}
+<div class="slide-embed">
+  <iframe
+    src="slides/skill-usage-and-design/"
+    title="Skill Usage and Design slides"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
+<p class="slide-embed-link">
+  <a class="slide-embed-button" href="slides/skill-usage-and-design/" target="_blank" rel="noopener">
+    Open slides in a new tab →
+  </a>
+</p>
+```

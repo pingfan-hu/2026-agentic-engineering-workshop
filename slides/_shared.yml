@@ -1,4 +1,4 @@
-author: "<br>**Pingfan Hu** & **John Helveston**<br>George Washington University<br><br>2026 Agentic Engineering Workshop"
+author: "<br>**Pingfan Hu** & **Dr. John Helveston**<br>George Washington University<br><br>2026 Agentic Engineering Workshop"
 
 format:
   revealjs:
@@ -7,7 +7,7 @@ format:
     slide-number: true
     embed-resources: false
     auto-stretch: false
-    footer: "<a href='http://pingfanhu.com'>Pingfan Hu</a> &amp; <a href='https://www.jhelvy.com'>John Helveston</a> — 2026 Agentic Engineering Workshop"
+    footer: "<a href='http://pingfanhu.com'>Pingfan Hu</a> &amp; <a href='https://www.jhelvy.com'>Dr. John Helveston</a> — 2026 Agentic Engineering Workshop"
     preview-links: auto
     link-external-newwindow: true
     link-external-icon: false

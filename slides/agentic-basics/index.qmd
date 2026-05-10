@@ -1,33 +1,440 @@
 ---
 pagetitle: "Agentic Basics"
 title: "[Agentic Basics]{.amber}"
+title-slide-attributes:
+  data-background-color: "#2C3E50"
+  data-background-image: figs/banner.png
+  data-background-size: 24%
+  data-background-position: right 20% center
+  class: dark-centered
+  style: text-align:left;
 ---
 
 ## About {.center style="font-size: 30px; line-height: 1.5;"}
 
 ::: {.columns}
-::: {.column width="38%"}
+::: {.column width="50%"}
+- **Pingfan Hu**
+- PhD Candidate at George Washington University
+- Heavy Claude Code user since release
+- Blog series: *Agentic Engineering* parts 1–3
+- [pingfanhu.com](http://pingfanhu.com)
 :::
 
-::: {.column width="62%"}
-- _Speaker bio placeholder._
+::: {.column width="50%"}
+- **Dr. John Helveston**
+- Associate Professor at George Washington University
+- Open-source author and educator
+- [jhelvy.com](https://www.jhelvy.com)
 :::
 :::
 
-## Agenda {.light-centered .center}
+## Today {.light-centered .center}
 
-- Assistants vs Agents
-- Architecture
-- Handy Tools
+Three sections, ~25 minutes:
 
-## [Assistants]{.teal} vs [Agents]{.amber} {.dark-centered .center}
+1. **[Assistants]{.teal} vs [Agents]{.amber}** — the vocabulary
+2. **Architecture** — what's inside Claude Code, and how to wire it
+3. **Handy Tools** — software, extensions, and habits that make it work
 
-_Section content placeholder._
+> Goal: walk out with the mental model to design your *own* workflow.
 
-## Architecture {.light-centered .center}
+## [Section 1]{.amber}<br>Assistants vs Agents {.dark-centered .center}
 
-_Section content placeholder._
+## The opening problem {.light-centered .center}
 
-## Handy Tools {.light-centered .center}
+- AI moves faster than anyone can keep up.
+- New model, new tool, new workflow — every morning.
+- The reframe:
 
-_Section content placeholder._
+::: {.centered-container style="width: 70%; margin-top: 1em;"}
+You don't need to chase every release.<br>You need a workflow that **works for you**.
+:::
+
+<br>
+
+> *"Everyone has their developing flow."* — Andrej Karpathy
+
+## Two terms, one distinction {.light-centered .center}
+
+::: {.columns}
+::: {.column width="50%"}
+### [AI Assistants]{.teal}
+
+- Conversational interfaces
+- You ask → it answers
+- ChatGPT, Claude.ai, Gemini
+- Can browse, run code, remember
+- **You drive each turn**
+:::
+
+::: {.column width="50%"}
+### [AI Agents]{.amber}
+
+- Autonomous executors
+- Run shell, read/write files, call APIs
+- Codex, Claude Code, Gemini CLI
+- Loop through decisions
+- **Acts independently in an environment**
+:::
+:::
+
+<br>
+
+::: {.centered-container style="width: 60%;"}
+Assistants answer. Agents act.
+:::
+
+## What an "agent" actually is {.light-centered .center}
+
+Anthropic's clearest definition:
+
+::: {.centered-container style="width: 60%; font-size: 1.3em;"}
+Agent = [LLM]{.teal} + [Tools]{.amber} + [Loop]{.purple}
+:::
+
+<br>
+
+The loop:
+
+1. LLM decides what tool to call
+2. Tool runs in the environment
+3. Result feeds back into context
+4. LLM decides next move
+5. Repeat
+
+> Everything in this workshop is about shaping that loop.
+
+## [Workflows]{.teal} vs [Agents]{.amber} {.light-centered .center}
+
+From Anthropic's *Building Effective Agents*:
+
+::: {.columns}
+::: {.column width="50%"}
+### [Workflows]{.teal}
+
+- Predefined sequences of LLM calls
+- Glued together by code
+- **Control flow is fixed**
+:::
+
+::: {.column width="50%"}
+### [Agents]{.amber}
+
+- LLM decides the next step
+- Dynamic decision-making
+- **Control flow is dynamic**
+:::
+:::
+
+<br>
+
+::: {.centered-container style="width: 70%;"}
+Claude Code is firmly in the **agent** camp.
+:::
+
+## When to use which {.light-centered .center}
+
+::: {.columns}
+::: {.column width="50%"}
+### Use an [Assistant]{.teal} for...
+
+- One-off questions
+- Quick lookups
+- Polishing a paragraph
+- Anything that fits in one chat
+:::
+
+::: {.column width="50%"}
+### Use an [Agent]{.amber} for...
+
+- Multi-step tasks
+- Project work
+- File or API operations
+- Anything that loops
+:::
+:::
+
+<br>
+
+> Rest of the workshop assumes you're stepping up to **agents**, specifically Claude Code.
+
+## [Section 2]{.amber}<br>Architecture {.dark-centered .center}
+
+## Where you launch matters {.light-centered .center}
+
+::: {.centered-container style="width: 75%;"}
+The most important step is **picking the directory you launch from**.
+:::
+
+<br>
+
+- That directory becomes the agent's environment
+- Every file under it is potential context
+- Two kinds of directories matter ↓
+
+## Two kinds of directories {.light-centered .center}
+
+::: {.columns}
+::: {.column width="50%"}
+### [Home]{.coral} `~`
+
+- Computer-level tasks
+- Convenient but **dangerous**
+- Agent can touch anything
+- Good for **global** `CLAUDE.md`
+- Avoid launching real work here
+:::
+
+::: {.column width="50%"}
+### [Project]{.sage} `cd <path>`
+
+- Scoped to one project
+- Own `CLAUDE.md`
+- Own `.claude/` config
+- Own conversation history
+- **Where work actually lives**
+:::
+:::
+
+## Quick install {.light-centered .center}
+
+```bash
+# install
+brew install --cask claude-code
+
+# change to project
+cd /path/to/your-project
+
+# launch
+claude
+```
+
+<br>
+
+::: {.centered-container style="width: 70%;"}
+Or open the project in an IDE (VS Code, Positron, Kaku)<br>and launch `claude` from the integrated terminal.
+:::
+
+## The four components {.light-centered .center}
+
+Every Claude Code feature falls into one of these:
+
+| Component | What it does | Examples |
+|---|---|---|
+| **[Context]{.teal}** | What Claude reads at session start | `CLAUDE.md`, `rules/`, `memory/` |
+| **[Capabilities]{.amber}** | What Claude can act on | MCP servers, plugins |
+| **[Behaviors]{.coral}** | How Claude operates | skills, hooks |
+| **[Agents]{.purple}** | Delegated execution | subagents, verifiers |
+
+## [Context]{.teal} — the foundation {.light-centered .center}
+
+- **`CLAUDE.md`** — auto-loaded every session. Project root + subdirs. Keep it short.
+- **Global `CLAUDE.md`** at `~/.claude/CLAUDE.md` — applies to *every* session.
+- **`.claude/rules/*.md`** — topical knowledge, loaded **on demand**.
+- **`memory/`** — auto-managed, never pushed to cloud, don't worry about it.
+
+<br>
+
+::: {.centered-container style="width: 70%;"}
+Trigger to write a rule: *"I want this reproduced reliably."*
+:::
+
+## [Capabilities]{.amber} — what Claude acts on {.light-centered .center}
+
+- **MCP** (Model Context Protocol) — external servers
+  - GitHub, Gmail, Figma, browser automation, calendars, databases
+  - Claude calls them as structured tools
+- **Plugins** — installable bundles
+  - Skills + MCPs + hooks + config in one package
+  - Install via `/plugin`
+
+<br>
+
+::: {.centered-container style="width: 60%;"}
+⚠️ MCPs eat tokens fast. Use sparingly.
+:::
+
+## [Behaviors]{.coral} — how Claude operates {.light-centered .center}
+
+- **Skills** — reusable slash commands
+  - `/commit`, `/review`, `/init`
+  - Stored as `.md` files
+  - Auto-trigger on context, or manual `/name`
+
+- **Hooks** — shell commands fired on events
+  - Linter after every edit
+  - Formatter on save
+  - Build verification at session end
+
+> Part 2 zooms into skill design.
+
+## [Agents]{.purple} — delegated execution {.light-centered .center}
+
+- **Subagents** — child Claude instances
+  - Focused subtask, separate context
+  - Keeps the main session clean
+  - Run in parallel for big problems
+
+- **Verifiers** — post-execution checks
+  - A test, a diff, a log review
+  - Confirms output before "done"
+
+> Part 3 builds out the full multi-agent **harness**.
+
+## A concrete project layout {.light-centered .center}
+
+```text
+your-project/
+├── CLAUDE.md                  # rules loaded every session
+├── .claude/
+│   ├── rules/                 # topical, on-demand
+│   │   ├── core.md
+│   │   ├── config.md
+│   │   └── release.md
+│   ├── skills/                # slash commands
+│   ├── agents/                # subagent definitions
+│   └── settings.json          # hooks, permissions
+└── docs/
+    └── ai/                    # human + AI shared docs
+```
+
+> The shape varies. The point: every piece has a home.
+
+## Plan first, then act {.light-centered .center}
+
+The single biggest behavioral lever:
+
+- For any non-trivial task → enter **plan mode** first
+- Make Claude write a plan
+- Agree on it
+- *Then* implement
+- If things go sideways → **stop and re-plan**, don't push through
+
+<br>
+
+::: {.centered-container style="width: 70%;"}
+The model is good. Letting it plan first makes it much better.
+:::
+
+## The bigger picture {.dark-centered .center}
+
+Three terms, three levels of maturity. They **coexist**.
+
+| Stage | What it is |
+|---|---|
+| **[Vibe Coding]{.teal}** | Describe → generate → hope. Unpredictable. |
+| **[Agentic Engineering]{.amber}** | Rules + skills → reproducible workflows. *(this workshop)* |
+| **[Harness Engineering]{.coral}** | Structured environment around the model. *(Part 3)* |
+
+<br>
+
+> Stop handcrafting every piece. Start conducting.
+
+## [Section 3]{.amber}<br>Handy Tools {.dark-centered .center}
+
+## Don't panic {.light-centered .center}
+
+- *"10 must-install AI tools!"* — every week
+- You install them → they disappear from your life
+- **There is no must-install kit.**
+- General-purpose tools help. Most of what you need is buildable.
+
+<br>
+
+::: {.centered-container style="width: 75%;"}
+The tools below are the ones that actually stuck.
+:::
+
+## Software stack {.light-centered .center}
+
+Four daily-use tools. Each replaceable; the categories aren't.
+
+::: {.columns}
+::: {.column width="50%"}
+- **[Obsidian]{.teal}** — notes as `.md`, free iCloud sync
+- **[Spokenly]{.amber}** — speech-to-text, multilingual
+:::
+
+::: {.column width="50%"}
+- **[Positron]{.coral}** — IDE from Posit, VS Code base
+- **[Kaku]{.purple}** — open-source macOS terminal
+:::
+:::
+
+<br>
+
+::: {.centered-container style="width: 80%;"}
+Pattern: small, configurable, integrates with Claude Code via text files or terminal.
+:::
+
+## Extensions taxonomy {.light-centered .center}
+
+No official name. Three kinds:
+
+- **[Plugins]{.teal}** — marketplace bundles via `/plugin`
+  - `everything-claude-code`, `claude-plugins-official`
+- **[MCPs (connectors)]{.amber}** — external servers
+  - Excalidraw, Figma, TinyFish, Gmail, Calendar
+- **[Skills]{.coral}** — slash commands as `.md` files
+  - tw93's [Waza](https://github.com/tw93/waza): `/think`, `/design`, `/hunt`, `/check`, `/write`, `/learn`, `/read`, `/health`
+
+<br>
+
+> Two design principles preview: **less is more** + **negative examples** *(Part 2)*
+
+## Custom shell commands {.light-centered .center}
+
+Not AI tools — but what makes the AI workflow frictionless.
+
+::: {.columns}
+::: {.column width="50%"}
+### `q-` (quick)
+
+- `q-brew` — update homebrew
+- `q-pull` — pull all repos
+- `q-hide` — hide windows
+- `q-close` — close apps
+:::
+
+::: {.column width="50%"}
+### `cd-` (change dir)
+
+- `cd-obsidian` → vault
+- `cd-website` → website
+- `cd-github` → repos root
+:::
+:::
+
+<br>
+
+> Each is one line. Cheap to add. Real time saved every day.
+
+## The actual hardest skill {.dark-centered .center}
+
+> *"Your success in life will be determined largely by your ability to speak, your ability to write, and the quality of your ideas — in that order."*
+>
+> — Patrick Winston, MIT AI Lab
+
+<br>
+
+::: {.centered-container style="width: 75%;"}
+**Old:** *"Talk is cheap, show me the code."*<br>
+**New:** *"Code is cheap, show me the prompt."*
+:::
+
+## Three takeaways {.light-centered .center}
+
+1. **Assistants vs Agents** — agents act in an environment. Agent = LLM + tools + loop.
+
+2. **Architecture** — working directory is scope. Four components: **Context, Capabilities, Behaviors, Agents**. Plan first.
+
+3. **Handy Tools** — no must-install kit. Pick small composable tools. Use plugins/MCPs/skills sparingly. The hardest skill is still speaking clearly.
+
+## Up next {.dark-centered .center}
+
+### [Part 2:]{.amber} Skill Usage and Design
+
+- Common skills people actually use
+- How to design your own (`SKILL.md` anatomy, the Gotchas section)
+- Sharing skills across projects with symlinks

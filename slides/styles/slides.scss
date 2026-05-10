@@ -132,6 +132,12 @@ th { font-size: 24px; }
   text-align: center;
 }
 
+// Title slide uses Reveal's data-background layer so the banner image can show through.
+// Override .dark-centered's solid fill on the title-slide section only.
+#title-slide.dark-centered {
+  background-color: transparent !important;
+}
+
 .black-centered {
   background-color: #000 !important;
   color: $light-bg !important;

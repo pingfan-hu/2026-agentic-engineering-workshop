@@ -1,18 +1,438 @@
 ---
 pagetitle: "Harness Engineering"
 title: "[Harness Engineering]{.amber}"
+title-slide-attributes:
+  data-background-color: "#2C3E50"
+  data-background-image: figs/banner.png
+  data-background-size: 24%
+  data-background-position: right 20% center
+  class: dark-centered
+  style: text-align:left;
 ---
 
-## Welcome
+## Why a third part exists {.light-centered .center}
 
-Part 3 of the 2026 Agentic Engineering Workshop.
+Parts 1 & 2 cover **short-lived tasks** well.
 
-## Agenda
+For tasks that take **hours or days**, single-agent prompting breaks down:
 
-- Planning before coding
-- Verification loops
-- Multi-agent orchestration
+- The agent praises its own mediocre output
+- Context fills up → performance degrades
+- Agent declares victory while features are stubbed
+- You spend more time correcting than building
 
-## Planning Before Coding
+<br>
 
-Plan first. Verify the plan. Then implement.
+::: {.centered-container style="width: 75%;"}
+A **harness** is the structured environment that keeps long-running work reliable.
+:::
+
+## The through-line {.dark-centered .center}
+
+> *"Every component in a harness encodes an assumption about what the model can't do on its own — and those assumptions are worth stress testing."*
+>
+> — Anthropic Engineering, *Harness Design for Long-Running Application Development* (Mar 2026)
+
+<br>
+
+::: {.centered-container style="width: 70%;"}
+Hold onto this. It's the whole part in one sentence.
+:::
+
+## Today {.light-centered .center}
+
+Three sections, ~25 minutes:
+
+1. **[Components]{.teal}** — what's inside a harness
+2. **[Practices]{.amber}** — what successful teams do
+3. **[Design Your Own]{.coral}** — a staged path from baseline to full harness
+
+## [Section 1]{.amber}<br>Components of a Harness {.dark-centered .center}
+
+## Definition {.light-centered .center}
+
+::: {.centered-container style="width: 90%;"}
+A harness is an orchestrated system of **specialized agents and tools** that guide Claude through complex multi-step tasks. Rather than one model doing everything, work is decomposed into phases with **different agent personas**, each handling what the base model struggles with alone.
+:::
+
+<br>
+
+Three layers:
+
+1. **Agent specialization** — different jobs, different prompts, different contexts
+2. **Infrastructure** — communication, handoffs, tools
+3. **Verification systems** — how you check that work is actually done
+
+## Layer 1: Agent specialization {.light-centered .center}
+
+The durable triad for long-running coding work:
+
+| Agent | Job | Why it exists |
+|---|---|---|
+| **[Planner]{.teal}** | Expand prompt → detailed spec | Base model under-specifies when implementing |
+| **[Generator]{.amber}** | Do the actual work | Focused execution, no judgment burden |
+| **[Evaluator]{.coral}** | Independently grade output | Generators **inflate scores** when grading themselves |
+
+<br>
+
+::: {.centered-container style="width: 75%;"}
+*"Agents reliably skew positive when grading their own work."*
+:::
+
+## Layer 2: Infrastructure {.light-centered .center}
+
+The plumbing that lets multi-agent work survive long sessions:
+
+- **File-based communication** — one writes, another reads. Files survive resets.
+- **Structured artifact handoffs** — `SPEC.md`, `IMPLEMENTATION.md`, `REVIEW.md`
+- **Version control** — every checkpoint is a commit. Rewindable.
+- **Sprint contracts** — generator and evaluator negotiate "done" **before** work begins
+- **Interactive testing tools** — Playwright MCP, HTTP MCP. Use the output, don't just read it.
+
+## Layer 3: Verification systems {.light-centered .center}
+
+Most people get this layer wrong.
+
+- **Concrete, gradable criteria** — not *"is this good?"* but *"does this satisfy criteria 1, 2, 3 at score N?"*
+- **Few-shot calibration** — example outputs with detailed score breakdowns
+- **Hard thresholds** — sprint fails below threshold. No "directionally good enough."
+- **Interactive (not static)** — let the evaluator *use* the output. Click, type, navigate, hit the API.
+
+<br>
+
+> Subjective questions get subjective answers. Gradable criteria get gradable ones.
+
+## A complete harness {.light-centered .center}
+
+```text
+       prompt
+         │
+         ▼
+   ┌──────────┐
+   │  PLANNER │── writes SPEC.md ──┐
+   └──────────┘                    │
+                                   ▼
+                            sprint contract
+                                   │
+                                   ▼
+   ┌────────────┐  reads spec  ┌──────────┐
+   │ GENERATOR  │◀────────────▶│ EVALUATOR│
+   │ writes code│  writes      │ tests    │
+   │            │  REVIEW.md   │ outputs  │
+   └────────────┘              └──────────┘
+         │                          │
+         └──── git commits ─────────┘
+                    │
+                    ▼
+              (next sprint or done)
+```
+
+## [Section 2]{.amber}<br>Successful Practices {.dark-centered .center}
+
+## Practice 1 {.light-centered .center}
+
+::: {.centered-container style="width: 80%; font-size: 1.3em;"}
+[Separate]{.teal} generation [from]{.amber} evaluation.
+:::
+
+<br>
+
+- Evaluator is a **separate agent** with its own context
+- Tune it to be **skeptical**, not lenient
+- File-based handoff: generator exits, evaluator reads fresh
+- Single biggest quality lever
+
+> Do not ask Claude to evaluate output Claude just produced.
+
+## Practice 2 {.light-centered .center}
+
+::: {.centered-container style="width: 80%; font-size: 1.3em;"}
+Turn [subjective]{.teal} judgments into [gradable]{.amber} criteria.
+:::
+
+<br>
+
+Frontend design example:
+
+| Criterion | Weight | What it means |
+|---|---|---|
+| Design quality | 25% | Layout, hierarchy, contrast |
+| Originality | 20% | Not a generic template |
+| Craft | 25% | Spacing, typography, micro-interactions |
+| Functionality | 30% | Features actually work end-to-end |
+
+<br>
+
+> Calibrate with **few-shot examples**: 2–3 outputs with annotated scores.
+
+## Practice 3 {.light-centered .center}
+
+::: {.centered-container style="width: 80%; font-size: 1.3em;"}
+Use context [resets]{.teal}, not [compaction]{.coral}.
+:::
+
+<br>
+
+- In-place compaction creates **"context anxiety"** — model senses fill, wraps up early
+- Resets clear context, model reads `SPEC.md` + `STATE.md` fresh
+- This is **why** the harness is built around files
+
+<br>
+
+When to reset:
+
+- Between sprints
+- When the model starts cutting corners
+- When you've corrected the same mistake twice
+
+## Practice 4 {.light-centered .center}
+
+::: {.centered-container style="width: 80%; font-size: 1.3em;"}
+[Decompose]{.amber} complex tasks.
+:::
+
+<br>
+
+A multi-hour task done in one shot **fails**.<br>The same task split into eight one-hour sprints **succeeds**.
+
+<br>
+
+Each sprint should have:
+
+- A **single clear deliverable**
+- **Success criteria known in advance** (the sprint contract)
+- A scope that fits in one context window
+- File handoffs and a reset between sprints
+
+## Practice 5 {.light-centered .center}
+
+::: {.centered-container style="width: 80%; font-size: 1.3em;"}
+[Iterate]{.coral} the harness as the model improves.
+:::
+
+<br>
+
+When a new Claude releases:
+
+- Is the planner still load-bearing?
+- Does the evaluator still catch what it caught last quarter?
+- Are sprint contracts still needed?
+
+<br>
+
+> *"As models continue to improve, the space of interesting harness combinations doesn't shrink. It moves."*
+
+## Failure modes & their fixes {.light-centered .center}
+
+| Failure | Fix |
+|---|---|
+| **Self-evaluation bias** | Separate evaluator agent (P1) |
+| **Context degradation** | Reset + file handoffs (P3) |
+| **Specification brittleness** | Keep spec high-level, use sprint contracts |
+| **Incomplete QA testing** | Prompt evaluator to probe deeply, refine iteratively |
+| **Feature stubbing** | Evaluator tests for completeness, files bugs |
+
+## [Section 3]{.amber}<br>Design Your Own Harness {.dark-centered .center}
+
+## Start simple {.light-centered .center}
+
+::: {.centered-container style="width: 80%; font-size: 1.2em;"}
+*"Find the simplest solution possible.<br>Only increase complexity when needed."*
+:::
+
+<br>
+
+A staged path follows. **Stop at the earliest stage that works.**<br>Most workflows never need to leave Stage 0.
+
+## Stage 0 — single-agent baseline {.light-centered .center}
+
+Just Claude Code, in your project directory.
+
+- A `CLAUDE.md`
+- Maybe a few skills (Part 2)
+
+<br>
+
+You **don't need a harness yet**. Signals you've outgrown it:
+
+- Tasks regularly span multiple sessions
+- Model declares victory on incomplete work
+- More time correcting than building
+- Quality varies wildly between attempts
+
+## Stage 1 — add a verifier {.light-centered .center}
+
+The cheapest harness upgrade:
+
+::: {.centered-container style="width: 75%;"}
+A second Claude Code session with a "skeptical reviewer" prompt.
+:::
+
+<br>
+
+| Session A (Writer) | Session B (Reviewer) |
+|---|---|
+| Implement feature X | (waits) |
+| (writes code, commits) | Review `@src/...`. Edge cases, races, consistency. |
+| Address the review feedback | (waits) |
+
+<br>
+
+> You haven't built a "harness" yet. You've decoupled generation from evaluation. **That's most of the win.**
+
+## Stage 2 — add a planner {.light-centered .center}
+
+When scope keeps drifting:
+
+- Tasks start without enough scope definition
+- Implementation doesn't match what you wanted
+- First draft solves a different problem
+
+<br>
+
+Implementation:
+
+- A planning session produces `SPEC.md`
+- A fresh implementation session reads it
+
+<br>
+
+> Same shape as Claude Code's built-in **plan mode**, scaled across sessions.
+
+## Stage 3 — sprint contracts {.light-centered .center}
+
+```markdown
+# Sprint 3 Contract
+
+## Goal
+Add OAuth login flow to the existing auth module.
+
+## Done means
+- [ ] User can complete the Google sign-in flow
+- [ ] Session persists across page reloads
+- [ ] Existing email/password login still works
+- [ ] All new code has unit tests, all tests pass
+- [ ] No TODOs or stubs in shipped code
+
+## Out of scope
+- GitHub OAuth (separate sprint)
+- UI redesign of the login page
+```
+
+<br>
+
+> Disagreements happen during **drafting**, not at the end.
+
+## Stage 4 — interactive verification {.light-centered .center}
+
+When static review stops catching real issues, give the evaluator tools to **use** the output:
+
+- **Frontend** → Playwright MCP (click, type, navigate, screenshot)
+- **Backend** → HTTP MCP (hit the API, assert on responses)
+- **Data** → query MCP (run the analysis end-to-end)
+
+<br>
+
+::: {.columns}
+::: {.column width="50%"}
+### Static review catches
+
+- Typos
+- Structure issues
+- Surface bugs
+:::
+
+::: {.column width="50%"}
+### Interactive review catches
+
+- Race conditions
+- Integration failures
+- Real edge cases
+:::
+:::
+
+## Stage 5 — define gradable criteria {.light-centered .center}
+
+Write down **3–6 criteria** for "good" output in your domain.
+
+<br>
+
+For each criterion:
+
+- A **rubric** (what counts as 1, 3, 5)
+- 2–3 **few-shot examples** with detailed score breakdowns
+- A **hard threshold** below which the sprint fails
+
+<br>
+
+> Weight criteria by where the model is naturally weak.<br>Feed the rubric into the evaluator's system prompt.
+
+## Stage 6 — stress-test on every release {.light-centered .center}
+
+When a new Claude releases:
+
+1. Run an existing task through the harness once
+2. For each component, ask: *"Is this still load-bearing?"*
+3. Disable load-bearing components one at a time. Re-run.
+4. Anything you can disable without quality dropping → **delete it**
+5. With the freed budget, add components that push further
+
+<br>
+
+::: {.centered-container style="width: 75%;"}
+Otherwise harnesses accumulate cruft and slow you down.
+:::
+
+## A starter checklist {.light-centered .center}
+
+For your next non-trivial project:
+
+- [ ] What's my baseline failure mode?
+- [ ] Do I need a planner, an evaluator, or both?
+- [ ] What are my 3–6 gradable success criteria?
+- [ ] What does my sprint contract template look like?
+- [ ] What tool does my evaluator use to interactively verify?
+- [ ] Where do my structured handoffs live?
+- [ ] What's my reset trigger?
+
+<br>
+
+::: {.centered-container style="width: 70%;"}
+Answer these → you have a harness.
+:::
+
+## Workshop wrap {.dark-centered .center}
+
+::: {.columns}
+::: {.column width="33%"}
+### [Part 1]{.teal}
+
+Vocabulary.<br><br>Assistants vs agents.<br>Four components.<br>Handy tools.
+:::
+
+::: {.column width="34%"}
+### [Part 2]{.amber}
+
+Behaviors layer.<br><br>Skill design.<br>Gotchas section.<br>Symlinks for sharing.
+:::
+
+::: {.column width="33%"}
+### [Part 3]{.coral}
+
+Operating model.<br><br>Planner / Generator / Evaluator.<br>Sprint contracts.<br>Interactive verification.
+:::
+:::
+
+## The through-line, again {.dark-centered .center}
+
+> *"Every component in your setup — every CLAUDE.md instruction, every skill, every harness piece — encodes an assumption about what the model can't do on its own.<br>Treat those assumptions as living. Stress-test them as the model improves."*
+
+<br>
+
+::: {.centered-container style="width: 75%; font-size: 1.3em;"}
+Stop handcrafting. Start conducting.
+:::
+
+<br>
+
+Thank you.
