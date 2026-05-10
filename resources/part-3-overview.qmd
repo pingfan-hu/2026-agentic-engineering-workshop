@@ -1,19 +1,19 @@
 <div class="section-outer section-purple">
  <div class="section-header">
-  <span class="section-header-text">In this section, we will discuss how to reconstruct your workflow using agentic engineering.</span>
+  <span class="section-header-text">In this section, we will discuss how to engineer your own agentic harness.</span>
  </div>
  <div class="section-grid section-grid-3">
   <div class="section-card">
-   <div class="section-card-icon"><i data-lucide="file-text"></i></div>
-   <div class="section-label">Organize Your Language</div>
+   <div class="section-card-icon"><i data-lucide="boxes"></i></div>
+   <div class="section-label">Components of a Harness</div>
   </div>
   <div class="section-card">
-   <div class="section-card-icon"><i data-lucide="network"></i></div>
-   <div class="section-label">Build Your Architecture</div>
+   <div class="section-card-icon"><i data-lucide="award"></i></div>
+   <div class="section-label">Successful Harness Practices</div>
   </div>
   <div class="section-card">
-   <div class="section-card-icon"><i data-lucide="sparkles"></i></div>
-   <div class="section-label">Quick Production Showcases</div>
+   <div class="section-card-icon"><i data-lucide="hammer"></i></div>
+   <div class="section-label">Design Your Own Harness</div>
   </div>
  </div>
 </div>

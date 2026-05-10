@@ -1,0 +1,18 @@
+---
+title: "Harness Engineering"
+author: "Pingfan Hu & John Helveston"
+---
+
+## Welcome
+
+Part 3 of the 2026 Agentic Engineering Workshop.
+
+## Agenda
+
+- Planning before coding
+- Verification loops
+- Multi-agent orchestration
+
+## Planning Before Coding
+
+Plan first. Verify the plan. Then implement.

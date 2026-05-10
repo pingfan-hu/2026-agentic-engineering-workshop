@@ -1,0 +1,18 @@
+---
+title: "Skill Usage and Design"
+author: "Pingfan Hu & John Helveston"
+---
+
+## Welcome
+
+Part 2 of the 2026 Agentic Engineering Workshop.
+
+## Agenda
+
+- MCP servers
+- Skills and subagents
+- Hooks
+
+## MCP Servers
+
+Model Context Protocol — extend Claude with external tools.

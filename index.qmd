@@ -22,14 +22,14 @@ grid:
 
 <hr>
 
-## Part 1: [Claude Code Basics](claude-code-basics.qmd)
+## Part 1: [Agentic Basics](agentic-basics.qmd)
 
 {{< include resources/part-1-overview.qmd >}}
 
-## Part 2: [Handy Tools](handy-tools.qmd)
+## Part 2: [Skill Usage and Design](skill-usage-and-design.qmd)
 
 {{< include resources/part-2-overview.qmd >}}
 
-## Part 3: [Workflow Construction](workflow-construction.qmd)
+## Part 3: [Harness Engineering](harness-engineering.qmd)
 
 {{< include resources/part-3-overview.qmd >}}

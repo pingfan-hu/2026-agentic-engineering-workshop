@@ -39,6 +39,17 @@ jobs:
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
 
+      - name: Render slide decks
+        run: |
+          set -e
+          for d in slides/*/; do
+            [ -f "${d}_quarto.yml" ] || continue
+            echo "Rendering ${d}"
+            quarto render "${d}"
+            mkdir -p "_site/${d}"
+            cp -R "${d}_output/." "_site/${d}"
+          done
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

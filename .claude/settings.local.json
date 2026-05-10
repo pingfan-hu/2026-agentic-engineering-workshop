@@ -20,7 +20,9 @@
       "Bash(sips -g pixelWidth -g pixelHeight /Users/pingfan/Documents/GitHub/talks/2026-agentic-engineering-workshop/images/favicon.png)",
       "Bash(python3 -c \"import cairosvg\")",
       "Bash(python3 -c \"from PIL import Image\")",
-      "Bash(brew install *)"
+      "Bash(brew install *)",
+      "Bash(quarto --version)",
+      "Bash(quarto render *)"
     ]
   }
 }

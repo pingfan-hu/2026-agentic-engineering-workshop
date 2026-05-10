@@ -1,0 +1,26 @@
+---
+title: "Agentic Basics"
+author: "Pingfan Hu & John Helveston"
+---
+
+## Welcome
+
+Part 1 of the 2026 Agentic Engineering Workshop.
+
+## Agenda
+
+- What is Claude Code
+- Installing and running it
+- Your first session
+
+## What is Claude Code
+
+Claude Code is Anthropic's official CLI for agentic coding tasks.
+
+## Your First Session
+
+```bash
+claude
+```
+
+That's it. Ask it anything about your repo.

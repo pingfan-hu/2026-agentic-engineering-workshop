@@ -2,22 +2,18 @@
  <div class="section-header">
   <span class="section-header-text">In this section, we will discuss the basics of agentic engineering.</span>
  </div>
- <div class="section-grid section-grid-4">
-  <div class="section-card">
-   <div class="section-card-icon"><i data-lucide="lightbulb"></i></div>
-   <div class="section-label">Motivation</div>
-  </div>
+ <div class="section-grid section-grid-3">
   <div class="section-card">
    <div class="section-card-icon"><i data-lucide="git-compare-arrows"></i></div>
    <div class="section-label">Assistants vs Agents</div>
   </div>
   <div class="section-card">
-   <div class="section-card-icon"><i data-lucide="rocket"></i></div>
-   <div class="section-label">Launching Claude Code</div>
-  </div>
-  <div class="section-card">
    <div class="section-card-icon"><i data-lucide="layers"></i></div>
    <div class="section-label">Architecture</div>
+  </div>
+  <div class="section-card">
+   <div class="section-card-icon"><i data-lucide="wrench"></i></div>
+   <div class="section-label">Handy Tools</div>
   </div>
  </div>
 </div>

@@ -3,6 +3,7 @@ project:
   render:
     - "**/*.qmd"
     - "!**/resources/*.qmd"
+    - "!slides/**"
   resources:
     - images/
 
@@ -32,14 +33,14 @@ website:
         href: index.qmd
         text: Home
       - icon: mortarboard
-        href: claude-code-basics.qmd
-        text: Claude Code Basics
+        href: agentic-basics.qmd
+        text: Agentic Basics
       - icon: tools
-        href: handy-tools.qmd
-        text: Handy Tools
+        href: skill-usage-and-design.qmd
+        text: Skill Usage and Design
       - icon: diagram-3
-        href: workflow-construction.qmd
-        text: Workflow Construction
+        href: harness-engineering.qmd
+        text: Harness Engineering
 
     tools:
       - icon: github
