@@ -1,26 +1,33 @@
 ---
-title: "Agentic Basics"
-author: "Pingfan Hu & John Helveston"
+pagetitle: "Agentic Basics"
+title: "[Agentic Basics]{.amber}"
 ---
 
-## Welcome
+## About {.center style="font-size: 30px; line-height: 1.5;"}
 
-Part 1 of the 2026 Agentic Engineering Workshop.
+::: {.columns}
+::: {.column width="38%"}
+:::
 
-## Agenda
+::: {.column width="62%"}
+- _Speaker bio placeholder._
+:::
+:::
 
-- What is Claude Code
-- Installing and running it
-- Your first session
+## Agenda {.light-centered .center}
 
-## What is Claude Code
+- Assistants vs Agents
+- Architecture
+- Handy Tools
 
-Claude Code is Anthropic's official CLI for agentic coding tasks.
+## [Assistants]{.teal} vs [Agents]{.amber} {.dark-centered .center}
 
-## Your First Session
+_Section content placeholder._
 
-```bash
-claude
-```
+## Architecture {.light-centered .center}
 
-That's it. Ask it anything about your repo.
+_Section content placeholder._
+
+## Handy Tools {.light-centered .center}
+
+_Section content placeholder._

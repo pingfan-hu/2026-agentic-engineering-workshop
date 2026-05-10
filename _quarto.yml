@@ -6,6 +6,8 @@ project:
     - "!slides/**"
   resources:
     - images/
+  post-render:
+    - scripts/render-slides.sh
 
 website:
   title: "Agentic Engineering"
@@ -49,9 +51,7 @@ website:
 
 format:
   html:
-    toc: true
-    toc-depth: 5
-    toc-location: left
+    toc: false
     lightbox: true
     highlight-style:
       light: styles/code-dark.theme

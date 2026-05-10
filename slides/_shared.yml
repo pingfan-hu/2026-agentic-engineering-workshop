@@ -1,0 +1,23 @@
+author: "<br>**Pingfan Hu** & **John Helveston**<br>George Washington University<br><br>2026 Agentic Engineering Workshop"
+
+format:
+  revealjs:
+    smaller: false
+    theme: ../styles/slides.scss
+    slide-number: true
+    embed-resources: false
+    auto-stretch: false
+    footer: "<a href='http://pingfanhu.com'>Pingfan Hu</a> &amp; <a href='https://www.jhelvy.com'>John Helveston</a> — 2026 Agentic Engineering Workshop"
+    preview-links: auto
+    link-external-newwindow: true
+    link-external-icon: false
+    center-title-slide: true
+    code-block-height: 650px
+    title-slide-attributes:
+      data-background-color: "#2C3E50"
+      class: dark-centered
+      style: text-align:left;
+
+execute:
+  warning: false
+  echo: false

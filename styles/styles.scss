@@ -949,10 +949,10 @@ div.quarto-about-trestles .about-entity .description {
 
 // Color variants — primary, tint (icon bg), border-soft (divider), hover (card bg)
 $section-themes: (
-  'orange': (#CA6F1E, #FEF5E7, #F5CBA7, #FBEAD3),
-  'green':  (#1E8449, #E9F7EF, #A9DFBF, #DCF0E3),
+  'orange': (#B36A3F, #FAF1E8, #DBB68F, #F4E6D5),
+  'green':  (#3D8A60, #ECF4EF, #A8CCBA, #DDEBE2),
   'blue':   (#2471A3, #EBF5FB, #A9CCE3, #D4E8F4),
-  'purple': (#5654A2, #EEEDF8, #D4D3EE, #F0EFF8),
+  'purple': (#7A66A8, #F2EFF7, #C2BAD8, #EAE5F2),
 );
 
 @each $name, $colors in $section-themes {
@@ -1107,10 +1107,10 @@ body.quarto-dark {
 
   // Color variants — primary, tint (icon bg + label/icon color), border, hover
   $section-themes-dark: (
-    'orange': (#e89c5e, #4a3520, #5e3e1f, #2c2620),
-    'green':  (#5dbd84, #1f3e2a, #1f5e3e, #1e2622),
+    'orange': (#dca57a, #3e3026, #6b5040, #2a2620),
+    'green':  (#75c096, #253a2e, #3a6b50, #1f2622),
     'blue':   (#5e9ec5, #1f2f3e, #1f3e5e, #1e2229),
-    'purple': (#7c7ac4, #2c2840, #3a3858, #1e1d2c),
+    'purple': (#a298c8, #2e2a3a, #534b6e, #26232e),
   );
 
   @each $name, $colors in $section-themes-dark {

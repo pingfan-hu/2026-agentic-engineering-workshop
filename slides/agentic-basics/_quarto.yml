@@ -1,13 +1,7 @@
 project:
-  type: default
-  output-dir: _output
+  type: website
+  resources:
+    - figs/
 
-format:
-  revealjs:
-    theme: white
-    slide-number: true
-    chalkboard: true
-    incremental: false
-    transition: fade
-    history: false
-    embed-resources: false
+metadata-files:
+  - ../_shared.yml

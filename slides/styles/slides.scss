@@ -1,0 +1,271 @@
+/*-- scss:defaults --*/
+
+// === Typography ===
+$font-family-sans-serif: "TsangerJinKai", sans-serif !default;
+$font-family-monospace: "Maple Mono", monospace !default;
+$presentation-font-size-root: 36px;
+$presentation-font-smaller: 0.75;
+$presentation-line-height: 1.3;
+
+// === Colors ===
+$body-bg: #F8F7F0 !default;
+$body-color: #564232 !default;
+$link-color: #5654A2 !default;
+$selection-color: #694696 !default;
+$selection-bg: #D6C2DD !default;
+
+// === Headings ===
+$presentation-heading-font: "TsangerJinKai", sans-serif !default;
+$presentation-h1-font-size: 1.6em;
+$presentation-h2-font-size: 1.3em;
+$presentation-h3-font-size: 1.2em;
+$presentation-h4-font-size: 1.1em;
+$presentation-heading-color: #5654A2 !default;
+
+// === Code Blocks ===
+$code-block-bg: #EDEDED !default;
+$code-block-border-color: lighten($body-color, 60%);
+$code-block-font-size: 0.6em;
+
+// === Inline Code ===
+$code-color: #2C8475 !default;
+
+
+/*-- scss:rules --*/
+
+// === SCSS Variables ===
+$purple:          #5654A2;
+$teal:            #2C8475;
+$teal-link:       #3DA18A;
+$teal-link-hover: #236257;
+$amber:           #FFB84D;
+$navy:            #2C3E50;
+$light-bg:        #F8F7F0;
+$bubble-bg:       #DFE4FF;
+$coral:           #D45F47;
+$rose:            #B5476A;
+$sage:            #4A7A5A;
+$slate:           #5A6B80;
+$gold:            #C4881A;
+$blue:            #3A7DC9;
+
+// === Fonts ===
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/maple-mono@5.2.5/index.min.css');
+
+@font-face {
+  font-family: 'TsangerJinKai';
+  src: url('https://raw.githubusercontent.com/pingfan-hu/resources/main/fonts/TsangerJinKai02-W04.ttf') format('truetype');
+}
+
+// === Global ===
+:root {
+  --r-block-margin: 5px;
+}
+
+iframe { margin-bottom: 0.5em; }
+th { font-size: 24px; }
+.quarto-figure { margin-bottom: 0; }
+
+// === Reveal.js ===
+.reveal {
+  font-family: 'TsangerJinKai', sans-serif;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'TsangerJinKai', sans-serif;
+
+    code { color: $teal; }
+    a code { color: inherit; }
+  }
+
+  code, pre, pre code {
+    font-family: 'Maple Mono', monospace;
+  }
+
+  a {
+    color: $teal-link !important;
+    &:hover { color: $teal-link-hover !important; }
+  }
+
+  .slide-background-content {
+    background-position: 50% 80%;
+  }
+
+  // Overrides for dark slide headings and code
+  .dark-centered {
+    h1, h2, h3, h4, h5, h6 { color: $light-bg !important; }
+    code { color: $amber !important; }
+  }
+}
+
+// === Title Slide ===
+.custom-title-slide {
+  h1 {
+    position: relative;
+    top: 5vh;
+    font-size: 1.3em !important;
+  }
+
+  .quarto-title-author-name {
+    position: relative;
+    top: 5vh;
+    font-size: 0.9em !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .reveal .slides section.custom-title-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    height: 100% !important;
+  }
+}
+
+// === Slide Variants ===
+.light-centered {
+  text-align: center;
+}
+
+.dark-centered {
+  background-color: $navy !important;
+  color: $light-bg !important;
+  text-align: center;
+}
+
+.black-centered {
+  background-color: #000 !important;
+  color: $light-bg !important;
+  text-align: center;
+}
+
+// === Layout ===
+.grid-container {
+  display: grid;
+  gap: 10px;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.four-by-three-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  height: 30vh;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+
+  > * {
+    border: 2px solid $teal;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: $teal;
+    font-weight: bold;
+  }
+}
+
+// === Containers ===
+.centered-container {
+  text-align: center;
+  color: #FF5733;
+  border: 2px solid #333;
+  padding: 10px;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.centered-container-dark {
+  text-align: center;
+  color: $navy;
+  border: 2px solid $teal-link;
+  padding: 10px;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: rgba(248, 247, 240, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+// === Speech Bubbles ===
+.bubble-left {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $bubble-bg;
+  border-radius: 5px;
+  position: absolute;
+  margin-left: 20px;
+  width: fit-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent $bubble-bg transparent transparent;
+  }
+}
+
+.bubble-top {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $bubble-bg;
+  border-radius: 5px;
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%);
+  width: fit-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent $bubble-bg transparent;
+  }
+}
+
+// === Color Utilities ===
+.teal   { color: $teal !important; }
+.purple { color: $purple !important; }
+.amber  { color: $amber !important; }
+.navy   { color: $navy !important; }
+.coral  { color: $coral !important; }
+.rose   { color: $rose !important; }
+.sage   { color: $sage !important; }
+.slate  { color: $slate !important; }
+.gold   { color: $gold !important; }
+.blue   { color: $blue !important; }
+
+// === Text Size Utilities ===
+.small  { font-size: 0.7em; }
+
+// === Image Utilities ===
+.round-image {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.purple-border {
+  border: 2px solid $purple;
+}
+
+.img-middle {
+  img {
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+}

@@ -1,4 +1,4 @@
-<div class="section-outer section-orange">
+<div class="section-outer section-green">
  <div class="section-header">
   <span class="section-header-text">In this section, we will discuss the basics of agentic engineering.</span>
  </div>

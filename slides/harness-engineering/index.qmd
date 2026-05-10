@@ -1,6 +1,6 @@
 ---
-title: "Harness Engineering"
-author: "Pingfan Hu & John Helveston"
+pagetitle: "Harness Engineering"
+title: "[Harness Engineering]{.amber}"
 ---
 
 ## Welcome

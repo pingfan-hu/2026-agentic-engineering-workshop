@@ -1,6 +1,6 @@
 ---
-title: "Skill Usage and Design"
-author: "Pingfan Hu & John Helveston"
+pagetitle: "Skill Usage and Design"
+title: "[Skill Usage and Design]{.amber}"
 ---
 
 ## Welcome
