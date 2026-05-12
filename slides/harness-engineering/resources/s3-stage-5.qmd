@@ -1,0 +1,41 @@
+```{=html}
+<div style="width:88%;margin:0 auto;">
+
+ <div style="display:flex;align-items:center;justify-content:center;gap:0.5em;margin-bottom:0.8em;">
+  <span style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#9B8EA0;letter-spacing:0.14em;text-transform:uppercase;">stage</span>
+  <span style="font-family:'Maple Mono',monospace;font-size:1.4em;font-weight:900;color:#4A7A5A;line-height:1;">05</span>
+  <span style="font-size:0.85em;font-weight:700;color:#2C3E50;">Define gradable criteria</span>
+ </div>
+
+ <div style="text-align:center;font-family:'Maple Mono',monospace;font-size:0.55em;color:#9B8EA0;letter-spacing:0.06em;margin-bottom:0.7em;">
+  write down <span style="color:#4A7A5A;font-weight:700;">3–6 criteria</span> · for each:
+ </div>
+
+ <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5em;text-align:left;margin-bottom:0.85em;">
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.75em 0.85em;border-top:3px solid #4A7A5A;box-shadow:0 3px 10px rgba(74,122,90,0.1);">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#4A7A5A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.25em;">item 01</div>
+   <div style="font-size:0.7em;font-weight:700;color:#4A7A5A;margin-bottom:0.2em;">Rubric</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.45;">What counts as <span style="font-family:'Maple Mono',monospace;color:#4A7A5A;">1</span>, <span style="font-family:'Maple Mono',monospace;color:#4A7A5A;">3</span>, <span style="font-family:'Maple Mono',monospace;color:#4A7A5A;">5</span>.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.75em 0.85em;border-top:3px solid #4A7A5A;box-shadow:0 3px 10px rgba(74,122,90,0.1);">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#4A7A5A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.25em;">item 02</div>
+   <div style="font-size:0.7em;font-weight:700;color:#4A7A5A;margin-bottom:0.2em;">Few-shot examples</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.45;">2–3 outputs with annotated breakdowns.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.75em 0.85em;border-top:3px solid #4A7A5A;box-shadow:0 3px 10px rgba(74,122,90,0.1);">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#4A7A5A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.25em;">item 03</div>
+   <div style="font-size:0.7em;font-weight:700;color:#4A7A5A;margin-bottom:0.2em;">Hard threshold</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.45;">Below score → sprint <strong style="color:#D45F47;">fails</strong>.</div>
+  </div>
+
+ </div>
+
+ <div style="background:rgba(74,122,90,0.1);border-left:3px solid #4A7A5A;border-radius:0 10px 10px 0;padding:0.55em 0.95em;font-size:0.6em;color:#1F4A2D;text-align:left;font-style:italic;">
+  Weight by where the model is <strong style="color:#4A7A5A;font-style:normal;">naturally weak</strong>. Feed the rubric into the evaluator's system prompt.
+ </div>
+
+</div>
+```

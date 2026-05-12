@@ -1,0 +1,47 @@
+```{=html}
+<div style="width:92%;margin:0 auto;">
+
+ <div style="text-align:center;font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFB84D;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.7em;">— the whole workshop —</div>
+
+ <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6em;text-align:left;">
+
+  <div style="background:rgba(45,132,117,0.12);border:1px solid rgba(45,132,117,0.4);border-radius:14px;padding:0.95em 1em;">
+   <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:0.45em;">
+    <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#3DA18A;letter-spacing:0.1em;text-transform:uppercase;">part 01</span>
+    <span style="font-size:0.85em;font-weight:700;color:#3DA18A;">Vocabulary</span>
+   </div>
+   <ul style="list-style:none;padding:0;margin:0;font-size:0.55em;line-height:1.6;color:#DDE3F0;">
+    <li>· assistants vs agents</li>
+    <li>· four components</li>
+    <li>· handy tools</li>
+   </ul>
+  </div>
+
+  <div style="background:rgba(255,184,77,0.12);border:1px solid rgba(255,184,77,0.4);border-radius:14px;padding:0.95em 1em;">
+   <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:0.45em;">
+    <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFB84D;letter-spacing:0.1em;text-transform:uppercase;">part 02</span>
+    <span style="font-size:0.85em;font-weight:700;color:#FFB84D;">Behaviors</span>
+   </div>
+   <ul style="list-style:none;padding:0;margin:0;font-size:0.55em;line-height:1.6;color:#DDE3F0;">
+    <li>· skill design</li>
+    <li>· Gotchas section</li>
+    <li>· symlinks for sharing</li>
+   </ul>
+  </div>
+
+  <div style="background:rgba(212,95,71,0.12);border:1px solid rgba(212,95,71,0.4);border-radius:14px;padding:0.95em 1em;">
+   <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:0.45em;">
+    <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#E0826E;letter-spacing:0.1em;text-transform:uppercase;">part 03</span>
+    <span style="font-size:0.85em;font-weight:700;color:#E0826E;">Operating model</span>
+   </div>
+   <ul style="list-style:none;padding:0;margin:0;font-size:0.55em;line-height:1.6;color:#DDE3F0;">
+    <li>· planner / generator / evaluator</li>
+    <li>· sprint contracts</li>
+    <li>· interactive verification</li>
+   </ul>
+  </div>
+
+ </div>
+
+</div>
+```

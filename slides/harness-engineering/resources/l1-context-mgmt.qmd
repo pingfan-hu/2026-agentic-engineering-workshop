@@ -1,0 +1,50 @@
+```{=html}
+<div style="width:90%;margin:0 auto;">
+
+ <div style="text-align:center;margin-bottom:0.85em;">
+  <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#3A7DC9;background:#DCE9FA;padding:0.25em 0.7em;border-radius:999px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;">Layer 01 · Context Management</span>
+  <div style="margin-top:0.55em;font-size:0.7em;color:#2C3E50;">This layer usually involves <span style="color:#3A7DC9;font-weight:700;">three things</span>:</div>
+ </div>
+
+ <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.55em;text-align:left;">
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;box-shadow:0 4px 14px rgba(58,125,201,0.1);">
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.5em;">
+    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#DCE9FA;display:flex;align-items:center;justify-content:center;color:#3A7DC9;"><i data-lucide="target" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">item 01</div>
+   </div>
+   <div style="font-size:0.65em;font-weight:700;color:#3A7DC9;margin-bottom:0.3em;">Role &amp; goal</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.5;">Make the model clear on what it is, what task it has, what success means.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;box-shadow:0 4px 14px rgba(196,136,26,0.1);">
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.5em;">
+    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#FEF5E7;display:flex;align-items:center;justify-content:center;color:#C4881A;"><i data-lucide="scissors" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">item 02</div>
+   </div>
+   <div style="font-size:0.65em;font-weight:700;color:#C4881A;margin-bottom:0.3em;">Selection &amp; cropping</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.5;">More context isn't better. <strong>Cropping is key.</strong></div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;box-shadow:0 4px 14px rgba(44,132,117,0.1);">
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.5em;">
+    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#E5F2EE;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="layout-grid" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">item 03</div>
+   </div>
+   <div style="font-size:0.65em;font-weight:700;color:#2C8475;margin-bottom:0.3em;">Structured organization</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.5;">Fixed sections, consistent positions, design state shape.</div>
+  </div>
+
+ </div>
+
+ <div style="margin-top:0.85em;background:#FCEEEC;border:1.5px solid #F2B5A8;border-radius:12px;padding:0.7em 1em;text-align:center;">
+  <div style="font-size:0.6em;color:#7A2418;line-height:1.5;">
+   ⚠ &nbsp;If info is messy, the model easily
+   <span style="color:#D45F47;font-weight:700;">misses key points</span>,
+   <span style="color:#D45F47;font-weight:700;">forgets constraints</span>,
+   even <span style="color:#D45F47;font-weight:700;">self-pollutes</span>.
+  </div>
+ </div>
+
+</div>
+```

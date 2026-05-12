@@ -1,0 +1,44 @@
+```{=html}
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="display:flex;align-items:center;justify-content:center;gap:0.5em;margin-bottom:1em;flex-wrap:wrap;">
+  <div style="background:linear-gradient(135deg,#2C3E50,#1F2C3A);color:#FFB84D;font-family:'Maple Mono',monospace;font-size:0.65em;padding:0.4em 0.85em;border-radius:10px;font-weight:700;box-shadow:0 4px 14px rgba(44,62,80,0.2);">
+   <span style="color:#FFB84D;">$</span> claude
+  </div>
+  <span style="font-family:'Maple Mono',monospace;color:#9B8EA0;font-size:0.55em;">←──→</span>
+  <div style="display:flex;flex-wrap:wrap;gap:0.25em;justify-content:center;max-width:60%;">
+   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#FFFFFF;color:#5654A2;padding:0.2em 0.5em;border-radius:6px;border:1px solid #C4C3E8;">github</span>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#FFFFFF;color:#5654A2;padding:0.2em 0.5em;border-radius:6px;border:1px solid #C4C3E8;">gmail</span>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#FFFFFF;color:#5654A2;padding:0.2em 0.5em;border-radius:6px;border:1px solid #C4C3E8;">figma</span>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#FFFFFF;color:#5654A2;padding:0.2em 0.5em;border-radius:6px;border:1px solid #C4C3E8;">browser</span>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#FFFFFF;color:#5654A2;padding:0.2em 0.5em;border-radius:6px;border:1px solid #C4C3E8;">postgres</span>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#FFFFFF;color:#5654A2;padding:0.2em 0.5em;border-radius:6px;border:1px solid #C4C3E8;">slack</span>
+  </div>
+ </div>
+
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.65em;text-align:left;margin-bottom:0.7em;">
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;border-top:4px solid #5654A2;box-shadow:0 4px 14px rgba(86,84,162,0.08);">
+   <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:0.3em;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.78em;font-weight:700;color:#5654A2;">MCP</div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.42em;color:#9B8EA0;letter-spacing:0.08em;text-transform:uppercase;">model context protocol</div>
+   </div>
+   <div style="font-size:0.55em;color:#564232;line-height:1.5;">Servers Claude calls as <strong>tools</strong>.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;border-top:4px solid #C4881A;box-shadow:0 4px 14px rgba(196,136,26,0.08);">
+   <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:0.3em;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.78em;font-weight:700;color:#C4881A;">Plugins</div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.42em;color:#9B8EA0;letter-spacing:0.08em;text-transform:uppercase;">/plugin</div>
+   </div>
+   <div style="font-size:0.55em;color:#564232;line-height:1.5;">Skills + MCPs + hooks <strong>bundled</strong>.</div>
+  </div>
+
+ </div>
+
+ <div style="background:#FCEEEC;border-radius:10px;padding:0.55em 0.95em;font-size:0.55em;color:#7A2418;text-align:center;">
+  ⚠ &nbsp;MCPs eat tokens. <strong>Use sparingly.</strong>
+ </div>
+
+</div>
+```

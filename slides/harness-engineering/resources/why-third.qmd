@@ -1,0 +1,29 @@
+```{=html}
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="text-align:center;">
+  <div style="display:inline-flex;align-items:center;gap:0.5em;margin-bottom:0.85em;">
+   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:#DCE9FA;display:flex;align-items:center;justify-content:center;color:#3A7DC9;font-size:1em;">💬</div>
+   <div style="text-align:left;">
+    <div style="font-size:0.78em;font-weight:700;color:#2C3E50;line-height:1.1;">Chat-bot era</div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.08em;text-transform:uppercase;">good prompt = good answer</div>
+   </div>
+  </div>
+
+  <div style="display:flex;justify-content:center;gap:0.4em;margin-bottom:0.85em;">
+   <span style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#3A7DC9;background:#FFFFFF;padding:0.2em 0.55em;border-radius:999px;border:1px solid #B5D0F0;">tasks short</span>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#3A7DC9;background:#FFFFFF;padding:0.2em 0.55em;border-radius:999px;border:1px solid #B5D0F0;">chains short</span>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#3A7DC9;background:#FFFFFF;padding:0.2em 0.55em;border-radius:999px;border:1px solid #B5D0F0;">state minimal</span>
+  </div>
+
+  <div style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#C4C3E8;letter-spacing:0.4em;">▼ ▼ ▼</div>
+
+  <div style="margin-top:0.7em;background:#FFFFFF;border-radius:14px;padding:0.95em 1.2em;display:inline-flex;flex-direction:column;align-items:center;gap:0.3em;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.12em;text-transform:uppercase;">multi-step, multi-tool, hours-long</div>
+   <div style="font-size:0.78em;color:#2C3E50;">Saying it clearly is <span style="color:#D45F47;font-weight:700;">no longer enough</span>.</div>
+  </div>
+
+ </div>
+
+</div>
+```

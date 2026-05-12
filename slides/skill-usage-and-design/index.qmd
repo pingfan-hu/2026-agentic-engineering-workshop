@@ -10,399 +10,96 @@ title-slide-attributes:
   style: text-align:left;
 ---
 
-## Recap & today {.light-centered .center}
+## Recap {.light-centered .center}
 
-In Part 1 we placed **skills** in the **Behaviors** layer of the four-component model.
-
-<br>
-
-Three sections today, ~25 minutes:
-
-1. **[Common Skills]{.teal}** — what people actually use
-2. **[Skill Design]{.amber}** — how to write your own
-3. **[Skill Symlinks]{.coral}** — how to share them across projects
+{{< include resources/recap-today.qmd >}}
 
 ## [Section 1]{.amber}<br>Common Skills {.dark-centered .center}
 
-## What a skill really is {.light-centered .center}
-
-- A **directory** under `.claude/skills/`
-- Contains a `SKILL.md` file
-- Optionally: scripts, assets, data, reference files
-- The agent discovers, explores, and uses all of it
-
-<br>
-
-::: {.centered-container style="width: 70%;"}
-Skill = `SKILL.md` + (optional) supporting files
-:::
-
 ## A minimal `SKILL.md` {.light-centered .center}
 
-```markdown
-.claude/skills/api-conventions/SKILL.md
----
-name: api-conventions
-description: REST API design conventions for our services
----
-# API Conventions
-- Use kebab-case for URL paths
-- Use camelCase for JSON properties
-- Always include pagination for list endpoints
-- Version APIs in the URL path (/v1/, /v2/)
-```
-
-<br>
-
-> Two ways skills run: **auto-trigger** on context, or **manual** via `/name`
+{{< include resources/s1-minimal-skillmd.qmd >}}
 
 ## Where skills come from {.light-centered .center}
 
-::: {.columns}
-::: {.column width="33%"}
-### [Plugins]{.teal}
-
-- `everything-claude-code`
-- `claude-plugins-official`
-- Install via `/plugin`
-:::
-
-::: {.column width="34%"}
-### [Curated sets]{.amber}
-
-- tw93's [Waza](https://github.com/tw93/waza)
-- 8 short skills
-- `/think` `/design` `/hunt` `/check` `/write` `/learn` `/read` `/health`
-:::
-
-::: {.column width="33%"}
-### [Your own]{.coral}
-
-- The most important source
-- 60–80% of daily use after a few months
-- We'll write one in Section 2
-:::
-:::
+{{< include resources/s1-where-skills-from.qmd >}}
 
 ## What people use them for {.light-centered .center}
 
-| Category | Example |
-|---|---|
-| **Code review** | `/review`, `/security-review` |
-| **Refactor & cleanup** | `/simplify`, `/refactor-clean` |
-| **Test discipline** | `/tdd`, `/test-coverage`, `/e2e` |
-| **Build / verify** | `/build-fix`, `/verify`, `/quality-gate` |
-| **Documentation** | `/update-docs`, `/init` |
-| **PR & git** | `/commit`, `/checkpoint` |
-| **Knowledge** | `/think`, `/learn`, `/read`, `/docs-lookup` |
-
-<br>
-
-> The 80/20 rule kicks in fast. Optimize the handful you actually use.
-
-## Plugins vs standalone skills {.light-centered .center}
-
-::: {.columns}
-::: {.column width="50%"}
-### [Standalone skill]{.teal}
-
-- One `SKILL.md` in `.claude/skills/`
-- Quick, self-contained
-- Easy to write and share
-- Where most people start
-:::
-
-::: {.column width="50%"}
-### [Plugin]{.amber}
-
-- Bundles multiple skills + MCPs + hooks
-- For distribution to a team
-- For coherent skill sets
-- Graduate here once you have 3–4 related skills
-:::
-:::
+{{< include resources/s1-what-for.qmd >}}
 
 ## [Section 2]{.amber}<br>Skill Design {.dark-centered .center}
 
 ## Anatomy of `SKILL.md` {.light-centered .center}
 
-Two parts: **frontmatter** (YAML) + **body** (markdown).
-
-```markdown
----
-name: fix-issue
-description: Fix a GitHub issue
-disable-model-invocation: true
----
-Analyze and fix the GitHub issue: $ARGUMENTS.
-
-1. Use `gh issue view` to get the issue details
-2. Search the codebase for relevant files
-3. Implement the fix
-4. Write and run tests
-5. Create a descriptive commit, push, and open a PR
-```
-
-<br>
-
-- **`name`** → becomes `/name`. Keep short.
-- **`description`** → one sentence. Used for auto-trigger.
-- **`disable-model-invocation: true`** → opt out of auto-trigger (for side-effect skills)
+{{< include resources/s2-anatomy.qmd >}}
 
 ## The load-bearing section {.dark-centered .center}
 
-> *"The most valuable content in any skill is the **Gotchas** section containing common mistakes based on real problems Claude encounters when using your skill."*
->
-> — Anthropic, *Building Skills for Claude*
-
-<br>
-
-::: {.centered-container style="width: 75%;"}
-Gotchas are where your tribal knowledge lives.
-:::
+{{< include resources/s2-load-bearing.qmd >}}
 
 ## A Gotchas-rich skill {.light-centered .center}
 
-```markdown
----
-name: deploy-staging
-description: Deploy current branch to staging
-disable-model-invocation: true
----
-
-## Steps
-1. ...
-
-## Gotchas
-- The migration must complete BEFORE the API redeploys,
-  or requests hit the new schema with the old code.
-- `npm run build` succeeds even if env vars are missing.
-  Verify with `npm run build:check` before deploying.
-- The CDN cache takes 90 seconds to purge.
-  Don't declare success until the smoke test passes.
-```
-
-<br>
-
-> Difference between "kind of works" and **actually reliable**.
+{{< include resources/s2-gotchas-rich.qmd >}}
 
 ## Design principle 1 {.light-centered .center}
 
-::: {.centered-container style="width: 75%; font-size: 1.4em;"}
-[Less is more.]{.amber}
-:::
-
-<br>
-
-- Fewer skills, shorter names → easier recall → actually used
-- The everything-bundle wins **once**; the focused set wins **daily**
-- Heuristics:
-  - Long names = probably one skill too many
-  - Aim for **4–8 character** slash commands
-  - **6–10 active skills** is the sweet spot
+{{< include resources/s2-principle-1.qmd >}}
 
 ## Design principle 2 {.light-centered .center}
 
-::: {.centered-container style="width: 75%; font-size: 1.4em;"}
-[Define the negatives.]{.coral}
-:::
+{{< include resources/s2-principle-2.qmd >}}
 
-<br>
+## Skills as advanced Context Engineering {.light-centered .center}
 
-- LLMs default to broadly useful → trigger too often
-- Saying what a skill should **not** do sharpens targeting
-- Compare:
-  - ❌ *"code review for security issues"*
-  - ✅ *"code review for security issues — do NOT run on docs, refactors, or formatting-only diffs"*
+{{< include resources/s2-skills-as-context.qmd >}}
 
-> Underused. Steal it.
+## The attention problem {.light-centered .center}
+
+{{< include resources/s2-attention-dispersion.qmd >}}
+
+## Design principle 3 — progressive disclosure {.light-centered .center}
+
+{{< include resources/s2-progressive-disclosure.qmd >}}
 
 ## How to actually write a skill {.light-centered .center}
 
-Don't start from a blank page.
-
-1. **Do the task by hand once** with Claude Code. Get it right.
-2. **Ask Claude to extract a `SKILL.md`** from the session — including a Gotchas section based on what went wrong.
-3. **Drop it in** `.claude/skills/<name>/SKILL.md`. Test on the next similar task.
-4. **Refine over time.** Misfires → update Gotchas. Extra work → add negative examples.
-
-<br>
-
-::: {.centered-container style="width: 80%;"}
-Complete a full output first → then ask Claude to extract a rule from it.
-:::
+{{< include resources/s2-how-to-write.qmd >}}
 
 ## Skills vs `CLAUDE.md` vs rules {.light-centered .center}
 
-| Use | When | Loaded |
-|---|---|---|
-| **`CLAUDE.md`** | Applies to *every* session | Always |
-| **`rules/*.md`** | Topical knowledge (style, conventions) | On demand by Claude |
-| **Skills** | Reusable workflows (steps to *do* something) | On invocation |
-
-<br>
-
-- *"Always behave this way"* → `CLAUDE.md` (short)
-- *"When you need to know about X"* → `rules/X.md`
-- *"When you need to do X"* → `skills/X/SKILL.md`
+{{< include resources/s2-skills-vs-rules.qmd >}}
 
 ## Skill anti-patterns {.light-centered .center}
 
-- **Kitchen-sink skill** — a `/do-everything` that branches into ten workflows. Split it.
-- **Duplicate-of-CLAUDE.md skill** — restates rules already loaded every session. Delete one.
-- **Auto-trigger landmine** — side-effect skill (deploy, push, delete) without `disable-model-invocation: true`. The model will call it.
-- **Unverified skill** — steps without a "how to confirm it worked" section. You'll catch failures by hand.
+{{< include resources/s2-anti-patterns.qmd >}}
 
 ## [Section 3]{.amber}<br>Skill Symlinks {.dark-centered .center}
 
 ## The problem {.light-centered .center}
 
-You write a great `/commit` skill in **Project A**.<br>Project B needs the same skill. Project C also.
-
-<br>
-
-::: {.columns}
-::: {.column width="33%"}
-### Copy-paste
-
-Drift the moment you improve one. ❌
-:::
-
-::: {.column width="34%"}
-### Bundle as plugin
-
-Real solution. Overkill for one or two skills. ⚠️
-:::
-
-::: {.column width="33%"}
-### Symlink
-
-Lightweight middle path. ✅
-:::
-:::
-
-## How symlinks work in Claude Code {.light-centered .center}
-
-::: {.centered-container style="width: 80%;"}
-Claude Code follows symlinks transparently.<br>It reads and edits the **target** file, not the link.
-:::
-
-<br>
-
-- Keep one canonical copy of a skill anywhere on disk
-- Link to it from any project's `.claude/skills/`
-- Update once → all linked projects see the change
+{{< include resources/s3-the-problem.qmd >}}
 
 ## Two patterns {.light-centered .center}
 
-::: {.columns}
-::: {.column width="50%"}
-### Pattern A — global folder
-
-- Canonical copy at `~/.claude/skills/<name>/`
-- Each project: `ln -s` into `.claude/skills/`
-- Add link to project `.gitignore`
-:::
-
-::: {.column width="50%"}
-### Pattern B — skills repo
-
-- Canonical copy in `~/code/my-skills/`
-- Each project links what it wants
-- Bonus: skills repo is version-controlled and shareable
-:::
-:::
+{{< include resources/s3-two-patterns.qmd >}}
 
 ## A complete example {.light-centered .center}
 
-```bash
-# One-time: create the canonical skill
-mkdir -p ~/.claude/skills/commit
-cat > ~/.claude/skills/commit/SKILL.md <<'EOF'
----
-name: commit
-description: Stage relevant files and create a conventional commit
----
-Stage relevant changes and create a commit message
-following conventional-commits format. Do NOT amend.
-EOF
-
-# Per project: link it in
-cd ~/code/my-project
-mkdir -p .claude/skills
-ln -s ~/.claude/skills/commit .claude/skills/commit
-
-# Don't ship the link
-echo ".claude/skills/commit" >> .gitignore
-```
-
-<br>
-
-> Now `/commit` works here. Update the canonical once → every linked project gets the change.
+{{< include resources/s3-complete-example.qmd >}}
 
 ## Important guardrails {.light-centered .center}
 
-::: {.columns}
-::: {.column width="50%"}
-### ✅ Do
-
-- Symlink **individual skill folders**
-- Add symlinks to `.gitignore`
-- Track the canonical skill in git
-- Use absolute paths
-:::
-
-::: {.column width="50%"}
-### ❌ Don't
-
-- Symlink the entire `.claude/`<br>(it has project-specific config)
-- Commit the symlink to git<br>(points to your home dir)
-- Symlink across machines without a sync strategy
-:::
-:::
+{{< include resources/s3-guardrails.qmd >}}
 
 ## When to graduate to a plugin {.light-centered .center}
 
-Symlinks are great for **1–5 personal skills**.
-
-<br>
-
-The signal it's time to move on:
-
-- Coherent set of skills that belong together (e.g., a "git workflow" set)
-- Want to share with a teammate or publish
-- Want to bundle skills + MCP + hooks into one install
-
-<br>
-
-::: {.centered-container style="width: 70%;"}
-Same source of truth. Plus distribution.
-:::
-
-## Cross-tool sharing {.light-centered .center}
-
-If you also use Codex, OpenClaw, or other CLI agents:
-
-- Each agent looks for skills in a **different directory**
-- Tools like [skillshare](https://github.com/runkids/skillshare) maintain one skills directory and create symlinks into each agent's expected location
-- Single source of truth across **multiple agents**
-
-<br>
-
-> Worth knowing about. Not required to start.
+{{< include resources/s3-graduate.qmd >}}
 
 ## Three takeaways {.light-centered .center}
 
-1. **Common skills.** Most useful ones come from your own work. Plugins and curated sets are the seed. Optimize the **6–10** you use daily.
-
-2. **Skill design.** `SKILL.md` = frontmatter + body. **Gotchas section is load-bearing.** Two principles: **less is more**, **define the negatives**. Extract from success, don't start blank.
-
-3. **Skill symlinks.** One canonical source, `ln -s` into each project, `.gitignore` the link. Symlink individual skills, never the whole `.claude/`. Graduate to plugins when the set grows.
+{{< include resources/takeaways.qmd >}}
 
 ## Up next {.dark-centered .center}
 
-### [Part 3:]{.amber} Harness Engineering
-
-- Components of a **harness** (planner / generator / evaluator)
-- Practices that make long-running agent work reliable
-- A staged path to designing your own
+{{< include resources/up-next.qmd >}}

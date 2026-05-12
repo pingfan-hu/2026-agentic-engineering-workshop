@@ -1,0 +1,29 @@
+```{=html}
+<div style="width:88%;margin:0 auto;text-align:left;">
+
+ <div style="position:relative;background:rgba(255,184,77,0.08);border-left:5px solid #FFB84D;border-radius:0 14px 14px 0;padding:1.4em 1.7em 1.5em;margin-bottom:1em;">
+  <div style="position:absolute;top:0.4em;left:0.7em;font-family:'Georgia',serif;font-size:5em;color:#FFB84D;line-height:0.7;opacity:0.18;user-select:none;">"</div>
+  <div style="position:relative;font-size:0.95em;line-height:1.55;color:#F8F7F0;font-style:italic;font-family:'Georgia','TsangerJinKai',serif;">
+   Your success is determined by your <span style="color:#FFB84D;font-style:normal;font-weight:700;">ability to speak</span>, your <span style="color:#FFB84D;font-style:normal;font-weight:700;">ability to write</span>, and the <span style="color:#FFB84D;font-style:normal;font-weight:700;">quality of your ideas</span> — in that order.
+  </div>
+  <div style="margin-top:0.7em;text-align:right;font-family:'Maple Mono',monospace;font-size:0.55em;color:#9B8EA0;">
+   — Patrick Winston, MIT
+  </div>
+ </div>
+
+ <div style="display:flex;align-items:stretch;gap:0;border-radius:14px;overflow:hidden;border:1px solid rgba(248,247,240,0.15);">
+  <div style="flex:1;background:rgba(248,247,240,0.04);padding:0.85em 1em;text-align:center;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.35em;">old</div>
+   <div style="font-size:0.7em;color:rgba(248,247,240,0.55);font-style:italic;line-height:1.45;">"Show me the <span style="color:#9B8EA0;">code</span>."</div>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:center;background:rgba(248,247,240,0.06);padding:0 0.6em;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.85em;color:#FFB84D;font-weight:700;">→</div>
+  </div>
+  <div style="flex:1;background:rgba(255,184,77,0.12);padding:0.85em 1em;text-align:center;border-left:1px solid rgba(255,184,77,0.3);">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFB84D;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.35em;">new</div>
+   <div style="font-size:0.7em;color:#F8F7F0;font-style:italic;line-height:1.45;">"Show me the <span style="color:#FFB84D;font-weight:700;font-style:normal;">prompt</span>."</div>
+  </div>
+ </div>
+
+</div>
+```

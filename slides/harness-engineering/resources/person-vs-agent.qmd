@@ -1,0 +1,29 @@
+```{=html}
+<div style="width:80%;margin:0 auto;text-align:center;">
+
+ <div style="font-size:0.78em;color:#2C3E50;margin-bottom:1em;line-height:1.4;">
+  Notice — this is exactly <span style="color:#3A7DC9;font-weight:700;">how a person works</span>.
+ </div>
+
+ <div style="display:flex;justify-content:center;gap:1.2em;">
+
+  <div style="background:#FFFFFF;border-radius:18px;padding:1.1em 1.4em 1.2em;text-align:center;box-shadow:0 6px 22px rgba(86,84,162,0.12);min-width:9em;">
+   <div style="width:3em;height:3em;border-radius:50%;background:#F4F2FB;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6em;color:#5654A2;font-size:1.3em;">👤</div>
+   <div style="font-size:0.85em;font-weight:700;color:#2C3E50;margin-bottom:0.5em;">Person</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#5654A2;background:#EEEDF8;padding:0.2em 0.6em;border-radius:999px;display:inline-block;">+ experience</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:18px;padding:1.1em 1.4em 1.2em;text-align:center;box-shadow:0 6px 22px rgba(44,132,117,0.12);min-width:9em;">
+   <div style="width:3em;height:3em;border-radius:50%;background:#E5F2EE;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6em;color:#2C8475;font-size:1.3em;">🤖</div>
+   <div style="font-size:0.85em;font-weight:700;color:#2C3E50;margin-bottom:0.5em;">Agent</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#2C8475;background:#E5F2EE;padding:0.2em 0.6em;border-radius:999px;display:inline-block;">+ harness</div>
+  </div>
+
+ </div>
+
+ <div style="margin-top:0.95em;font-family:'Maple Mono',monospace;font-size:0.55em;color:#9B8EA0;letter-spacing:0.06em;font-style:italic;">
+  experience for humans &nbsp;·&nbsp; harness for agents
+ </div>
+
+</div>
+```

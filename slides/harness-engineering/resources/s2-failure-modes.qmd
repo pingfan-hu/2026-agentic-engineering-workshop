@@ -1,0 +1,45 @@
+```{=html}
+<div style="width:92%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:0.55em;text-align:left;">
+
+ <div style="background:#FFFFFF;border-radius:12px;padding:0.7em 0.9em;display:grid;grid-template-columns:1.4em 1fr;gap:0.6em;align-items:center;border-left:3px solid #D45F47;">
+  <div style="font-family:'Maple Mono',monospace;font-weight:900;color:#D45F47;font-size:1em;">⚠</div>
+  <div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#7A2418;font-weight:700;">self-evaluation bias</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.4;margin-top:0.15em;">→ separate evaluator agent <span style="color:#5654A2;font-family:'Maple Mono',monospace;">[P1]</span></div>
+  </div>
+ </div>
+
+ <div style="background:#FFFFFF;border-radius:12px;padding:0.7em 0.9em;display:grid;grid-template-columns:1.4em 1fr;gap:0.6em;align-items:center;border-left:3px solid #D45F47;">
+  <div style="font-family:'Maple Mono',monospace;font-weight:900;color:#D45F47;font-size:1em;">⚠</div>
+  <div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#7A2418;font-weight:700;">context degradation</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.4;margin-top:0.15em;">→ reset + file handoffs <span style="color:#5654A2;font-family:'Maple Mono',monospace;">[P3]</span></div>
+  </div>
+ </div>
+
+ <div style="background:#FFFFFF;border-radius:12px;padding:0.7em 0.9em;display:grid;grid-template-columns:1.4em 1fr;gap:0.6em;align-items:center;border-left:3px solid #D45F47;">
+  <div style="font-family:'Maple Mono',monospace;font-weight:900;color:#D45F47;font-size:1em;">⚠</div>
+  <div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#7A2418;font-weight:700;">spec brittleness</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.4;margin-top:0.15em;">→ keep spec high-level, use sprint contracts</div>
+  </div>
+ </div>
+
+ <div style="background:#FFFFFF;border-radius:12px;padding:0.7em 0.9em;display:grid;grid-template-columns:1.4em 1fr;gap:0.6em;align-items:center;border-left:3px solid #D45F47;">
+  <div style="font-family:'Maple Mono',monospace;font-weight:900;color:#D45F47;font-size:1em;">⚠</div>
+  <div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#7A2418;font-weight:700;">incomplete QA testing</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.4;margin-top:0.15em;">→ prompt evaluator to probe deeply, refine</div>
+  </div>
+ </div>
+
+ <div style="background:#FFFFFF;border-radius:12px;padding:0.7em 0.9em;display:grid;grid-template-columns:1.4em 1fr;gap:0.6em;align-items:center;border-left:3px solid #D45F47;grid-column:1 / -1;">
+  <div style="font-family:'Maple Mono',monospace;font-weight:900;color:#D45F47;font-size:1em;">⚠</div>
+  <div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#7A2418;font-weight:700;">feature stubbing</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.4;margin-top:0.15em;">→ evaluator tests for completeness, files bugs against stubs</div>
+  </div>
+ </div>
+
+</div>
+```

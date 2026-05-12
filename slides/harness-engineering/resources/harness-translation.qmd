@@ -1,0 +1,14 @@
+```{=html}
+<div style="width:80%;margin:0 auto;text-align:center;">
+
+ <div style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#9B8EA0;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.7em;">in plain language</div>
+
+ <div style="background:#FFFFFF;border-radius:18px;padding:1.5em 1.8em;box-shadow:0 8px 28px rgba(86,84,162,0.12);border:1px solid #EEEDF8;font-size:0.85em;color:#2C3E50;line-height:1.6;">
+  In an Agent system,<br>
+  besides the <span style="color:#7B2CBF;font-weight:700;">model itself</span>,<br>
+  almost everything that determines whether it can <span style="color:#C4881A;font-weight:700;">deliver reliably</span><br>
+  can be counted as <span style="color:#2C8475;font-weight:700;">Harness</span>.
+ </div>
+
+</div>
+```

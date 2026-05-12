@@ -1,0 +1,48 @@
+```{=html}
+<div style="width:90%;margin:0 auto;">
+
+ <div style="text-align:center;margin-bottom:0.85em;">
+  <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#3A7DC9;background:#DCE9FA;padding:0.25em 0.7em;border-radius:999px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;">Layer 04 · State &amp; Memory</span>
+  <div style="margin-top:0.55em;font-size:0.7em;color:#2C3E50;">Distinguish at least <span style="color:#3A7DC9;font-weight:700;">three categories</span>:</div>
+ </div>
+
+ <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.55em;text-align:left;">
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;box-shadow:0 4px 14px rgba(58,125,201,0.1);border-top:3px solid #3A7DC9;">
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.45em;">
+    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#DCE9FA;display:flex;align-items:center;justify-content:center;color:#3A7DC9;"><i data-lucide="list-checks" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">type 01</div>
+   </div>
+   <div style="font-size:0.65em;font-weight:700;color:#3A7DC9;margin-bottom:0.4em;">Current task state</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.55;">
+    <div style="opacity:0.5;">step 1 done</div>
+    <div style="color:#3A7DC9;font-weight:700;">step 2 in progress</div>
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;box-shadow:0 4px 14px rgba(196,136,26,0.1);border-top:3px solid #C4881A;">
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.45em;">
+    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#FEF5E7;display:flex;align-items:center;justify-content:center;color:#C4881A;"><i data-lucide="file-text" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">type 02</div>
+   </div>
+   <div style="font-size:0.65em;font-weight:700;color:#C4881A;margin-bottom:0.4em;">Session intermediate</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.55;font-family:'Maple Mono',monospace;background:#FFFBF0;padding:0.3em 0.45em;border-radius:5px;">
+    "API supports <span style="color:#C4881A;">https://...</span>"
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;box-shadow:0 4px 14px rgba(212,95,71,0.1);border-top:3px solid #D45F47;">
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.45em;">
+    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#FCEEEC;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="star" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">type 03</div>
+   </div>
+   <div style="font-size:0.65em;font-weight:700;color:#D45F47;margin-bottom:0.4em;">Long-term &amp; preferences</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.55;font-family:'Maple Mono',monospace;background:#FCF1EE;padding:0.3em 0.45em;border-radius:5px;">
+    "user prefers <span style="color:#D45F47;">Python</span>,<br>tabs not spaces"
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

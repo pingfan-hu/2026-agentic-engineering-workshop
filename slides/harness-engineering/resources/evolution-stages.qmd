@@ -1,0 +1,41 @@
+```{=html}
+<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="text-align:center;font-size:0.75em;color:#2C3E50;margin-bottom:1em;line-height:1.4;">
+  Past two years, AI engineering has gone through <span style="color:#FFB84D;font-weight:700;">three obvious shifts of focus</span>
+ </div>
+
+ <div style="display:grid;grid-template-columns:1fr 0.15fr 1fr 0.15fr 1fr;align-items:center;gap:0.4em;">
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.95em 0.85em 1em;text-align:center;box-shadow:0 6px 22px rgba(86,84,162,0.1);border-top:4px solid #5654A2;">
+   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:linear-gradient(135deg,#EEEDF8,#D6D2EF);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5em;color:#5654A2;">
+    <i data-lucide="message-circle" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i>
+   </div>
+   <div style="font-size:0.7em;font-weight:700;color:#5654A2;line-height:1.2;">Prompt<br>Engineering</div>
+   <div style="font-size:0.5em;color:#9B8EA0;line-height:1.45;margin-top:0.45em;">Did the model<br>hear what we said?</div>
+  </div>
+
+  <div style="font-family:'Maple Mono',monospace;font-size:1em;color:#9B8EA0;text-align:center;font-weight:700;">→</div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.95em 0.85em 1em;text-align:center;box-shadow:0 6px 22px rgba(196,136,26,0.1);border-top:4px solid #C4881A;">
+   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:linear-gradient(135deg,#FEF5E7,#FAE9C8);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5em;color:#C4881A;">
+    <i data-lucide="book-open" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i>
+   </div>
+   <div style="font-size:0.7em;font-weight:700;color:#C4881A;line-height:1.2;">Context<br>Engineering</div>
+   <div style="font-size:0.5em;color:#9B8EA0;line-height:1.45;margin-top:0.45em;">Does the model have<br>the right info?</div>
+  </div>
+
+  <div style="font-family:'Maple Mono',monospace;font-size:1em;color:#9B8EA0;text-align:center;font-weight:700;">→</div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.95em 0.85em 1em;text-align:center;box-shadow:0 6px 22px rgba(44,132,117,0.12);border-top:4px solid #2C8475;">
+   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5em;color:#2C8475;">
+    <i data-lucide="settings" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i>
+   </div>
+   <div style="font-size:0.7em;font-weight:700;color:#2C8475;line-height:1.2;">Harness<br>Engineering</div>
+   <div style="font-size:0.5em;color:#9B8EA0;line-height:1.45;margin-top:0.45em;">Can the model<br>execute reliably?</div>
+  </div>
+
+ </div>
+
+</div>
+```

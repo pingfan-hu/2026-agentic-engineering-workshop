@@ -1,0 +1,46 @@
+```{=html}
+<div style="width:78%;margin:0 auto;">
+
+ <div style="background:#FFFFFF;border:2px solid #5654A2;border-radius:14px;padding:1em 1.3em;box-shadow:0 6px 22px rgba(86,84,162,0.15);text-align:left;">
+
+  <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#5654A2;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.5em;display:flex;align-items:center;gap:0.4em;"><i data-lucide="clipboard-list" style="width:1em;height:1em;stroke-width:1.8;"></i>starter checklist · your next non-trivial project</div>
+
+  <ul style="list-style:none;padding:0;margin:0;font-size:0.62em;line-height:1.85;color:#564232;">
+   <li style="display:flex;gap:0.6em;align-items:flex-start;">
+    <span style="display:inline-block;width:0.95em;height:0.95em;border:1.5px solid #5654A2;border-radius:3px;flex-shrink:0;margin-top:0.25em;"></span>
+    What's my baseline failure mode?
+   </li>
+   <li style="display:flex;gap:0.6em;align-items:flex-start;">
+    <span style="display:inline-block;width:0.95em;height:0.95em;border:1.5px solid #5654A2;border-radius:3px;flex-shrink:0;margin-top:0.25em;"></span>
+    Do I need a planner, an evaluator, or both?
+   </li>
+   <li style="display:flex;gap:0.6em;align-items:flex-start;">
+    <span style="display:inline-block;width:0.95em;height:0.95em;border:1.5px solid #5654A2;border-radius:3px;flex-shrink:0;margin-top:0.25em;"></span>
+    What are my <strong>3–6</strong> gradable success criteria?
+   </li>
+   <li style="display:flex;gap:0.6em;align-items:flex-start;">
+    <span style="display:inline-block;width:0.95em;height:0.95em;border:1.5px solid #5654A2;border-radius:3px;flex-shrink:0;margin-top:0.25em;"></span>
+    What does my sprint contract template look like?
+   </li>
+   <li style="display:flex;gap:0.6em;align-items:flex-start;">
+    <span style="display:inline-block;width:0.95em;height:0.95em;border:1.5px solid #5654A2;border-radius:3px;flex-shrink:0;margin-top:0.25em;"></span>
+    What tool does my evaluator use to <em>interactively</em> verify?
+   </li>
+   <li style="display:flex;gap:0.6em;align-items:flex-start;">
+    <span style="display:inline-block;width:0.95em;height:0.95em;border:1.5px solid #5654A2;border-radius:3px;flex-shrink:0;margin-top:0.25em;"></span>
+    Where do my structured handoffs live?
+   </li>
+   <li style="display:flex;gap:0.6em;align-items:flex-start;">
+    <span style="display:inline-block;width:0.95em;height:0.95em;border:1.5px solid #5654A2;border-radius:3px;flex-shrink:0;margin-top:0.25em;"></span>
+    What's my reset trigger?
+   </li>
+  </ul>
+
+  <div style="margin-top:0.7em;padding-top:0.55em;border-top:1px dashed #C4C3E8;text-align:center;font-family:'Maple Mono',monospace;font-size:0.55em;color:#5654A2;font-weight:700;">
+   answer these → you have a harness
+  </div>
+
+ </div>
+
+</div>
+```

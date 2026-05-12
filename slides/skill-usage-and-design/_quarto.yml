@@ -3,3 +3,8 @@ project:
 
 metadata-files:
   - ../_shared.yml
+
+format:
+  revealjs:
+    include-in-header:
+      - resources/_header.html

@@ -1,0 +1,40 @@
+```{=html}
+<div style="width:90%;margin:0 auto;">
+
+ <div style="display:flex;align-items:center;justify-content:center;gap:0.5em;margin-bottom:0.8em;">
+  <span style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#9B8EA0;letter-spacing:0.14em;text-transform:uppercase;">stage</span>
+  <span style="font-family:'Maple Mono',monospace;font-size:1.4em;font-weight:900;color:#3A7DC9;line-height:1;">04</span>
+  <span style="font-size:0.85em;font-weight:700;color:#2C3E50;">Interactive verification</span>
+ </div>
+
+ <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.45em;text-align:left;margin-bottom:0.85em;">
+  <div style="background:#FFFFFF;border-radius:10px;padding:0.6em 0.75em;border-left:3px solid #3A7DC9;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#3A7DC9;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.2em;">frontend</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.6em;color:#564232;font-weight:700;">Playwright MCP</div>
+   <div style="font-size:0.5em;color:#9B8EA0;line-height:1.4;margin-top:0.15em;">click · type · screenshot</div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:10px;padding:0.6em 0.75em;border-left:3px solid #3A7DC9;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#3A7DC9;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.2em;">backend</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.6em;color:#564232;font-weight:700;">HTTP MCP</div>
+   <div style="font-size:0.5em;color:#9B8EA0;line-height:1.4;margin-top:0.15em;">hit API · assert response</div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:10px;padding:0.6em 0.75em;border-left:3px solid #3A7DC9;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#3A7DC9;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.2em;">data</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.6em;color:#564232;font-weight:700;">Query MCP</div>
+   <div style="font-size:0.5em;color:#9B8EA0;line-height:1.4;margin-top:0.15em;">run analysis end-to-end</div>
+  </div>
+ </div>
+
+ <div style="display:flex;align-items:stretch;gap:0;border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,0.08);text-align:left;">
+  <div style="flex:1;background:#F8F7F0;padding:0.75em 0.95em;border-right:2px dashed #C4C3E8;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3em;">static review catches</div>
+   <div style="font-size:0.55em;color:#564232;line-height:1.55;">typos · structure issues · surface bugs</div>
+  </div>
+  <div style="flex:1;background:#E5F2EE;padding:0.75em 0.95em;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#1F5E54;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3em;">interactive catches</div>
+   <div style="font-size:0.55em;color:#564232;line-height:1.55;"><strong style="color:#1F5E54;">races · integration failures · real edge cases</strong></div>
+  </div>
+ </div>
+
+</div>
+```

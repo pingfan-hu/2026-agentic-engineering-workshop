@@ -1,0 +1,49 @@
+```{=html}
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.65em;text-align:left;">
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.8em 0.95em;box-shadow:0 4px 14px rgba(212,95,71,0.1);border-left:4px solid #D45F47;">
+   <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.35em;">
+    <div style="width:1.5em;height:1.5em;border-radius:0.35em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);color:#D45F47;display:flex;align-items:center;justify-content:center;"><i data-lucide="triangle-alert" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.6em;color:#7A2418;font-weight:700;">kitchen-sink</div>
+   </div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.5;">
+    <code style="font-family:'Maple Mono',monospace;color:#D45F47;background:#FCEEEC;padding:0.05em 0.3em;border-radius:4px;">/do-everything</code> branching into 10. <strong>Split it.</strong>
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.8em 0.95em;box-shadow:0 4px 14px rgba(212,95,71,0.1);border-left:4px solid #D45F47;">
+   <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.35em;">
+    <div style="width:1.5em;height:1.5em;border-radius:0.35em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);color:#D45F47;display:flex;align-items:center;justify-content:center;"><i data-lucide="copy" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.6em;color:#7A2418;font-weight:700;">CLAUDE.md duplicate</div>
+   </div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.5;">
+    Restates rules already loaded. <strong>Delete one.</strong>
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.8em 0.95em;box-shadow:0 4px 14px rgba(212,95,71,0.1);border-left:4px solid #D45F47;">
+   <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.35em;">
+    <div style="width:1.5em;height:1.5em;border-radius:0.35em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);color:#D45F47;display:flex;align-items:center;justify-content:center;"><i data-lucide="bomb" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.6em;color:#7A2418;font-weight:700;">auto-trigger landmine</div>
+   </div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.5;">
+    Side-effect skill without <code style="font-family:'Maple Mono',monospace;color:#D45F47;font-size:0.85em;">disable-model-invocation</code>.
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.8em 0.95em;box-shadow:0 4px 14px rgba(212,95,71,0.1);border-left:4px solid #D45F47;">
+   <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.35em;">
+    <div style="width:1.5em;height:1.5em;border-radius:0.35em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);color:#D45F47;display:flex;align-items:center;justify-content:center;font-size:0.85em;font-weight:900;">?</div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.6em;color:#7A2418;font-weight:700;">unverified</div>
+   </div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.5;">
+    No "how to confirm it worked." <strong>You'll catch failures by hand.</strong>
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

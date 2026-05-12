@@ -1,0 +1,47 @@
+```{=html}
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="display:grid;grid-template-columns:1.2fr 0.9fr;gap:1em;align-items:start;">
+
+  <div style="border-radius:12px;overflow:hidden;background:#1E1E2E;box-shadow:0 8px 22px rgba(0,0,0,0.18);">
+   <div style="background:linear-gradient(180deg,#3A3950,#2A2940);padding:0.4em 0.7em;display:flex;align-items:center;gap:0.35em;">
+    <span style="width:0.5em;height:0.5em;border-radius:50%;background:#FF5F56;"></span>
+    <span style="width:0.5em;height:0.5em;border-radius:50%;background:#FFBD2E;"></span>
+    <span style="width:0.5em;height:0.5em;border-radius:50%;background:#27C93F;"></span>
+    <span style="margin-left:0.5em;font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;">SKILL.md</span>
+   </div>
+   <div style="padding:0.85em 1.1em;font-family:'Maple Mono',monospace;font-size:0.55em;line-height:1.7;text-align:left;color:#F8F7F0;">
+    <div style="background:rgba(86,84,162,0.15);margin:-0.85em -1.1em 0.4em;padding:0.3em 1.1em;border-left:3px solid #5654A2;color:#C4C3E8;font-size:0.85em;font-style:italic;">— frontmatter —</div>
+    <div style="color:#5C6B80;">---</div>
+    <div><span style="color:#69B4F0;">name:</span> <span style="color:#27C93F;">fix-issue</span></div>
+    <div><span style="color:#69B4F0;">description:</span> <span style="color:#FFB84D;">Fix a GitHub issue</span></div>
+    <div><span style="color:#69B4F0;">disable-model-invocation:</span> <span style="color:#FF6F8E;">true</span></div>
+    <div style="color:#5C6B80;">---</div>
+    <div style="background:rgba(255,184,77,0.12);margin:0.4em -1.1em;padding:0.3em 1.1em;border-left:3px solid #FFB84D;color:#FFE5B0;font-size:0.85em;font-style:italic;">— body —</div>
+    <div>1. <span style="color:#FFB84D;">gh issue view</span></div>
+    <div>2. search the codebase</div>
+    <div>3. implement the fix</div>
+    <div>4. write &amp; run tests</div>
+    <div>5. commit, push, open PR</div>
+   </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:0.5em;text-align:left;">
+   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border-left:3px solid #5654A2;">
+    <code style="font-family:'Maple Mono',monospace;font-size:0.6em;color:#5654A2;font-weight:700;">name</code>
+    <div style="font-size:0.5em;color:#564232;line-height:1.4;margin-top:0.15em;">Becomes <code style="font-family:'Maple Mono',monospace;color:#5654A2;">/name</code>. Keep short.</div>
+   </div>
+   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border-left:3px solid #5654A2;">
+    <code style="font-family:'Maple Mono',monospace;font-size:0.6em;color:#5654A2;font-weight:700;">description</code>
+    <div style="font-size:0.5em;color:#564232;line-height:1.4;margin-top:0.15em;">Powers auto-trigger.</div>
+   </div>
+   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(212,95,71,0.08);border-left:3px solid #D45F47;">
+    <code style="font-family:'Maple Mono',monospace;font-size:0.55em;color:#D45F47;font-weight:700;">disable-model-invocation</code>
+    <div style="font-size:0.5em;color:#564232;line-height:1.4;margin-top:0.15em;">Opt-out for side-effect skills.</div>
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

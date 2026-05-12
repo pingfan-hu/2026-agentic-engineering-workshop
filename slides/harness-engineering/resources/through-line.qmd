@@ -1,0 +1,19 @@
+```{=html}
+<div style="width:88%;margin:0 auto;text-align:left;">
+
+ <div style="position:relative;background:rgba(255,184,77,0.08);border-left:5px solid #FFB84D;border-radius:0 14px 14px 0;padding:1.4em 1.7em 1.5em;">
+  <div style="position:absolute;top:0.4em;left:0.7em;font-family:'Georgia',serif;font-size:5em;color:#FFB84D;line-height:0.7;opacity:0.18;user-select:none;">"</div>
+  <div style="position:relative;font-size:0.95em;line-height:1.55;color:#F8F7F0;font-style:italic;font-family:'Georgia','TsangerJinKai',serif;">
+   Every component in a harness encodes an <span style="color:#FFB84D;font-style:normal;font-weight:700;">assumption</span> about what the model can't do on its own — and those assumptions are worth <span style="color:#FFB84D;font-style:normal;font-weight:700;">stress testing</span>.
+  </div>
+  <div style="margin-top:0.7em;text-align:right;font-family:'Maple Mono',monospace;font-size:0.55em;color:#9B8EA0;letter-spacing:0.05em;">
+   — Anthropic Engineering, <em>Harness Design</em> (Mar 2026)
+  </div>
+ </div>
+
+ <div style="margin-top:1em;text-align:center;font-family:'Maple Mono',monospace;font-size:0.65em;color:#FFB84D;letter-spacing:0.06em;">
+  hold onto this — it's the whole part in one sentence
+ </div>
+
+</div>
+```

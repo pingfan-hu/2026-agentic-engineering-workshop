@@ -1,0 +1,21 @@
+```{=html}
+<div style="width:88%;margin:0 auto;text-align:left;">
+
+ <div style="position:relative;background:rgba(255,184,77,0.08);border-left:5px solid #FFB84D;border-radius:0 14px 14px 0;padding:1.4em 1.7em 1.5em;margin-bottom:1em;">
+  <div style="position:absolute;top:0.4em;left:0.7em;font-family:'Georgia',serif;font-size:5em;color:#FFB84D;line-height:0.7;opacity:0.18;user-select:none;">"</div>
+  <div style="position:relative;font-size:0.9em;line-height:1.55;color:#F8F7F0;font-style:italic;font-family:'Georgia','TsangerJinKai',serif;">
+   Every component in your setup — every <code style="font-family:'Maple Mono',monospace;color:#FFB84D;font-style:normal;">CLAUDE.md</code> instruction, every skill, every harness piece — encodes an <span style="color:#FFB84D;font-style:normal;font-weight:700;">assumption</span> about what the model can't do on its own.<br>
+   Treat those assumptions as living. <span style="color:#FFB84D;font-style:normal;font-weight:700;">Stress-test them as the model improves.</span>
+  </div>
+ </div>
+
+ <div style="text-align:center;font-size:1.3em;font-weight:700;color:#F8F7F0;line-height:1.3;letter-spacing:-0.01em;margin-bottom:0.8em;">
+  Stop handcrafting. <span style="color:#FFB84D;">Start conducting.</span>
+ </div>
+
+ <div style="text-align:center;font-family:'Maple Mono',monospace;font-size:0.7em;color:#FFB84D;letter-spacing:0.1em;border-top:1px dashed rgba(255,184,77,0.4);padding-top:0.7em;">
+  thank you ✦
+ </div>
+
+</div>
+```

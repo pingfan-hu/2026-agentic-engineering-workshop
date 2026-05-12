@@ -1,0 +1,29 @@
+```{=html}
+<div style="width:78%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="border-radius:14px;overflow:hidden;background:#1E1E2E;box-shadow:0 12px 32px rgba(0,0,0,0.18);">
+  <div style="background:linear-gradient(180deg,#3A3950,#2A2940);padding:0.5em 0.85em;display:flex;align-items:center;gap:0.4em;">
+   <span style="width:0.5em;height:0.5em;border-radius:50%;background:#FF5F56;"></span>
+   <span style="width:0.5em;height:0.5em;border-radius:50%;background:#FFBD2E;"></span>
+   <span style="width:0.5em;height:0.5em;border-radius:50%;background:#27C93F;"></span>
+   <span style="margin:0 auto;font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;">your-project · tree -L 2</span>
+  </div>
+
+  <div style="padding:0.95em 1.4em 1.1em;font-family:'Maple Mono',monospace;font-size:0.55em;line-height:1.7;text-align:left;color:#F8F7F0;">
+   <div><span style="color:#3DA18A;font-weight:700;">your-project/</span></div>
+   <div><span style="color:#5C6B80;">├── </span><span style="color:#FFB84D;">CLAUDE.md</span> <span style="color:#5C6B80;font-style:italic;">// auto-loaded</span></div>
+   <div><span style="color:#5C6B80;">├── </span><span style="color:#69B4F0;font-weight:700;">.claude/</span></div>
+   <div><span style="color:#5C6B80;">│&nbsp;&nbsp; ├── </span><span style="color:#69B4F0;">rules/</span> <span style="color:#5C6B80;font-style:italic;">// on-demand</span></div>
+   <div><span style="color:#5C6B80;">│&nbsp;&nbsp; ├── </span><span style="color:#69B4F0;">skills/</span> <span style="color:#5C6B80;font-style:italic;">// slash commands</span></div>
+   <div><span style="color:#5C6B80;">│&nbsp;&nbsp; ├── </span><span style="color:#69B4F0;">agents/</span> <span style="color:#5C6B80;font-style:italic;">// subagents</span></div>
+   <div><span style="color:#5C6B80;">│&nbsp;&nbsp; └── </span><span style="color:#FFB84D;">settings.json</span> <span style="color:#5C6B80;font-style:italic;">// hooks</span></div>
+   <div><span style="color:#5C6B80;">└── </span><span style="color:#69B4F0;font-weight:700;">docs/ai/</span> <span style="color:#5C6B80;font-style:italic;">// shared docs</span></div>
+  </div>
+ </div>
+
+ <div style="margin-top:0.85em;text-align:center;font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;">
+  shape varies — <span style="color:#5654A2;font-weight:700;">every piece has a home</span>
+ </div>
+
+</div>
+```
