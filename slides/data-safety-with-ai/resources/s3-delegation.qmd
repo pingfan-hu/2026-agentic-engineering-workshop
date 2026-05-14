@@ -1,0 +1,51 @@
+```{=html}
+<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.4em 1em;border-radius:18px;">
+
+ <div style="display:flex;flex-direction:column;gap:0.4em;text-align:left;">
+
+  <div style="display:grid;grid-template-columns:2fr 1fr 2fr;gap:0.6em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.55em 0.95em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border-left:4px solid #2C8475;">
+   <div style="font-size:0.6em;color:#2C3E50;font-weight:700;">Boilerplate &amp; syntax</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#2C8475;background:#E5F2EE;padding:0.2em 0.55em;border-radius:999px;text-align:center;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;">delegate</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.45;font-style:italic;">checkable in seconds</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:2fr 1fr 2fr;gap:0.6em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.55em 0.95em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border-left:4px solid #2C8475;">
+   <div style="font-size:0.6em;color:#2C3E50;font-weight:700;">First draft of transformation code</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#C4881A;background:#FEF5E7;padding:0.2em 0.55em;border-radius:999px;text-align:center;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;">delegate, then read</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.45;font-style:italic;">reason every line yourself</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:2fr 1fr 2fr;gap:0.6em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.55em 0.95em;box-shadow:0 4px 14px rgba(212,95,71,0.08);border-left:4px solid #D45F47;">
+   <div style="font-size:0.6em;color:#2C3E50;font-weight:700;">Handling missing values</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#D45F47;background:#FCEEEC;padding:0.2em 0.55em;border-radius:999px;text-align:center;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;">keep</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.45;font-style:italic;">no ground truth &mdash; your call</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:2fr 1fr 2fr;gap:0.6em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.55em 0.95em;box-shadow:0 4px 14px rgba(212,95,71,0.08);border-left:4px solid #D45F47;">
+   <div style="font-size:0.6em;color:#2C3E50;font-weight:700;">Picking a model specification</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#D45F47;background:#FCEEEC;padding:0.2em 0.55em;border-radius:999px;text-align:center;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;">keep</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.45;font-style:italic;">theory + judgment</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:2fr 1fr 2fr;gap:0.6em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.55em 0.95em;box-shadow:0 4px 14px rgba(212,95,71,0.08);border-left:4px solid #D45F47;">
+   <div style="font-size:0.6em;color:#2C3E50;font-weight:700;">Interpreting model output</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#D45F47;background:#FCEEEC;padding:0.2em 0.55em;border-radius:999px;text-align:center;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;">keep</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.45;font-style:italic;">this <em>is</em> the analysis</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:2fr 1fr 2fr;gap:0.6em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.55em 0.95em;box-shadow:0 4px 14px rgba(212,95,71,0.08);border-left:4px solid #D45F47;">
+   <div style="font-size:0.6em;color:#2C3E50;font-weight:700;">Drafting the methods section</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#D45F47;background:#FCEEEC;padding:0.2em 0.55em;border-radius:999px;text-align:center;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;">keep</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.45;font-style:italic;">how you defend the work</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:2fr 1fr 2fr;gap:0.6em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.55em 0.95em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border-left:4px solid #2C8475;">
+   <div style="font-size:0.6em;color:#2C3E50;font-weight:700;">Reformatting the methods section</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#2C8475;background:#E5F2EE;padding:0.2em 0.55em;border-radius:999px;text-align:center;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;">delegate</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.45;font-style:italic;">mechanics, not decisions</div>
+  </div>
+
+ </div>
+
+</div>
+```

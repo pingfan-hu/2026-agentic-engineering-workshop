@@ -40,9 +40,9 @@ website:
       - icon: tools
         href: skill-usage-and-design.qmd
         text: Skill Usage and Design
-      - icon: diagram-3
-        href: harness-engineering.qmd
-        text: Harness Engineering
+      - icon: shield-check
+        href: data-safety-with-ai.qmd
+        text: Data Safety with AI
 
     tools:
       - icon: github

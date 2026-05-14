@@ -1,0 +1,73 @@
+```{=html}
+<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.7em;">
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border-top:4px solid #2C8475;">
+   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45em;">
+    <div style="display:flex;align-items:center;gap:0.5em;">
+     <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="recycle" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.78em;font-weight:700;color:#2C8475;">Boilerplate</div>
+    </div>
+    <span style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;letter-spacing:0.1em;">SAFE · 01</span>
+   </div>
+   <div style="font-size:0.55em;color:#564232;line-height:1.5;margin-bottom:0.4em;">Imports, themes, axis labels, file I/O.</div>
+   <div style="display:flex;flex-wrap:wrap;gap:0.2em;">
+    <code style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#E5F2EE;padding:0.15em 0.4em;border-radius:4px;color:#2C8475;">library()</code>
+    <code style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#E5F2EE;padding:0.15em 0.4em;border-radius:4px;color:#2C8475;">theme_*</code>
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border-top:4px solid #2C8475;">
+   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45em;">
+    <div style="display:flex;align-items:center;gap:0.5em;">
+     <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="git-branch" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.78em;font-weight:700;color:#2C8475;">Translation</div>
+    </div>
+    <span style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;letter-spacing:0.1em;">SAFE · 02</span>
+   </div>
+   <div style="font-size:0.55em;color:#564232;line-height:1.5;margin-bottom:0.4em;">R↔Python, Stata→R, SQL dialects.</div>
+   <div style="display:flex;flex-wrap:wrap;gap:0.2em;">
+    <code style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#E5F2EE;padding:0.15em 0.4em;border-radius:4px;color:#2C8475;">R → Py</code>
+    <code style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#E5F2EE;padding:0.15em 0.4em;border-radius:4px;color:#2C8475;">Stata → R</code>
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border-top:4px solid #2C8475;">
+   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45em;">
+    <div style="display:flex;align-items:center;gap:0.5em;">
+     <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="file-text" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.78em;font-weight:700;color:#2C8475;">Documentation</div>
+    </div>
+    <span style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;letter-spacing:0.1em;">SAFE · 03</span>
+   </div>
+   <div style="font-size:0.55em;color:#564232;line-height:1.5;margin-bottom:0.4em;">Variable names, docstrings, READMEs.</div>
+   <div style="display:flex;flex-wrap:wrap;gap:0.2em;">
+    <code style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#E5F2EE;padding:0.15em 0.4em;border-radius:4px;color:#2C8475;">naming</code>
+    <code style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#E5F2EE;padding:0.15em 0.4em;border-radius:4px;color:#2C8475;">README</code>
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border-top:4px solid #2C8475;">
+   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45em;">
+    <div style="display:flex;align-items:center;gap:0.5em;">
+     <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="search" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.78em;font-weight:700;color:#2C8475;">Library lookup</div>
+    </div>
+    <span style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;letter-spacing:0.1em;">SAFE · 04</span>
+   </div>
+   <div style="font-size:0.55em;color:#564232;line-height:1.5;margin-bottom:0.4em;">"How do I do X in <code style="font-family:'Maple Mono',monospace;font-size:0.85em;color:#2C8475;">polars</code>?"</div>
+   <div style="display:flex;flex-wrap:wrap;gap:0.2em;">
+    <code style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#E5F2EE;padding:0.15em 0.4em;border-radius:4px;color:#2C8475;">syntax</code>
+    <code style="font-family:'Maple Mono',monospace;font-size:0.5em;background:#E5F2EE;padding:0.15em 0.4em;border-radius:4px;color:#2C8475;">examples</code>
+   </div>
+  </div>
+
+ </div>
+
+ <div style="margin-top:0.85em;text-align:center;font-family:'Maple Mono',monospace;font-size:0.55em;color:#2C8475;font-style:italic;">
+  rule of thumb &nbsp;·&nbsp; <span style="color:#564232;font-style:normal;">delegate where the right answer is checkable in <strong style="color:#2C8475;">5 seconds</strong></span>
+ </div>
+
+</div>
+```

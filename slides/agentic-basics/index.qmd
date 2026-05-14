@@ -24,11 +24,11 @@ title-slide-attributes:
 
 {{< include resources/s1-two-terms.qmd >}}
 
-## Agent = Model + Harness {.light-centered .center}
+## Agent = Model + Tools {.light-centered .center}
 
 {{< include resources/s1-agent-equation.qmd >}}
 
-## Three shifts of focus {.light-centered .center}
+## Two shifts of focus {.light-centered .center}
 
 {{< include resources/s1-evolution.qmd >}}
 

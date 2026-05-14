@@ -38,9 +38,5 @@
   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#1F5E54;">confirm "done"</span>
  </div>
 
- <div style="margin-top:0.7em;font-family:'Maple Mono',monospace;font-size:0.5em;color:#5654A2;font-style:italic;">
-  → Part 3: full harness
- </div>
-
 </div>
 ```

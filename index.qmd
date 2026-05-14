@@ -30,6 +30,6 @@ grid:
 
 {{< include resources/part-2-overview.qmd >}}
 
-## Part 3: [Harness Engineering](harness-engineering.qmd)
+## Part 3: [Data Safety with AI](data-safety-with-ai.qmd)
 
 {{< include resources/part-3-overview.qmd >}}

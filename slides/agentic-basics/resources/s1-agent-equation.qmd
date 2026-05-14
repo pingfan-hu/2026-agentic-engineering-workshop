@@ -25,15 +25,15 @@
 
   <div style="display:flex;flex-direction:column;align-items:center;gap:0.5em;">
    <div style="width:3.4em;height:3.4em;border-radius:1em;background:linear-gradient(135deg,#E8F5E9,#C8E6C9);display:flex;align-items:center;justify-content:center;color:#2C8475;box-shadow:0 6px 18px rgba(44,132,117,0.2);border:1.5px solid #C8E6C9;">
-    <i data-lucide="settings" style="width:1.5em;height:1.5em;stroke-width:1.8;"></i>
+    <i data-lucide="wrench" style="width:1.5em;height:1.5em;stroke-width:1.8;"></i>
    </div>
-   <div style="font-family:'Maple Mono',monospace;font-size:0.85em;font-weight:700;color:#2C8475;">Harness</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.85em;font-weight:700;color:#2C8475;">Tools</div>
   </div>
 
  </div>
 
  <div style="margin-top:1em;text-align:center;font-size:0.6em;color:#564232;line-height:1.5;">
-  Agentic engineering = building the <span style="color:#2C8475;font-weight:700;">harness</span> around the model.
+  Agentic engineering = giving the model the right <span style="color:#2C8475;font-weight:700;">tools</span> to act.
  </div>
 
 </div>

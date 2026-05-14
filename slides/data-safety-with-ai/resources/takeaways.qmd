@@ -1,0 +1,33 @@
+```{=html}
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="display:flex;flex-direction:column;gap:0.55em;text-align:left;">
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.6em 1fr;gap:0.95em;align-items:center;box-shadow:0 4px 14px rgba(212,95,71,0.1);">
+   <div style="width:2.4em;height:2.4em;border-radius:50%;background:linear-gradient(135deg,#D45F47,#B5476A);color:#F8F7F0;display:flex;align-items:center;justify-content:center;font-size:0.95em;font-weight:900;">✓</div>
+   <div>
+    <div style="font-size:0.72em;font-weight:700;color:#D45F47;margin-bottom:0.15em;">Counter-productivity</div>
+    <div style="font-size:0.55em;color:#564232;line-height:1.45;">Speed without supervision = <strong style="color:#2C3E50;">throughput without quality</strong>.</div>
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.6em 1fr;gap:0.95em;align-items:center;box-shadow:0 4px 14px rgba(86,84,162,0.1);">
+   <div style="width:2.4em;height:2.4em;border-radius:50%;background:linear-gradient(135deg,#5654A2,#3F3D7E);color:#F8F7F0;display:flex;align-items:center;justify-content:center;font-size:0.95em;font-weight:900;">✓</div>
+   <div>
+    <div style="font-size:0.72em;font-weight:700;color:#5654A2;margin-bottom:0.15em;">The dilemma</div>
+    <div style="font-size:0.55em;color:#564232;line-height:1.45;">No ground truth → <strong style="color:#2C3E50;">two LLMs agreeing is not evidence</strong>.</div>
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.6em 1fr;gap:0.95em;align-items:center;box-shadow:0 4px 14px rgba(44,132,117,0.1);">
+   <div style="width:2.4em;height:2.4em;border-radius:50%;background:linear-gradient(135deg,#2C8475,#3DA18A);color:#F8F7F0;display:flex;align-items:center;justify-content:center;font-size:0.95em;font-weight:900;">✓</div>
+   <div>
+    <div style="font-size:0.72em;font-weight:700;color:#2C8475;margin-bottom:0.15em;">A workflow</div>
+    <div style="font-size:0.55em;color:#564232;line-height:1.45;">You own data decisions. <strong style="color:#2C3E50;">You write the methods section.</strong></div>
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

@@ -1,19 +1,19 @@
 <div class="section-outer section-purple">
  <div class="section-header">
-  <span class="section-header-text">In this section, we will discuss how to engineer your own agentic harness.</span>
+  <span class="section-header-text">In this section, we will discuss how to keep AI assistance safe for data-science work.</span>
  </div>
  <div class="section-grid section-grid-3">
   <div class="section-card">
-   <div class="section-card-icon"><i data-lucide="boxes"></i></div>
-   <div class="section-label">Components of a Harness</div>
+   <div class="section-card-icon"><i data-lucide="gauge"></i></div>
+   <div class="section-label">Counter-productivity of AI</div>
   </div>
   <div class="section-card">
-   <div class="section-card-icon"><i data-lucide="award"></i></div>
-   <div class="section-label">Successful Harness Practices</div>
+   <div class="section-card-icon"><i data-lucide="git-fork"></i></div>
+   <div class="section-label">The Data-Science Dilemma</div>
   </div>
   <div class="section-card">
-   <div class="section-card-icon"><i data-lucide="hammer"></i></div>
-   <div class="section-label">Design Your Own Harness</div>
+   <div class="section-card-icon"><i data-lucide="shield-check"></i></div>
+   <div class="section-label">A Successful Workflow</div>
   </div>
  </div>
 </div>

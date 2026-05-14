@@ -1,0 +1,20 @@
+---
+title: "Data Safety with AI"
+---
+
+```{=html}
+<div class="slide-embed">
+  <iframe
+    src="slides/data-safety-with-ai/"
+    title="Data Safety with AI slides"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
+<p class="slide-embed-link">
+  <a class="slide-embed-button" href="slides/data-safety-with-ai/" target="_blank" rel="noopener">
+    Open slides in a new tab →
+  </a>
+</p>
+```

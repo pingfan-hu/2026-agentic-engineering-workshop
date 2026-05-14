@@ -1,0 +1,93 @@
+---
+pagetitle: "Data Safety with AI"
+title: "[Data Safety with AI]{.amber}"
+title-slide-attributes:
+  data-background-color: "#2C3E50"
+  data-background-image: figs/banner.png
+  data-background-size: 24%
+  data-background-position: right 20% center
+  class: dark-centered
+  style: text-align:left;
+---
+
+## Recap {.light-centered .center}
+
+{{< include resources/recap.qmd >}}
+
+## [Section 1]{.amber}<br>Counter-productivity of AI {.dark-centered .center}
+
+## Fast [≠]{.coral} Better {.light-centered .center}
+
+{{< include resources/s1-fast-not-better.qmd >}}
+
+## The reviewer's question {.dark-centered .center}
+
+{{< include resources/s1-reviewer-test.qmd >}}
+
+## Three failure modes {.light-centered .center}
+
+{{< include resources/s1-failure-modes.qmd >}}
+
+## The [reasoning]{.teal} is the analysis {.light-centered .center}
+
+{{< include resources/s1-lost-reasoning.qmd >}}
+
+## Where AI [clearly]{.teal} helps {.light-centered .center}
+
+{{< include resources/s1-where-helps.qmd >}}
+
+## [Section 2]{.amber}<br>The dilemma in data science {.dark-centered .center}
+
+## Missing values — [it depends why]{.purple} {.light-centered .center}
+
+{{< include resources/s2-missing-values.qmd >}}
+
+## Every interesting decision {.light-centered .center}
+
+{{< include resources/s2-decisions.qmd >}}
+
+## Why a [harness loop]{.coral} fails here {.light-centered .center}
+
+{{< include resources/s2-harness-fails.qmd >}}
+
+## The credibility question {.dark-centered .center}
+
+{{< include resources/s2-credibility.qmd >}}
+
+## [Section 3]{.amber}<br>A successful workflow {.dark-centered .center}
+
+## Human as [gatekeeper]{.teal} {.light-centered .center}
+
+{{< include resources/s3-gatekeeper.qmd >}}
+
+## Two non-negotiables {.light-centered .center}
+
+{{< include resources/s3-non-negotiables.qmd >}}
+
+## Delegation map {.light-centered .center}
+
+{{< include resources/s3-delegation.qmd >}}
+
+## Pin the decisions in code {.light-centered .center}
+
+{{< include resources/s3-pin-decisions.qmd >}}
+
+## Verify against an [independent]{.teal} check {.light-centered .center}
+
+{{< include resources/s3-verify.qmd >}}
+
+## Two issues data science makes worse {.light-centered .center}
+
+{{< include resources/s3-repro-disclosure.qmd >}}
+
+## [Verify]{.amber}, then trust {.dark-centered .center}
+
+{{< include resources/s3-mindset.qmd >}}
+
+## Three takeaways {.light-centered .center}
+
+{{< include resources/takeaways.qmd >}}
+
+## Thank you {.dark-centered .center}
+
+{{< include resources/closing.qmd >}}

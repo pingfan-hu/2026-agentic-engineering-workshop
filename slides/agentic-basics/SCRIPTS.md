@@ -8,7 +8,7 @@ Organized into the three sections defined in `resources/part-1-overview.qmd`:
 2. **Architecture**
 3. **Handy Tools**
 
-Source: Pingfan's three "Agentic Engineering" blog posts (March–April 2026), with conceptual fill-ins drawn from Anthropic's published material on agent design (notably *Building Effective Agents* and the harness-engineering framing).
+Source: Pingfan's three "Agentic Engineering" blog posts (March–April 2026), with conceptual fill-ins drawn from Anthropic's published material on agent design (notably *Building Effective Agents*).
 
 ---
 
@@ -166,15 +166,14 @@ The single biggest behavioral lever I've found:
 
 The model is already good. Letting it plan first makes it much better.
 
-### The bigger picture: vibe coding → agentic engineering → harness design
+### The bigger picture: vibe coding → agentic engineering
 
 _[Slide: workflow evolution timeline]_
 
-Three terms describe three levels of maturity. They **coexist** — they don't replace each other.
+Two terms describe two levels of maturity. They **coexist** — they don't replace each other.
 
 - **Vibe Coding** — describe what you want, model generates code, hope it works. Outputs are unpredictable; you can't reliably reproduce a good result. Where most people start.
-- **Agentic Engineering** — design agents with rules and skills; they handle complex tasks **reproducibly**. Where most of this workshop lives.
-- **Harness Engineering / Harness Design** — Anthropic's recent framing. The "harness" is the structured environment **around** the model: tools, sandboxes, verifiers, retry logic, evaluation harnesses. Part 3 of this workshop goes deep on this.
+- **Agentic Engineering** — design agents with rules and skills; they handle complex tasks **reproducibly**. Where this workshop lives.
 
 > Stop handcrafting every piece. Start conducting.
 > Set the rules, build the skills, let the agents handle execution.

@@ -1,0 +1,48 @@
+```{=html}
+<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="text-align:center;margin-bottom:0.85em;">
+  <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.25em;">an automated loop, no ground truth</div>
+ </div>
+
+ <div style="display:flex;align-items:center;justify-content:center;gap:0.35em;flex-wrap:wrap;margin-bottom:0.95em;">
+
+  <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.75em;text-align:center;min-width:5.5em;box-shadow:0 4px 14px rgba(86,84,162,0.1);">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.42em;color:#5654A2;letter-spacing:0.12em;text-transform:uppercase;">01</div>
+   <div style="font-size:0.6em;font-weight:700;color:#2C3E50;margin-top:0.1em;">Generator</div>
+   <div style="font-size:0.45em;color:#9B8EA0;line-height:1.4;margin-top:0.15em;">picks plausible default</div>
+  </div>
+
+  <span style="font-family:'Maple Mono',monospace;color:#9B8EA0;font-weight:700;">→</span>
+
+  <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.75em;text-align:center;min-width:5.5em;box-shadow:0 4px 14px rgba(212,95,71,0.1);border:1px dashed #D45F47;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.42em;color:#D45F47;letter-spacing:0.12em;text-transform:uppercase;">02</div>
+   <div style="font-size:0.6em;font-weight:700;color:#2C3E50;margin-top:0.1em;">Reviewer</div>
+   <div style="font-size:0.45em;color:#D45F47;line-height:1.4;margin-top:0.15em;font-style:italic;">agrees &mdash; same training data</div>
+  </div>
+
+  <span style="font-family:'Maple Mono',monospace;color:#9B8EA0;font-weight:700;">→</span>
+
+  <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.75em;text-align:center;min-width:5.5em;box-shadow:0 4px 14px rgba(212,95,71,0.1);border:1px dashed #D45F47;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.42em;color:#D45F47;letter-spacing:0.12em;text-transform:uppercase;">03</div>
+   <div style="font-size:0.6em;font-weight:700;color:#2C3E50;margin-top:0.1em;">Verifier</div>
+   <div style="font-size:0.45em;color:#D45F47;line-height:1.4;margin-top:0.15em;font-style:italic;">checks code runs, not the decision</div>
+  </div>
+
+  <span style="font-family:'Maple Mono',monospace;color:#9B8EA0;font-weight:700;">→</span>
+
+  <div style="background:linear-gradient(135deg,#FCEEEC,#FAD9D2);border-radius:10px;padding:0.55em 0.75em;text-align:center;min-width:5.5em;box-shadow:0 6px 18px rgba(212,95,71,0.2);border:2px solid #D45F47;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.42em;color:#7A2418;letter-spacing:0.12em;text-transform:uppercase;">04</div>
+   <div style="font-size:0.65em;font-weight:700;color:#7A2418;margin-top:0.1em;">Output ships</div>
+   <div style="font-size:0.45em;color:#7A2418;line-height:1.4;margin-top:0.15em;font-weight:700;">silently wrong</div>
+  </div>
+
+ </div>
+
+ <div style="background:#FFFFFF;border-radius:12px;padding:0.7em 1em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border-left:3px solid #5654A2;text-align:left;">
+  <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#5654A2;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.2em;">why it fails</div>
+  <div style="font-size:0.6em;color:#564232;line-height:1.5;">No verifier with ground truth &nbsp;→&nbsp; reviewer is just another generator &nbsp;→&nbsp; <strong style="color:#D45F47;">two LLMs agreeing is not evidence</strong>.</div>
+ </div>
+
+</div>
+```

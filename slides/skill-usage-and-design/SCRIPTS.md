@@ -354,4 +354,4 @@ Three takeaways from Part 2:
 2. **Skill design.** `SKILL.md` = frontmatter (`name`, `description`, optional `disable-model-invocation`) + body. The Gotchas section is the load-bearing piece. Two principles: **less is more**, **define the negatives**. Don't start from blank — extract from a successful session.
 3. **Skill symlinks.** One canonical source, `ln -s` into each project, `.gitignore` the link. Symlink individual skills, never the whole `.claude/`. Graduate to plugins when the set grows.
 
-Hand-off to Part 3: skills are the *behaviors* layer. Part 3 is about the **harness** — the structured environment around all of this (planner / generator / evaluator agents, sprint contracts, verification systems) that makes long-running work reliable.
+Hand-off to Part 3: skills make agents reproducible — but reproducible isn't the same as *correct*. Part 3 is about **Data Safety with AI**: where AI assistance helps a data-science workflow, where it quietly hurts it, and how to keep the data scientist in the loop as the gatekeeper.

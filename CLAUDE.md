@@ -6,8 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A Quarto **website** that hosts the landing pages for a three-part workshop, with each part embedding a Quarto **revealjs** slide deck via `<iframe>`. The website and the slide decks are nested but separate Quarto projects, glued together by a post-render hook.
 
-- Three parts: Agentic Basics, Skill Usage and Design, Harness Engineering
-- Three top-level pages (`agentic-basics.qmd`, `skill-usage-and-design.qmd`, `harness-engineering.qmd`) each iframe their respective deck under `slides/<deck>/`
+- Three parts: Agentic Basics, Skill Usage and Design, Data Safety with AI
+- Three top-level pages (`agentic-basics.qmd`, `skill-usage-and-design.qmd`, `data-safety-with-ai.qmd`) each iframe their respective deck under `slides/<deck>/`
 - Deployed to GitHub Pages via `.github/workflows/quarto-publish.yml` on push to `main`
 
 ## Build / preview
