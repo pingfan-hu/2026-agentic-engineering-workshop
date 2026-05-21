@@ -1,11 +1,17 @@
 ---
 title: "Installation"
-description: "Three CLI agents and a handful of software that round out an agentic engineering workflow."
+description: "A short list of essentials, plus the CLI agents and software that round out an agentic engineering workflow."
 toc: false
 grid:
   sidebar-width: 0px
   margin-width: 0px
 ---
+
+## Essentials
+
+The bare minimum needed to follow the workshop hands-on.
+
+{{< include resources/essentials.qmd >}}
 
 ## Agents
 
