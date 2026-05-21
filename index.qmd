@@ -23,6 +23,10 @@ grid:
 
 <hr>
 
+## Part 0: [Installation](installation.qmd)
+
+{{< include resources/part-0-overview.qmd >}}
+
 ## Part 1: [Agentic Basics](basics.qmd)
 
 {{< include resources/part-1-overview.qmd >}}

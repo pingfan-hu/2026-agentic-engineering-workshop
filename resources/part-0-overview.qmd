@@ -1,0 +1,20 @@
+<div class="section-outer section-blue">
+ <div class="section-header">
+  <span class="section-header-text">Before the workshop, install the tools below to follow along hands-on.</span>
+ </div>
+ <div class="section-grid section-grid-3">
+  <div class="section-sub">Extensive</div>
+  <div class="section-card">
+   <div class="section-card-icon"><i data-lucide="package-check"></i></div>
+   <div class="section-label">Essentials</div>
+  </div>
+  <div class="section-card">
+   <div class="section-card-icon"><i data-lucide="bot"></i></div>
+   <div class="section-label">Agents</div>
+  </div>
+  <div class="section-card">
+   <div class="section-card-icon"><i data-lucide="app-window"></i></div>
+   <div class="section-label">Software</div>
+  </div>
+ </div>
+</div>
