@@ -1127,7 +1127,7 @@ $section-themes: (
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: #E5F0F7;
+  background: #E5E7EB;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1277,7 +1277,7 @@ $section-themes: (
   // hover, and the row-hover tint was bleeding through the transparent
   // platform column.
   .swtbl-row:hover { background: #F8F7F0; }
-  .swtbl-row:hover .swtbl-software-icon { background: #E5F0F7; }
+  .swtbl-row:hover .swtbl-software-icon { background: #E5E7EB; }
 }
 
 // ---- Scroll Animations ----
