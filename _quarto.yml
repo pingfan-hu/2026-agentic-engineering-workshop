@@ -34,15 +34,18 @@ website:
       - icon: house-door
         href: index.qmd
         text: Home
+      - icon: box-seam
+        href: installation.qmd
+        text: 0. Installation
       - icon: mortarboard
-        href: agentic-basics.qmd
-        text: Agentic Basics
+        href: basics.qmd
+        text: 1. Agentic Basics
       - icon: tools
-        href: skill-usage-and-design.qmd
-        text: Skill Usage and Design
+        href: skills.qmd
+        text: 2. Skill Usage and Design
       - icon: shield-check
-        href: data-safety-with-ai.qmd
-        text: Data Safety with AI
+        href: safety.qmd
+        text: 3. Data Safety with AI
 
     tools:
       - icon: github

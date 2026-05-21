@@ -1,0 +1,12 @@
+```{=html}
+<div class="auth-row">
+ <a class="auth-card" href="https://pingfanhu.com" target="_blank" rel="noopener">
+  <img class="auth-image" src="images/pingfan-hu.png" alt="Pingfan Hu" />
+  <span class="auth-name">Pingfan Hu</span>
+ </a>
+ <a class="auth-card" href="https://www.jhelvy.com" target="_blank" rel="noopener">
+  <img class="auth-image" src="images/john-helveston.png" alt="Dr. John Helveston" />
+  <span class="auth-name">Dr. John Helveston</span>
+ </a>
+</div>
+```

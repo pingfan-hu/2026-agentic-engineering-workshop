@@ -1,0 +1,20 @@
+---
+title: "Installation"
+description: "Three CLI agents and a handful of software that round out an agentic engineering workflow."
+toc: false
+grid:
+  sidebar-width: 0px
+  margin-width: 0px
+---
+
+## Agents
+
+Install one of these 3 AI agents (or all of them if you want to collaborate across platforms):
+
+{{< include resources/agents.qmd >}}
+
+## Software
+
+Install these software to support your agentic engineering workflow.
+
+{{< include resources/software.qmd >}}

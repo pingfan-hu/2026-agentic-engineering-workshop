@@ -4,10 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A Quarto **website** that hosts the landing pages for a three-part workshop, with each part embedding a Quarto **revealjs** slide deck via `<iframe>`. The website and the slide decks are nested but separate Quarto projects, glued together by a post-render hook.
+A Quarto **website** hosting the landing surface for a three-part workshop, with each part embedding a Quarto **revealjs** slide deck via `<iframe>`. The parent website and the per-deck slide projects are nested but separate Quarto projects, glued together by a post-render hook.
 
-- Three parts: Agentic Basics, Skill Usage and Design, Data Safety with AI
-- Three top-level pages (`agentic-basics.qmd`, `skill-usage-and-design.qmd`, `data-safety-with-ai.qmd`) each iframe their respective deck under `slides/<deck>/`
+- Three workshop parts: **Agentic Basics**, **Skill Usage and Design**, **Data Safety with AI**
+- Four top-level content pages: `installation.qmd` (pre-workshop setup) plus three slide pages (`basics.qmd`, `skills.qmd`, `safety.qmd`)
 - Deployed to GitHub Pages via `.github/workflows/quarto-publish.yml` on push to `main`
 
 ## Build / preview
@@ -22,40 +22,84 @@ The deployed `_site/` is built end-to-end by the parent `quarto render` — CI d
 
 ## Architecture: nested Quarto projects
 
-This is the only non-obvious part of the repo. Read this before touching `_quarto.yml` files or the build flow.
+The only non-obvious part of the repo. Read this before touching any `_quarto.yml` or the build flow.
 
-**Parent project** (`/_quarto.yml`) — `type: website`, builds the landing pages. It explicitly excludes `slides/**` from its render list (`!slides/**`) so the website doesn't try to render the decks as website pages (which would fight revealjs format and apply the navbar/footer to slides).
+**Parent project** (`/_quarto.yml`) — `type: website`, builds the landing pages. It explicitly excludes `slides/**` from its render list (`!slides/**`) so the website doesn't try to render the decks as website pages (which would fight revealjs format and apply the navbar/footer to slides). It also excludes `**/resources/*.qmd` so partials don't become standalone pages.
 
 **Per-deck projects** (`slides/<deck>/_quarto.yml`) — each deck is its own `type: website` Quarto project so its `_site/` output dir, theme, and revealjs format stay isolated from the parent.
 
-**Glue** — `_quarto.yml` in the parent declares `post-render: [scripts/render-slides.sh]`. After every parent render (including in `quarto preview`), the script renders each `slides/*/` subproject and copies its `_site/` into the parent's `_site/slides/<deck>/` so the iframes resolve. Without the hook the parent re-render would wipe `_site/slides/` and the iframes would 404.
+**Glue** — the parent declares `post-render: [scripts/render-slides.sh]`. After every parent render (including in `quarto preview`), the script renders each `slides/*/` subproject and copies its `_site/` into the parent's `_site/slides/<deck>/` so the iframes resolve. Without the hook the parent re-render would wipe `_site/slides/` and the iframes would 404.
 
-**Important constraint:** Quarto's implicit `_metadata.yml` cascade does **not** cross nested project boundaries. Shared deck config lives in `slides/_shared.yml` and is pulled in via `metadata-files: [../_shared.yml]` in each deck's `_quarto.yml` — that's the documented way to share metadata across nested projects.
+**Quarto's `_metadata.yml` cascade does NOT cross nested project boundaries.** Shared deck config lives in `slides/_shared.yml` and is pulled in via `metadata-files: [../_shared.yml]` in each deck's `_quarto.yml` — the documented way to share metadata across nested projects.
 
-## Where things live
+## Top-level pages
+
+Navbar order is the source of truth (`_quarto.yml` → `website.navbar.left`):
+
+| Page | File | Role |
+|---|---|---|
+| Home | `index.qmd` | Landing — author cards (`resources/authors.qmd`), GW affiliation, three Part-N section grids (`resources/part-{1,2,3}-overview.qmd`) |
+| 0. Installation | `installation.qmd` | Pre-workshop setup — two sections (Agents, Software) pulled in from `resources/agents.qmd` and `resources/software.qmd` |
+| 1. Agentic Basics | `basics.qmd` | iframes `slides/agentic-basics/` |
+| 2. Skill Usage and Design | `skills.qmd` | iframes `slides/skill-usage-and-design/` |
+| 3. Data Safety with AI | `safety.qmd` | iframes `slides/data-safety-with-ai/` |
+
+### Filename ↔ deck-dir mismatch
+
+The three slide pages were shortened (`basics.qmd`, `skills.qmd`, `safety.qmd`) but the **deck directories under `slides/` kept their original verbose names**. The iframe `src` attribute inside each slide page is the source of truth. Don't "fix" this by renaming the deck directories — you'd have to update iframe srcs, the `quarto preview slides/<deck>` invocation, and the post-render hook's path assumptions. Leave it.
+
+### Body-width override on slide pages
+
+`basics.qmd`, `skills.qmd`, `safety.qmd` each set `grid: { sidebar-width: 0px, body-width: 1200px, margin-width: 0px }` so the iframe stretches past Quarto's 800px default. `index.qmd` and `installation.qmd` use the same override without `body-width` (default 800px is fine for them).
+
+## Shared assets
 
 - `slides/_shared.yml` — every revealjs format option, footer, author, default `title-slide-attributes`, execute settings. Edit here to change all three decks at once.
 - `slides/styles/slides.scss` — single shared SCSS for all decks (TsangerJinKai font, color utility classes like `.amber` `.teal`, slide-variant classes like `.dark-centered` `.light-centered`). Decks reference it as `../styles/slides.scss`.
 - `slides/<deck>/_quarto.yml` — `project:` + `resources: figs/` + `metadata-files: [../_shared.yml]`. ~6 lines.
 - `slides/<deck>/index.qmd` — front matter (`pagetitle`, `title`, **per-deck** `title-slide-attributes` for the banner image), then slide content.
-- `slides/<deck>/figs/banner.png` — round PNG (transparent corners) used as the title slide's `data-background-image`. See "Banner images" below.
+- `slides/<deck>/figs/banner.png` — round PNG (transparent corners) used as the title slide's `data-background-image`. See "Title slide & banner mechanics".
 - `slides/<deck>/SCRIPTS.md` — speaker script for the deck, organized into the same three sections as `resources/part-N-overview.qmd`. Source for slide content.
-- `styles/styles.scss` — parent **website** styles. Section-card color themes (`orange`/`green`/`purple`) live here as a `$section-themes` map (~line 952 light, ~line 1110 dark). The `.slide-embed` + `.slide-embed-button` classes used by the three top-level pages also live here (single source of truth — don't inline `<style>` blocks in the per-page qmd files).
-- `resources/part-{1,2,3}-overview.qmd` — included into `index.qmd` via `{{< include >}}`. Each renders one of the colored section-card grids on the landing page.
+- `styles/styles.scss` — parent **website** styles. All component CSS lives here (see "Component CSS conventions") — never inline `<style>` blocks in qmd files.
+- `styles/styles.js` — parent-website JS entry, loaded via `include-after-body` in `_quarto.yml` alongside the Lucide icons CDN. Touch this for landing-page behavior or icon rendering changes.
+- `images/` — parent website static assets, registered as a Quarto resource in `_quarto.yml` so it's copied into `_site/` as-is. `images/software/` holds the app icons used by `resources/software.qmd`; `images/{pingfan-hu,john-helveston}.png` are the author headshots.
+- `resources/*.qmd` — partials included into top-level pages via `{{< include >}}`. Excluded from the parent render list so they never render as standalone pages.
+
+## Component CSS conventions
+
+For tables, card grids, author cards, etc.:
+
+- HTML lives in a `resources/<name>.qmd` partial, wrapped in a `{=html}` fence.
+- CSS lives in `styles/styles.scss` under a topic header comment like `// ---- Authors ----` or `// ---- Software Table ----`.
+- **Never inline `<style>` or `<link>` blocks in the qmd file** — Maple Mono is `@import`-ed at the top of `styles.scss` and Lucide icons are loaded globally via `_quarto.yml`'s `include-after-body`.
+- Dark-mode overrides live inside the single `body.quarto-dark { ... }` block in `styles.scss`.
+- Mobile breakpoint is `@media (max-width: 640px)` (used consistently across all components).
+
+Current component families in `styles/styles.scss`:
+- `.swtbl-*` — two-column tables in `resources/agents.qmd` and `resources/software.qmd` (icon + name on left, description on right, with a head/body layout that flips on mobile)
+- `.auth-*` — author headshot cards in `resources/authors.qmd`
+- `.section-*` — colored Part-N section grids in `resources/part-{1,2,3}-overview.qmd`
+- `.slide-embed*` — iframe wrapper used by the three slide pages
+- `.affiliation*` — GW affiliation row at the top of `index.qmd`
+
+## Quarto theme overrides
+
+Quarto's bundled theme CSS uses high-specificity selectors with the `.quarto-title-block.default` chain. Naïve `#title-block-header .description` rules **lose** to Quarto's `#title-block-header.quarto-title-block.default .description { margin-top: 0 }`. Match the full chain to compete on equal specificity (later-source rules then win); reach for `!important` only as a last resort. The page-description block styling under `// ---- Page description block ----` in `styles.scss` is the working example.
 
 ## Title slide & banner mechanics
 
-Each deck has a navy title slide with a circular banner image on the right. Three things make this work, all of which need to stay in sync:
+Each deck has a navy title slide with a circular banner image on the right. Three things must stay in sync:
 
 1. **Per-deck `title-slide-attributes` in `index.qmd` front matter** override the shared default in `_shared.yml` to add `data-background-image: figs/banner.png` (with `data-background-size`, `data-background-position`). The override is a full replacement — the index.qmd block must include `data-background-color`, `class: dark-centered`, and `style:` too.
 2. **The banner PNGs are circularly masked** (transparent outside the circle). Generated by `/ph-image` skill, then post-processed with PIL ellipse mask. If you regenerate a banner, re-apply the mask or it'll show as a square.
 3. **`#title-slide.dark-centered { background-color: transparent !important; }`** in `slides/styles/slides.scss` lets Reveal's `data-background` layer (where the banner lives) show through. Without this override, `.dark-centered`'s opaque navy fill on the section element covers the banner. The override is scoped to `#title-slide` so other `.dark-centered` slides (section dividers, dark quote slides) keep their solid navy fill.
 
-If you change the banner position or size, edit each deck's `index.qmd` front matter — `slides/_shared.yml`'s `title-slide-attributes` is only the fallback.
+If you change banner position or size, edit each deck's `index.qmd` front matter — `slides/_shared.yml`'s `title-slide-attributes` is only the fallback.
 
 ## Speaker scripts → slide content
 
 Each deck has a `SCRIPTS.md` (speaker script) and an `index.qmd` (slide content). They evolve together:
+
 - `SCRIPTS.md` is the source of truth for what to *say*; structured into the three sections defined in `resources/part-N-overview.qmd`
 - `index.qmd` is the slide deck; bullets/short paragraphs that match the script
 - Pacing target: ~25 minutes per part, ~25–29 slides each. Section dividers use `.dark-centered`, content slides use `.light-centered` or default
