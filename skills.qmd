@@ -10,7 +10,7 @@ grid:
 ```{=html}
 <div class="slide-embed">
   <iframe
-    src="slides/skill-usage-and-design/"
+    src="slides/skills/"
     title="Skill Usage and Design slides"
     allowfullscreen
     loading="lazy">
@@ -18,7 +18,7 @@ grid:
 </div>
 
 <p class="slide-embed-link">
-  <a class="slide-embed-button" href="slides/skill-usage-and-design/" target="_blank" rel="noopener">
+  <a class="slide-embed-button" href="slides/skills/" target="_blank" rel="noopener">
     Open slides in a new tab →
   </a>
 </p>

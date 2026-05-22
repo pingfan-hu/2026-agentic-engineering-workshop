@@ -10,7 +10,7 @@ grid:
 ```{=html}
 <div class="slide-embed">
   <iframe
-    src="slides/data-safety-with-ai/"
+    src="slides/safety/"
     title="Data Safety with AI slides"
     allowfullscreen
     loading="lazy">
@@ -18,7 +18,7 @@ grid:
 </div>
 
 <p class="slide-embed-link">
-  <a class="slide-embed-button" href="slides/data-safety-with-ai/" target="_blank" rel="noopener">
+  <a class="slide-embed-button" href="slides/safety/" target="_blank" rel="noopener">
     Open slides in a new tab →
   </a>
 </p>

@@ -10,7 +10,7 @@ grid:
 ```{=html}
 <div class="slide-embed">
   <iframe
-    src="slides/agentic-basics/"
+    src="slides/basics/"
     title="Agentic Basics slides"
     allowfullscreen
     loading="lazy">
@@ -18,7 +18,7 @@ grid:
 </div>
 
 <p class="slide-embed-link">
-  <a class="slide-embed-button" href="slides/agentic-basics/" target="_blank" rel="noopener">
+  <a class="slide-embed-button" href="slides/basics/" target="_blank" rel="noopener">
     Open slides in a new tab →
   </a>
 </p>

@@ -15,7 +15,7 @@ A Quarto **website** hosting the landing surface for a three-part workshop, with
 ```bash
 quarto render                                # full build (parent + all decks via post-render hook)
 quarto preview                               # live website; post-render hook re-runs each render to keep _site/slides/* fresh
-quarto preview slides/agentic-basics         # live preview of a single deck (hot reload as you edit it)
+quarto preview slides/basics                 # live preview of a single deck (hot reload as you edit it)
 ```
 
 The deployed `_site/` is built end-to-end by the parent `quarto render` — CI does nothing extra.
@@ -40,13 +40,11 @@ Navbar order is the source of truth (`_quarto.yml` → `website.navbar.left`):
 |---|---|---|
 | Home | `index.qmd` | Landing — author cards (`resources/authors.qmd`), GW affiliation, three Part-N section grids (`resources/part-{1,2,3}-overview.qmd`) |
 | 0. Installation | `installation.qmd` | Pre-workshop setup — two sections (Agents, Software) pulled in from `resources/agents.qmd` and `resources/software.qmd` |
-| 1. Agentic Basics | `basics.qmd` | iframes `slides/agentic-basics/` |
-| 2. Skill Usage and Design | `skills.qmd` | iframes `slides/skill-usage-and-design/` |
-| 3. Data Safety with AI | `safety.qmd` | iframes `slides/data-safety-with-ai/` |
+| 1. Agentic Basics | `basics.qmd` | iframes `slides/basics/` |
+| 2. Skill Usage and Design | `skills.qmd` | iframes `slides/skills/` |
+| 3. Data Safety with AI | `safety.qmd` | iframes `slides/safety/` |
 
-### Filename ↔ deck-dir mismatch
-
-The three slide pages were shortened (`basics.qmd`, `skills.qmd`, `safety.qmd`) but the **deck directories under `slides/` kept their original verbose names**. The iframe `src` attribute inside each slide page is the source of truth. Don't "fix" this by renaming the deck directories — you'd have to update iframe srcs, the `quarto preview slides/<deck>` invocation, and the post-render hook's path assumptions. Leave it.
+Slide page filenames and their deck directories under `slides/` share the same short names (`basics`, `skills`, `safety`). The iframe `src` attribute inside each slide page is the source of truth — if you rename a deck directory, update the iframe `src`/`href` in the corresponding qmd to match.
 
 ### Body-width override on slide pages
 
