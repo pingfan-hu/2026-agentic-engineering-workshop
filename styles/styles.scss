@@ -1273,6 +1273,12 @@ $section-themes: (
     border-top-width: 2px;
   }
 
+  // Header is hidden on mobile, so the first row's top border becomes a
+  // stray blue line above the first entry. Drop it. (Both .swtbl-header and
+  // .swtbl-row are <div>s, so :first-of-type doesn't isolate the first row —
+  // adjacent-sibling does.)
+  .swtbl-header + .swtbl-row { border-top: none; }
+
   // Drop the within-row separator and tinted bg so icon+name and description
   // read as one unit per software, not two cells. Center the whole header row.
   .swtbl-software {
