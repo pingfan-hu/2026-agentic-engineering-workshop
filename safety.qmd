@@ -3,7 +3,7 @@ title: "Data Safety with AI"
 toc: false
 grid:
   sidebar-width: 0px
-  body-width: 1200px
+  body-width: 900px
   margin-width: 0px
 ---
 
