@@ -2,28 +2,235 @@
 
 Speaking script for **Part 1: Agentic Basics** of the 2026 Agentic Engineering Workshop.
 
-Organized into the three sections defined in `resources/part-1-overview.qmd`:
+Part 1 is **hands-on first, theory second**. The plan:
 
-1. **Assistants vs Agents**
-2. **Architecture**
-3. **Handy Tools**
+1. **Install Your Tools** — Spokenly, Claude Code, Positron.
+2. **Your First Website** — use Claude Code to build a single-page HTML site.
+3. **Multiple Pages** — extend it to a multi-page site with navigation.
+4. **Agentic Basics** — now that students have *seen* an agent work, unpack the theory: assistants vs agents, the agent loop, architecture, and the bigger workflow picture.
 
-Source: Pingfan's three "Agentic Engineering" blog posts (March–April 2026), with conceptual fill-ins drawn from Anthropic's published material on agent design (notably *Building Effective Agents*).
+Source material: Pingfan's four "Agentic Engineering" blog posts (March 2026 – May 2026), plus Anthropic's *Building Effective Agents* for the formal definitions.
+
+> Note: the existing `resources/part-1-overview.qmd` lists three section cards (Assistants vs Agents · Architecture · Handy Tools). Once this script lands, the overview cards should be updated to match the four-section structure here.
 
 ---
 
-## 1. Assistants vs Agents
+## 0. Opening framing (~2 minutes)
 
-### Opening: the panic & the opportunity
+_[Slide: panic + opportunity]_
 
-_[~2 minutes — set the tone]_
-
-- Everyone in this room knows the feeling: every morning there is news of a new model, a new tool, a new workflow. It is overwhelming.
+- Every morning there is news of a new model, a new tool, a new workflow. It is overwhelming. Everyone in this room knows the feeling.
 - The reframe: you do not need to chase every release. You need **a workflow that works for you**.
 - Anchor quote — Andrej Karpathy: *"everyone has their developing flow."*
-- Goal of Part 1: give you the **vocabulary and mental model** to design your own.
+- So my opening advice: **don't panic.** Build your own workflow whenever you need one. Adapt what catches your eye, or start from scratch.
 
-### The core distinction
+_[Slide: roadmap]_
+
+- Here is the plan for the next 25 minutes:
+  1. **Install three pieces of software** so we are all on the same baseline.
+  2. **Build a single-page website with Claude Code** — your first hands-on with an AI agent.
+  3. **Turn it into a multi-page website** — add an About page and a Projects page that link from the homepage.
+  4. **Step back and unpack the agentic basics** — what just happened, and why it matters.
+- You will *use* an agent before you *learn about* one. That order is deliberate.
+
+---
+
+## 1. Install Your Tools
+
+### Why these three (~1 minute)
+
+_[Slide: three-tool stack]_
+
+We are installing exactly three tools today. Each plays a distinct role in the loop:
+
+- **Claude Code** — the agent. It reads files, writes files, runs shell commands, calls APIs.
+- **Positron** — the IDE we'll keep open while Claude Code works, so we can watch files change live and edit alongside it.
+- **Spokenly** — voice-to-text. Most of my blog posts and prompts are dictated, not typed. It is faster than typing and produces cleaner first drafts than you'd expect.
+
+You can swap any of these later. Today we standardize so everyone is on the same baseline.
+
+### Claude Code (~2 minutes)
+
+_[Slide: terminal command]_
+
+Homebrew is the cleanest install on macOS:
+
+```bash
+brew install --cask claude-code
+```
+
+On Windows, follow the official installer at `claude.com/claude-code`. On Linux, same install page.
+
+Once installed, open a terminal and type:
+
+```bash
+claude
+```
+
+It will prompt you to log in. Use your Claude account. If you already have a Claude Pro or Team plan, Claude Code is included.
+
+> **Heads up:** do not launch `claude` from your home directory yet. Where you launch it matters, and we'll get to that in a second.
+
+### Positron (~1.5 minutes)
+
+_[Slide: Positron download]_
+
+Positron is an IDE from Posit, the company behind RStudio. It is built on the VS Code foundation, so every VS Code extension and shortcut transfers. Three reasons we use it:
+
+- Editor, terminal, console, and data viewer open at once.
+- Free, cross-platform, MIT-licensed.
+- Side-by-side source-and-rendered-output view is exactly what we want for HTML work.
+
+Download at `positron.posit.co` → install → open it once to confirm it launches.
+
+### Spokenly (~1.5 minutes)
+
+_[Slide: Spokenly]_
+
+Spokenly is a voice-to-text app for Mac and iOS. It wires up an AI model (GPT-4o by default) to transcribe and lightly clean up your speech — filler words and false starts get smoothed out, but your actual phrasing survives.
+
+- Download at `spokenly.app`, sign in, set a global hotkey.
+- Test it: hold the hotkey, say a full sentence, release. The text lands wherever your cursor is.
+- The blog posts and slides for this workshop were dictated through Spokenly.
+
+You can keep typing if you prefer. But try it once during the next hour — most people don't go back.
+
+### Checkpoint (~30 seconds)
+
+_[Slide: checklist]_
+
+Before we move on, everyone should have:
+
+- [ ] `claude` runs in a terminal.
+- [ ] Positron opens.
+- [ ] Spokenly's hotkey produces text in any window.
+
+If anyone is stuck, raise a hand now. The next sections assume all three work.
+
+---
+
+## 2. Your First Website
+
+### Pick a project directory (~2 minutes)
+
+_[Slide: working directory matters]_
+
+This is the **single most important habit** in agentic engineering: pick the directory you launch from. Everything Claude Code sees and touches lives under that directory.
+
+Two kinds of directories matter:
+
+1. **Home directory** (`~`) — convenient, but an agent launched here can touch anything on your machine. I keep a global `CLAUDE.md` here for rules that apply to *every* session, but I rarely launch real work from `~`.
+2. **Project directories** — where you `cd` before launching. Each project gets its own `CLAUDE.md`, its own configuration, its own history. Scoped. Safer. More focused.
+
+> *"It matters where you launch Claude Code."*
+
+Open Positron. Create a new folder somewhere sensible — call it `my-first-site`. Open it in Positron, then open Positron's integrated terminal. You're now inside the project. Launch Claude Code:
+
+```bash
+claude
+```
+
+No `cd` needed — Positron's terminal already opens at the project root.
+
+### Prompt for a homepage (~5 minutes)
+
+_[Slide: first prompt]_
+
+Now we use Claude Code as an agent. Your first prompt — say it, dictate it, type it, whatever feels right:
+
+> *"Create a single-page personal website. One HTML file called `index.html`, one CSS file called `styles.css`. The page should have my name as a big headline, a short paragraph about me, and a section with three of my interests as a list. Use a clean modern look — generous spacing, a serif headline, a sans-serif body, and a single accent color. Don't add JavaScript yet."*
+
+Watch what happens:
+
+- Claude reads the (empty) directory.
+- It writes `index.html` and `styles.css`.
+- It tells you what it created and how to view it.
+
+Open `index.html` in your browser by double-clicking it, or run `open index.html` from the terminal.
+
+This is the agent loop in action. The model picked tools — `Write` for each file — ran them, and reported back. You did not write a single line of HTML.
+
+### Iterate in plain language (~3 minutes)
+
+_[Slide: iteration is a conversation]_
+
+The output probably looks generic. Make it yours. Pick *one* of these and dictate it through Spokenly:
+
+- *"Replace the placeholder name with mine — Pingfan Hu — and rewrite the bio in one sentence about being a PhD student at GW studying agentic engineering."*
+- *"Change the accent color to teal, and add a soft shadow under the headline."*
+- *"Use a Google Font — `Inter` for body, `Playfair Display` for the headline."*
+
+Refresh the browser after each change. Each round is a turn of the agent loop: model decides → tool runs → result feeds back → you decide what's next.
+
+> Notice: you are not writing code. You are **describing what you want**. The agent translates intent into edits.
+
+### Anchor the takeaway (~30 seconds)
+
+_[Slide: assistant vs agent foreshadow]_
+
+What you just used is **not** a chatbot. ChatGPT in a browser cannot create files on your laptop. Claude Code can — and just did. We'll formally name that difference in Section 4.
+
+---
+
+## 3. Multiple Pages
+
+### Add a second page (~3 minutes)
+
+_[Slide: about page]_
+
+Next prompt:
+
+> *"Add an `about.html` page with a longer bio — three paragraphs covering my background, current research, and hobbies. Match the style of `index.html`. Link to it from the homepage with a navigation bar at the top."*
+
+Watch what Claude does this time:
+
+- Reads `index.html` and `styles.css` first (it now has prior context).
+- Writes `about.html` reusing the same styles.
+- Edits `index.html` to add a `<nav>` at the top with two links.
+- Optionally extracts shared header markup into something cleaner.
+
+Refresh the homepage. Click the link. You now have two pages.
+
+### Add a third page and tighten the nav (~3 minutes)
+
+_[Slide: projects page]_
+
+> *"Add a `projects.html` page that lists three projects, each with a title, a short description, and a placeholder link. Update the nav on all three pages so each page links to the other two. Highlight the current page in the nav with bold text."*
+
+Two things to notice:
+
+1. Claude updates **three files** in one turn — homepage, about, projects. It does the boring consistency work for you.
+2. "Highlight the current page" is a tiny design decision that would take you a few minutes to implement by hand. The agent does it in seconds and explains how.
+
+### Where Claude struggles (~2 minutes)
+
+_[Slide: when it goes wrong]_
+
+It will go wrong eventually. Three common shapes:
+
+- **Vague prompt → generic output.** "Make it look better" yields nothing useful. "Tighten the line-height to 1.4, increase the headline size to 3rem, and add 4rem of vertical padding around each section" yields exactly that.
+- **Wrong assumption.** Claude may invent a file path or import a library you don't have. When you spot this, stop and correct — don't let it keep building on a wrong assumption.
+- **Stuck in a loop.** If a fix doesn't land after two attempts, **stop and re-plan.** Tell the agent what's wrong and what you want instead. Don't keep pushing through.
+
+> *"If something goes sideways, STOP and re-plan immediately — don't keep pushing."* — That's a line from my own global `CLAUDE.md`.
+
+### Wrap the hands-on (~1 minute)
+
+You now have a three-page site, generated and styled entirely by describing what you wanted. Take 30 seconds to look at the files in Positron's file panel. Notice:
+
+- HTML files Claude wrote.
+- A CSS file Claude wrote and edited.
+- A conversation history you can scroll up to read.
+
+That's everything. No frameworks, no build step, no boilerplate. The whole project is **plain text the agent can read and edit**.
+
+---
+
+## 4. Agentic Basics
+
+Now the theory. We just *used* an agent — let's unpack what an agent actually is, how Claude Code is architected, and where this workflow sits in the bigger picture.
+
+### Assistants vs Agents (~3 minutes)
 
 _[Slide: side-by-side comparison]_
 
@@ -32,15 +239,17 @@ These two terms get used interchangeably. They should not be.
 - **AI Assistants** — conversational interfaces. You ask, they answer. ChatGPT, Claude.ai, Gemini. Modern assistants can browse, run code, and remember context — but they still wait for you to drive each turn.
 - **AI Agents** — autonomous executors. They run shell commands, read and write files, call APIs, and loop through decisions without waiting for you at each step. Codex, Claude Code, Gemini CLI.
 
-The differentiator is not multi-turn conversation. It is **the ability to act independently in an environment**.
+The differentiator is **not** multi-turn conversation. It is **the ability to act independently in an environment**.
 
 > Assistants answer. Agents act.
 
-### What an "agent" actually is
+In the last 20 minutes, you used an agent. Compare it mentally to ChatGPT in a browser — same model family, totally different surface.
 
-_[Slide: the agent loop diagram]_
+### What an "agent" actually is (~3 minutes)
 
-Anthropic's framing is the clearest one I've seen: an agent is an **LLM + tools + a loop**.
+_[Slide: the agent loop]_
+
+Anthropic's framing in *Building Effective Agents* is the clearest one I've seen: an agent is an **LLM + tools + a loop**.
 
 1. The LLM decides what tool to call.
 2. The tool runs in the environment.
@@ -48,54 +257,20 @@ Anthropic's framing is the clearest one I've seen: an agent is an **LLM + tools 
 4. The model decides the next move.
 5. Repeat.
 
-That loop is the whole game. Everything in the rest of this workshop — rules, skills, hooks, subagents, verifiers — is about shaping that loop.
+That loop is the whole game. Everything else in this workshop — rules, skills, hooks, subagents, verifiers — is about shaping that loop.
 
-Anthropic also makes a useful distinction in *Building Effective Agents*:
+Anthropic also draws a useful distinction:
 
-- **Workflows** — predefined sequences of LLM calls glued by code. The control flow is fixed.
-- **Agents** — the LLM itself decides the next step. The control flow is dynamic.
+- **Workflows** — predefined sequences of LLM calls glued by code. Control flow is fixed.
+- **Agents** — the LLM itself decides the next step. Control flow is dynamic.
 
-Claude Code is firmly in the agent camp.
+Claude Code is firmly in the agent camp. You saw it pick which files to read, which to write, and when to stop.
 
-### When to use which
-
-- One-off questions, quick lookups, polishing a paragraph → **Assistant** (the chat app).
-- Multi-step tasks, project work, anything that touches files or external services → **Agent** (Claude Code & friends).
-
-For the rest of this workshop we assume you are ready to step up to agents — specifically Claude Code.
-
----
-
-## 2. Architecture
-
-### "Architecture" means: where the agent lives
-
-_[Slide: working directory = scope of context]_
-
-The single most important step when you launch an agent is **picking the directory you launch from**. That directory becomes the agent's environment. Every file under it is potential context.
-
-Two kinds of directories matter:
-
-1. **Home directory** (`~`) — for computer-level tasks. Convenient but dangerous: an agent launched in `~` can touch anything on your machine. I keep a global `CLAUDE.md` here for rules that apply to *every* session, but I rarely launch real *work* from here.
-2. **Project directories** — where you `cd` before launching. Each project gets its own `CLAUDE.md`, its own `.claude/` configuration, its own history. Scoped. Safer. More focused.
-
-> It matters where you launch Claude Code.
-
-Quick installation aside (skip if audience already has it):
-
-```bash
-brew install --cask claude-code     # install
-cd /path/to/your-project            # change to project
-claude                              # launch
-```
-
-Or open the project in an IDE (VS Code, Positron, Kaku) and launch `claude` from the integrated terminal — no `cd` needed.
-
-### The four components of a Claude Code project
+### Architecture: where the agent lives (~3 minutes)
 
 _[Slide: four-component diagram]_
 
-After enough sessions you start to see the same pieces again and again. tw93 published a six-layer breakdown of Claude Code; I reorganized it into **four components**, because every Claude Code feature falls into one of them.
+After enough sessions you start seeing the same pieces again and again. tw93 published a six-layer breakdown of Claude Code; I reorganized it into **four components**, because every Claude Code feature falls into one of them.
 
 | Component | What it does | Examples |
 |---|---|---|
@@ -104,37 +279,14 @@ After enough sessions you start to see the same pieces again and again. tw93 pub
 | **Behaviors** | How Claude operates | skills, hooks |
 | **Agents** | Delegated execution | subagents, verifiers |
 
-Walk through each:
+Quick walkthrough — we'll go deep in Part 2:
 
-#### Context — the foundation
+- **Context — the foundation.** `CLAUDE.md` is the file Claude reads automatically every session. One in the project root; subdirectories can have their own. A **global** `CLAUDE.md` lives at `~/.claude/CLAUDE.md` and applies to every session. Detailed rules go in `.claude/rules/*.md` and load **on demand**, not upfront — saves tokens, keeps output consistent. The trigger for writing a rule: *"I want this reproduced reliably."*
+- **Capabilities.** **MCP** (Model Context Protocol) connects Claude to external servers — GitHub, Gmail, Figma, browsers, calendars. **Plugins** bundle skills + MCPs + hooks + config into one installable unit. MCPs eat tokens fast; use sparingly.
+- **Behaviors.** **Skills** are reusable slash commands like `/commit` or `/review` — prompt templates that load into the session. **Hooks** are shell commands that fire automatically on Claude Code events (linter after every edit, build verification at session end).
+- **Agents.** **Subagents** are child Claude instances spawned to handle a focused subtask, keeping the main context clean. **Verifiers** are post-execution checks that confirm output is actually correct before the task is marked done.
 
-- `CLAUDE.md` is the file Claude reads automatically on every session. One in the project root; each subdirectory can have its own. Keep it short — it loads every time.
-- A **global** `CLAUDE.md` lives at `~/.claude/CLAUDE.md` and applies to every Claude Code session, regardless of which project you're in.
-- `.claude/rules/*.md` — detailed rules split by topic. They load **on demand**, not upfront. Saves tokens, keeps output consistent.
-- The trigger for writing a rule: *"I want this reproduced reliably."*
-- `memory/` — auto-managed by Claude Code, lives in `~/.claude/projects/`, **never** pushed to the cloud. Don't worry about it.
-
-Practical workflow tip: complete a full output once, *then* ask Claude in the same session to extract a rule from it. The rule can be reused and refined over time.
-
-#### Capabilities — what Claude can act on
-
-- **MCP** (Model Context Protocol) — external servers. GitHub, Gmail, Figma, browser automation, calendars, databases. Claude calls them as structured tools.
-- **Plugins** — installable packages that bundle skills + MCPs + hooks + config together.
-- ⚠️ MCPs eat tokens fast. Use sparingly.
-
-#### Behaviors — how Claude operates
-
-- **Skills** — reusable slash commands like `/commit` or `/review`. They load a prompt template into the session to guide a structured workflow.
-- **Hooks** — shell commands that fire automatically on Claude Code events. Linter after every edit, formatter on save, build verification at session end.
-
-#### Agents — delegated execution
-
-- **Subagents** — child Claude instances spawned to handle a focused subtask. Keeps the main session's context clean. Run them in parallel when the problem is big.
-- **Verifiers** — post-execution checks (a test, a diff, a log review) that confirm the output is actually correct before the task is marked done.
-
-### A concrete project layout
-
-_[Slide: directory tree]_
+_[Slide: a concrete project layout]_
 
 ```text
 your-project/
@@ -153,7 +305,7 @@ your-project/
 
 The shape varies by project. The point: every piece has a home, and Claude Code knows where to look.
 
-### Plan first, then act
+### Plan first, then act (~2 minutes)
 
 _[Slide: plan mode]_
 
@@ -162,109 +314,47 @@ The single biggest behavioral lever I've found:
 - For any non-trivial task (3+ steps or anything architectural), enter **plan mode** first.
 - Make Claude write a plan. Agree on it. *Then* implement.
 - If something goes sideways mid-task, stop and re-plan. Don't push through.
-- Use plan mode for verification too, not just building.
+- Use plan mode for verification too, not just for building.
 
-The model is already good. Letting it plan first makes it much better.
+You can try it now — hit Shift+Tab in your Claude Code session to toggle plan mode. The model proposes; you approve; then it executes.
 
-### The bigger picture: vibe coding → agentic engineering
+### Vibe coding → agentic engineering (~2 minutes)
 
-_[Slide: workflow evolution timeline]_
+_[Slide: workflow evolution]_
 
 Two terms describe two levels of maturity. They **coexist** — they don't replace each other.
 
 - **Vibe Coding** — describe what you want, model generates code, hope it works. Outputs are unpredictable; you can't reliably reproduce a good result. Where most people start.
 - **Agentic Engineering** — design agents with rules and skills; they handle complex tasks **reproducibly**. Where this workshop lives.
 
-> Stop handcrafting every piece. Start conducting.
-> Set the rules, build the skills, let the agents handle execution.
+> *Stop handcrafting every piece. Start conducting.*
+> *Set the rules, build the skills, let the agents handle execution.*
 
----
+### The hardest skill is still speaking (~2 minutes)
 
-## 3. Handy Tools
+_[Slide: language as the bottleneck]_
 
-### The framing: don't panic
+A point that ties everything together.
 
-_[Slide: don't panic]_
+Patrick Winston, former director of the MIT AI Lab, opened his famous *How to Speak* lecture with: *"Your success in life will be determined largely by your ability to speak, your ability to write, and the quality of your ideas, in that order."*
 
-Open this section the way I open Part 2 of my blog series: **don't panic.** You see lists like *"10 must-install AI tools"* everywhere. You install them, they quietly disappear from your life a week later.
+In the AI era this matters **more**, not less. The bottleneck for using agents well is your ability to express what you want clearly. The coding language matters less; **your ability to articulate matters more**.
 
-There is no must-install kit. General-purpose tools help, but most of what you need is buildable. The tools below are the ones that actually stuck for me.
-
-### Software
-
-_[Slide: 4-tool stack]_
-
-Four tools I use daily. Each is replaceable; the categories are not.
-
-- **Obsidian** — note-taking, plain `.md` files, free iCloud sync. I pair it with Claude Code via `cd-obsidian`. Works for knowledge base, drafts, plans, anything text. Plain markdown is the cheapest format for Claude to read and edit.
-- **Spokenly** — speech-to-text, multilingual, Mac & iOS. Largely replaces hand-typing for me. The blog posts you read for this workshop were dictated.
-- **Positron** — IDE from Posit, built for data science but fine for general dev. VS Code foundation, so all extensions and shortcuts transfer. Editor, terminal, console, and data viewer open at once.
-- **Kaku** — open-source macOS terminal, built-in tools, customizable shortcuts. Tabs and split panels with two keystrokes. Includes Yazi (terminal file manager) — I added a custom `yy` command that `cd`s into whatever Yazi is browsing when you quit it. Claude Code wrote it for me in a few seconds.
-
-The pattern: each tool is **small, configurable, and integrates with Claude Code** via either text files or terminal commands.
-
-### Extensions
-
-_[Slide: plugins / MCPs / skills taxonomy]_
-
-There is no official name for installable LLM contents. I call them **extensions**. Three kinds:
-
-- **Plugins** — marketplace bundles. Install via `/plugin`. Bring in their own skills, MCPs, hooks, config.
-  - `everything-claude-code` — the community kitchen sink.
-  - `claude-plugins-official` — Anthropic-maintained. I use `claude-md-management`, `code-review`, `code-simplifier`, `context7`.
-- **MCPs (connectors)** — external servers giving Claude real-time tool/data access.
-  - **Excalidraw** — sketch system designs and flow charts.
-  - **Figma** — read access to design files; generate code that matches your UI specs.
-  - **TinyFish** — browser automation (forms, scraping, web UIs) without writing a script.
-  - **Gmail / Google Calendar** — schedule check, inbox triage, todo list from email.
-- **Skills** — slash commands stored as `.md` files. Auto-trigger on context, or invoke manually with `/name`.
-  - tw93's [Waza](https://github.com/tw93/waza) is a great reference: eight skills, deliberately small surface area — `/think`, `/design`, `/hunt`, `/check`, `/write`, `/learn`, `/read`, `/health`.
-
-Two design principles from the Waza author worth absorbing — these will come back in Part 2:
-
-1. **Less is more.** Fewer skills with shorter names → easier to remember → actually used. Big bundles like `everything-claude-code` lose to focused sets in practice.
-2. **Negative examples.** Define what a skill should *not* do. LLMs default to "broadly useful"; constraints sharpen targeting. Underused. Very effective.
-
-### Custom shell commands
-
-_[Slide: q- and cd- commands]_
-
-Two patterns of bash commands I use daily — these aren't AI tools, but they're what makes the AI workflow frictionless.
-
-- **`q-` (quick)** commands for routine maintenance.
-  - `q-brew` → `brew update && brew upgrade && brew cleanup`. Fires every morning, leaves a log.
-  - `q-pull` → pull all my GitHub repos (current branch + `main`). Fires every morning.
-  - `q-hide` hides all windows, `q-close` closes all apps. For focus.
-- **`cd-` (change directory)** commands replace plain `cd` with named shortcuts.
-  - `cd-obsidian` → my vault.
-  - `cd-website` → my website project.
-  - `cd-github` → repos root.
-
-Each is one line: an alias for `cd <path>`. Cheap to add, real time saved every day.
-
-### The actual hardest skill: speaking well
-
-_[Slide: callback to language as the bottleneck]_
-
-Coming back to a point that ties this all together:
-
-Patrick Winston, former director of the MIT AI Lab, opened his *How to Speak* lecture with: *"Your success in life will be determined largely by your ability to speak, your ability to write, and the quality of your ideas, in that order."*
-
-In the AI era this matters **more**, not less. Being able to express what you want clearly is a humanistic skill, and it is the bottleneck for using agents well. The coding language matters less; **your ability to articulate matters more**.
+This is also why **Spokenly belongs in the stack**. Voice input lowers the friction of getting a clear prompt out of your head and into the agent.
 
 Old saying: *"Talk is cheap, show me the code."*
 New saying: *"Code is cheap, show me the prompt."*
 
 ---
 
-## Closing & transition
+## Closing & transition (~1 minute)
 
 _[Slide: recap + handoff]_
 
 Three takeaways from Part 1:
 
-1. **Assistants vs Agents.** Agents act independently in an environment. The agent = LLM + tools + loop.
-2. **Architecture.** Working directory is the scope. Four components: **Context, Capabilities, Behaviors, Agents.** Plan first.
-3. **Handy Tools.** No must-install kit. Pick small composable software. Use plugins/MCPs/skills sparingly. Automate the drudgery with `q-` and `cd-` commands. The hardest skill is still speaking clearly.
+1. **You used an agent.** Spokenly + Claude Code + Positron is a complete loop — speech in, code out, rendered output visible side-by-side. You have a working three-page site to prove it.
+2. **An agent is LLM + tools + loop.** Claude Code is an agent because it acts independently in your working directory. Pick that directory carefully — it defines what the agent sees and touches.
+3. **Architecture has four components:** Context · Capabilities · Behaviors · Agents. We touched Context (the working directory itself). Part 2 dives into Behaviors — specifically, how to design and use **skills**.
 
-Hand-off to Part 2: now that you have the **vocabulary** and the **toolbox**, the next part dives into **Skill Usage and Design** — how to actually build the skills that drive your agentic workflow.
+Hand-off to Part 2: now that you have the **vocabulary** and a **working site**, the next part is **Skill Usage and Design** — how to build the reusable workflows that turn one good prompt into a repeatable agent capability.

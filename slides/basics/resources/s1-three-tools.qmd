@@ -1,0 +1,45 @@
+```{=html}
+<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.7em;">
+
+  <div style="background:#FFFFFF;border-radius:16px;padding:1em 0.95em 1.05em;box-shadow:0 6px 22px rgba(204,120,92,0.12);text-align:left;border-top:4px solid #CC785C;">
+   <a class="tool-link" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">
+    <div class="tool-icon">
+     <div style="width:1.75em;height:1.75em;border-radius:0.45em;background:linear-gradient(135deg,#FBEEE8,#F5D9CD);display:flex;align-items:center;justify-content:center;">
+      <svg viewBox="0 0 24 24" fill="#CC785C" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;display:block;"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>
+     </div>
+    </div>
+    <div style="font-size:0.72em;font-weight:700;white-space:nowrap;color:#CC785C;">Claude Code</div>
+   </a>
+   <div style="font-size:0.55em;color:#564232;line-height:1.55;">AI agent by Anthropic.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:16px;padding:1em 0.95em 1.05em;box-shadow:0 6px 22px rgba(58,125,201,0.12);text-align:left;border-top:4px solid #3A7DC9;">
+   <a class="tool-link" href="https://positron.posit.co" target="_blank" rel="noopener">
+    <div class="tool-icon">
+     <img src="figs/positron-icon.png" alt="Positron" style="width:1.75em;height:1.75em;object-fit:contain;border-radius:0.45em;display:block;margin:0;" />
+    </div>
+    <div style="font-size:0.72em;font-weight:700;white-space:nowrap;color:#3A7DC9;">Positron</div>
+   </a>
+   <div style="font-size:0.55em;color:#564232;line-height:1.55;">Data science IDE by Posit.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:16px;padding:1em 0.95em 1.05em;box-shadow:0 6px 22px rgba(44,132,117,0.12);text-align:left;border-top:4px solid #2C8475;">
+   <a class="tool-link" href="https://spokenly.app" target="_blank" rel="noopener">
+    <div class="tool-icon">
+     <img src="figs/spokenly-logo.png" alt="Spokenly" style="width:1.75em;height:1.75em;object-fit:contain;border-radius:0.45em;display:block;margin:0;" />
+    </div>
+    <div style="font-size:0.72em;font-weight:700;white-space:nowrap;color:#2C8475;">Spokenly</div>
+   </a>
+   <div style="font-size:0.55em;color:#564232;line-height:1.55;">AI powered voice-to-text application.</div>
+  </div>
+
+ </div>
+
+ <div style="margin-top:0.9em;text-align:center;font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.08em;">
+  swap any later · standardize today
+ </div>
+
+</div>
+```

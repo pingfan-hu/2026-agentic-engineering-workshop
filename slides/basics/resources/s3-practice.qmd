@@ -1,0 +1,33 @@
+```{=html}
+<div style="width:88%;margin:0 auto;text-align:center;">
+
+ <div style="background:linear-gradient(135deg,#5654A2,#3F3D7E);border-radius:20px;padding:1.6em 1.4em 1.5em;box-shadow:0 14px 40px rgba(86,84,162,0.32);">
+
+  <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFF;opacity:0.85;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:0.6em;">— practice 03 —</div>
+
+  <div style="font-size:1.5em;font-weight:800;color:#FFF;line-height:1.1;margin-bottom:0.95em;letter-spacing:-0.01em;">
+   Make it three pages.
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6em;text-align:left;">
+
+   <div style="background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.35);border-radius:12px;padding:0.75em 0.85em;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#FFF;opacity:0.85;letter-spacing:0.12em;margin-bottom:0.3em;">STEP 01</div>
+    <div style="font-size:0.6em;color:#FFF;font-weight:600;line-height:1.5;">Add About + Projects pages. Nav bar links all three.</div>
+   </div>
+
+   <div style="background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.35);border-radius:12px;padding:0.75em 0.85em;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#FFF;opacity:0.85;letter-spacing:0.12em;margin-bottom:0.3em;">STEP 02</div>
+    <div style="font-size:0.6em;color:#FFF;font-weight:600;line-height:1.5;">Hit a pitfall? Stop, re-prompt, don't push.</div>
+   </div>
+
+  </div>
+
+  <div style="margin-top:1em;font-family:'Maple Mono',monospace;font-size:0.55em;color:#FFF;opacity:0.85;letter-spacing:0.1em;">
+   ⏱ ~ 8 min &nbsp;·&nbsp; one prompt, three files
+  </div>
+
+ </div>
+
+</div>
+```

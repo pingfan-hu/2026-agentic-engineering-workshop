@@ -10,89 +10,59 @@ title-slide-attributes:
   style: text-align:left;
 ---
 
-## About {.light-centered .center}
+## Meet Your Instructors {.light-centered .center}
 
 {{< include resources/about.qmd >}}
 
-## [Section 1]{.amber}<br>Assistants vs Agents {.dark-centered .center}
+## Today {.light-centered .center}
 
-## The opening problem {.light-centered .center}
+{{< include resources/roadmap.qmd >}}
 
-{{< include resources/s1-opening-problem.qmd >}}
+## Basic Installation {.light-centered .center}
 
-## Two terms, one distinction {.light-centered .center}
+{{< include resources/s1-three-tools.qmd >}}
 
-{{< include resources/s1-two-terms.qmd >}}
+## Practice 01 {.light-centered .center}
 
-## Agent = Model + Tools {.light-centered .center}
+{{< include resources/s1-practice.qmd >}}
 
-{{< include resources/s1-agent-equation.qmd >}}
-
-## Two shifts of focus {.light-centered .center}
-
-{{< include resources/s1-evolution.qmd >}}
-
-## When to use which {.light-centered .center}
-
-{{< include resources/s1-when-to-use.qmd >}}
-
-## [Section 2]{.amber}<br>Architecture {.dark-centered .center}
-
-## Two kinds of directories {.light-centered .center}
+## Where you launch matters {.light-centered .center}
 
 {{< include resources/s2-two-directories.qmd >}}
 
-## Quick install {.light-centered .center}
+## Describe, don't code {.light-centered .center}
 
-{{< include resources/s2-quick-install.qmd >}}
+{{< include resources/s2-first-prompt.qmd >}}
+
+## Practice 02 {.light-centered .center}
+
+{{< include resources/s2-practice.qmd >}}
+
+## Extend, don't restart {.light-centered .center}
+
+{{< include resources/s3-multipage-prompt.qmd >}}
+
+## Where it struggles {.light-centered .center}
+
+{{< include resources/s3-pitfalls.qmd >}}
+
+## Practice 03 {.light-centered .center}
+
+{{< include resources/s3-practice.qmd >}}
+
+## Assistants vs Agents {.light-centered .center}
+
+{{< include resources/s1-two-terms.qmd >}}
+
+## Agent = Model + Tools + Loop {.light-centered .center}
+
+{{< include resources/s1-agent-equation.qmd >}}
 
 ## The four components {.light-centered .center}
 
 {{< include resources/s2-four-components.qmd >}}
 
-## [Context]{.teal} — the foundation {.light-centered .center}
-
-{{< include resources/s2-context.qmd >}}
-
-## [Capabilities]{.amber} — what Claude acts on {.light-centered .center}
-
-{{< include resources/s2-capabilities.qmd >}}
-
-## [Behaviors]{.coral} — how Claude operates {.light-centered .center}
-
-{{< include resources/s2-behaviors.qmd >}}
-
-## [Agents]{.purple} — delegated execution {.light-centered .center}
-
-{{< include resources/s2-agents.qmd >}}
-
-## A concrete project layout {.light-centered .center}
-
-{{< include resources/s2-project-layout.qmd >}}
-
-## Plan first, then act {.light-centered .center}
-
-{{< include resources/s2-plan-first.qmd >}}
-
-## [Section 3]{.amber}<br>Handy Tools {.dark-centered .center}
-
-## Don't panic {.light-centered .center}
-
-{{< include resources/s3-dont-panic.qmd >}}
-
-## Software stack {.light-centered .center}
-
-{{< include resources/s3-software-stack.qmd >}}
-
-## Extensions taxonomy {.light-centered .center}
-
-{{< include resources/s3-extensions.qmd >}}
-
-## Custom shell commands {.light-centered .center}
-
-{{< include resources/s3-shell-commands.qmd >}}
-
-## The actual hardest skill {.dark-centered .center}
+## The hardest skill {.dark-centered .center}
 
 {{< include resources/s3-hardest-skill.qmd >}}
 

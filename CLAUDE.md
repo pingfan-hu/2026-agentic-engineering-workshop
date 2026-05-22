@@ -80,6 +80,15 @@ Current component families in `styles/styles.scss`:
 - `.slide-embed*` — iframe wrapper used by the three slide pages
 - `.affiliation*` — GW affiliation row at the top of `index.qmd`
 
+## Hover effects on slide elements — avoid the shake
+
+Hover effects on cards or in-card links must not visibly shift the surrounding card. Two failure modes seen in this repo:
+
+1. **`transform: translateY(-Npx)` on hover.** On retina displays the transform promotes the hovered element to a new GPU compositor layer, which forces a subpixel repaint of its siblings inside the same card. The whole card appears to "shake" for a frame. Fix: drop the hover transform — use only `box-shadow` and/or `background-color` changes to signal hover. A press transform on `:active` is fine (momentary).
+2. **First-time layer promotion on `opacity` transition.** Same root cause: when the opacity transition starts, the browser creates the layer on the fly. Pre-promote with `will-change: opacity, transform;` (and optionally `backface-visibility: hidden;`) so the layer exists before hover.
+
+Both `.instructor-link` (about slide) and `.tool-link` (s1-three-tools slide) in `slides/styles/slides.scss` follow this pattern. When adding a new hoverable element, default to: no hover transform, `box-shadow`/`background`/`color` changes only, `will-change` pre-set, `:active` for the click press.
+
 ## Quarto theme overrides
 
 Quarto's bundled theme CSS uses high-specificity selectors with the `.quarto-title-block.default` chain. Naïve `#title-block-header .description` rules **lose** to Quarto's `#title-block-header.quarto-title-block.default .description { margin-top: 0 }`. Match the full chain to compete on equal specificity (later-source rules then win); reach for `!important` only as a last resort. The page-description block styling under `// ---- Page description block ----` in `styles.scss` is the working example.
