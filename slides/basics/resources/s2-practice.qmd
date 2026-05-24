@@ -1,29 +1,29 @@
 ```{=html}
-<div style="width:88%;margin:0 auto;text-align:center;">
+<div style="width:78%;margin:0 auto;text-align:left;">
 
- <div style="background:linear-gradient(135deg,#3A7DC9,#2C5F9E);border-radius:20px;padding:1.6em 1.4em 1.5em;box-shadow:0 14px 40px rgba(58,125,201,0.32);">
+ <div style="background:rgba(255,184,77,0.08);border-left:5px solid #FFB84D;border-radius:0 14px 14px 0;padding:1.3em 1.6em 1.4em;">
 
-  <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFF;opacity:0.85;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:0.6em;">— practice 02 —</div>
+  <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFB84D;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.5em;">— practice 03 —</div>
 
-  <div style="font-size:1.5em;font-weight:800;color:#FFF;line-height:1.1;margin-bottom:0.95em;letter-spacing:-0.01em;">
+  <div style="font-size:1.2em;font-weight:800;color:#F8F7F0;line-height:1.15;margin-bottom:0.95em;letter-spacing:-0.01em;">
    Build your one-page site.
   </div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6em;text-align:left;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6em;">
 
-   <div style="background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.35);border-radius:12px;padding:0.75em 0.85em;">
-    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#FFF;opacity:0.85;letter-spacing:0.12em;margin-bottom:0.3em;">STEP 01</div>
-    <div style="font-size:0.6em;color:#FFF;font-weight:600;line-height:1.5;">Make folder <code style="font-family:'Maple Mono',monospace;font-size:0.95em;">my-first-site</code>, open in Positron, launch <code style="font-family:'Maple Mono',monospace;font-size:0.95em;">claude</code></div>
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:10px;padding:0.8em 0.95em;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#FFB84D;letter-spacing:0.14em;margin-bottom:0.35em;">STEP 01</div>
+    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.5;">Make folder <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#FFB84D;">my-first-site</code>, open in Positron, launch <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#FFB84D;">claude</code></div>
    </div>
 
-   <div style="background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.35);border-radius:12px;padding:0.75em 0.85em;">
-    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#FFF;opacity:0.85;letter-spacing:0.12em;margin-bottom:0.3em;">STEP 02</div>
-    <div style="font-size:0.6em;color:#FFF;font-weight:600;line-height:1.5;">Dictate the prompt. Open <code style="font-family:'Maple Mono',monospace;font-size:0.95em;">index.html</code>. Iterate once or twice.</div>
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:10px;padding:0.8em 0.95em;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#FFB84D;letter-spacing:0.14em;margin-bottom:0.35em;">STEP 02</div>
+    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.5;">Dictate the prompt. Open <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#FFB84D;">index.html</code>. Iterate once or twice.</div>
    </div>
 
   </div>
 
-  <div style="margin-top:1em;font-family:'Maple Mono',monospace;font-size:0.55em;color:#FFF;opacity:0.85;letter-spacing:0.1em;">
+  <div style="margin-top:1em;font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.12em;">
    ⏱ ~ 8 min &nbsp;·&nbsp; describe, don't code
   </div>
 

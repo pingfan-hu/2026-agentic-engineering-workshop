@@ -14,41 +14,9 @@ title-slide-attributes:
 
 {{< include resources/about.qmd >}}
 
-## Today {.light-centered .center}
+## Today {.dark-centered .center}
 
 {{< include resources/roadmap.qmd >}}
-
-## Basic Installation {.light-centered .center}
-
-{{< include resources/s1-three-tools.qmd >}}
-
-## Practice 01 {.light-centered .center}
-
-{{< include resources/s1-practice.qmd >}}
-
-## Where you launch matters {.light-centered .center}
-
-{{< include resources/s2-two-directories.qmd >}}
-
-## Describe, don't code {.light-centered .center}
-
-{{< include resources/s2-first-prompt.qmd >}}
-
-## Practice 02 {.light-centered .center}
-
-{{< include resources/s2-practice.qmd >}}
-
-## Extend, don't restart {.light-centered .center}
-
-{{< include resources/s3-multipage-prompt.qmd >}}
-
-## Where it struggles {.light-centered .center}
-
-{{< include resources/s3-pitfalls.qmd >}}
-
-## Practice 03 {.light-centered .center}
-
-{{< include resources/s3-practice.qmd >}}
 
 ## Assistants vs Agents {.light-centered .center}
 
@@ -65,6 +33,38 @@ title-slide-attributes:
 ## The hardest skill {.dark-centered .center}
 
 {{< include resources/s3-hardest-skill.qmd >}}
+
+## Basic Installation {.light-centered .center}
+
+{{< include resources/s1-three-tools.qmd >}}
+
+## Practice 02 {.dark-centered .center}
+
+{{< include resources/s1-practice.qmd >}}
+
+## Where you launch matters {.light-centered .center}
+
+{{< include resources/s2-two-directories.qmd >}}
+
+## Describe, don't code {.light-centered .center}
+
+{{< include resources/s2-first-prompt.qmd >}}
+
+## Practice 03 {.dark-centered .center}
+
+{{< include resources/s2-practice.qmd >}}
+
+## Extend, don't restart {.light-centered .center}
+
+{{< include resources/s3-multipage-prompt.qmd >}}
+
+## Where it struggles {.light-centered .center}
+
+{{< include resources/s3-pitfalls.qmd >}}
+
+## Practice 04 {.dark-centered .center}
+
+{{< include resources/s3-practice.qmd >}}
 
 ## Three takeaways {.light-centered .center}
 

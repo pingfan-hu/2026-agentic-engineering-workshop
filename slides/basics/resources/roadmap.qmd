@@ -1,36 +1,40 @@
 ```{=html}
-<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.6em 1em 1.4em;border-radius:18px;">
+<div style="width:72%;margin:0 auto;text-align:left;">
 
- <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.55em;">
+ <div style="display:flex;flex-direction:column;gap:0.55em;">
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.7em 0.95em;text-align:center;box-shadow:0 6px 22px rgba(44,132,117,0.12);border-top:4px solid #2C8475;">
-   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;margin:0 auto 0.45em;color:#2C8475;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.8em;">01</div>
-   <div style="font-size:0.7em;font-weight:700;color:#2C8475;line-height:1.2;">Install</div>
-   <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.35em;">three tools</div>
+  <div style="display:flex;align-items:center;gap:1.1em;background:rgba(93,212,188,0.08);border-left:5px solid #5DD4BC;border-radius:0 12px 12px 0;padding:0.75em 1.1em;">
+   <div style="font-family:'Maple Mono',monospace;font-weight:700;font-size:0.85em;color:#5DD4BC;min-width:1.6em;letter-spacing:0.02em;">01</div>
+   <div style="flex:1;">
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Motivation</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">why agentic engineering matters now</div>
+   </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.7em 0.95em;text-align:center;box-shadow:0 6px 22px rgba(58,125,201,0.12);border-top:4px solid #3A7DC9;">
-   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#DCE9FA,#B5D0F0);display:flex;align-items:center;justify-content:center;margin:0 auto 0.45em;color:#3A7DC9;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.8em;">02</div>
-   <div style="font-size:0.7em;font-weight:700;color:#3A7DC9;line-height:1.2;">One Page</div>
-   <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.35em;">your first site</div>
+  <div style="display:flex;align-items:center;gap:1.1em;background:rgba(123,181,240,0.08);border-left:5px solid #7BB5F0;border-radius:0 12px 12px 0;padding:0.75em 1.1em;">
+   <div style="font-family:'Maple Mono',monospace;font-weight:700;font-size:0.85em;color:#7BB5F0;min-width:1.6em;letter-spacing:0.02em;">02</div>
+   <div style="flex:1;">
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Installation</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">three tools, ready in ten minutes</div>
+   </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.7em 0.95em;text-align:center;box-shadow:0 6px 22px rgba(196,136,26,0.12);border-top:4px solid #C4881A;">
-   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#FEF5E7,#FAE9C8);display:flex;align-items:center;justify-content:center;margin:0 auto 0.45em;color:#C4881A;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.8em;">03</div>
-   <div style="font-size:0.7em;font-weight:700;color:#C4881A;line-height:1.2;">Many Pages</div>
-   <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.35em;">add navigation</div>
+  <div style="display:flex;align-items:center;gap:1.1em;background:rgba(255,184,77,0.08);border-left:5px solid #FFB84D;border-radius:0 12px 12px 0;padding:0.75em 1.1em;">
+   <div style="font-family:'Maple Mono',monospace;font-weight:700;font-size:0.85em;color:#FFB84D;min-width:1.6em;letter-spacing:0.02em;">03</div>
+   <div style="flex:1;">
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Simple HTML</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">your first one-page site from a prompt</div>
+   </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.7em 0.95em;text-align:center;box-shadow:0 6px 22px rgba(86,84,162,0.12);border-top:4px solid #5654A2;">
-   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#EEEDF8,#D6D2EF);display:flex;align-items:center;justify-content:center;margin:0 auto 0.45em;color:#5654A2;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.8em;">04</div>
-   <div style="font-size:0.7em;font-weight:700;color:#5654A2;line-height:1.2;">Theory</div>
-   <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.35em;">unpack the basics</div>
+  <div style="display:flex;align-items:center;gap:1.1em;background:rgba(157,154,224,0.08);border-left:5px solid #9D9AE0;border-radius:0 12px 12px 0;padding:0.75em 1.1em;">
+   <div style="font-family:'Maple Mono',monospace;font-weight:700;font-size:0.85em;color:#9D9AE0;min-width:1.6em;letter-spacing:0.02em;">04</div>
+   <div style="flex:1;">
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">HTML Project</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">multipage site with navigation</div>
+   </div>
   </div>
 
- </div>
-
- <div style="margin-top:1em;text-align:center;font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.06em;">
-  use first &nbsp;<span style="color:#C4881A;">→</span>&nbsp; learn after
  </div>
 
 </div>

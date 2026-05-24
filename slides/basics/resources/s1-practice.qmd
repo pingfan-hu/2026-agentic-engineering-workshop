@@ -1,34 +1,34 @@
 ```{=html}
-<div style="width:88%;margin:0 auto;text-align:center;">
+<div style="width:78%;margin:0 auto;text-align:left;">
 
- <div style="background:linear-gradient(135deg,#FFB84D,#C4881A);border-radius:20px;padding:1.6em 1.4em 1.5em;box-shadow:0 14px 40px rgba(196,136,26,0.32);">
+ <div style="background:rgba(123,181,240,0.08);border-left:5px solid #7BB5F0;border-radius:0 14px 14px 0;padding:1.3em 1.6em 1.4em;">
 
-  <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFF;opacity:0.85;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:0.6em;">— practice 01 —</div>
+  <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#7BB5F0;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.5em;">— practice 02 —</div>
 
-  <div style="font-size:1.5em;font-weight:800;color:#FFF;line-height:1.1;margin-bottom:0.95em;letter-spacing:-0.01em;">
+  <div style="font-size:1.2em;font-weight:800;color:#F8F7F0;line-height:1.15;margin-bottom:0.95em;letter-spacing:-0.01em;">
    Install all three tools.
   </div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.55em;text-align:left;">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.55em;">
 
-   <div style="background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.35);border-radius:12px;padding:0.7em 0.7em;">
-    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#FFF;opacity:0.85;letter-spacing:0.12em;margin-bottom:0.3em;">CLAUDE CODE</div>
-    <div style="font-size:0.6em;color:#FFF;font-weight:600;">→ <code style="font-family:'Maple Mono',monospace;font-size:0.95em;">claude</code> runs in terminal</div>
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(123,181,240,0.2);border-radius:10px;padding:0.7em 0.8em;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#7BB5F0;letter-spacing:0.14em;margin-bottom:0.35em;">CLAUDE CODE</div>
+    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.45;">→ <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#7BB5F0;">claude</code> runs in terminal</div>
    </div>
 
-   <div style="background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.35);border-radius:12px;padding:0.7em 0.7em;">
-    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#FFF;opacity:0.85;letter-spacing:0.12em;margin-bottom:0.3em;">POSITRON</div>
-    <div style="font-size:0.6em;color:#FFF;font-weight:600;">→ launches and opens</div>
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(123,181,240,0.2);border-radius:10px;padding:0.7em 0.8em;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#7BB5F0;letter-spacing:0.14em;margin-bottom:0.35em;">POSITRON</div>
+    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.45;">→ launches and opens</div>
    </div>
 
-   <div style="background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.35);border-radius:12px;padding:0.7em 0.7em;">
-    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#FFF;opacity:0.85;letter-spacing:0.12em;margin-bottom:0.3em;">SPOKENLY</div>
-    <div style="font-size:0.6em;color:#FFF;font-weight:600;">→ hotkey produces text</div>
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(123,181,240,0.2);border-radius:10px;padding:0.7em 0.8em;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#7BB5F0;letter-spacing:0.14em;margin-bottom:0.35em;">SPOKENLY</div>
+    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.45;">→ hotkey produces text</div>
    </div>
 
   </div>
 
-  <div style="margin-top:1em;font-family:'Maple Mono',monospace;font-size:0.55em;color:#FFF;opacity:0.85;letter-spacing:0.1em;">
+  <div style="margin-top:1em;font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.12em;">
    ⏱ ~ 5 min &nbsp;·&nbsp; raise hand if stuck
   </div>
 
