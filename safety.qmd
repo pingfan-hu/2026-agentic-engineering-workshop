@@ -3,11 +3,16 @@ title: "Data Safety with AI"
 toc: false
 grid:
   sidebar-width: 0px
-  body-width: 900px
   margin-width: 0px
 ---
 
 ```{=html}
+<p class="slide-embed-link">
+  <a class="slide-embed-button" href="slides/safety/" target="_blank" rel="noopener">
+    Open slides in a new tab
+  </a>
+</p>
+
 <div class="slide-embed">
   <iframe
     src="slides/safety/"
@@ -16,10 +21,4 @@ grid:
     loading="lazy">
   </iframe>
 </div>
-
-<p class="slide-embed-link">
-  <a class="slide-embed-button" href="slides/safety/" target="_blank" rel="noopener">
-    Open slides in a new tab →
-  </a>
-</p>
 ```

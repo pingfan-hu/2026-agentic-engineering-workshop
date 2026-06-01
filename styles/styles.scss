@@ -1544,11 +1544,27 @@ body.quarto-dark {
 }
 
 // === Slide deck embed (used on per-part pages) ===
+// The content column always spans 80% of the viewport (10% breathing room on
+// each side) — no fixed pixels. Quarto bakes the front-matter `body-width`
+// into a hardcoded `.page-columns` grid (not a CSS variable), so we re-declare
+// that grid with a `70vw` body column and equal `1fr` margins to center it.
+// The full `:has().fullcontent:not(.floating):not(.docked)` chain matches
+// Quarto's own selector specificity, so this wins on source order without
+// `!important`. Title, the "open in new tab" button, and the iframe all live
+// in this column, so they scale and stay aligned together.
+body:has(.slide-embed).fullcontent:not(.floating):not(.docked) .page-columns {
+  grid-template-columns:
+    [screen-start screen-start-inset page-start page-start-inset body-start-outset] 1fr
+    [body-start body-content-start] 70vw
+    [body-content-end body-end body-end-outset page-end-inset page-end] 1fr
+    [screen-end-inset screen-end];
+}
+
 .slide-embed {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  margin: 1.5rem 0;
+  margin: 0 0 1.5rem;
   border: 1px solid rgba(1, 61, 91, 0.18);
   border-radius: 8px;
   overflow: hidden;
@@ -1565,54 +1581,54 @@ body.quarto-dark {
   border: 0;
 }
 
-// Anchor the "Open slides in a new tab" button to the top-right of the
-// page content, aligned with the page title. :has() scopes this to pages
-// that actually embed a deck so other pages keep static positioning.
-main.content:has(.slide-embed) {
-  position: relative;
+// Hide the redundant page title on deck pages — the slide itself shows it.
+body:has(.slide-embed) #title-block-header {
+  display: none;
 }
 
+// With the title gone, pull the deck content toward the top: drop Quarto's
+// 14px content-block top padding and trim the fixed-navbar clearance (default
+// 82px) to just clear the single-row navbar. Scoped to deck pages only.
+body.nav-fixed:has(.slide-embed) {
+  padding-top: 70px;
+}
+
+body:has(.slide-embed) #quarto-content > * {
+  padding-top: 0;
+}
+
+// "Open slides in a new tab" button: a squared tab centered on the top edge of
+// the deck. The container is a flex box (NOT a text line) so there's no
+// line-height leading below the button — its bottom sits flush on the iframe.
 .slide-embed-link {
-  text-align: right;
-  font-size: 0.9rem;
-  position: absolute;
-  top: 2rem;
-  right: 0;
+  display: flex;
+  justify-content: center;
   margin: 0;
-  z-index: 2;
 }
 
-@media (max-width: 640px) {
-  main.content:has(.slide-embed) {
-    position: static;
-  }
-
-  .slide-embed-link {
-    position: static;
-    margin-top: 0.75rem;
-  }
-}
-
+// Font scales with the viewport via clamp() so the button stays proportional
+// to the 80vw deck instead of staying a fixed width and ballooning when the
+// viewport narrows (low-res / mobile). Floor keeps it readable; cap stops it
+// growing on large screens. Padding is in `em` so it tracks the font.
 .slide-embed-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.4em;
-  padding: 4px 16px;
+  padding: 0.35em 1.3em;
   background: #E5F0F7;
   color: #013D5B !important;
   font-family: 'Maple Mono', monospace;
-  font-size: 0.85em;
+  font-size: clamp(0.62rem, 1.1vw, 0.78rem);
+  line-height: 1.4;
   text-decoration: none !important;
-  border-radius: 20px;
+  border-radius: 6px 6px 0 0;
   border: 1.5px solid #013D5B;
-  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .slide-embed-button:hover {
   background: #013D5B;
   color: #F8F7F0 !important;
   text-decoration: none !important;
-  transform: translateX(2px);
 }
 
 .slide-embed-button:focus-visible {
