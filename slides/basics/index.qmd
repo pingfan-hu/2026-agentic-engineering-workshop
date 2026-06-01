@@ -28,7 +28,7 @@ title-slide-attributes:
 
 ## &nbsp; {.dark-centered .center}
 
-{{< include resources/s1-three-tools.qmd >}}
+{{< include resources/s1-practice.qmd >}}
 
 ## Where you launch matters {.light-centered .center}
 
