@@ -22,25 +22,13 @@ title-slide-attributes:
 
 {{< include resources/s1-two-terms.qmd >}}
 
-## Agent = Model + Tools + Loop {.light-centered .center}
+## &nbsp; {.light-centered .center}
 
 {{< include resources/s1-agent-equation.qmd >}}
 
-## The four components {.light-centered .center}
-
-{{< include resources/s2-four-components.qmd >}}
-
-## The hardest skill {.dark-centered .center}
-
-{{< include resources/s3-hardest-skill.qmd >}}
-
-## Basic Installation {.light-centered .center}
+## &nbsp; {.dark-centered .center}
 
 {{< include resources/s1-three-tools.qmd >}}
-
-## Practice 02 {.dark-centered .center}
-
-{{< include resources/s1-practice.qmd >}}
 
 ## Where you launch matters {.light-centered .center}
 
@@ -69,6 +57,10 @@ title-slide-attributes:
 ## Three takeaways {.light-centered .center}
 
 {{< include resources/takeaways.qmd >}}
+
+## The hardest skill {.dark-centered .center}
+
+{{< include resources/s3-hardest-skill.qmd >}}
 
 ## Up next {.dark-centered .center}
 

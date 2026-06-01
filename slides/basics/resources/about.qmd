@@ -9,7 +9,8 @@
     <div style="font-size:0.85em;font-weight:700;color:#2C3E50;white-space:nowrap;">Pingfan Hu</div>
    </div>
    <div style="font-size:0.55em;color:#564232;line-height:1.55;margin-bottom:0.55em;">
-    PhD Candidate, EMSE
+    PhD Candidate, EMSE<br>
+    Systems Engineering
    </div>
    <a class="instructor-link instructor-link--blue" href="http://pingfanhu.com" target="_blank" rel="noopener" style="margin-top:auto;">pingfanhu.com ↗</a>
   </div>

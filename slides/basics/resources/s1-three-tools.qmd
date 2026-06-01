@@ -1,45 +1,89 @@
 ```{=html}
-<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+<div id="practice-timer" class="practice-timer" role="button" tabindex="0" title="Click to start or pause">
+ <span class="pt-ico pt-ico-play"><i data-lucide="play" style="width:1em;height:1em;"></i></span>
+ <span class="pt-ico pt-ico-pause"><i data-lucide="pause" style="width:1em;height:1em;"></i></span>
+ <span class="pt-time">10:00</span>
+</div>
 
- <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.7em;">
+<div style="width:92%;margin:0 auto;text-align:left;">
 
-  <div style="background:#FFFFFF;border-radius:16px;padding:1em 0.95em 1.05em;box-shadow:0 6px 22px rgba(204,120,92,0.12);text-align:left;border-top:4px solid #CC785C;">
-   <a class="tool-link" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">
-    <div class="tool-icon">
-     <div style="width:1.75em;height:1.75em;border-radius:0.45em;background:linear-gradient(135deg,#FBEEE8,#F5D9CD);display:flex;align-items:center;justify-content:center;">
-      <svg viewBox="0 0 24 24" fill="#CC785C" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;display:block;"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>
+ <div style="background:rgba(255,184,77,0.08);border-left:6px solid #FFB84D;border-radius:0 16px 16px 0;padding:1.7em 2.1em 1.8em;">
+
+  <div style="font-family:'Maple Mono',monospace;font-size:0.82em;color:#FFB84D;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.55em;">— practice 01 —</div>
+
+  <div style="font-size:0.85em;font-weight:800;color:#F8F7F0;line-height:1.15;margin-bottom:1em;letter-spacing:-0.01em;white-space:nowrap;">
+   Install and initialize all three software.
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0.8em;">
+
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.55em 0.7em;">
+    <a class="tool-link" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">
+     <div class="tool-icon">
+      <div style="width:1.5em;height:1.5em;border-radius:0.4em;background:linear-gradient(135deg,#FBEEE8,#F5D9CD);display:flex;align-items:center;justify-content:center;">
+       <svg viewBox="0 0 24 24" fill="#CC785C" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;display:block;"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>
+      </div>
      </div>
-    </div>
-    <div style="font-size:0.72em;font-weight:700;white-space:nowrap;color:#CC785C;">Claude Code</div>
-   </a>
-   <div style="font-size:0.55em;color:#564232;line-height:1.55;">AI agent by Anthropic.</div>
+     <div style="font-size:0.55em;font-weight:700;white-space:nowrap;color:#E8A589;">Claude Code</div>
+    </a>
+    <div style="font-size:0.46em;color:#C9C4BC;line-height:1.5;margin-top:0.2em;">AI agent by Anthropic.</div>
+   </div>
+
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.55em 0.7em;">
+    <a class="tool-link" href="https://positron.posit.co" target="_blank" rel="noopener">
+     <div class="tool-icon">
+      <img src="figs/positron-icon.png" alt="Positron" style="width:1.7em;height:1.7em;object-fit:contain;display:block;margin:0;" />
+     </div>
+     <div style="font-size:0.55em;font-weight:700;white-space:nowrap;color:#7FB0E6;">Positron</div>
+    </a>
+    <div style="font-size:0.46em;color:#C9C4BC;line-height:1.5;margin-top:0.2em;">Data science IDE by Posit.</div>
+   </div>
+
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.55em 0.7em;">
+    <a class="tool-link" href="https://spokenly.app" target="_blank" rel="noopener">
+     <div class="tool-icon">
+      <img src="figs/spokenly-logo.png" alt="Spokenly" style="width:1.7em;height:1.7em;object-fit:contain;display:block;margin:0;" />
+     </div>
+     <div style="font-size:0.55em;font-weight:700;white-space:nowrap;color:#6FC2B0;">Spokenly</div>
+    </a>
+    <div style="font-size:0.46em;color:#C9C4BC;line-height:1.5;margin-top:0.2em;">Voice-to-text app.</div>
+   </div>
+
   </div>
 
-  <div style="background:#FFFFFF;border-radius:16px;padding:1em 0.95em 1.05em;box-shadow:0 6px 22px rgba(58,125,201,0.12);text-align:left;border-top:4px solid #3A7DC9;">
-   <a class="tool-link" href="https://positron.posit.co" target="_blank" rel="noopener">
-    <div class="tool-icon">
-     <img src="figs/positron-icon.png" alt="Positron" style="width:1.75em;height:1.75em;object-fit:contain;border-radius:0.45em;display:block;margin:0;" />
-    </div>
-    <div style="font-size:0.72em;font-weight:700;white-space:nowrap;color:#3A7DC9;">Positron</div>
-   </a>
-   <div style="font-size:0.55em;color:#564232;line-height:1.55;">Data science IDE by Posit.</div>
-  </div>
-
-  <div style="background:#FFFFFF;border-radius:16px;padding:1em 0.95em 1.05em;box-shadow:0 6px 22px rgba(44,132,117,0.12);text-align:left;border-top:4px solid #2C8475;">
-   <a class="tool-link" href="https://spokenly.app" target="_blank" rel="noopener">
-    <div class="tool-icon">
-     <img src="figs/spokenly-logo.png" alt="Spokenly" style="width:1.75em;height:1.75em;object-fit:contain;border-radius:0.45em;display:block;margin:0;" />
-    </div>
-    <div style="font-size:0.72em;font-weight:700;white-space:nowrap;color:#2C8475;">Spokenly</div>
-   </a>
-   <div style="font-size:0.55em;color:#564232;line-height:1.55;">AI powered voice-to-text application.</div>
-  </div>
-
- </div>
-
- <div style="margin-top:0.9em;text-align:center;font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.08em;">
-  swap any later · standardize today
  </div>
 
 </div>
+
+<script>
+(function(){
+  function init(){
+    var el = document.getElementById('practice-timer');
+    if(!el || el.dataset.wired) return;
+    el.dataset.wired = '1';
+    var display = el.querySelector('.pt-time');
+    var TOTAL = 600, STEP = 5;
+    var remaining = TOTAL, id = null;
+    function fmt(s){ var m = Math.floor(s/60), x = s % 60; return m + ':' + (x < 10 ? '0' : '') + x; }
+    function render(){ display.textContent = fmt(remaining); }
+    function stop(){ if(id){ clearInterval(id); id = null; } el.classList.remove('pt-running'); }
+    function tick(){
+      remaining -= STEP;
+      if(remaining <= 0){ remaining = 0; render(); stop(); el.classList.add('pt-done'); return; }
+      render();
+    }
+    function start(){
+      if(id) return;
+      if(remaining <= 0){ remaining = TOTAL; el.classList.remove('pt-done'); render(); }
+      id = setInterval(tick, STEP * 1000);
+      el.classList.add('pt-running');
+    }
+    function toggle(){ if(id) stop(); else start(); }
+    el.addEventListener('click', toggle);
+    el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); } });
+    render();
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
 ```

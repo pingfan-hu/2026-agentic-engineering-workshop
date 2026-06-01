@@ -131,14 +131,37 @@ th { font-size: 24px; }
     text-decoration: none !important;
     display: inline-flex;
     align-items: center;
-    gap: 0.55em;
-    margin-bottom: 0.6em;
-    transition: opacity 0.15s ease, transform 0.1s ease;
+    gap: 0.35em;
+    margin-bottom: 0.3em;
+    transition: transform 0.1s ease;
     cursor: pointer;
-    will-change: opacity, transform;
+    will-change: transform;
     backface-visibility: hidden;
 
-    &:hover { opacity: 0.72; }
+    // Product name carries an underline that grows from the left in its own
+    // brand color (currentColor of the inline-styled name div).
+    .tool-icon + div {
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.1em;
+        width: 100%;
+        height: 0.1em;
+        background: currentColor;
+        border-radius: 999px;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+    }
+
+    &:hover {
+      .tool-icon + div::after { transform: scaleX(1); }
+    }
     &:active { transform: scale(0.97); }
   }
 
@@ -147,8 +170,8 @@ th { font-size: 24px; }
   // box-shadow, background) that throw off card layout — reset them here so
   // every tool icon occupies the same footprint regardless of element type.
   .tool-icon {
-    width: 2em;
-    height: 2em;
+    width: 1.7em;
+    height: 1.7em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,6 +184,101 @@ th { font-size: 24px; }
       box-shadow: none !important;
       max-width: none !important;
       max-height: none !important;
+    }
+  }
+
+  // Assistants vs Agents (s1-two-terms). Clickable product pills + an
+  // emphasized "agents win" card. Hover uses box-shadow only (no transform)
+  // to avoid sibling jitter; the press transform on :active is momentary.
+  .term-pill {
+    text-decoration: none !important;
+    transition: box-shadow 0.15s ease, transform 0.1s ease;
+    cursor: pointer;
+    will-change: transform;
+
+    &:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14); }
+    &:active { transform: scale(0.97); }
+
+    // Keep each pill's brand color over the global `.reveal a` color !important.
+    &--teal { color: #2C8475 !important; &:hover { color: #2C8475 !important; } }
+    &--gold { color: #C4881A !important; &:hover { color: #C4881A !important; } }
+  }
+
+  // Agent card is pre-scaled to read as the focus of the slide. transform-origin
+  // centers the zoom. No hover/active interaction — emphasis is static.
+  .agent-card {
+    position: relative;
+    transform: scale(1.05);
+    transform-origin: center center;
+  }
+
+  // Slightly recede the assistants card so the agents card reads as the winner.
+  .assistant-card { opacity: 0.82; }
+
+  // "Agents win" badge pinned above the agent card.
+  .agent-badge {
+    position: absolute;
+    top: -0.85em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    font-family: 'Maple Mono', monospace;
+    font-size: 0.42em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #E0A92E, #C4881A);
+    padding: 0.45em 0.95em;
+    border-radius: 999px;
+    box-shadow: 0 5px 16px rgba(196, 136, 26, 0.4);
+    white-space: nowrap;
+  }
+
+  // Practice countdown timer pinned to the slide's top-right corner. Click (or
+  // Enter/Space) toggles start / pause / resume; counts 10:00 down in 5s steps.
+  // Fixed positioning anchors it to the scaled .slides stage; it only renders
+  // while its slide is the active section.
+  .practice-timer {
+    position: fixed;
+    top: 22px;
+    right: 30px;
+    z-index: 30;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    font-family: 'Maple Mono', monospace;
+    font-weight: 700;
+    font-size: 1.05em;
+    line-height: 1;
+    color: #2C3E50;
+    background: #FBE6C9;
+    border: 2px solid #F0CE8E;
+    border-radius: 999px;
+    padding: 0.4em 0.75em;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    transition: box-shadow 0.15s ease, transform 0.1s ease;
+
+    svg { width: 1.05em; height: 1.05em; display: block; margin: 0; }
+    .pt-time { min-width: 2.7em; text-align: center; letter-spacing: 0.04em; }
+    .pt-ico { display: inline-flex; align-items: center; }
+    .pt-ico-pause { display: none; }
+
+    &:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.26); }
+    &:active { transform: scale(0.96); }
+
+    &.pt-running {
+      .pt-ico-play { display: none; }
+      .pt-ico-pause { display: inline-flex; }
+    }
+    &.pt-done {
+      color: #FFFFFF;
+      background: #C0392B;
+      border-color: #C0392B;
     }
   }
 
