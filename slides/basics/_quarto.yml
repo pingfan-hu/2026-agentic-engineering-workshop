@@ -6,6 +6,12 @@ project:
     - figs/
     - resources/s2-html-example.html
     - resources/s2-html-example.css
+    - resources/s2-html-example-1.html
+    - resources/s2-html-example-2.html
+    - resources/s2-html-example-3.html
+    - resources/s2-html-example-4.html
+    - resources/s2-html-example-5.html
+    - resources/s2-html-example-6.html
 
 metadata-files:
   - ../_shared.yml

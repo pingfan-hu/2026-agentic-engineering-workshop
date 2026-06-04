@@ -46,6 +46,18 @@ title-slide-attributes:
 
 {{< include resources/s2-html-result.qmd >}}
 
+## Create Some More HTML Pages {.light-centered .center}
+
+{{< include resources/s2-second-prompt.qmd >}}
+
+## Example Output: A Full Website {.dark-centered .center}
+
+{{< include resources/s2-html-result-2.qmd >}}
+
+## How a Website Is Built {.light-centered .center}
+
+{{< include resources/s2-website-structure.qmd >}}
+
 ## &nbsp; {.dark-centered .center}
 
 {{< include resources/s2-practice.qmd >}}

@@ -1,0 +1,25 @@
+```{=html}
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.4em 1em;border-radius:18px;">
+
+ <div style="font-size:0.5em;color:#6F6470;margin-bottom:0.7em;text-align:center;">Talk using Spokenly, or copy the text below and paste it to Claude.</div>
+
+ <div style="background:#FFFFFF;border:2px solid #3A7DC9;border-radius:14px;padding:1em 1.15em;box-shadow:0 6px 22px rgba(58,125,201,0.15);text-align:left;">
+
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5em;margin-bottom:0.6em;">
+   <div style="display:flex;align-items:center;gap:0.5em;">
+    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#DCE9FA,#B5D0F0);display:flex;align-items:center;justify-content:center;color:#3A7DC9;"><i data-lucide="message-square-quote" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#3A7DC9;letter-spacing:0.1em;text-transform:uppercase;">Example prompt</div>
+   </div>
+   <button class="copy-prompt-btn" aria-label="Copy prompt" onclick="var b=this;navigator.clipboard.writeText(document.getElementById('second-prompt-text').innerText.trim()).then(function(){var l=b.querySelector('.copy-label');l.textContent='Copied!';setTimeout(function(){l.textContent='Copy';},1500);});">
+    <i data-lucide="copy" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i><span class="copy-label">Copy</span>
+   </button>
+  </div>
+
+  <div id="second-prompt-text" style="font-size:0.54em;color:#2C3E50;line-height:1.7;font-family:'Georgia',serif;">
+   For each notable film on the Tom Hanks page, create its own HTML page. Then link everything together: make each film on the main page clickable so it opens that film's page, and add a "Back to Tom Hanks" button at the top of every film page. Reuse the same <code style="font-family:'Maple Mono',monospace;color:#C4881A;">styles.css</code> so all pages match.
+  </div>
+
+ </div>
+
+</div>
+```

@@ -1,0 +1,38 @@
+```{=html}
+<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.4em 1.2em;border-radius:18px;">
+
+ <div style="font-size:0.5em;color:#6F6470;line-height:1.55;text-align:center;margin-bottom:1.1em;">A website is just a handful of HTML pages that all share <strong style="color:#2C3E50;">one</strong> stylesheet. Many pages, one consistent look — that's the minimum.</div>
+
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:1em;align-items:stretch;">
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:1.1em 1.3em;box-shadow:0 6px 22px rgba(58,125,201,0.12);text-align:left;">
+
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.85em;">
+    <div style="width:1.7em;height:1.7em;border-radius:0.45em;background:linear-gradient(135deg,#FEF5E7,#FAE9C8);display:flex;align-items:center;justify-content:center;color:#C4881A;flex-shrink:0;"><i data-lucide="folder" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
+    <span style="font-family:'Maple Mono',monospace;font-size:0.55em;font-weight:700;color:#2C3E50;">my-website/</span>
+   </div>
+
+   <div style="display:flex;align-items:center;gap:0.55em;font-family:'Maple Mono',monospace;font-size:0.5em;margin-bottom:0.55em;">
+    <span style="color:#C9C0CB;">├─</span><i data-lucide="file-code" style="width:0.95em;height:0.95em;stroke-width:1.8;color:#D45F47;"></i><span style="color:#D45F47;">index.html</span>
+   </div>
+   <div style="display:flex;align-items:center;gap:0.55em;font-family:'Maple Mono',monospace;font-size:0.5em;margin-bottom:0.55em;">
+    <span style="color:#C9C0CB;">├─</span><i data-lucide="file-code" style="width:0.95em;height:0.95em;stroke-width:1.8;color:#D45F47;"></i><span style="color:#D45F47;">about.html</span>
+   </div>
+   <div style="display:flex;align-items:center;gap:0.55em;font-family:'Maple Mono',monospace;font-size:0.5em;margin-bottom:0.55em;">
+    <span style="color:#C9C0CB;">├─</span><i data-lucide="file-code" style="width:0.95em;height:0.95em;stroke-width:1.8;color:#D45F47;"></i><span style="color:#D45F47;">projects.html</span>
+   </div>
+   <div style="display:flex;align-items:center;gap:0.55em;font-family:'Maple Mono',monospace;font-size:0.5em;margin-bottom:0.55em;">
+    <span style="color:#C9C0CB;">├─</span><i data-lucide="file-code" style="width:0.95em;height:0.95em;stroke-width:1.8;color:#D45F47;"></i><span style="color:#D45F47;">contact.html</span>
+   </div>
+   <div style="display:flex;align-items:center;gap:0.55em;font-family:'Maple Mono',monospace;font-size:0.5em;">
+    <span style="color:#C9C0CB;">└─</span><i data-lucide="palette" style="width:0.95em;height:0.95em;stroke-width:1.8;color:#3A7DC9;"></i><span style="color:#3A7DC9;">styles.css</span>
+   </div>
+
+  </div>
+
+  <div style="border:2px dashed #CFC6D3;border-radius:14px;background:rgba(255,255,255,0.4);min-height:100%;"></div>
+
+ </div>
+
+</div>
+```
