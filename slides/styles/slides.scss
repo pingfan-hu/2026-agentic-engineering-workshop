@@ -11,8 +11,8 @@ $presentation-line-height: 1.3;
 $body-bg: #F8F7F0 !default;
 $body-color: #564232 !default;
 $link-color: #5654A2 !default;
-$selection-color: #694696 !default;
-$selection-bg: #D6C2DD !default;
+$selection-color: inherit !default;
+$selection-bg: #C6D6E8 !default;
 
 // === Headings ===
 $presentation-heading-font: "TsangerJinKai", sans-serif !default;
@@ -202,6 +202,31 @@ th { font-size: 24px; }
     // Keep each pill's brand color over the global `.reveal a` color !important.
     &--teal { color: #2C8475 !important; &:hover { color: #2C8475 !important; } }
     &--gold { color: #C4881A !important; &:hover { color: #C4881A !important; } }
+  }
+
+  // Copy-prompt button (s2-first-prompt). Pinned top-right of the prompt card;
+  // copies the prompt text to the clipboard and flips its label to "Copied!".
+  // Hover uses background + box-shadow only (no transform) to avoid card jitter.
+  .copy-prompt-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    flex-shrink: 0;
+    font-family: 'Maple Mono', monospace;
+    font-size: 0.42em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #3A7DC9;
+    background: #EAF1FB;
+    border: 1px solid #C8DCF4;
+    border-radius: 999px;
+    padding: 0.45em 0.85em;
+    cursor: pointer;
+    transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+    will-change: transform;
+
+    &:hover { background: #DCE9FA; box-shadow: 0 3px 10px rgba(58, 125, 201, 0.18); }
+    &:active { transform: scale(0.96); }
   }
 
   // Agent card is pre-scaled to read as the focus of the slide. transform-origin

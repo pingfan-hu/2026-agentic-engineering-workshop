@@ -1,0 +1,20 @@
+```{=html}
+<div style="width:80%;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 14px 40px rgba(44,62,80,0.18);border:1px solid #E3DCD2;background:#FAF7F2;">
+
+ <div style="display:flex;align-items:center;gap:0.55em;padding:0.6em 0.9em;background:#F1ECE4;border-bottom:1px solid #E3DCD2;">
+  <span style="width:0.6em;height:0.6em;border-radius:50%;background:#ED6A5E;display:inline-block;"></span>
+  <span style="width:0.6em;height:0.6em;border-radius:50%;background:#F4BF4F;display:inline-block;"></span>
+  <span style="width:0.6em;height:0.6em;border-radius:50%;background:#61C554;display:inline-block;"></span>
+  <span style="flex:1;margin-left:0.6em;font-family:'Maple Mono',monospace;font-size:0.4em;color:#9B8EA0;background:#FFFFFF;border:1px solid #E3DCD2;border-radius:999px;padding:0.3em 0.9em;">tom-hanks.html</span>
+ </div>
+
+ <iframe src="resources/s2-html-example.html?v=2" title="Tom Hanks page built by Claude" style="display:block;width:100%;max-width:100%;height:460px;border:0;margin:0;background:#FAF7F2;"></iframe>
+
+ <div style="display:flex;align-items:center;justify-content:center;gap:0.7em;padding:0.6em;background:#F1ECE4;border-top:1px solid #E3DCD2;">
+  <span style="display:inline-flex;align-items:center;gap:0.4em;font-family:'Maple Mono',monospace;font-size:0.42em;color:#D45F47;background:#FCEEEC;padding:0.3em 0.7em;border-radius:7px;"><i data-lucide="file-code" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i>tom-hanks.html</span>
+  <span style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;font-weight:700;">+</span>
+  <span style="display:inline-flex;align-items:center;gap:0.4em;font-family:'Maple Mono',monospace;font-size:0.42em;color:#3A7DC9;background:#EAF1FB;padding:0.3em 0.7em;border-radius:7px;"><i data-lucide="palette" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i>styles.css</span>
+ </div>
+
+</div>
+```

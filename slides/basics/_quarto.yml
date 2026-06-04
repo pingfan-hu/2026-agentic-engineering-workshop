@@ -4,6 +4,8 @@ project:
     - index.qmd
   resources:
     - figs/
+    - resources/s2-html-example.html
+    - resources/s2-html-example.css
 
 metadata-files:
   - ../_shared.yml

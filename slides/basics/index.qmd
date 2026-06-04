@@ -38,9 +38,13 @@ title-slide-attributes:
 
 {{< include resources/s2-setup.qmd >}}
 
-## Describe, don't code {.light-centered .center}
+## Create Your First HTML Page {.light-centered .center}
 
 {{< include resources/s2-first-prompt.qmd >}}
+
+## Example Output by Claude Code {.dark-centered .center}
+
+{{< include resources/s2-html-result.qmd >}}
 
 ## &nbsp; {.dark-centered .center}
 
