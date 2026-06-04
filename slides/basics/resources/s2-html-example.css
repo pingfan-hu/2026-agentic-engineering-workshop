@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/maple-mono@5.2.5/index.min.css');
+
 :root {
   --accent: #c2410c;
   --ink: #1f2937;
@@ -158,7 +160,8 @@ h2::before {
 .film-link .arrow {
   margin-left: auto;
   color: var(--muted);
-  font-weight: 700;
+  font-family: 'Maple Mono', monospace;
+  font-weight: 500;
   transition: transform 0.15s ease, color 0.15s ease;
 }
 
@@ -189,22 +192,22 @@ h2::before {
 .back-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.9rem;
-  font-weight: 600;
+  gap: 0.4em;
+  padding: 4px 14px 4px 11px;
+  border-radius: 20px;
+  border: 1.5px solid var(--accent);
+  background: #fbeee8;
   color: var(--accent);
+  font-family: 'Maple Mono', monospace;
+  font-size: 0.85rem;
   text-decoration: none;
-  padding: 0.4rem 0.95rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  transition: gap 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
 .back-link:hover {
-  gap: 0.7rem;
-  border-color: var(--accent);
-  box-shadow: 0 4px 12px rgba(194, 65, 12, 0.12);
+  background: var(--accent);
+  color: #ffffff;
+  transform: translateX(-2px);
 }
 
 /* ---- Footer ---- */

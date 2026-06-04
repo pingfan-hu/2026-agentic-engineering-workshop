@@ -8,4 +8,54 @@ if (window.Reveal) {
     if (typeof lucide !== 'undefined') lucide.createIcons();
   });
 }
+
+// ---- Embedded-site iframe scrolling ----
+// Reveal scales .slides with a CSS transform. That breaks the browser's NATIVE
+// wheel-to-scroll for an iframe (the scroll hit-test goes stale until a relayout
+// — which is what pressing F does — and stays valid for only one iframe at a
+// time). PROGRAMMATIC scrolling is unaffected, so we catch the wheel ourselves
+// and call scrollBy() on the iframe's own window. Works without F, and each
+// iframe is handled independently so both slides work at once.
+function wheelDelta(e) { return e.deltaY * (e.deltaMode === 1 ? 16 : 1); }
+
+// Real filename -> display name shown in the fake address bar, so navigating the
+// embedded site updates the URL to the educational page name.
+var SITE_URL_NAMES = {
+  's2-html-example.html': 'tom-hanks.html',
+  's2-html-example-1.html': 'tom-hanks.html',
+  's2-html-example-2.html': 'forrest-gump.html',
+  's2-html-example-3.html': 'apollo-13.html',
+  's2-html-example-4.html': 'saving-private-ryan.html',
+  's2-html-example-5.html': 'cast-away.html',
+  's2-html-example-6.html': 'captain-phillips.html'
+};
+
+window.wireSiteScroll = function(f) {
+  try {
+    var win = f.contentWindow, d = win.document;
+    // Update the fake address bar to the current page (runs on every navigation).
+    var urlEl = f.parentNode.querySelector('.site-url');
+    if (urlEl) {
+      var base = (win.location.pathname.split('/').pop() || '').replace(/\?.*$/, '');
+      if (SITE_URL_NAMES[base]) urlEl.textContent = SITE_URL_NAMES[base];
+    }
+    // Path A: the wheel reaches the iframe's document — scroll that iframe directly.
+    if (d.__wheelWired) return;
+    d.__wheelWired = true;
+    d.addEventListener('wheel', function(e) {
+      win.scrollBy(0, wheelDelta(e));
+      e.preventDefault();
+    }, { passive: false });
+  } catch (err) {}
+};
+
+// Path B: the wheel reaches the parent document instead — scroll the iframe in
+// the currently visible slide. Capture phase + window catches it first.
+window.addEventListener('wheel', function(e) {
+  var present = document.querySelector('.reveal section.present');
+  var f = present && present.querySelector('iframe');
+  if (f && f.contentWindow) {
+    try { f.contentWindow.scrollBy(0, wheelDelta(e)); e.preventDefault(); } catch (err) {}
+  }
+}, { passive: false, capture: true });
 </script>
