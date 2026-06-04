@@ -10,3 +10,4 @@ format:
   revealjs:
     include-in-header:
       - resources/_header.html
+      - ../styles/practice-timer.html
