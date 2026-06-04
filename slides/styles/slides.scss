@@ -237,10 +237,19 @@ th { font-size: 24px; }
     white-space: nowrap;
   }
 
-  // Practice countdown timer pinned to the slide's top-right corner. Click (or
-  // Enter/Space) toggles start / pause / resume; counts 10:00 down in 5s steps.
-  // Fixed positioning anchors it to the scaled .slides stage; it only renders
-  // while its slide is the active section.
+  // Teal variant of the focus badge — same form, themed to the project/teal
+  // palette (e.g. the "Project Directories" focus card on the launch-dir slide).
+  .agent-badge--teal {
+    background: linear-gradient(135deg, #3DA890, #2C8475);
+    box-shadow: 0 5px 16px rgba(44, 132, 117, 0.4);
+  }
+
+  // Practice countdown timer pinned to the slide's top-right corner. Two parts:
+  // .pt-main (play/pause + time) toggles start / pause / resume on click or
+  // Enter/Space; .pt-reset restarts the clock to its initial time. Counts down
+  // in 1s steps. The time display has a FIXED width so the pill never resizes as
+  // the digits change. Fixed positioning anchors it to the scaled .slides stage;
+  // it only renders while its slide is the active section.
   .practice-timer {
     position: fixed;
     top: 22px;
@@ -248,7 +257,7 @@ th { font-size: 24px; }
     z-index: 30;
     display: inline-flex;
     align-items: center;
-    gap: 0.45em;
+    gap: 0.5em;
     font-family: 'Maple Mono', monospace;
     font-weight: 700;
     font-size: 1.05em;
@@ -257,28 +266,138 @@ th { font-size: 24px; }
     background: #FBE6C9;
     border: 2px solid #F0CE8E;
     border-radius: 999px;
-    padding: 0.4em 0.75em;
-    cursor: pointer;
+    padding: 0.4em 0.7em;
     user-select: none;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
-    transition: box-shadow 0.15s ease, transform 0.1s ease;
+    transition: box-shadow 0.15s ease;
 
     svg { width: 1.05em; height: 1.05em; display: block; margin: 0; }
-    .pt-time { min-width: 2.7em; text-align: center; letter-spacing: 0.04em; }
-    .pt-ico { display: inline-flex; align-items: center; }
+
+    .pt-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+      &:active { transform: scale(0.96); }
+      // Play/pause icon fades like the reset button: solid on hover, faded otherwise.
+      &:hover .pt-ico { opacity: 1; }
+    }
+    // Fixed width keeps the pill from resizing as the countdown text changes
+    // width (e.g. "10:00" -> "9:59" -> "0:30"). Monospace + centered.
+    .pt-time {
+      width: 3em;
+      text-align: center;
+      letter-spacing: 0.04em;
+      font-variant-numeric: tabular-nums;
+    }
+    // will-change + backface-visibility pre-promote the layer so the first hover
+    // opacity transition doesn't repaint-shake the icon.
+    .pt-ico { display: inline-flex; align-items: center; opacity: 0.65; transition: opacity 0.15s ease; will-change: opacity; backface-visibility: hidden; }
     .pt-ico-pause { display: none; }
 
+    .pt-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0 0 0.35em;
+      margin: 0;
+      background: transparent;
+      border: none;
+      border-left: 1.5px solid rgba(0, 0, 0, 0.18);
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      // Fade only the icon, never the button — so the divider border stays a
+      // constant solid color and never reacts to hover. will-change pre-promotes
+      // the layer so the first hover transition doesn't repaint-shake.
+      svg {
+        opacity: 0.65;
+        transition: opacity 0.15s ease, transform 0.12s ease;
+        will-change: opacity, transform;
+        backface-visibility: hidden;
+      }
+      &:hover svg { opacity: 1; }
+      &:active svg { transform: rotate(-35deg) scale(0.9); }
+    }
+
     &:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.26); }
-    &:active { transform: scale(0.96); }
 
     &.pt-running {
       .pt-ico-play { display: none; }
       .pt-ico-pause { display: inline-flex; }
     }
+    // Last minute: turn the time text red as a heads-up.
+    &.pt-warning .pt-time { color: #C0392B; }
+    // Paused (was running, then paused): fade the time text to the reset icon's
+    // idle opacity. Fresh / reset stays solid — only an active pause fades it.
+    &.pt-paused .pt-time { opacity: 0.65; }
     &.pt-done {
       color: #FFFFFF;
       background: #C0392B;
       border-color: #C0392B;
+      .pt-reset { border-left-color: rgba(255, 255, 255, 0.4); }
+    }
+  }
+
+  // Countdown scrubber — a draggable bar pinned to the slide's bottom edge.
+  // Always visible: full opacity while running (.pt-visible), gently faded when
+  // paused / idle / done. Spans the full countdown (max = TOTAL). The input uses
+  // step = 1 so the thumb tracks the live 1s countdown smoothly (matching the
+  // --fill amber fill); the timer script snaps *user* drags to 5s. Fixed
+  // positioning anchors it to the scaled .slides stage, so it only renders while
+  // its slide is the active section.
+  .practice-scrub {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    width: 72%;
+    max-width: 920px;
+    height: 16px;
+    margin: 0;
+    z-index: 30;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.55;
+    transition: opacity 0.2s ease;
+
+    &.pt-visible { opacity: 1; }
+
+    &::-webkit-slider-runnable-track {
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(to right,
+        #E0A92E 0%, #E0A92E var(--fill, 100%),
+        rgba(248, 247, 240, 0.2) var(--fill, 100%), rgba(248, 247, 240, 0.2) 100%);
+    }
+    &::-moz-range-track {
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(to right,
+        #E0A92E 0%, #E0A92E var(--fill, 100%),
+        rgba(248, 247, 240, 0.2) var(--fill, 100%), rgba(248, 247, 240, 0.2) 100%);
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      margin-top: -5px;
+      border-radius: 50%;
+      background: #C4881A;
+      border: 2px solid #FBE6C9;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    &::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #C4881A;
+      border: 2px solid #FBE6C9;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
   }
 

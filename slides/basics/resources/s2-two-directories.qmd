@@ -3,36 +3,35 @@
 
  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.9em;">
 
-  <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(212,95,71,0.12);text-align:left;">
+  <div class="assistant-card" style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(212,95,71,0.1);text-align:left;">
    <div style="display:flex;align-items:center;gap:0.55em;margin-bottom:0.6em;">
     <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="house" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div>
-     <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;letter-spacing:0.12em;text-transform:uppercase;">directory 01</div>
      <div style="font-size:0.78em;font-weight:700;color:#D45F47;">Home &nbsp;<code style="font-family:'Maple Mono',monospace;font-size:0.85em;color:#D45F47;background:#FCEEEC;padding:0.05em 0.35em;border-radius:4px;">~</code></div>
     </div>
    </div>
    <ul style="list-style:none;padding:0;margin:0 0 0.6em;font-size:0.55em;line-height:1.6;color:#564232;">
-    <li>· computer-level scope</li>
-    <li>· agent can touch anything</li>
-    <li>· global rules only</li>
+    <li>· global <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#D45F47;">.claude/</code> resources</li>
+    <li>· a top-level <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#D45F47;">CLAUDE.md</code></li>
+    <li>· generic rules for every project</li>
    </ul>
-   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#7A2418;background:#FCEEEC;padding:0.25em 0.6em;border-radius:5px;display:inline-block;letter-spacing:0.06em;">⚠ dangerous</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#7A2418;background:#FCEEEC;padding:0.25em 0.6em;border-radius:5px;display:inline-block;letter-spacing:0.06em;">global scope</div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(44,132,117,0.12);text-align:left;">
+  <div class="agent-card" style="background:#FFFFFF;border:1.5px solid #9FD3C7;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 10px 30px rgba(44,132,117,0.2);text-align:left;">
+   <div class="agent-badge agent-badge--teal"><i data-lucide="crown" style="width:1em;height:1em;stroke-width:2.2;"></i>Today's focus</div>
    <div style="display:flex;align-items:center;gap:0.55em;margin-bottom:0.6em;">
     <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="folder-git-2" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div>
-     <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;letter-spacing:0.12em;text-transform:uppercase;">directory 02</div>
-     <div style="font-size:0.78em;font-weight:700;color:#2C8475;">Project &nbsp;<code style="font-family:'Maple Mono',monospace;font-size:0.85em;color:#2C8475;background:#E5F2EE;padding:0.05em 0.35em;border-radius:4px;">cd</code></div>
+     <div style="font-size:0.78em;font-weight:700;color:#2C8475;">Project Directories</div>
     </div>
    </div>
    <ul style="list-style:none;padding:0;margin:0 0 0.6em;font-size:0.55em;line-height:1.6;color:#564232;">
-    <li>· scoped to one project</li>
+    <li>· in-depth, long-term work</li>
     <li>· own <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#2C8475;">CLAUDE.md</code> + <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#2C8475;">.claude/</code></li>
     <li>· own conversation history</li>
    </ul>
-   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#1F5E54;background:#E5F2EE;padding:0.25em 0.6em;border-radius:5px;display:inline-block;letter-spacing:0.06em;">✓ where work lives</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#1F5E54;background:#E5F2EE;padding:0.25em 0.6em;border-radius:5px;display:inline-block;letter-spacing:0.06em;">deep project work</div>
   </div>
 
  </div>

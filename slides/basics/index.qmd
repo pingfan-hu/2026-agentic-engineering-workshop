@@ -34,11 +34,15 @@ title-slide-attributes:
 
 {{< include resources/s2-two-directories.qmd >}}
 
+## Open your workspace {.light-centered .center}
+
+{{< include resources/s2-setup.qmd >}}
+
 ## Describe, don't code {.light-centered .center}
 
 {{< include resources/s2-first-prompt.qmd >}}
 
-## Practice 03 {.dark-centered .center}
+## &nbsp; {.dark-centered .center}
 
 {{< include resources/s2-practice.qmd >}}
 
@@ -50,7 +54,7 @@ title-slide-attributes:
 
 {{< include resources/s3-pitfalls.qmd >}}
 
-## Practice 04 {.dark-centered .center}
+## &nbsp; {.dark-centered .center}
 
 {{< include resources/s3-practice.qmd >}}
 

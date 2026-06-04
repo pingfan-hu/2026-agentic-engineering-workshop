@@ -3,7 +3,7 @@
 
  <div style="background:rgba(157,154,224,0.08);border-left:5px solid #9D9AE0;border-radius:0 14px 14px 0;padding:1.3em 1.6em 1.4em;">
 
-  <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9D9AE0;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.5em;">— practice 04 —</div>
+  <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9D9AE0;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.5em;">— practice 03 —</div>
 
   <div style="font-size:1.2em;font-weight:800;color:#F8F7F0;line-height:1.15;margin-bottom:0.95em;letter-spacing:-0.01em;">
    Make it three pages.

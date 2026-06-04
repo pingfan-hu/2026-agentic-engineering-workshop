@@ -11,7 +11,7 @@
   </div>
 
   <div style="font-size:0.58em;color:#2C3E50;line-height:1.7;font-family:'Georgia',serif;">
-   Create a single-page personal website. One <code style="font-family:'Maple Mono',monospace;color:#C4881A;">index.html</code>, one <code style="font-family:'Maple Mono',monospace;color:#C4881A;">styles.css</code>. Big name headline, one-sentence bio, three interests. Clean modern look — serif headline, sans-serif body, one accent color. No JavaScript.
+   Create a single-page HTML bio of Tom Hanks. One <code style="font-family:'Maple Mono',monospace;color:#C4881A;">index.html</code>, one <code style="font-family:'Maple Mono',monospace;color:#C4881A;">styles.css</code>. Big name headline, a short bio paragraph, three notable films. Clean modern look — serif headline, sans-serif body, one accent color. No JavaScript.
   </div>
 
  </div>
@@ -22,10 +22,6 @@
   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#C4881A;background:#FEF5E7;padding:0.25em 0.55em;border-radius:5px;">Write index.html</span>
   <span style="font-family:'Maple Mono',monospace;color:#9B8EA0;">→</span>
   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#2C8475;background:#E5F2EE;padding:0.25em 0.55em;border-radius:5px;">Write styles.css</span>
- </div>
-
- <div style="margin-top:0.5em;text-align:center;font-family:'Maple Mono',monospace;font-size:0.48em;color:#9B8EA0;letter-spacing:0.08em;">
-  the agent loop, in action
  </div>
 
 </div>
