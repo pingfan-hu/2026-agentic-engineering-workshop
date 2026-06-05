@@ -11,19 +11,19 @@
  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.65em;">
 
   <div style="background:#FFFFFF;border-radius:14px;padding:0.95em 0.9em 1em;text-align:center;box-shadow:0 4px 14px rgba(212,95,71,0.12);border-top:4px solid #D45F47;">
-   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5em;color:#D45F47;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">01</div>
+   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5em;color:#D45F47;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">01</div>
    <div style="font-size:0.78em;font-weight:700;color:#D45F47;line-height:1.2;">Counter-productivity</div>
    <div style="font-size:0.5em;color:#9B8EA0;line-height:1.45;margin-top:0.4em;">the visible cost</div>
   </div>
 
   <div style="background:#FFFFFF;border-radius:14px;padding:0.95em 0.9em 1em;text-align:center;box-shadow:0 4px 14px rgba(86,84,162,0.12);border-top:4px solid #5654A2;">
-   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:linear-gradient(135deg,#EEEDF8,#D6D2EF);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5em;color:#5654A2;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">02</div>
+   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5em;color:#5654A2;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">02</div>
    <div style="font-size:0.78em;font-weight:700;color:#5654A2;line-height:1.2;">The dilemma</div>
    <div style="font-size:0.5em;color:#9B8EA0;line-height:1.45;margin-top:0.4em;">no ground truth</div>
   </div>
 
   <div style="background:#FFFFFF;border-radius:14px;padding:0.95em 0.9em 1em;text-align:center;box-shadow:0 4px 14px rgba(44,132,117,0.12);border-top:4px solid #2C8475;">
-   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;margin:0 auto 0.5em;color:#2C8475;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">03</div>
+   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5em;color:#2C8475;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">03</div>
    <div style="font-size:0.78em;font-weight:700;color:#2C8475;line-height:1.2;">A workflow</div>
    <div style="font-size:0.5em;color:#9B8EA0;line-height:1.45;margin-top:0.4em;">human as gatekeeper</div>
   </div>

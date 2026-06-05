@@ -6,7 +6,7 @@
  <div style="background:#FFFFFF;border:2px solid #C4881A;border-radius:14px;padding:1em 1.15em;box-shadow:0 6px 22px rgba(196,136,26,0.15);text-align:left;">
 
   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.6em;">
-   <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#FEF5E7,#FAE9C8);display:flex;align-items:center;justify-content:center;color:#C4881A;"><i data-lucide="message-square-quote" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
+   <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#FEF5E7;border:1px solid #F0DDB4;display:flex;align-items:center;justify-content:center;color:#C4881A;"><i data-lucide="message-square-quote" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#C4881A;letter-spacing:0.1em;text-transform:uppercase;">you →</div>
   </div>
 

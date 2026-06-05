@@ -5,7 +5,7 @@
 
   <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(44,132,117,0.1);text-align:left;">
    <div style="display:flex;align-items:center;gap:0.55em;margin-bottom:0.6em;">
-    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="brain" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="brain" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div>
      <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;letter-spacing:0.12em;text-transform:uppercase;">by hand</div>
      <div style="font-size:0.78em;font-weight:700;color:#2C8475;">You think</div>
@@ -21,7 +21,7 @@
 
   <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(212,95,71,0.1);text-align:left;">
    <div style="display:flex;align-items:center;gap:0.55em;margin-bottom:0.6em;">
-    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="bot" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="bot" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div>
      <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;letter-spacing:0.12em;text-transform:uppercase;">accepted</div>
      <div style="font-size:0.78em;font-weight:700;color:#D45F47;">It produces</div>

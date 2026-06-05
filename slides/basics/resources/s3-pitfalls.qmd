@@ -5,7 +5,7 @@
 
   <div style="background:#FFFFFF;border-radius:14px;padding:0.9em 0.85em 1em;text-align:left;box-shadow:0 6px 22px rgba(212,95,71,0.12);border-top:4px solid #D45F47;">
    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.55em;">
-    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="message-circle-warning" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
+    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="message-circle-warning" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
     <div style="font-size:0.65em;font-weight:700;color:#D45F47;line-height:1.2;">Vague prompt</div>
    </div>
    <div style="font-size:0.5em;color:#564232;line-height:1.55;">"Make it look better" → generic output. Name what you want.</div>
@@ -13,7 +13,7 @@
 
   <div style="background:#FFFFFF;border-radius:14px;padding:0.9em 0.85em 1em;text-align:left;box-shadow:0 6px 22px rgba(196,136,26,0.12);border-top:4px solid #C4881A;">
    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.55em;">
-    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#FEF5E7,#FAE9C8);display:flex;align-items:center;justify-content:center;color:#C4881A;"><i data-lucide="alert-triangle" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
+    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#FEF5E7;border:1px solid #F0DDB4;display:flex;align-items:center;justify-content:center;color:#C4881A;"><i data-lucide="alert-triangle" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
     <div style="font-size:0.65em;font-weight:700;color:#C4881A;line-height:1.2;">Wrong guess</div>
    </div>
    <div style="font-size:0.5em;color:#564232;line-height:1.55;">Invented file path or library. Stop and correct early.</div>
@@ -21,7 +21,7 @@
 
   <div style="background:#FFFFFF;border-radius:14px;padding:0.9em 0.85em 1em;text-align:left;box-shadow:0 6px 22px rgba(86,84,162,0.12);border-top:4px solid #5654A2;">
    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.55em;">
-    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#EEEDF8,#D6D2EF);display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="rotate-ccw" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
+    <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="rotate-ccw" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
     <div style="font-size:0.65em;font-weight:700;color:#5654A2;line-height:1.2;">Stuck loop</div>
    </div>
    <div style="font-size:0.5em;color:#564232;line-height:1.55;">Two failed fixes? <strong style="color:#2C3E50;">STOP. Re-plan.</strong> Don't push.</div>

@@ -31,7 +31,7 @@
 
   <span style="font-family:'Maple Mono',monospace;color:#9B8EA0;font-weight:700;">→</span>
 
-  <div style="background:linear-gradient(135deg,#FCEEEC,#FAD9D2);border-radius:10px;padding:0.55em 0.75em;text-align:center;min-width:5.5em;box-shadow:0 6px 18px rgba(212,95,71,0.2);border:2px solid #D45F47;">
+  <div style="background:#FCEEEC;border:1px solid #F0C5BA;border-radius:10px;padding:0.55em 0.75em;text-align:center;min-width:5.5em;box-shadow:0 6px 18px rgba(212,95,71,0.2);border:2px solid #D45F47;">
    <div style="font-family:'Maple Mono',monospace;font-size:0.42em;color:#7A2418;letter-spacing:0.12em;text-transform:uppercase;">04</div>
    <div style="font-size:0.65em;font-weight:700;color:#7A2418;margin-top:0.1em;">Output ships</div>
    <div style="font-size:0.45em;color:#7A2418;line-height:1.4;margin-top:0.15em;font-weight:700;">silently wrong</div>

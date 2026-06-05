@@ -6,7 +6,7 @@
  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.55em;text-align:left;">
 
   <div style="background:#FFFFFF;border-radius:12px;padding:0.75em 0.95em;box-shadow:0 4px 14px rgba(86,84,162,0.1);display:flex;align-items:center;gap:0.6em;">
-   <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#EEEDF8,#D6D2EF);display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">?</div>
+   <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">?</div>
    <div>
     <div style="font-size:0.65em;color:#5654A2;font-weight:700;line-height:1.2;">Outliers</div>
     <div style="font-size:0.5em;color:#564232;line-height:1.45;margin-top:0.15em;">Drop them &mdash; or are they the phenomenon?</div>
@@ -14,7 +14,7 @@
   </div>
 
   <div style="background:#FFFFFF;border-radius:12px;padding:0.75em 0.95em;box-shadow:0 4px 14px rgba(86,84,162,0.1);display:flex;align-items:center;gap:0.6em;">
-   <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#EEEDF8,#D6D2EF);display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">?</div>
+   <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">?</div>
    <div>
     <div style="font-size:0.65em;color:#5654A2;font-weight:700;line-height:1.2;">Model assumptions</div>
     <div style="font-size:0.5em;color:#564232;line-height:1.45;margin-top:0.15em;">Violation: fatal &mdash; or tolerable for this question?</div>
@@ -22,7 +22,7 @@
   </div>
 
   <div style="background:#FFFFFF;border-radius:12px;padding:0.75em 0.95em;box-shadow:0 4px 14px rgba(86,84,162,0.1);display:flex;align-items:center;gap:0.6em;">
-   <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#EEEDF8,#D6D2EF);display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">?</div>
+   <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">?</div>
    <div>
     <div style="font-size:0.65em;color:#5654A2;font-weight:700;line-height:1.2;">Collinearity</div>
     <div style="font-size:0.5em;color:#564232;line-height:1.45;margin-top:0.15em;">Drop the covariate &mdash; or keep for theory?</div>
@@ -30,7 +30,7 @@
   </div>
 
   <div style="background:#FFFFFF;border-radius:12px;padding:0.75em 0.95em;box-shadow:0 4px 14px rgba(86,84,162,0.1);display:flex;align-items:center;gap:0.6em;">
-   <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:linear-gradient(135deg,#EEEDF8,#D6D2EF);display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">?</div>
+   <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;font-family:'Maple Mono',monospace;font-weight:900;font-size:0.85em;">?</div>
    <div>
     <div style="font-size:0.65em;color:#5654A2;font-weight:700;line-height:1.2;">p = 0.04</div>
     <div style="font-size:0.5em;color:#564232;line-height:1.45;margin-top:0.15em;">An effect &mdash; or evidence you ran enough tests?</div>

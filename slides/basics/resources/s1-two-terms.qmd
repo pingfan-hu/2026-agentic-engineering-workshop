@@ -5,7 +5,7 @@
 
   <div class="assistant-card" style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(44,132,117,0.1);text-align:center;">
    <div style="display:flex;align-items:center;justify-content:center;gap:0.55em;margin-bottom:0.6em;">
-    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="message-circle" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="message-circle" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div style="font-size:0.78em;font-weight:700;color:#2C8475;">Assistants</div>
    </div>
    <div style="font-size:0.6em;color:#564232;line-height:1.55;margin-bottom:0.6em;">One-off tasks.</div>
@@ -16,10 +16,10 @@
    </div>
   </div>
 
-  <div class="agent-card" style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 10px 30px rgba(196,136,26,0.2);text-align:center;border:1.5px solid #FAE9C8;">
+  <div class="agent-card" style="background:#FFFBF3;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 10px 30px rgba(196,136,26,0.2);text-align:center;border:1.5px solid #FAE9C8;">
    <div class="agent-badge"><i data-lucide="crown" style="width:1em;height:1em;stroke-width:2.2;"></i>Today's focus</div>
    <div style="display:flex;align-items:center;justify-content:center;gap:0.55em;margin-bottom:0.6em;">
-    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#FEF5E7,#FAE9C8);display:flex;align-items:center;justify-content:center;color:#C4881A;"><i data-lucide="bot" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#FEF5E7;border:1px solid #F0DDB4;display:flex;align-items:center;justify-content:center;color:#C4881A;"><i data-lucide="bot" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div style="font-size:0.78em;font-weight:700;color:#C4881A;">Agents</div>
    </div>
    <div style="font-size:0.6em;color:#564232;line-height:1.55;margin-bottom:0.6em;">Full project workflows.</div>

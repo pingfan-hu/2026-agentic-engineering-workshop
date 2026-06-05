@@ -38,21 +38,25 @@ title-slide-attributes:
 
 {{< include resources/s2-setup.qmd >}}
 
-## Create Your First HTML Page {.light-centered .center}
+## Your First HTML Page {.light-centered .center}
 
 {{< include resources/s2-first-prompt.qmd >}}
 
-## Example Output by Claude Code {.dark-centered .center}
+## Example Output: Single Page {.dark-centered .center}
 
 {{< include resources/s2-html-result.qmd >}}
 
-## Create Some More HTML Pages {.light-centered .center}
+## Some More HTML Pages {.light-centered .center}
 
 {{< include resources/s2-second-prompt.qmd >}}
 
 ## Example Output: A Full Website {.dark-centered .center}
 
 {{< include resources/s2-html-result-2.qmd >}}
+
+## Know what you're building {.light-centered .center}
+
+{{< include resources/s2-know-the-basics.qmd >}}
 
 ## How a Website Is Built {.light-centered .center}
 

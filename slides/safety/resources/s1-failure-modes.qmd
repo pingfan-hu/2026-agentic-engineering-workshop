@@ -5,7 +5,7 @@
 
   <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.9em;text-align:left;box-shadow:0 4px 14px rgba(212,95,71,0.12);border-top:4px solid #D45F47;">
    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.5em;">
-    <div style="width:1.7em;height:1.7em;border-radius:0.4em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="triangle-alert" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="width:1.7em;height:1.7em;border-radius:0.4em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="triangle-alert" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
     <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">mode 01</div>
    </div>
    <div style="font-size:0.7em;font-weight:700;color:#D45F47;line-height:1.2;margin-bottom:0.4em;">Plausible code,<br>wrong assumptions</div>
@@ -14,7 +14,7 @@
 
   <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.9em;text-align:left;box-shadow:0 4px 14px rgba(212,95,71,0.12);border-top:4px solid #D45F47;">
    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.5em;">
-    <div style="width:1.7em;height:1.7em;border-radius:0.4em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="quote" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="width:1.7em;height:1.7em;border-radius:0.4em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="quote" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
     <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">mode 02</div>
    </div>
    <div style="font-size:0.7em;font-weight:700;color:#D45F47;line-height:1.2;margin-bottom:0.4em;">Confident summaries<br>of noisy results</div>
@@ -23,7 +23,7 @@
 
   <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.9em;text-align:left;box-shadow:0 4px 14px rgba(212,95,71,0.12);border-top:4px solid #D45F47;">
    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.5em;">
-    <div style="width:1.7em;height:1.7em;border-radius:0.4em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="timer" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+    <div style="width:1.7em;height:1.7em;border-radius:0.4em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="timer" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
     <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">mode 03</div>
    </div>
    <div style="font-size:0.7em;font-weight:700;color:#D45F47;line-height:1.2;margin-bottom:0.4em;">Velocity that<br>hides the error</div>

@@ -243,9 +243,9 @@ th { font-size: 24px; }
   // "Agents win" badge pinned above the agent card.
   .agent-badge {
     position: absolute;
-    top: -0.85em;
+    top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     gap: 0.3em;

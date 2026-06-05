@@ -5,7 +5,7 @@
 
   <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(44,132,117,0.1);text-align:left;border-top:4px solid #2C8475;">
    <div style="display:flex;align-items:center;gap:0.55em;margin-bottom:0.6em;">
-    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="git-fork" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="git-fork" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div>
      <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;letter-spacing:0.12em;text-transform:uppercase;">non-negotiable 01</div>
      <div style="font-size:0.78em;font-weight:700;color:#2C8475;">You own every<br>data decision</div>
@@ -22,7 +22,7 @@
 
   <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(86,84,162,0.1);text-align:left;border-top:4px solid #5654A2;">
    <div style="display:flex;align-items:center;gap:0.55em;margin-bottom:0.6em;">
-    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#EEEDF8,#D6D2EF);display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="clipboard-list" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+    <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="clipboard-list" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div>
      <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;letter-spacing:0.12em;text-transform:uppercase;">non-negotiable 02</div>
      <div style="font-size:0.78em;font-weight:700;color:#5654A2;">You write the<br>methods section</div>

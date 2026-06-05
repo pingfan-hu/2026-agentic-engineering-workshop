@@ -6,7 +6,7 @@
 
  <div style="display:flex;align-items:stretch;gap:0;border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,0.06);text-align:left;">
 
-  <div style="flex:1;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);padding:0.85em 1em;">
+  <div style="flex:1;background:#FCEEEC;border:1px solid #F0C5BA;padding:0.85em 1em;">
    <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.4em;">
     <span style="width:1.2em;height:1.2em;border-radius:50%;background:#D45F47;color:#F8F7F0;display:flex;align-items:center;justify-content:center;font-size:0.65em;font-weight:900;">✕</span>
     <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#7A2418;letter-spacing:0.1em;text-transform:uppercase;">vague</span>
@@ -16,7 +16,7 @@
    </div>
   </div>
 
-  <div style="flex:1.15;background:linear-gradient(135deg,#E5F2EE,#C8E6C9);padding:0.85em 1em;">
+  <div style="flex:1.15;background:#E5F2EE;border:1px solid #BCDFC0;padding:0.85em 1em;">
    <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.4em;">
     <span style="width:1.2em;height:1.2em;border-radius:50%;background:#2C8475;color:#F8F7F0;display:flex;align-items:center;justify-content:center;font-size:0.65em;font-weight:900;">✓</span>
     <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#1F5E54;letter-spacing:0.1em;text-transform:uppercase;">sharp</span>

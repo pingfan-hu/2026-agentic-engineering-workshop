@@ -16,7 +16,7 @@
    <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.55em 0.7em;">
     <a class="tool-link" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">
      <div class="tool-icon">
-      <div style="width:1.5em;height:1.5em;border-radius:0.4em;background:linear-gradient(135deg,#FBEEE8,#F5D9CD);display:flex;align-items:center;justify-content:center;">
+      <div style="width:1.5em;height:1.5em;border-radius:0.4em;background:#FBEEE8;border:1px solid #EAC6B6;display:flex;align-items:center;justify-content:center;">
        <svg viewBox="0 0 24 24" fill="#CC785C" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;display:block;"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>
       </div>
      </div>

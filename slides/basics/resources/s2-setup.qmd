@@ -5,7 +5,7 @@
 
   <div style="display:flex;align-items:center;gap:1em;background:#FFFFFF;border-radius:14px;padding:0.85em 1.25em;box-shadow:0 6px 22px rgba(212,95,71,0.12);text-align:left;">
    <div style="font-family:'Maple Mono',monospace;font-size:0.62em;font-weight:700;color:#C9B6CF;letter-spacing:0.1em;">01</div>
-   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#FCEEEC,#FAD9D2);display:flex;align-items:center;justify-content:center;color:#D45F47;flex-shrink:0;"><i data-lucide="folder-plus" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;flex-shrink:0;"><i data-lucide="folder-plus" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
    <div style="flex:1;">
     <div style="font-size:0.62em;font-weight:700;color:#D45F47;margin-bottom:0.12em;">Create a folder</div>
     <div style="font-size:0.46em;color:#6F6470;line-height:1.4;">Choose a place on your computer and create a new folder. Name it however you like, without spaces.</div>
@@ -14,7 +14,7 @@
 
   <div style="display:flex;align-items:center;gap:1em;background:#FFFFFF;border-radius:14px;padding:0.85em 1.25em;box-shadow:0 6px 22px rgba(58,125,201,0.12);text-align:left;">
    <div style="font-family:'Maple Mono',monospace;font-size:0.62em;font-weight:700;color:#C9B6CF;letter-spacing:0.1em;">02</div>
-   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#DCE9FA,#B5D0F0);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><img src="figs/positron-icon.png" alt="Positron" style="width:1.4em;height:1.4em;object-fit:contain;display:block;margin:0;" /></div>
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#DCE9FA;border:1px solid #A6C4EA;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><img src="figs/positron-icon.png" alt="Positron" style="width:1.4em;height:1.4em;object-fit:contain;display:block;margin:0;" /></div>
    <div style="flex:1;">
     <div style="font-size:0.62em;font-weight:700;color:#3A7DC9;margin-bottom:0.12em;">Open it in Positron</div>
     <div style="font-size:0.46em;color:#6F6470;line-height:1.4;">In Positron, choose <code style="font-family:'Maple Mono',monospace;font-size:0.95em;background:#EAF1FB;color:#234E80;padding:0.05em 0.35em;border-radius:5px;">File › Open Folder…</code> and pick the folder you just made.</div>
@@ -23,7 +23,7 @@
 
   <div style="display:flex;align-items:center;gap:1em;background:#FFFFFF;border-radius:14px;padding:0.85em 1.25em;box-shadow:0 6px 22px rgba(204,120,92,0.14);text-align:left;">
    <div style="font-family:'Maple Mono',monospace;font-size:0.62em;font-weight:700;color:#C9B6CF;letter-spacing:0.1em;">03</div>
-   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#FBEEE8,#F5D9CD);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg viewBox="0 0 24 24" fill="#CC785C" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;display:block;"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg></div>
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#FBEEE8;border:1px solid #EAC6B6;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg viewBox="0 0 24 24" fill="#CC785C" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;display:block;"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg></div>
    <div style="flex:1;">
     <div style="font-size:0.62em;font-weight:700;color:#CC785C;margin-bottom:0.12em;">Launch Claude Code</div>
     <div style="font-size:0.46em;color:#6F6470;line-height:1.4;">In Positron's terminal, type <code style="font-family:'Maple Mono',monospace;font-size:0.95em;background:#FBEEE8;color:#8A4B2F;padding:0.05em 0.35em;border-radius:5px;">claude</code> and press Enter.</div>
