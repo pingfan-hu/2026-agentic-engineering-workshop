@@ -54,13 +54,13 @@ title-slide-attributes:
 
 {{< include resources/s2-html-result-2.qmd >}}
 
+## The Structure of a Website {.light-centered .center}
+
+{{< include resources/s2-website-structure.qmd >}}
+
 ## Know what you're building {.light-centered .center}
 
 {{< include resources/s2-know-the-basics.qmd >}}
-
-## How a Website Is Built {.light-centered .center}
-
-{{< include resources/s2-website-structure.qmd >}}
 
 ## &nbsp; {.dark-centered .center}
 

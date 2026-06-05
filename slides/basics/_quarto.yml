@@ -12,6 +12,11 @@ project:
     - resources/s2-html-example-4.html
     - resources/s2-html-example-5.html
     - resources/s2-html-example-6.html
+    - resources/s2-structure-example.css
+    - resources/s2-structure-example-1.html
+    - resources/s2-structure-example-2.html
+    - resources/s2-structure-example-3.html
+    - resources/s2-structure-example-4.html
 
 metadata-files:
   - ../_shared.yml

@@ -1,5 +1,5 @@
 ```{=html}
-<div class="practice-timer" data-minutes="10"></div>
+<div class="practice-timer" data-minutes="20"></div>
 
 <div style="width:92%;margin:0 auto;text-align:left;">
 
@@ -8,24 +8,33 @@
   <div style="font-family:'Maple Mono',monospace;font-size:0.82em;color:#FFB84D;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.55em;">— practice 02 —</div>
 
   <div style="font-size:0.85em;font-weight:800;color:#F8F7F0;line-height:1.15;margin-bottom:1em;letter-spacing:-0.01em;white-space:nowrap;">
-   Build a one-page bio site.
+   Build a small multi-page website.
   </div>
 
   <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0.8em;">
 
-   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.7em 0.85em;">
-    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFB84D;letter-spacing:0.16em;margin-bottom:0.4em;">STEP 01</div>
-    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.5;">Make a folder, open it in Positron, launch <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#FFB84D;">claude</code>.</div>
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.75em 0.9em 0.85em;">
+    <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.5em;">
+     <div style="width:1.45em;height:1.45em;border-radius:0.4em;background:rgba(255,184,77,0.14);border:1px solid rgba(255,184,77,0.35);display:flex;align-items:center;justify-content:center;color:#FFB84D;flex-shrink:0;"><i data-lucide="file-code" style="width:0.82em;height:0.82em;stroke-width:1.8;"></i></div>
+     <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFB84D;letter-spacing:0.16em;">STEP 01</div>
+    </div>
+    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.5;">Launch <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#FFB84D;">claude</code>. Ask for <strong>one</strong> HTML page + its CSS.</div>
    </div>
 
-   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.7em 0.85em;">
-    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFB84D;letter-spacing:0.16em;margin-bottom:0.4em;">STEP 02</div>
-    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.5;">Ask for a one-page HTML bio — yourself or a movie star.</div>
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.75em 0.9em 0.85em;">
+    <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.5em;">
+     <div style="width:1.45em;height:1.45em;border-radius:0.4em;background:rgba(255,184,77,0.14);border:1px solid rgba(255,184,77,0.35);display:flex;align-items:center;justify-content:center;color:#FFB84D;flex-shrink:0;"><i data-lucide="eye" style="width:0.82em;height:0.82em;stroke-width:1.8;"></i></div>
+     <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFB84D;letter-spacing:0.16em;">STEP 02</div>
+    </div>
+    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.5;">Open <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#FFB84D;">index.html</code>. Iterate on the look.</div>
    </div>
 
-   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.7em 0.85em;">
-    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFB84D;letter-spacing:0.16em;margin-bottom:0.4em;">STEP 03</div>
-    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.5;">Open <code style="font-family:'Maple Mono',monospace;font-size:0.95em;color:#FFB84D;">index.html</code> in the browser. Iterate once.</div>
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.75em 0.9em 0.85em;">
+    <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.5em;">
+     <div style="width:1.45em;height:1.45em;border-radius:0.4em;background:rgba(255,184,77,0.14);border:1px solid rgba(255,184,77,0.35);display:flex;align-items:center;justify-content:center;color:#FFB84D;flex-shrink:0;"><i data-lucide="link" style="width:0.82em;height:0.82em;stroke-width:1.8;"></i></div>
+     <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFB84D;letter-spacing:0.16em;">STEP 03</div>
+    </div>
+    <div style="font-size:0.55em;color:#F8F7F0;line-height:1.5;">Add more pages, <strong>linked</strong> so you can click between them.</div>
    </div>
 
   </div>

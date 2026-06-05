@@ -54,9 +54,18 @@
     <i data-lucide="monitor" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i>
    </div>
    <div style="font-size:0.7em;font-weight:700;color:#2C3E50;line-height:1.2;">HTML &amp; Styling</div>
-   <div style="display:flex;flex-wrap:wrap;gap:0.25em;justify-content:center;margin-top:0.5em;">
-    <code style="font-family:'Maple Mono',monospace;font-size:0.42em;background:#FCEEEC;padding:0.15em 0.45em;border-radius:5px;color:#D45F47;">index.html</code>
-    <code style="font-family:'Maple Mono',monospace;font-size:0.42em;background:#DCE9FA;padding:0.15em 0.45em;border-radius:5px;color:#3A7DC9;">styles.css</code>
+   <div style="display:flex;flex-direction:column;align-items:center;gap:0.4em;margin-top:0.55em;">
+    <div style="display:flex;flex-direction:column;align-items:stretch;gap:0.22em;padding:0.45em 0.55em 0.5em;border:1px dashed #E3B9AE;border-radius:9px;background:rgba(252,238,236,0.55);">
+     <div style="font-family:'Maple Mono',monospace;font-size:0.34em;color:#C77B66;letter-spacing:0.1em;text-transform:uppercase;text-align:center;margin-bottom:0.1em;">several pages</div>
+     <code style="font-family:'Maple Mono',monospace;font-size:0.42em;background:#FCEEEC;padding:0.15em 0.5em;border-radius:5px;color:#D45F47;text-align:center;">index.html</code>
+     <code style="font-family:'Maple Mono',monospace;font-size:0.42em;background:#FCEEEC;padding:0.15em 0.5em;border-radius:5px;color:#D45F47;text-align:center;">about.html</code>
+     <code style="font-family:'Maple Mono',monospace;font-size:0.42em;background:#FCEEEC;padding:0.15em 0.5em;border-radius:5px;color:#D45F47;text-align:center;">contact.html</code>
+    </div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.65em;color:#9B8EA0;font-weight:700;line-height:0.5;">+</div>
+    <div style="display:flex;flex-direction:column;align-items:stretch;gap:0.22em;padding:0.45em 0.55em 0.5em;border:1px dashed #AEC9EC;border-radius:9px;background:rgba(220,233,250,0.55);">
+     <div style="font-family:'Maple Mono',monospace;font-size:0.34em;color:#3A7DC9;letter-spacing:0.1em;text-transform:uppercase;text-align:center;margin-bottom:0.1em;">one stylesheet</div>
+     <code style="font-family:'Maple Mono',monospace;font-size:0.42em;background:#DCE9FA;padding:0.15em 0.5em;border-radius:5px;color:#3A7DC9;text-align:center;">styles.css</code>
+    </div>
    </div>
   </div>
 
