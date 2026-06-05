@@ -39,9 +39,16 @@ window.wireSiteScroll = function(f) {
     var win = f.contentWindow, d = win.document;
     // Update the fake address bar to the current page (runs on every navigation).
     var urlEl = f.parentNode.querySelector('.site-url');
-    if (urlEl) {
-      var base = (win.location.pathname.split('/').pop() || '').replace(/\?.*$/, '');
-      if (SITE_URL_NAMES[base]) urlEl.textContent = SITE_URL_NAMES[base];
+    var base = (win.location.pathname.split('/').pop() || '').replace(/\?.*$/, '');
+    var displayName = SITE_URL_NAMES[base];
+    if (urlEl && displayName) urlEl.textContent = displayName;
+    // Highlight the file-tree row matching the page now shown in the preview.
+    // Scoped to the current slide so other embedded sites are unaffected.
+    var scope = f.closest ? f.closest('section') : null;
+    if (scope) {
+      scope.querySelectorAll('.site-tree .struct-file').forEach(function(row) {
+        row.classList.toggle('is-active', row.getAttribute('data-file') === displayName);
+      });
     }
     // Path A: the wheel reaches the iframe's document — scroll that iframe directly.
     if (d.__wheelWired) return;
@@ -51,6 +58,15 @@ window.wireSiteScroll = function(f) {
       e.preventDefault();
     }, { passive: false });
   } catch (err) {}
+};
+
+// Click a file row in the structure tree to load that page in the sibling
+// preview iframe. wireSiteScroll() (the iframe's onload) then updates the fake
+// address bar and the active-row highlight.
+window.openSitePage = function(el, target) {
+  var section = el.closest && el.closest('section');
+  var iframe = section && section.querySelector('iframe');
+  if (iframe) iframe.src = iframe.src.replace(/[^\/]+$/, target + '?v=2');
 };
 
 // Path B: the wheel reaches the parent document instead — scroll the iframe in
