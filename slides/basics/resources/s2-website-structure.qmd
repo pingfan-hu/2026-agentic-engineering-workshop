@@ -13,7 +13,7 @@
    </div>
 
    <div class="struct-row struct-folder">
-    <span class="struct-connector">├─ </span><span class="struct-label"><i data-lucide="folder" style="width:0.95em;height:0.95em;stroke-width:1.8;color:#C4881A;"></i><span class="struct-name">HTML/</span></span>
+    <span class="struct-connector">├─ </span><span class="struct-label"><i data-lucide="folder" style="width:0.95em;height:0.95em;stroke-width:1.8;color:#C4881A;"></i><span class="struct-name">html/</span></span>
    </div>
    <div class="struct-row struct-file" data-file="index.html" onclick="window.openSitePage&&openSitePage(this,'s2-structure-example-1.html')">
     <span class="struct-connector">│   ├─ </span><span class="struct-label"><i data-lucide="file-code" style="width:0.95em;height:0.95em;stroke-width:1.8;color:#D45F47;"></i><span class="struct-name">index.html</span></span>
