@@ -39,6 +39,11 @@
 
   </div>
 
+  <div style="display:flex;align-items:center;justify-content:center;gap:0.55em;width:fit-content;max-width:100%;margin:1.2em auto 0;background:#F7F3EA;border:1px solid #E7DCC8;border-radius:999px;padding:0.5em 1.2em;font-size:0.5em;line-height:1.35;color:#6F6470;text-align:left;white-space:nowrap;box-shadow:0 6px 18px rgba(0,0,0,0.22);">
+   <i data-lucide="share-2" style="width:1.3em;height:1.3em;stroke-width:1.8;color:#C4881A;flex:none;"></i>
+   <span><span style="color:#2C3E50;font-weight:700;">Happy with your homepage?</span> Drop the link in the chat so everyone can see it.</span>
+  </div>
+
  </div>
 
 </div>

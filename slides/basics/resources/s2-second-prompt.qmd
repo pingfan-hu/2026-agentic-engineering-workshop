@@ -16,9 +16,16 @@
   </div>
 
   <div id="second-prompt-text" style="font-size:0.54em;color:#2C3E50;line-height:1.7;font-family:'Georgia',serif;">
-   For each notable film on the Tom Hanks page, create its own HTML page. Then link everything together: make each film on the main page clickable so it opens that film's page, and add a "Back to Tom Hanks" button at the top of every film page. Reuse the same <code style="font-family:'Maple Mono',monospace;color:#C4881A;">styles.css</code> so all pages match.
+   For each notable film on the <span style="color:#137A6E;font-weight:600;">Tom Hanks</span> page, create its own HTML page. Then link everything together: make each film on the main page clickable so it opens that film's page, and add a "Back to <span style="color:#137A6E;font-weight:600;">Tom Hanks</span>" button at the top of every film page. Reuse the same <code style="font-family:'Maple Mono',monospace;color:#C4881A;">styles.css</code> so all pages match.
   </div>
 
+ </div>
+
+ <div style="width:55%;height:1px;margin:1.3em auto 0;background:linear-gradient(90deg,transparent,#C7BCD0,transparent);"></div>
+
+ <div style="display:flex;align-items:center;justify-content:center;gap:0.6em;max-width:88%;margin:0.85em auto 0;font-size:0.46em;line-height:1.5;color:#6F6470;text-align:left;">
+  <i data-lucide="lightbulb" style="width:1.5em;height:1.5em;stroke-width:1.8;color:#137A6E;flex:none;"></i>
+  <span><span style="color:#137A6E;font-weight:600;">Tom Hanks is only one example.</span><br>Replace the name with anyone you like, the same person you chose before.</span>
  </div>
 
 </div>

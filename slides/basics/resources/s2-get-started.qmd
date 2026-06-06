@@ -1,0 +1,36 @@
+```{=html}
+<div style="width:fit-content;max-width:92%;margin:0 auto;background:#F7F3EA;border:1px solid #E7DCC8;border-radius:20px;padding:1.9em 2.4em;box-shadow:0 18px 50px rgba(0,0,0,0.3);">
+
+ <div style="display:grid;grid-template-columns:auto auto auto;justify-content:center;align-items:center;column-gap:1.5em;row-gap:0.75em;">
+
+  <!-- row 1: cards + plus, vertically centered on the white cards -->
+  <div style="grid-row:1;grid-column:1;display:flex;gap:0.55em;">
+   <div style="display:flex;flex-direction:column;align-items:center;gap:0.45em;background:#FFFFFF;border:1px solid #EFE6D6;border-radius:12px;padding:0.85em 0.7em;box-shadow:0 3px 12px rgba(44,62,80,0.06);">
+    <div style="width:2em;height:2em;border-radius:0.5em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="file-code" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+    <span style="font-family:'Maple Mono',monospace;font-size:0.4em;color:#2C3E50;">index.html</span>
+   </div>
+   <div style="display:flex;flex-direction:column;align-items:center;gap:0.45em;background:#FFFFFF;border:1px solid #EFE6D6;border-radius:12px;padding:0.85em 0.7em;box-shadow:0 3px 12px rgba(44,62,80,0.06);">
+    <div style="width:2em;height:2em;border-radius:0.5em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="file-code" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+    <span style="font-family:'Maple Mono',monospace;font-size:0.4em;color:#2C3E50;">about.html</span>
+   </div>
+   <div style="display:flex;flex-direction:column;align-items:center;gap:0.45em;background:#FFFFFF;border:1px solid #EFE6D6;border-radius:12px;padding:0.85em 0.7em;box-shadow:0 3px 12px rgba(44,62,80,0.06);">
+    <div style="width:2em;height:2em;border-radius:0.5em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="file-code" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+    <span style="font-family:'Maple Mono',monospace;font-size:0.4em;color:#2C3E50;">contact.html</span>
+   </div>
+  </div>
+
+  <div style="grid-row:1;grid-column:2;font-family:'Maple Mono',monospace;font-size:1.3em;font-weight:700;color:#B5A78F;line-height:1;">+</div>
+
+  <div style="grid-row:1;grid-column:3;display:flex;flex-direction:column;align-items:center;gap:0.45em;background:#FFFFFF;border:1px solid #EFE6D6;border-radius:12px;padding:0.85em 0.7em;box-shadow:0 3px 12px rgba(44,62,80,0.06);">
+   <div style="width:2em;height:2em;border-radius:0.5em;background:#DCE9FA;border:1px solid #A6C4EA;display:flex;align-items:center;justify-content:center;color:#3A7DC9;"><i data-lucide="palette" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.4em;color:#2C3E50;">styles.css</span>
+  </div>
+
+  <!-- row 2: labels under each group -->
+  <div style="grid-row:2;grid-column:1;text-align:center;font-family:'Maple Mono',monospace;font-size:0.46em;letter-spacing:0.18em;text-transform:uppercase;color:#D45F47;">several HTML files</div>
+  <div style="grid-row:2;grid-column:3;text-align:center;font-family:'Maple Mono',monospace;font-size:0.46em;letter-spacing:0.18em;text-transform:uppercase;color:#3A7DC9;">one CSS file</div>
+
+ </div>
+
+</div>
+```

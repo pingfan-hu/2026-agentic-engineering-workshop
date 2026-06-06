@@ -38,6 +38,10 @@ title-slide-attributes:
 
 {{< include resources/s2-setup.qmd >}}
 
+## Let's get started with a website {.dark-centered .center}
+
+{{< include resources/s2-get-started.qmd >}}
+
 ## Your First HTML Page {.light-centered .center}
 
 {{< include resources/s2-first-prompt.qmd >}}

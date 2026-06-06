@@ -16,9 +16,16 @@
   </div>
 
   <div id="first-prompt-text" style="font-size:0.58em;color:#2C3E50;line-height:1.7;font-family:'Georgia',serif;">
-   Create a single-page HTML introduction for Tom Hanks, a famous movie star in the United States, and place all styling in a separate <code style="font-family:'Maple Mono',monospace;color:#C4881A;">styles.css</code> file.
+   Create a single-page HTML introduction for <span style="color:#137A6E;font-weight:600;">Tom Hanks</span>, a famous movie star in the United States, and place all styling in a separate <code style="font-family:'Maple Mono',monospace;color:#C4881A;">styles.css</code> file.
   </div>
 
+ </div>
+
+ <div style="width:55%;height:1px;margin:1.3em auto 0;background:linear-gradient(90deg,transparent,#C7BCD0,transparent);"></div>
+
+ <div style="display:flex;align-items:center;justify-content:center;gap:0.6em;max-width:88%;margin:0.85em auto 0;font-size:0.46em;line-height:1.5;color:#6F6470;text-align:left;">
+  <i data-lucide="lightbulb" style="width:1.5em;height:1.5em;stroke-width:1.8;color:#137A6E;flex:none;"></i>
+  <span><span style="color:#137A6E;font-weight:600;">Tom Hanks is only one example.</span><br>Replace the name with anyone you admire: a movie star, an athlete, a scientist, anyone famous.</span>
  </div>
 
 </div>

@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Writing conventions
+
+**Never use em dashes (—) in any generated text.** This covers slide copy, prose, comments, and commit messages. Use a colon, comma, parentheses, or two short sentences instead. It applies to all on-slide content under `slides/**` and every Markdown/qmd file in the repo.
+
 ## What this repo is
 
 A Quarto **website** hosting the landing surface for a three-part workshop, with each part embedding a Quarto **revealjs** slide deck via `<iframe>`. The parent website and the per-deck slide projects are nested but separate Quarto projects, glued together by a post-render hook.
