@@ -1,0 +1,66 @@
+```{=html}
+<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:0.95em 1em 1em;border-radius:18px;">
+
+ <!-- TOP BANNER: what a skill is (slim) -->
+ <div style="background:#FCEEEC;border:1px solid #F3D4CC;border-radius:14px;padding:0.45em 0.9em;display:flex;align-items:center;gap:0.8em;box-shadow:0 4px 16px rgba(212,95,71,0.1);text-align:left;">
+  <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#FFFFFF;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;flex-shrink:0;"><i data-lucide="package" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+  <div style="flex:1;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.4em;color:#D45F47;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;margin-bottom:0.6em;">what is a skill?</div>
+   <div style="font-size:0.6em;font-weight:700;color:#2C3E50;line-height:1.25;">A slash command that wraps a reusable, multi-step process.</div>
+  </div>
+ </div>
+
+ <!-- divider -->
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:0.8em 0 0;"></div>
+
+ <!-- two groups (50-50): Exemplar skill (purple) | Why it helps (teal) -->
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85em;align-items:stretch;margin-top:1.15em;">
+
+  <!-- LEFT GROUP: example skill structure -->
+  <div style="position:relative;background:#F5F4FB;border-top:3px solid #5654A2;border-radius:14px;padding:0.95em 0.8em 0.85em;box-shadow:0 8px 24px rgba(86,84,162,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#6462B4,#5654A2);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(86,84,162,0.4);white-space:nowrap;z-index:2;"><i data-lucide="star" style="width:1em;height:1em;stroke-width:2.2;"></i>Exemplar skill</div>
+
+   <div style="background:#FFFFFF;border-radius:11px;padding:0.8em 0.9em 0.85em;box-shadow:0 3px 10px rgba(86,84,162,0.08);flex:1;">
+    <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.65em;">
+     <div style="width:1.45em;height:1.45em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="folder-git-2" style="width:0.8em;height:0.8em;stroke-width:1.8;"></i></div>
+     <div style="font-family:'Maple Mono',monospace;font-size:0.56em;font-weight:700;color:#5654A2;line-height:1.1;">ph-slide/</div>
+    </div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.46em;line-height:1.5;color:#564232;">
+     <div><span style="color:#C4B8C9;white-space:pre;">├─ </span><span style="color:#5654A2;font-weight:700;">SKILL.md</span><span style="color:#9B8EA0;font-style:italic;margin-left:1.1em;">the instructions</span></div>
+     <div><span style="color:#C4B8C9;white-space:pre;">├─ </span><span style="color:#D45F47;font-weight:700;">script.R</span></div>
+     <div><span style="color:#C4B8C9;white-space:pre;">├─ </span><span style="color:#D45F47;font-weight:700;">script.py</span></div>
+     <div><span style="color:#C4B8C9;white-space:pre;">└─ </span><span style="color:#C4881A;font-weight:700;">assets/</span></div>
+     <div><span style="color:#C4B8C9;white-space:pre;">&nbsp;&nbsp; ├─ </span><span style="color:#D45F47;font-weight:700;">example.html</span></div>
+     <div><span style="color:#C4B8C9;white-space:pre;">&nbsp;&nbsp; └─ </span><span style="color:#D45F47;font-weight:700;">styles.css</span></div>
+    </div>
+   </div>
+  </div>
+
+  <!-- RIGHT GROUP: why it helps (title only) -->
+  <div style="position:relative;background:#F4FBF8;border-top:3px solid #2C8475;border-radius:14px;padding:0.95em 0.8em 0.85em;box-shadow:0 8px 24px rgba(44,132,117,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#3DA890,#2C8475);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(44,132,117,0.4);white-space:nowrap;z-index:2;"><i data-lucide="lightbulb" style="width:1em;height:1em;stroke-width:2.2;"></i>Why it helps</div>
+
+   <div style="display:flex;flex-direction:column;gap:0.52em;flex:1;justify-content:space-between;">
+
+    <div style="background:#FFFFFF;border-radius:11px;padding:0.34em 0.75em;display:grid;grid-template-columns:1.5em 1fr;gap:0.65em;align-items:center;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="timer" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.6em;font-weight:700;color:#2C3E50;line-height:1.2;">Saves time</div>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:11px;padding:0.34em 0.75em;display:grid;grid-template-columns:1.5em 1fr;gap:0.65em;align-items:center;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="recycle" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.6em;font-weight:700;color:#2C3E50;line-height:1.2;">Reproducible</div>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:11px;padding:0.34em 0.75em;display:grid;grid-template-columns:1.5em 1fr;gap:0.65em;align-items:center;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="shield" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.6em;font-weight:700;color:#2C3E50;line-height:1.2;">Stable &amp; consistent</div>
+    </div>
+
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

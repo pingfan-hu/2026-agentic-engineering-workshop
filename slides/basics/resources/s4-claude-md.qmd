@@ -1,0 +1,95 @@
+```{=html}
+<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:0.9em 1em 1em;border-radius:18px;">
+
+ <!-- equivalence header: CLAUDE.md == AGENTS.md -->
+ <div style="display:flex;align-items:center;justify-content:center;gap:0.6em;">
+  <div style="display:flex;align-items:center;gap:0.45em;background:#FFFFFF;border:1px solid #F0C5BA;border-radius:10px;padding:0.32em 0.7em;box-shadow:0 4px 14px rgba(212,95,71,0.1);">
+   <div style="width:1.5em;height:1.5em;border-radius:0.4em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;flex-shrink:0;"><i data-lucide="file-text" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+   <div style="text-align:left;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.55em;font-weight:700;color:#D45F47;line-height:1.1;">CLAUDE.md</div>
+    <div style="font-size:0.34em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">Claude Code</div>
+   </div>
+  </div>
+  <span style="font-family:'Maple Mono',monospace;color:#9B8EA0;font-size:0.7em;font-weight:700;">≡</span>
+  <div style="display:flex;align-items:center;gap:0.45em;background:#FFFFFF;border:1px solid #F0C5BA;border-radius:10px;padding:0.32em 0.7em;box-shadow:0 4px 14px rgba(212,95,71,0.1);">
+   <div style="width:1.5em;height:1.5em;border-radius:0.4em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;flex-shrink:0;"><i data-lucide="bot" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+   <div style="text-align:left;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.55em;font-weight:700;color:#D45F47;line-height:1.1;">AGENTS.md</div>
+    <div style="font-size:0.34em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">other agents</div>
+   </div>
+  </div>
+ </div>
+
+ <!-- divider -->
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:0.7em 0 0;"></div>
+
+ <!-- two groups: Directories (purple) | Constructions (teal) -->
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85em;align-items:stretch;margin-top:1.15em;">
+
+  <!-- LEFT GROUP: Directories -->
+  <div style="position:relative;background:#F5F4FB;border-top:3px solid #5654A2;border-radius:14px;padding:0.95em 0.8em 0.85em;box-shadow:0 8px 24px rgba(86,84,162,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#6462B4,#5654A2);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(86,84,162,0.4);white-space:nowrap;z-index:2;"><i data-lucide="folder-tree" style="width:1em;height:1em;stroke-width:2.2;"></i>Directories</div>
+
+   <div style="display:flex;flex-direction:column;gap:0.5em;flex:1;justify-content:space-between;">
+
+    <div style="background:#FFFFFF;border-radius:11px;padding:0.55em 0.7em;box-shadow:0 3px 10px rgba(86,84,162,0.08);">
+     <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.4em;">
+      <div style="width:1.65em;height:1.65em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="house" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+      <div style="font-size:0.55em;font-weight:700;color:#5654A2;line-height:1.15;">Home directory</div>
+      <span style="margin-left:auto;font-family:'Maple Mono',monospace;font-size:0.38em;color:#5654A2;background:#EEEDF8;padding:0.2em 0.55em;border-radius:999px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;">global</span>
+     </div>
+     <code style="display:block;font-family:'Maple Mono',monospace;font-size:0.46em;color:#564232;background:#F8F7F0;border:1px solid #ECE8DC;padding:0.3em 0.5em;border-radius:6px;">~/.claude/CLAUDE.md</code>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:11px;padding:0.55em 0.7em;box-shadow:0 3px 10px rgba(86,84,162,0.08);">
+     <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.4em;">
+      <div style="width:1.65em;height:1.65em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="folder-git-2" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+      <div style="font-size:0.55em;font-weight:700;color:#5654A2;line-height:1.15;">Project directory</div>
+      <span style="margin-left:auto;font-family:'Maple Mono',monospace;font-size:0.38em;color:#5654A2;background:#EEEDF8;padding:0.2em 0.55em;border-radius:999px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;">per-repo</span>
+     </div>
+     <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.3em;">
+      <code style="flex:1;font-family:'Maple Mono',monospace;font-size:0.46em;color:#564232;background:#F8F7F0;border:1px solid #ECE8DC;padding:0.3em 0.5em;border-radius:6px;">CLAUDE.md</code>
+      <span style="font-size:0.4em;color:#5654A2;font-weight:700;">root · required</span>
+     </div>
+     <div style="display:flex;align-items:center;gap:0.4em;">
+      <code style="flex:1;font-family:'Maple Mono',monospace;font-size:0.46em;color:#564232;background:#F8F7F0;border:1px solid #ECE8DC;padding:0.3em 0.5em;border-radius:6px;">components/CLAUDE.md</code>
+      <span style="font-size:0.4em;color:#9B8EA0;font-weight:700;">optional</span>
+     </div>
+    </div>
+
+   </div>
+  </div>
+
+  <!-- RIGHT GROUP: Constructions -->
+  <div style="position:relative;background:#F4FBF8;border-top:3px solid #2C8475;border-radius:14px;padding:0.95em 0.8em 0.85em;box-shadow:0 8px 24px rgba(44,132,117,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#3DA890,#2C8475);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(44,132,117,0.4);white-space:nowrap;z-index:2;"><i data-lucide="hammer" style="width:1em;height:1em;stroke-width:2.2;"></i>Constructions</div>
+
+   <div style="display:flex;flex-direction:column;gap:0.4em;flex:1;justify-content:space-between;">
+
+    <div style="background:#FFFFFF;border-radius:11px;padding:0.34em 0.7em;display:grid;grid-template-columns:1.5em 1fr;gap:0.6em;align-items:center;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="sparkles" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.56em;font-weight:700;color:#2C3E50;line-height:1.2;">Run <code style="font-family:'Maple Mono',monospace;background:#E5F2EE;color:#2C8475;padding:0.05em 0.35em;border-radius:5px;">/init</code> to create</div>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:11px;padding:0.34em 0.7em;display:grid;grid-template-columns:1.5em 1fr;gap:0.6em;align-items:center;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="scissors" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.56em;font-weight:700;color:#2C3E50;line-height:1.2;">High-level, not exhaustive</div>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:11px;padding:0.34em 0.7em;display:grid;grid-template-columns:1.5em 1fr;gap:0.6em;align-items:center;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="rotate-ccw" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.56em;font-weight:700;color:#2C3E50;line-height:1.2;">Refresh at each milestone</div>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:11px;padding:0.34em 0.7em;display:grid;grid-template-columns:1.5em 1fr;gap:0.6em;align-items:center;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="git-branch" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+     <div style="font-size:0.56em;font-weight:700;color:#2C3E50;line-height:1.2;">Add a tree if complex</div>
+    </div>
+
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

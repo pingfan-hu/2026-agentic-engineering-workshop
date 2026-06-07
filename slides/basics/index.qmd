@@ -70,6 +70,14 @@ title-slide-attributes:
 
 {{< include resources/s2-practice.qmd >}}
 
+## The CLAUDE.md file {.light-centered .center}
+
+{{< include resources/s4-claude-md.qmd >}}
+
+## Skills {.light-centered .center}
+
+{{< include resources/s5-skills.qmd >}}
+
 ## Extend, don't restart {.light-centered .center}
 
 {{< include resources/s3-multipage-prompt.qmd >}}
