@@ -13,37 +13,37 @@
 
   <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0.8em;">
 
-   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.55em 0.7em;">
-    <a class="tool-link" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">
+   <a class="tool-card" href="https://claude.com/product/claude-code" target="_blank" rel="noopener" style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.55em 0.7em;">
+    <div style="display:flex;align-items:center;gap:0.35em;margin-bottom:0.3em;">
      <div class="tool-icon">
       <div style="width:1.5em;height:1.5em;border-radius:0.4em;background:#FBEEE8;border:1px solid #EAC6B6;display:flex;align-items:center;justify-content:center;">
        <svg viewBox="0 0 24 24" fill="#CC785C" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;display:block;"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>
       </div>
      </div>
      <div style="font-size:0.55em;font-weight:700;white-space:nowrap;color:#E8A589;">Claude Code</div>
-    </a>
-    <div style="font-size:0.46em;color:#C9C4BC;line-height:1.5;margin-top:0.2em;">AI agent by Anthropic.</div>
-   </div>
+    </div>
+    <div style="font-size:0.46em;color:#C9C4BC;line-height:1.5;">AI agent by Anthropic.</div>
+   </a>
 
-   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.55em 0.7em;">
-    <a class="tool-link" href="https://positron.posit.co" target="_blank" rel="noopener">
+   <a class="tool-card" href="https://positron.posit.co" target="_blank" rel="noopener" style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.55em 0.7em;">
+    <div style="display:flex;align-items:center;gap:0.35em;margin-bottom:0.3em;">
      <div class="tool-icon">
       <img src="figs/positron-icon.png" alt="Positron" style="width:1.7em;height:1.7em;object-fit:contain;display:block;margin:0;" />
      </div>
      <div style="font-size:0.55em;font-weight:700;white-space:nowrap;color:#7FB0E6;">Positron</div>
-    </a>
-    <div style="font-size:0.46em;color:#C9C4BC;line-height:1.5;margin-top:0.2em;">Data science IDE by Posit.</div>
-   </div>
+    </div>
+    <div style="font-size:0.46em;color:#C9C4BC;line-height:1.5;">Data science IDE by Posit.</div>
+   </a>
 
-   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.55em 0.7em;">
-    <a class="tool-link" href="https://spokenly.app" target="_blank" rel="noopener">
+   <a class="tool-card" href="https://spokenly.app" target="_blank" rel="noopener" style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.55em 0.7em;">
+    <div style="display:flex;align-items:center;gap:0.35em;margin-bottom:0.3em;">
      <div class="tool-icon">
       <img src="figs/spokenly-logo.png" alt="Spokenly" style="width:1.7em;height:1.7em;object-fit:contain;display:block;margin:0;" />
      </div>
      <div style="font-size:0.55em;font-weight:700;white-space:nowrap;color:#6FC2B0;">Spokenly</div>
-    </a>
-    <div style="font-size:0.46em;color:#C9C4BC;line-height:1.5;margin-top:0.2em;">Voice-to-text app.</div>
-   </div>
+    </div>
+    <div style="font-size:0.46em;color:#C9C4BC;line-height:1.5;">Voice-to-text app.</div>
+   </a>
 
   </div>
 

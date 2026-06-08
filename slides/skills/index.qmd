@@ -18,83 +18,83 @@ title-slide-attributes:
 
 ## A minimal `SKILL.md` {.light-centered .center}
 
-{{< include resources/s1-minimal-skillmd.qmd >}}
+{{< include resources/minimal-skillmd.qmd >}}
 
 ## Where skills come from {.light-centered .center}
 
-{{< include resources/s1-where-skills-from.qmd >}}
+{{< include resources/where-skills-from.qmd >}}
 
 ## What people use them for {.light-centered .center}
 
-{{< include resources/s1-what-for.qmd >}}
+{{< include resources/what-for.qmd >}}
 
 ## [Section 2]{.amber}<br>Skill Design {.dark-centered .center}
 
 ## Anatomy of `SKILL.md` {.light-centered .center}
 
-{{< include resources/s2-anatomy.qmd >}}
+{{< include resources/anatomy.qmd >}}
 
 ## The load-bearing section {.dark-centered .center}
 
-{{< include resources/s2-load-bearing.qmd >}}
+{{< include resources/load-bearing.qmd >}}
 
 ## A Gotchas-rich skill {.light-centered .center}
 
-{{< include resources/s2-gotchas-rich.qmd >}}
+{{< include resources/gotchas-rich.qmd >}}
 
 ## Design principle 1 {.light-centered .center}
 
-{{< include resources/s2-principle-1.qmd >}}
+{{< include resources/principle-1.qmd >}}
 
 ## Design principle 2 {.light-centered .center}
 
-{{< include resources/s2-principle-2.qmd >}}
+{{< include resources/principle-2.qmd >}}
 
 ## Skills as advanced Context Engineering {.light-centered .center}
 
-{{< include resources/s2-skills-as-context.qmd >}}
+{{< include resources/skills-as-context.qmd >}}
 
 ## The attention problem {.light-centered .center}
 
-{{< include resources/s2-attention-dispersion.qmd >}}
+{{< include resources/attention-dispersion.qmd >}}
 
 ## Design principle 3 — progressive disclosure {.light-centered .center}
 
-{{< include resources/s2-progressive-disclosure.qmd >}}
+{{< include resources/progressive-disclosure.qmd >}}
 
 ## How to actually write a skill {.light-centered .center}
 
-{{< include resources/s2-how-to-write.qmd >}}
+{{< include resources/how-to-write.qmd >}}
 
 ## Skills vs `CLAUDE.md` vs rules {.light-centered .center}
 
-{{< include resources/s2-skills-vs-rules.qmd >}}
+{{< include resources/skills-vs-rules.qmd >}}
 
 ## Skill anti-patterns {.light-centered .center}
 
-{{< include resources/s2-anti-patterns.qmd >}}
+{{< include resources/anti-patterns.qmd >}}
 
 ## [Section 3]{.amber}<br>Skill Symlinks {.dark-centered .center}
 
 ## The problem {.light-centered .center}
 
-{{< include resources/s3-the-problem.qmd >}}
+{{< include resources/the-problem.qmd >}}
 
 ## Two patterns {.light-centered .center}
 
-{{< include resources/s3-two-patterns.qmd >}}
+{{< include resources/two-patterns.qmd >}}
 
 ## A complete example {.light-centered .center}
 
-{{< include resources/s3-complete-example.qmd >}}
+{{< include resources/complete-example.qmd >}}
 
 ## Important guardrails {.light-centered .center}
 
-{{< include resources/s3-guardrails.qmd >}}
+{{< include resources/guardrails.qmd >}}
 
 ## When to graduate to a plugin {.light-centered .center}
 
-{{< include resources/s3-graduate.qmd >}}
+{{< include resources/graduate.qmd >}}
 
 ## Three takeaways {.light-centered .center}
 

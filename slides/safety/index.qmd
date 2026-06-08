@@ -18,71 +18,71 @@ title-slide-attributes:
 
 ## Fast [≠]{.coral} Better {.light-centered .center}
 
-{{< include resources/s1-fast-not-better.qmd >}}
+{{< include resources/fast-not-better.qmd >}}
 
 ## The reviewer's question {.dark-centered .center}
 
-{{< include resources/s1-reviewer-test.qmd >}}
+{{< include resources/reviewer-test.qmd >}}
 
 ## Three failure modes {.light-centered .center}
 
-{{< include resources/s1-failure-modes.qmd >}}
+{{< include resources/failure-modes.qmd >}}
 
 ## The [reasoning]{.teal} is the analysis {.light-centered .center}
 
-{{< include resources/s1-lost-reasoning.qmd >}}
+{{< include resources/lost-reasoning.qmd >}}
 
 ## Where AI [clearly]{.teal} helps {.light-centered .center}
 
-{{< include resources/s1-where-helps.qmd >}}
+{{< include resources/where-helps.qmd >}}
 
 ## [Section 2]{.amber}<br>The dilemma in data science {.dark-centered .center}
 
 ## Missing values — [it depends why]{.purple} {.light-centered .center}
 
-{{< include resources/s2-missing-values.qmd >}}
+{{< include resources/missing-values.qmd >}}
 
 ## Every interesting decision {.light-centered .center}
 
-{{< include resources/s2-decisions.qmd >}}
+{{< include resources/decisions.qmd >}}
 
 ## Why a [harness loop]{.coral} fails here {.light-centered .center}
 
-{{< include resources/s2-harness-fails.qmd >}}
+{{< include resources/harness-fails.qmd >}}
 
 ## The credibility question {.dark-centered .center}
 
-{{< include resources/s2-credibility.qmd >}}
+{{< include resources/credibility.qmd >}}
 
 ## [Section 3]{.amber}<br>A successful workflow {.dark-centered .center}
 
 ## Human as [gatekeeper]{.teal} {.light-centered .center}
 
-{{< include resources/s3-gatekeeper.qmd >}}
+{{< include resources/gatekeeper.qmd >}}
 
 ## Two non-negotiables {.light-centered .center}
 
-{{< include resources/s3-non-negotiables.qmd >}}
+{{< include resources/non-negotiables.qmd >}}
 
 ## Delegation map {.light-centered .center}
 
-{{< include resources/s3-delegation.qmd >}}
+{{< include resources/delegation.qmd >}}
 
 ## Pin the decisions in code {.light-centered .center}
 
-{{< include resources/s3-pin-decisions.qmd >}}
+{{< include resources/pin-decisions.qmd >}}
 
 ## Verify against an [independent]{.teal} check {.light-centered .center}
 
-{{< include resources/s3-verify.qmd >}}
+{{< include resources/verify.qmd >}}
 
 ## Two issues data science makes worse {.light-centered .center}
 
-{{< include resources/s3-repro-disclosure.qmd >}}
+{{< include resources/repro-disclosure.qmd >}}
 
 ## [Verify]{.amber}, then trust {.dark-centered .center}
 
-{{< include resources/s3-mindset.qmd >}}
+{{< include resources/mindset.qmd >}}
 
 ## Three takeaways {.light-centered .center}
 

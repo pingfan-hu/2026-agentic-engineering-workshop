@@ -7,7 +7,7 @@
    <div style="width:3.4em;height:3.4em;border-radius:1em;background:#DCE9FA;border:1px solid #A6C4EA;display:flex;align-items:center;justify-content:center;color:#3A7DC9;box-shadow:0 6px 18px rgba(58,125,201,0.2);border:1.5px solid #B5D0F0;">
     <i data-lucide="bot" style="width:1.5em;height:1.5em;stroke-width:1.8;"></i>
    </div>
-   <div style="font-family:'Maple Mono',monospace;font-size:0.7em;font-weight:700;color:#3A7DC9;line-height:1.2;max-width:6em;text-align:center;">Agentic Engineering</div>
+   <div style="font-family:'Maple Mono',monospace;font-size:0.7em;font-weight:700;color:#3A7DC9;line-height:1.2;text-align:center;">Agentic<br>Engineering</div>
   </div>
 
   <div style="height:3.4em;display:flex;align-items:center;"><span style="font-family:'Maple Mono',monospace;font-size:1.5em;font-weight:300;color:#9B8EA0;line-height:1;">=</span></div>

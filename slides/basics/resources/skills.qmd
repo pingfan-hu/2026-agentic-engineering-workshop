@@ -25,14 +25,36 @@
      <div style="width:1.45em;height:1.45em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="folder-git-2" style="width:0.8em;height:0.8em;stroke-width:1.8;"></i></div>
      <div style="font-family:'Maple Mono',monospace;font-size:0.56em;font-weight:700;color:#5654A2;line-height:1.1;">ph-slide/</div>
     </div>
-    <div style="font-family:'Maple Mono',monospace;font-size:0.46em;line-height:1.5;color:#564232;">
-     <div><span style="color:#C4B8C9;white-space:pre;">├─ </span><span style="color:#5654A2;font-weight:700;">SKILL.md</span><span style="color:#9B8EA0;font-style:italic;margin-left:1.1em;">the instructions</span></div>
-     <div><span style="color:#C4B8C9;white-space:pre;">├─ </span><span style="color:#D45F47;font-weight:700;">script.R</span></div>
-     <div><span style="color:#C4B8C9;white-space:pre;">├─ </span><span style="color:#D45F47;font-weight:700;">script.py</span></div>
-     <div><span style="color:#C4B8C9;white-space:pre;">└─ </span><span style="color:#C4881A;font-weight:700;">assets/</span></div>
-     <div><span style="color:#C4B8C9;white-space:pre;">&nbsp;&nbsp; ├─ </span><span style="color:#D45F47;font-weight:700;">example.html</span></div>
-     <div><span style="color:#C4B8C9;white-space:pre;">&nbsp;&nbsp; └─ </span><span style="color:#D45F47;font-weight:700;">styles.css</span></div>
-    </div>
+    <!-- Whole tree + connectors + labels as one SVG so every dotted line is a single
+         continuous <path> (dashes flow around corners, no stitched seams). -->
+    <svg viewBox="0 0 190 100" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
+     <!-- file tree -->
+     <g font-family="'Maple Mono',monospace" font-size="10" xml:space="preserve">
+      <text x="0" y="14"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#5654A2" font-weight="700">SKILL.md</tspan></text>
+      <text x="0" y="30"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#D45F47" font-weight="700">script.R</tspan></text>
+      <text x="0" y="46"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#D45F47" font-weight="700">script.py</tspan></text>
+      <text x="0" y="62"><tspan fill="#C4B8C9">└─ </tspan><tspan fill="#C4881A" font-weight="700">assets/</tspan></text>
+      <text x="18" y="78"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#C4881A" font-weight="700">example.html</tspan></text>
+      <text x="18" y="94"><tspan fill="#C4B8C9">└─ </tspan><tspan fill="#C4881A" font-weight="700">styles.css</tspan></text>
+     </g>
+     <!-- connectors: one continuous dotted path per group -->
+     <g fill="none" stroke="#BAB3D5" stroke-width="1.05" stroke-linecap="round" stroke-dasharray="0.01 3">
+      <!-- main -->
+      <path d="M72,11 L150,11"/>
+      <!-- code: bracket (arm + spine + arm) as one stroke; tail leaves the spine between the two rows -->
+      <path d="M72,27 L122,27 L122,43 L78,43"/>
+      <path d="M122,35 L150,35"/>
+      <!-- files: bracket spans assets..styles.css; tail leaves the spine at the example.html row (example.html sits inside the bracket, no crossing) -->
+      <path d="M66,59 L122,59 L122,91 L102,91"/>
+      <path d="M122,75 L150,75"/>
+     </g>
+     <!-- labels -->
+     <g font-family="'Maple Mono',monospace" font-size="10" font-style="italic" fill="#9B8EA0">
+      <text x="154" y="14">main</text>
+      <text x="154" y="38">code</text>
+      <text x="154" y="78">files</text>
+     </g>
+    </svg>
    </div>
   </div>
 

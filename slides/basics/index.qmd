@@ -20,75 +20,77 @@ title-slide-attributes:
 
 ## Assistants vs Agents {.light-centered .center}
 
-{{< include resources/s1-two-terms.qmd >}}
+{{< include resources/two-terms.qmd >}}
 
 ## &nbsp; {.light-centered .center}
 
-{{< include resources/s1-agent-equation.qmd >}}
+{{< include resources/agent-equation.qmd >}}
 
 ## &nbsp; {.dark-centered .center}
 
-{{< include resources/s1-practice.qmd >}}
+{{< include resources/practice-1.qmd >}}
 
 ## Where you launch matters {.light-centered .center}
 
-{{< include resources/s2-two-directories.qmd >}}
+{{< include resources/two-directories.qmd >}}
 
 ## Open your workspace {.light-centered .center}
 
-{{< include resources/s2-setup.qmd >}}
+{{< include resources/setup.qmd >}}
 
 ## Let's get started with a website {.dark-centered .center}
 
-{{< include resources/s2-get-started.qmd >}}
+{{< include resources/get-started.qmd >}}
 
 ## Your First HTML Page {.light-centered .center}
 
-{{< include resources/s2-first-prompt.qmd >}}
+{{< include resources/first-prompt.qmd >}}
 
 ## Example Output: Single Page {.dark-centered .center}
 
-{{< include resources/s2-html-result.qmd >}}
+{{< include resources/html-result.qmd >}}
 
 ## Some More HTML Pages {.light-centered .center}
 
-{{< include resources/s2-second-prompt.qmd >}}
+{{< include resources/second-prompt.qmd >}}
 
 ## Example Output: A Full Website {.dark-centered .center}
 
-{{< include resources/s2-html-result-2.qmd >}}
+{{< include resources/html-result-2.qmd >}}
 
 ## The Structure of a Website {.light-centered .center}
 
-{{< include resources/s2-website-structure.qmd >}}
+{{< include resources/website-structure.qmd >}}
 
 ## Know what you're building {.light-centered .center}
 
-{{< include resources/s2-know-the-basics.qmd >}}
+{{< include resources/know-the-basics.qmd >}}
 
 ## &nbsp; {.dark-centered .center}
 
-{{< include resources/s2-practice.qmd >}}
+{{< include resources/practice-2.qmd >}}
 
 ## The CLAUDE.md file {.light-centered .center}
 
-{{< include resources/s4-claude-md.qmd >}}
+{{< include resources/claude-md.qmd >}}
 
 ## Skills {.light-centered .center}
 
-{{< include resources/s5-skills.qmd >}}
+{{< include resources/skills.qmd >}}
+
+
 
 ## Extend, don't restart {.light-centered .center}
 
-{{< include resources/s3-multipage-prompt.qmd >}}
+{{< include resources/multipage-prompt.qmd >}}
 
 ## Where it struggles {.light-centered .center}
 
-{{< include resources/s3-pitfalls.qmd >}}
+{{< include resources/pitfalls.qmd >}}
 
 ## &nbsp; {.dark-centered .center}
 
-{{< include resources/s3-practice.qmd >}}
+{{< include resources/practice-3.qmd >}}
 
 ## Three takeaways {.light-centered .center}
 
@@ -96,7 +98,7 @@ title-slide-attributes:
 
 ## The hardest skill {.dark-centered .center}
 
-{{< include resources/s3-hardest-skill.qmd >}}
+{{< include resources/hardest-skill.qmd >}}
 
 ## Up next {.dark-centered .center}
 
