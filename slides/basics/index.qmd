@@ -78,7 +78,9 @@ title-slide-attributes:
 
 {{< include resources/skills.qmd >}}
 
+## Installing skills {.light-centered .center}
 
+{{< include resources/install-skills.qmd >}}
 
 ## Extend, don't restart {.light-centered .center}
 
