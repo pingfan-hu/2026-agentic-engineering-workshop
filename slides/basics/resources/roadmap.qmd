@@ -6,32 +6,32 @@
   <div style="display:flex;align-items:center;gap:1.1em;background:rgba(93,212,188,0.08);border-left:5px solid #5DD4BC;border-radius:0 12px 12px 0;padding:0.75em 1.1em;">
    <div style="font-family:'Maple Mono',monospace;font-weight:700;font-size:0.85em;color:#5DD4BC;min-width:1.6em;letter-spacing:0.02em;">01</div>
    <div style="flex:1;">
-    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Motivation</div>
-    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">why agentic engineering matters now</div>
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">What is an Agent?</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">Assistants vs agents</div>
    </div>
   </div>
 
   <div style="display:flex;align-items:center;gap:1.1em;background:rgba(123,181,240,0.08);border-left:5px solid #7BB5F0;border-radius:0 12px 12px 0;padding:0.75em 1.1em;">
    <div style="font-family:'Maple Mono',monospace;font-weight:700;font-size:0.85em;color:#7BB5F0;min-width:1.6em;letter-spacing:0.02em;">02</div>
    <div style="flex:1;">
-    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Installation</div>
-    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">three tools, ready in ten minutes</div>
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Workflow Setup</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">Agent + IDE + Speech-to-Text</div>
    </div>
   </div>
 
   <div style="display:flex;align-items:center;gap:1.1em;background:rgba(255,184,77,0.08);border-left:5px solid #FFB84D;border-radius:0 12px 12px 0;padding:0.75em 1.1em;">
    <div style="font-family:'Maple Mono',monospace;font-weight:700;font-size:0.85em;color:#FFB84D;min-width:1.6em;letter-spacing:0.02em;">03</div>
    <div style="flex:1;">
-    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Simple HTML</div>
-    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">your first one-page site from a prompt</div>
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Website Example</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">Multi-page HTML + A Style Sheet</div>
    </div>
   </div>
 
   <div style="display:flex;align-items:center;gap:1.1em;background:rgba(157,154,224,0.08);border-left:5px solid #9D9AE0;border-radius:0 12px 12px 0;padding:0.75em 1.1em;">
    <div style="font-family:'Maple Mono',monospace;font-weight:700;font-size:0.85em;color:#9D9AE0;min-width:1.6em;letter-spacing:0.02em;">04</div>
    <div style="flex:1;">
-    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">HTML Project</div>
-    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">multipage site with navigation</div>
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Make It Reproducible</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">CLAUDE.md + Skills</div>
    </div>
   </div>
 

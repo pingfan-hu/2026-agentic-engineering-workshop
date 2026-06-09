@@ -101,7 +101,7 @@ the slide, those are reused instead of the injected defaults. -->
       showScrub(true);
     }
     function toggle(){ if(id){ stop(); el.classList.add('pt-paused'); } else { start(); } }
-    function reset(){ stop(); remaining = TOTAL; el.classList.remove('pt-done'); el.classList.remove('pt-paused'); render(); }
+    function reset(){ stop(); remaining = TOTAL; dragging = false; el.classList.remove('pt-done'); el.classList.remove('pt-paused'); scrub.value = TOTAL; render(); }
 
     main.addEventListener('click', toggle);
     main.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); } });
@@ -111,7 +111,9 @@ the slide, those are reused instead of the injected defaults. -->
     main.addEventListener('pointercancel', function(){ pressing = false; });
     resetBtn.addEventListener('click', function(e){ e.stopPropagation(); reset(); });
     scrub.addEventListener('input', function(){ dragging = true; remaining = Math.round((parseInt(scrub.value, 10) || 0) / SCRUB_STEP) * SCRUB_STEP; scrub.value = remaining; if(remaining > 0) el.classList.remove('pt-done'); render(); });
-    scrub.addEventListener('change', function(){ dragging = false; });
+    ['change', 'pointerup', 'pointercancel', 'mouseup', 'touchend', 'blur'].forEach(function(ev){
+      scrub.addEventListener(ev, function(){ dragging = false; });
+    });
 
     render();
   }

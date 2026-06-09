@@ -38,6 +38,10 @@ title-slide-attributes:
 
 {{< include resources/setup.qmd >}}
 
+## Agents can do almost anything {.light-centered .center}
+
+{{< include resources/agent-capabilities.qmd >}}
+
 ## Let's get started with a website {.dark-centered .center}
 
 {{< include resources/get-started.qmd >}}
@@ -82,13 +86,9 @@ title-slide-attributes:
 
 {{< include resources/install-skills.qmd >}}
 
-## Extend, don't restart {.light-centered .center}
+## Build your skill {.light-centered .center}
 
-{{< include resources/multipage-prompt.qmd >}}
-
-## Where it struggles {.light-centered .center}
-
-{{< include resources/pitfalls.qmd >}}
+{{< include resources/website-to-skill.qmd >}}
 
 ## &nbsp; {.dark-centered .center}
 
@@ -98,10 +98,6 @@ title-slide-attributes:
 
 {{< include resources/takeaways.qmd >}}
 
-## The hardest skill {.dark-centered .center}
+## One More Thing... {.dark-centered .center}
 
 {{< include resources/hardest-skill.qmd >}}
-
-## Up next {.dark-centered .center}
-
-{{< include resources/up-next.qmd >}}

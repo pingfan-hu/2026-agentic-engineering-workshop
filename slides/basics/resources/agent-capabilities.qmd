@@ -1,0 +1,58 @@
+```{=html}
+<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:0.7em;align-items:stretch;">
+
+  <!-- 1 · write code (purple) -->
+  <div style="background:#FFFFFF;border:1px solid #E3DCD2;border-radius:14px;padding:0.85em 0.55em;text-align:center;box-shadow:0 6px 18px rgba(44,62,80,0.08);display:flex;flex-direction:column;align-items:center;gap:0.5em;">
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="code-xml" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+   <div style="font-size:0.52em;font-weight:700;color:#5654A2;line-height:1.25;">Write code</div>
+  </div>
+
+  <!-- 2 · debug & refactor (teal) -->
+  <div style="background:#FFFFFF;border:1px solid #E3DCD2;border-radius:14px;padding:0.85em 0.55em;text-align:center;box-shadow:0 6px 18px rgba(44,62,80,0.08);display:flex;flex-direction:column;align-items:center;gap:0.5em;">
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="bug" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+   <div style="font-size:0.52em;font-weight:700;color:#2C8475;line-height:1.25;">Debug &amp; refactor</div>
+  </div>
+
+  <!-- 3 · analyze data (blue) -->
+  <div style="background:#FFFFFF;border:1px solid #E3DCD2;border-radius:14px;padding:0.85em 0.55em;text-align:center;box-shadow:0 6px 18px rgba(44,62,80,0.08);display:flex;flex-direction:column;align-items:center;gap:0.5em;">
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#DCE9FA;border:1px solid #A6C4EA;display:flex;align-items:center;justify-content:center;color:#3A7DC9;"><i data-lucide="chart-column" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+   <div style="font-size:0.52em;font-weight:700;color:#3A7DC9;line-height:1.25;">Analyze data</div>
+  </div>
+
+  <!-- 4 · generate images (purple-bright) -->
+  <div style="background:#FFFFFF;border:1px solid #E3DCD2;border-radius:14px;padding:0.85em 0.55em;text-align:center;box-shadow:0 6px 18px rgba(44,62,80,0.08);display:flex;flex-direction:column;align-items:center;gap:0.5em;">
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#F3E5F5;border:1px solid #D3A8DB;display:flex;align-items:center;justify-content:center;color:#7B2CBF;"><i data-lucide="image" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+   <div style="font-size:0.52em;font-weight:700;color:#7B2CBF;line-height:1.25;">Generate images</div>
+  </div>
+
+  <!-- 5 · summarize docs (amber) -->
+  <div style="background:#FFFFFF;border:1px solid #E3DCD2;border-radius:14px;padding:0.85em 0.55em;text-align:center;box-shadow:0 6px 18px rgba(44,62,80,0.08);display:flex;flex-direction:column;align-items:center;gap:0.5em;">
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#FEF5E7;border:1px solid #F0DDB4;display:flex;align-items:center;justify-content:center;color:#C4881A;"><i data-lucide="book-open" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+   <div style="font-size:0.52em;font-weight:700;color:#C4881A;line-height:1.25;">Summarize docs</div>
+  </div>
+
+  <!-- 6 · write & edit (sage) -->
+  <div style="background:#FFFFFF;border:1px solid #E3DCD2;border-radius:14px;padding:0.85em 0.55em;text-align:center;box-shadow:0 6px 18px rgba(44,62,80,0.08);display:flex;flex-direction:column;align-items:center;gap:0.5em;">
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#E9F1EB;border:1px solid #C6DBCB;display:flex;align-items:center;justify-content:center;color:#4A7A5A;"><i data-lucide="pen-line" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+   <div style="font-size:0.52em;font-weight:700;color:#4A7A5A;line-height:1.25;">Write &amp; edit</div>
+  </div>
+
+  <!-- 7 · automate tasks (navy) -->
+  <div style="background:#FFFFFF;border:1px solid #E3DCD2;border-radius:14px;padding:0.85em 0.55em;text-align:center;box-shadow:0 6px 18px rgba(44,62,80,0.08);display:flex;flex-direction:column;align-items:center;gap:0.5em;">
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#E8ECF0;border:1px solid #C5CED8;display:flex;align-items:center;justify-content:center;color:#2C3E50;"><i data-lucide="terminal" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+   <div style="font-size:0.52em;font-weight:700;color:#2C3E50;line-height:1.25;">Automate tasks</div>
+  </div>
+
+  <!-- 8 · build HTML (coral) — today's focus -->
+  <div style="position:relative;background:linear-gradient(160deg,#FCEEEC,#FAE0DA);border:1.5px solid #ED9684;border-radius:14px;padding:0.85em 0.55em;text-align:center;box-shadow:0 12px 26px rgba(212,95,71,0.28);display:flex;flex-direction:column;align-items:center;gap:0.5em;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);font-family:'Maple Mono',monospace;font-size:0.34em;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#E0735A,#D45F47);padding:0.4em 0.85em;border-radius:999px;box-shadow:0 4px 12px rgba(212,95,71,0.4);white-space:nowrap;">today's focus</div>
+   <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:linear-gradient(135deg,#E0735A,#D45F47);display:flex;align-items:center;justify-content:center;color:#FFFFFF;box-shadow:0 4px 12px rgba(212,95,71,0.35);"><i data-lucide="file-code" style="width:1.1em;height:1.1em;stroke-width:1.9;"></i></div>
+   <div style="font-size:0.52em;font-weight:800;color:#C0432C;line-height:1.25;">Build HTML</div>
+  </div>
+
+ </div>
+
+</div>
+```
