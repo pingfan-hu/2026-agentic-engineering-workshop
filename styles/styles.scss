@@ -987,27 +987,7 @@ a.section-card {
   // first click (see CLAUDE.md hover-shake note).
   will-change: transform;
 
-  // Hairline keeps the icon tile crisp, matching the installation table icons.
-  .section-card-icon {
-    border: 1px solid rgba(1, 61, 91, 0.10);
-    transition: background 0.15s ease, border-color 0.15s ease;
-  }
-
-  // Same lifted treatment as the installation cells: light-blue surface, soft
-  // shadow, white icon chip. z-index raises the card so its shadow sits above
-  // the flush neighbors instead of being painted over.
-  &:hover {
-    background: #F1F8FE;
-    box-shadow: 0 2px 12px rgba(1, 61, 91, 0.13);
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-
-    .section-card-icon {
-      background: #FFFFFF;
-      border-color: #C8DAE8;
-    }
-  }
+  &:hover .section-label { text-decoration: none; }
 
   &:active {
     transform: translateY(1px);
@@ -1656,15 +1636,6 @@ body.quarto-dark {
     }
   }
   a.section-card {
-    .section-card-icon { border-color: rgba(255, 255, 255, 0.10); }
-    &:hover {
-      background: #2B4458;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.40);
-      .section-card-icon {
-        background: #3A5570;
-        border-color: rgba(255, 255, 255, 0.22);
-      }
-    }
     &:active {
       background: #2A3447;
       .section-card-icon { background: #2A4055; }
