@@ -7,32 +7,63 @@
 
  <div class="swtbl-row">
   <div class="swtbl-software">
-   <a class="swtbl-software-icon" href="https://claude.com/claude-code" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="#CC785C" xmlns="http://www.w3.org/2000/svg" aria-label="Anthropic"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>
+   <a class="swtbl-software-link" href="https://claude.com/claude-code" target="_blank" rel="noopener">
+    <span class="swtbl-software-icon">
+     <svg viewBox="0 0 24 24" fill="#CC785C" xmlns="http://www.w3.org/2000/svg" aria-label="Anthropic"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>
+    </span>
+    <span class="swtbl-software-name">Claude Code</span>
    </a>
-   <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a>
   </div>
   <div class="swtbl-desc"><div>The AI coding agent we use throughout the workshop.</div></div>
  </div>
 
  <div class="swtbl-row">
   <div class="swtbl-software">
-   <a class="swtbl-software-icon" href="https://positron.posit.co" target="_blank" rel="noopener">
-    <img src="images/software/positron-icon.png" alt="Positron" />
+   <a class="swtbl-software-link" href="https://positron.posit.co" target="_blank" rel="noopener">
+    <span class="swtbl-software-icon">
+     <img src="images/software/positron-icon.png" alt="Positron" />
+    </span>
+    <span class="swtbl-software-name">Positron</span>
    </a>
-   <a href="https://positron.posit.co" target="_blank" rel="noopener">Positron</a>
   </div>
   <div class="swtbl-desc"><div>Data-science IDE built on VS Code, with side-by-side source and rendered output.</div></div>
  </div>
 
  <div class="swtbl-row">
   <div class="swtbl-software">
-   <a class="swtbl-software-icon" href="https://spokenly.app" target="_blank" rel="noopener">
-    <img src="images/software/spokenly-logo.png" alt="Spokenly" />
+   <a class="swtbl-software-link" href="https://www.r-project.org" target="_blank" rel="noopener">
+    <span class="swtbl-software-icon">
+     <img src="images/software/r-icon.svg" alt="R" />
+    </span>
+    <span class="swtbl-software-name">R</span>
    </a>
-   <a href="https://spokenly.app" target="_blank" rel="noopener">Spokenly</a>
+  </div>
+  <div class="swtbl-desc"><div>The statistical programming language we use for the hands-on data work.</div></div>
+ </div>
+
+ <div class="swtbl-row">
+  <div class="swtbl-software">
+   <a class="swtbl-software-link" href="https://spokenly.app" target="_blank" rel="noopener">
+    <span class="swtbl-software-icon">
+     <img src="images/software/spokenly-logo.png" alt="Spokenly" />
+    </span>
+    <span class="swtbl-software-name">Spokenly</span>
+   </a>
   </div>
   <div class="swtbl-desc"><div>AI powered voice-to-text application.</div></div>
+ </div>
+
+ <div class="swtbl-row swtbl-subrow">
+  <div class="swtbl-software">
+   <span class="swtbl-subrow-elbow" aria-hidden="true"></span>
+   <a class="swtbl-software-link" href="https://github.com/matthartman/ghost-pepper" target="_blank" rel="noopener">
+    <span class="swtbl-software-icon">
+     <img src="images/software/ghost-pepper-icon.png" alt="Ghost Pepper" />
+    </span>
+    <span class="swtbl-software-name">Ghost Pepper</span>
+   </a>
+  </div>
+  <div class="swtbl-desc"><div>Free, open source replacement for Spokenly. Pick this for an all open source workflow.</div></div>
  </div>
 </div>
 ```

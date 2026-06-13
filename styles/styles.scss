@@ -1168,30 +1168,75 @@ $section-themes: (
 
 .swtbl-row:hover { background: #EAF2F8; }
 
+// The whole first cell is a single clickable button: .swtbl-software is the
+// cell shell (background/border/padding), .swtbl-software-link is the button
+// that fills it and carries hover/press/focus affordances.
 .swtbl-software {
   display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 18px;
+  align-items: stretch;
+  padding: 8px;
   background: #EEF4F8;
   border-right: 1px solid #C8DAE8;
 }
 
 .swtbl-row:hover .swtbl-software { background: #E5F0F7; }
 
+.swtbl-software-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  // Pre-promote so the :active press creates its layer up front instead of
+  // repainting siblings on first click (see CLAUDE.md hover-shake note).
+  will-change: transform;
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.06s ease;
+}
+
+// Hover raises the button with shadow + a brighter surface only — no hover
+// transform, which would shake the row on retina (CLAUDE.md).
+.swtbl-software-link:hover {
+  background: #F1F8FE;
+  box-shadow: 0 2px 10px rgba(1, 61, 91, 0.13);
+  // Bootstrap reasserts underline on a:hover — keep the button undecorated.
+  text-decoration: none;
+}
+
+// White chip on the light-blue hover surface so the tile stays distinct
+// (cream-on-blue had near-zero contrast).
+.swtbl-software-link:hover .swtbl-software-icon {
+  background: #FFFFFF;
+  border-color: #C8DAE8;
+}
+
+// Momentary press transform is fine (CLAUDE.md).
+.swtbl-software-link:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 4px rgba(1, 61, 91, 0.12);
+}
+
+.swtbl-software-link:focus-visible {
+  outline: 2px solid #013D5B;
+  outline-offset: 2px;
+}
+
 .swtbl-software-icon {
   width: 44px;
   height: 44px;
   border-radius: 10px;
   background: #E5E7EB;
+  // Hairline keeps the tile edge crisp against any surface behind it.
+  border: 1px solid rgba(1, 61, 91, 0.10);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
-
-.swtbl-row:hover .swtbl-software-icon { background: #F8F7F0; }
 
 .swtbl-software-icon img,
 .swtbl-software-icon svg {
@@ -1200,9 +1245,90 @@ $section-themes: (
   display: block;
 }
 
-.swtbl-software a {
+.swtbl-software-name {
   font-family: 'Maple Mono', monospace;
   font-size: 0.95em;
+  color: #013D5B;
+}
+
+// ---- Sub-row: a secondary entry nested under the row above it ----
+// (e.g. Ghost Pepper as the open-source alternative to Spokenly). Same row
+// markup, but smaller and connected to its parent: no top divider, an elbow
+// connector, and a tighter, lighter treatment.
+.swtbl-subrow {
+  border-top: none;
+}
+
+.swtbl-subrow .swtbl-software {
+  align-items: center;
+  gap: 4px;
+}
+
+// Tree-branch elbow that visually ties this row to the one above it.
+.swtbl-subrow-elbow {
+  width: 14px;
+  height: 14px;
+  margin-left: 8px;
+  flex-shrink: 0;
+  border-left: 2px solid #B7CCDC;
+  border-bottom: 2px solid #B7CCDC;
+  border-bottom-left-radius: 6px;
+}
+
+.swtbl-subrow .swtbl-software-link {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.swtbl-subrow .swtbl-software-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.swtbl-subrow .swtbl-software-icon img,
+.swtbl-subrow .swtbl-software-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.swtbl-subrow .swtbl-software-name {
+  font-size: 0.82em;
+}
+
+.swtbl-subrow .swtbl-desc {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-size: 0.84em;
+}
+
+// Inset divider between the parent row and this sub-row, drawn separately in
+// each column so neither line touches the outer edges or the center column
+// separator.
+.swtbl-subrow .swtbl-software,
+.swtbl-subrow .swtbl-desc {
+  position: relative;
+}
+
+.swtbl-subrow .swtbl-software::before,
+.swtbl-subrow .swtbl-desc::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 34px;
+  right: 34px;
+  height: 4px;
+  // "-.-" : two line segments anchored to the ends, a dot centered in the gap.
+  background-image:
+    linear-gradient(#C8DAE8, #C8DAE8),
+    linear-gradient(#C8DAE8, #C8DAE8),
+    radial-gradient(circle, #C8DAE8 1.8px, transparent 2px);
+  background-repeat: no-repeat;
+  background-size:
+    calc(50% - 10px) 1px,
+    calc(50% - 10px) 1px,
+    100% 100%;
+  background-position: left center, right center, center center;
 }
 
 .swtbl-software-text {
@@ -1289,6 +1415,35 @@ $section-themes: (
     justify-content: center;
   }
 
+  // The button hugs its content and centers; touch devices don't hover, so
+  // drop the raised surface/shadow/press and keep only the icon-tile tint.
+  .swtbl-software-link {
+    flex: 0 1 auto;
+    justify-content: center;
+    padding: 6px 10px;
+  }
+
+  .swtbl-software-link:hover {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .swtbl-software-link:hover .swtbl-software-icon { background: #E5E7EB; }
+
+  .swtbl-software-link:active {
+    transform: none;
+    box-shadow: none;
+  }
+
+  // Centered stacked cards: the left elbow has nothing to branch from, so drop
+  // it. Smaller sizing + no divider already mark the sub-row as nested.
+  .swtbl-subrow-elbow { display: none; }
+
+  // Columns stack on mobile, so the per-column inset dividers would land in the
+  // wrong places (e.g. between Ghost Pepper's name and its own description).
+  .swtbl-subrow .swtbl-software::before,
+  .swtbl-subrow .swtbl-desc::before { display: none; }
+
   .swtbl-row:hover .swtbl-software { background: transparent; }
 
   // On mobile, name and "made by" pill sit side-by-side (not stacked).
@@ -1304,10 +1459,11 @@ $section-themes: (
     min-width: 190px;
   }
 
-  // Software table: the name link is a direct child of .swtbl-software.
-  // Same trick — fixed min-width + centered text so all icons line up.
-  // Wide enough to fit the longest name ("GitHub Desktop").
-  .swtbl-software > a:not(.swtbl-software-icon) {
+  // Software table: the name is a direct child of the button (in the agents
+  // table it sits inside .swtbl-software-text, so this direct-child selector
+  // only catches software rows). Fixed min-width + centered text so all icons
+  // line up. Wide enough to fit the longest name ("GitHub Desktop").
+  .swtbl-software-link > .swtbl-software-name {
     min-width: 150px;
     text-align: center;
   }
@@ -1483,7 +1639,31 @@ body.quarto-dark {
     border-right-color: #384A57;
   }
   .swtbl-row:hover .swtbl-software { background: #243845; }
-  .swtbl-software-icon { background: #2A4055; }
+  .swtbl-software-link:hover {
+    background: #2B4458;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  }
+  .swtbl-software-link:hover .swtbl-software-icon {
+    background: #3A5570;
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+  .swtbl-software-link:focus-visible { outline-color: #7DA5BD; }
+  .swtbl-software-name { color: #DCE6EE; }
+  .swtbl-subrow-elbow {
+    border-left-color: #4A6378;
+    border-bottom-color: #4A6378;
+  }
+  .swtbl-subrow .swtbl-software::before,
+  .swtbl-subrow .swtbl-desc::before {
+    background-image:
+      linear-gradient(#384A57, #384A57),
+      linear-gradient(#384A57, #384A57),
+      radial-gradient(circle, #384A57 1.8px, transparent 2px);
+  }
+  .swtbl-software-icon {
+    background: #2A4055;
+    border-color: rgba(255, 255, 255, 0.10);
+  }
   .swtbl-row:hover .swtbl-software-icon { background: #3A5570; }
   .swtbl-desc { color: #C9D4DD; }
 
@@ -1499,6 +1679,13 @@ body.quarto-dark {
     .swtbl-desc { background: #1F3340; }
     .swtbl-row:hover { background: #1e2433; }
     .swtbl-row:hover .swtbl-software-icon { background: #2A4055; }
+    // Touch devices: no raised button affordance (dark rules out-specify the
+    // light-mode mobile reset, so repeat it here).
+    .swtbl-software-link:hover {
+      background: transparent;
+      box-shadow: none;
+    }
+    .swtbl-software-link:hover .swtbl-software-icon { background: #2A4055; }
   }
 
   // Color variants — primary, tint (icon bg + label/icon color), border, hover
