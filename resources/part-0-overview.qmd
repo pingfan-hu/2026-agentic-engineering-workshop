@@ -4,17 +4,17 @@
  </div>
  <div class="section-grid section-grid-3">
   <div class="section-sub">Extensive</div>
-  <div class="section-card">
+  <a class="section-card" href="installation.html#essentials">
    <div class="section-card-icon"><i data-lucide="package-check"></i></div>
    <div class="section-label">Essentials</div>
-  </div>
-  <div class="section-card">
+  </a>
+  <a class="section-card" href="installation.html#agents">
    <div class="section-card-icon"><i data-lucide="bot"></i></div>
    <div class="section-label">Agents</div>
-  </div>
-  <div class="section-card">
+  </a>
+  <a class="section-card" href="installation.html#software">
    <div class="section-card-icon"><i data-lucide="app-window"></i></div>
    <div class="section-label">Software</div>
-  </div>
+  </a>
  </div>
 </div>

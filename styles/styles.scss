@@ -965,7 +965,7 @@ div.quarto-about-trestles .about-entity .description {
   padding: 22px 16px;
   text-align: center;
   border-right: 1px solid #C8DAE8;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.06s ease;
 
   &:last-child { border-right: none; }
 
@@ -973,6 +973,52 @@ div.quarto-about-trestles .about-entity .description {
     background: #EDF2F6;
 
     .section-card-icon { background: #F8F7F0; }
+  }
+}
+
+// Part 0 cards are links (Essentials / Agents / Software jump to the matching
+// installation sections). Other parts' cards stay plain <div>s, so the
+// clickable + press affordances are scoped to the anchor variant only.
+a.section-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  // Pre-promote so the momentary :active press doesn't repaint neighbors on
+  // first click (see CLAUDE.md hover-shake note).
+  will-change: transform;
+
+  // Hairline keeps the icon tile crisp, matching the installation table icons.
+  .section-card-icon {
+    border: 1px solid rgba(1, 61, 91, 0.10);
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+
+  // Same lifted treatment as the installation cells: light-blue surface, soft
+  // shadow, white icon chip. z-index raises the card so its shadow sits above
+  // the flush neighbors instead of being painted over.
+  &:hover {
+    background: #F1F8FE;
+    box-shadow: 0 2px 12px rgba(1, 61, 91, 0.13);
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+
+    .section-card-icon {
+      background: #FFFFFF;
+      border-color: #C8DAE8;
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+    background: #E0EDF5;
+
+    .section-card-icon { background: #FFFFFF; }
+  }
+
+  &:focus-visible {
+    outline: 2px solid #013D5B;
+    outline-offset: -2px;
   }
 }
 
@@ -1608,6 +1654,22 @@ body.quarto-dark {
       background: #232b3e;
       .section-card-icon { background: #1e2433; }
     }
+  }
+  a.section-card {
+    .section-card-icon { border-color: rgba(255, 255, 255, 0.10); }
+    &:hover {
+      background: #2B4458;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.40);
+      .section-card-icon {
+        background: #3A5570;
+        border-color: rgba(255, 255, 255, 0.22);
+      }
+    }
+    &:active {
+      background: #2A3447;
+      .section-card-icon { background: #2A4055; }
+    }
+    &:focus-visible { outline-color: #7DA5BD; }
   }
   .section-card-icon {
     background: #1F3340;

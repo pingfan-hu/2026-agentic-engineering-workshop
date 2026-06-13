@@ -19,6 +19,18 @@
 
  <div class="swtbl-row">
   <div class="swtbl-software">
+   <a class="swtbl-software-link" href="https://www.r-project.org" target="_blank" rel="noopener">
+    <span class="swtbl-software-icon">
+     <img src="images/software/r-icon.svg" alt="R" />
+    </span>
+    <span class="swtbl-software-name">R</span>
+   </a>
+  </div>
+  <div class="swtbl-desc"><div>The statistical programming language we use for the hands-on data work.</div></div>
+ </div>
+
+ <div class="swtbl-row">
+  <div class="swtbl-software">
    <a class="swtbl-software-link" href="https://spokenly.app" target="_blank" rel="noopener">
     <span class="swtbl-software-icon">
      <img src="images/software/spokenly-logo.png" alt="Spokenly" />
@@ -27,6 +39,19 @@
    </a>
   </div>
   <div class="swtbl-desc"><div>AI powered voice-to-text application.</div></div>
+ </div>
+
+ <div class="swtbl-row swtbl-subrow">
+  <div class="swtbl-software">
+   <span class="swtbl-subrow-elbow" aria-hidden="true"></span>
+   <a class="swtbl-software-link" href="https://github.com/matthartman/ghost-pepper" target="_blank" rel="noopener">
+    <span class="swtbl-software-icon">
+     <img src="images/software/ghost-pepper-icon.png" alt="Ghost Pepper" />
+    </span>
+    <span class="swtbl-software-name">Ghost Pepper</span>
+   </a>
+  </div>
+  <div class="swtbl-desc"><div>Free, open source replacement for Spokenly.</div></div>
  </div>
 
  <div class="swtbl-row">

@@ -63,7 +63,7 @@
     <span class="swtbl-software-name">Ghost Pepper</span>
    </a>
   </div>
-  <div class="swtbl-desc"><div>Free, open source replacement for Spokenly. Pick this for an all open source workflow.</div></div>
+  <div class="swtbl-desc"><div>Free, open source replacement for Spokenly.</div></div>
  </div>
 </div>
 ```
