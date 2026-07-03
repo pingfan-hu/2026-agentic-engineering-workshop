@@ -1,0 +1,34 @@
+```{=html}
+<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:0.9em;align-items:stretch;">
+
+  <div style="background:#FFFFFF;border-radius:16px;padding:1.1em 1em 1.2em;text-align:left;border-top:4px solid #D45F47;box-shadow:0 10px 26px rgba(212,95,71,0.14);">
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.6em;">
+    <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="dices" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
+    <div style="font-size:0.6em;font-weight:700;color:#D45F47;">Random by default</div>
+   </div>
+   <div style="font-size:0.52em;color:#564232;line-height:1.6;">LLMs are probability machines. Every output is <strong style="color:#D45F47;">sampled</strong>, not computed. Ask for an apple ten times, get ten different apples.</div>
+  </div>
+
+  <div style="background:#FFFBF3;border-radius:16px;padding:1.1em 1.05em 1.2em;text-align:left;border-top:4px solid #2C8475;box-shadow:0 10px 26px rgba(44,132,117,0.16);border:1px solid #C8E6C9;">
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.7em;">
+    <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#E8F5E9;border:1px solid #C8E6C9;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="anchor" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
+    <div style="font-size:0.6em;font-weight:700;color:#2C8475;">Deterministic on purpose</div>
+   </div>
+   <div style="display:flex;flex-direction:column;gap:0.5em;">
+    <div style="display:flex;align-items:center;gap:0.6em;background:#FFFFFF;border-radius:9px;padding:0.5em 0.75em;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <i data-lucide="copy" style="width:1.1em;height:1.1em;stroke-width:1.9;color:#2C8475;flex-shrink:0;"></i>
+     <div style="font-size:0.5em;color:#564232;line-height:1.45;"><strong style="color:#2C8475;">Templates:</strong> fixed examples the agent copies, never regenerates.</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.6em;background:#FFFFFF;border-radius:9px;padding:0.5em 0.75em;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <i data-lucide="terminal" style="width:1.1em;height:1.1em;stroke-width:1.9;color:#2C8475;flex-shrink:0;"></i>
+     <div style="font-size:0.5em;color:#564232;line-height:1.45;"><strong style="color:#2C8475;">Scripts:</strong> the pre- and post-processing that must never vary.</div>
+    </div>
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

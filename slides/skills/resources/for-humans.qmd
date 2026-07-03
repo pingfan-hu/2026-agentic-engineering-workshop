@@ -1,0 +1,12 @@
+```{=html}
+<div style="width:84%;margin:0 auto;text-align:left;">
+
+ <div style="position:relative;background:rgba(157,154,224,0.1);border-left:5px solid #9D9AE0;border-radius:0 14px 14px 0;padding:1.5em 1.8em 1.6em;">
+  <div style="position:absolute;top:0.4em;left:0.7em;font-family:'Georgia',serif;font-size:5em;color:#9D9AE0;line-height:0.7;opacity:0.18;user-select:none;">"</div>
+  <div style="position:relative;font-size:0.92em;line-height:1.55;color:#F8F7F0;font-style:italic;font-family:'Georgia','TsangerJinKai',serif;">
+   A skill is not for the <span style="color:#9D9AE0;font-style:normal;font-weight:700;">agent</span>'s benefit. The agent does not distinguish a skill from a temporary prompt: it just reads files and context. We make skills for the <span style="color:#FFB84D;font-style:normal;font-weight:700;">humans</span>, to encapsulate a workflow worth keeping.
+  </div>
+ </div>
+
+</div>
+```

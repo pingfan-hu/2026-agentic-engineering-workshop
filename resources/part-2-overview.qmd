@@ -1,19 +1,19 @@
 <div class="section-outer section-orange">
  <div class="section-header">
-  <span class="section-header-text">In this section, we will discuss how to use and design skills for agentic engineering.</span>
+  <span class="section-header-text">In this section, we will discuss how to use, install, and author skills for agentic engineering.</span>
  </div>
  <div class="section-grid section-grid-3">
   <div class="section-card">
-   <div class="section-card-icon"><i data-lucide="library"></i></div>
-   <div class="section-label">Common Skills</div>
+   <div class="section-card-icon"><i data-lucide="play"></i></div>
+   <div class="section-label">Using Skills</div>
+  </div>
+  <div class="section-card">
+   <div class="section-card-icon"><i data-lucide="download"></i></div>
+   <div class="section-label">Installing Skills</div>
   </div>
   <div class="section-card">
    <div class="section-card-icon"><i data-lucide="pencil-ruler"></i></div>
-   <div class="section-label">Skill Design</div>
-  </div>
-  <div class="section-card">
-   <div class="section-card-icon"><i data-lucide="link"></i></div>
-   <div class="section-label">Skill Symlinks</div>
+   <div class="section-label">Authoring Skills</div>
   </div>
  </div>
 </div>

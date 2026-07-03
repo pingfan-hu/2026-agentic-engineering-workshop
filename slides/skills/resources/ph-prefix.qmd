@@ -1,0 +1,44 @@
+```{=html}
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="display:grid;grid-template-columns:1fr 0.95fr;gap:1.1em;align-items:center;">
+
+  <div style="text-align:left;">
+   <div style="background:#FFFFFF;border-left:4px solid #2C8475;border-radius:0 12px 12px 0;padding:0.75em 1em;box-shadow:0 4px 14px rgba(44,132,117,0.08);margin-bottom:0.8em;">
+    <div style="font-size:0.62em;color:#2C3E50;line-height:1.5;">Minimal in <strong style="color:#2C8475;">form</strong> is not minimal in <strong style="color:#2C8475;">function</strong>.</div>
+   </div>
+   <div style="font-size:0.52em;color:#564232;line-height:1.6;">
+    A naming habit: I prefix every skill I author with my initials, <code style="font-family:'Maple Mono',monospace;color:#5654A2;background:#EEEDF8;padding:0.06em 0.36em;border-radius:5px;">ph-</code>. Inside <code style="font-family:'Maple Mono',monospace;color:#5654A2;">skills/</code>, everything I wrote sits together.
+   </div>
+  </div>
+
+  <div style="background:#FFFFFF;border:1px solid #E5F2EE;border-radius:11px;overflow:hidden;box-shadow:0 6px 18px rgba(44,132,117,0.12);">
+   <div style="display:flex;align-items:center;gap:0.4em;background:#E5F2EE;padding:0.44em 0.75em;border-bottom:1px solid #BCDFC0;">
+    <i data-lucide="folder-open" style="width:0.85em;height:0.85em;stroke-width:1.9;color:#2C8475;flex-shrink:0;"></i>
+    <code style="font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;color:#2C8475;">~/.claude/skills/</code>
+   </div>
+   <div style="padding:0.25em 0.15em;">
+    <div style="display:flex;align-items:center;gap:0.45em;padding:0.3em 0.55em;background:#F4FBF8;border-radius:6px;">
+     <i data-lucide="folder" style="width:0.9em;height:0.9em;stroke-width:1.9;color:#2C8475;flex-shrink:0;"></i>
+     <span style="font-family:'Maple Mono',monospace;font-size:0.55em;font-weight:700;color:#2C8475;">ph-html</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.45em;padding:0.3em 0.55em;background:#F4FBF8;border-radius:6px;">
+     <i data-lucide="folder" style="width:0.9em;height:0.9em;stroke-width:1.9;color:#2C8475;flex-shrink:0;"></i>
+     <span style="font-family:'Maple Mono',monospace;font-size:0.55em;font-weight:700;color:#2C8475;">ph-image</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.45em;padding:0.3em 0.55em;background:#F4FBF8;border-radius:6px;">
+     <i data-lucide="folder" style="width:0.9em;height:0.9em;stroke-width:1.9;color:#2C8475;flex-shrink:0;"></i>
+     <span style="font-family:'Maple Mono',monospace;font-size:0.55em;font-weight:700;color:#2C8475;">ph-slide</span>
+    </div>
+    <div style="height:1px;background:#EDEAE2;margin:0.25em 0.5em;"></div>
+    <div style="display:flex;align-items:center;gap:0.45em;padding:0.3em 0.55em;">
+     <i data-lucide="folder" style="width:0.9em;height:0.9em;stroke-width:1.9;color:#B6AFA3;flex-shrink:0;"></i>
+     <span style="font-family:'Maple Mono',monospace;font-size:0.55em;font-weight:600;color:#9B9384;">some-installed-skill</span>
+    </div>
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

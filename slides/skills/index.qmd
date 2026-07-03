@@ -12,93 +12,91 @@ title-slide-attributes:
 
 ## Recap {.light-centered .center}
 
-{{< include resources/recap-today.qmd >}}
+{{< include resources/recap.qmd >}}
 
-## [Section 1]{.amber}<br>Common Skills {.dark-centered .center}
+## Today {.dark-centered .center}
 
-## A minimal `SKILL.md` {.light-centered .center}
+{{< include resources/roadmap.qmd >}}
 
-{{< include resources/minimal-skillmd.qmd >}}
+## Why wrap work in a skill? {.light-centered .center}
 
-## Where skills come from {.light-centered .center}
+{{< include resources/motivation.qmd >}}
 
-{{< include resources/where-skills-from.qmd >}}
+## What is a skill? {.light-centered .center}
 
-## What people use them for {.light-centered .center}
+{{< include resources/what-skill.qmd >}}
 
-{{< include resources/what-for.qmd >}}
+## Invoking a skill {.light-centered .center}
 
-## [Section 2]{.amber}<br>Skill Design {.dark-centered .center}
+{{< include resources/invoke.qmd >}}
 
-## Anatomy of `SKILL.md` {.light-centered .center}
+## One consistent visual family {.light-centered .center}
+
+{{< include resources/banner-family.qmd >}}
+
+## &nbsp; {.dark-centered .center}
+
+{{< include resources/practice-1.qmd >}}
+
+## Where to install skills from {.light-centered .center}
+
+{{< include resources/install-sources.qmd >}}
+
+## &nbsp; {.dark-centered .center}
+
+{{< include resources/practice-2.qmd >}}
+
+## The minimal skill {.light-centered .center}
+
+{{< include resources/minimal-tree.qmd >}}
+
+## Inside a `SKILL.md` {.light-centered .center}
 
 {{< include resources/anatomy.qmd >}}
 
-## The load-bearing section {.dark-centered .center}
+## Minimal in form, not in function {.light-centered .center}
 
-{{< include resources/load-bearing.qmd >}}
+{{< include resources/ph-prefix.qmd >}}
 
-## A Gotchas-rich skill {.light-centered .center}
+## Add templates and scripts {.light-centered .center}
 
-{{< include resources/gotchas-rich.qmd >}}
+{{< include resources/complex-structure.qmd >}}
 
-## Design principle 1 {.light-centered .center}
+## These slides were built with `/ph-slide` {.light-centered .center}
 
-{{< include resources/principle-1.qmd >}}
+{{< include resources/workshop-built.qmd >}}
 
-## Design principle 2 {.light-centered .center}
+## Randomness vs determinism {.light-centered .center}
 
-{{< include resources/principle-2.qmd >}}
+{{< include resources/determinism.qmd >}}
 
-## Skills as advanced Context Engineering {.light-centered .center}
+## Pinned down by a template and a script {.light-centered .center}
 
-{{< include resources/skills-as-context.qmd >}}
+{{< include resources/seasoning.qmd >}}
 
-## The attention problem {.light-centered .center}
+## Nest another agent {.light-centered .center}
 
-{{< include resources/attention-dispersion.qmd >}}
+{{< include resources/nested-agents.qmd >}}
 
-## Design principle 3 — progressive disclosure {.light-centered .center}
+## One skill, many workflows {.light-centered .center}
 
-{{< include resources/progressive-disclosure.qmd >}}
+{{< include resources/bundled.qmd >}}
 
-## How to actually write a skill {.light-centered .center}
+## `/surveydown`: four workflows, one name {.light-centered .center}
 
-{{< include resources/how-to-write.qmd >}}
+{{< include resources/surveydown.qmd >}}
 
-## Skills vs `CLAUDE.md` vs rules {.light-centered .center}
+## &nbsp; {.dark-centered .center}
 
-{{< include resources/skills-vs-rules.qmd >}}
+{{< include resources/practice-3.qmd >}}
 
-## Skill anti-patterns {.light-centered .center}
-
-{{< include resources/anti-patterns.qmd >}}
-
-## [Section 3]{.amber}<br>Skill Symlinks {.dark-centered .center}
-
-## The problem {.light-centered .center}
-
-{{< include resources/the-problem.qmd >}}
-
-## Two patterns {.light-centered .center}
-
-{{< include resources/two-patterns.qmd >}}
-
-## A complete example {.light-centered .center}
-
-{{< include resources/complete-example.qmd >}}
-
-## Important guardrails {.light-centered .center}
-
-{{< include resources/guardrails.qmd >}}
-
-## When to graduate to a plugin {.light-centered .center}
-
-{{< include resources/graduate.qmd >}}
-
-## Three takeaways {.light-centered .center}
+## Four shapes of a skill {.light-centered .center}
 
 {{< include resources/takeaways.qmd >}}
+
+## &nbsp; {.dark-centered .center}
+
+{{< include resources/for-humans.qmd >}}
 
 ## Up next {.dark-centered .center}
 

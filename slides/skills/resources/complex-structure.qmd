@@ -1,0 +1,44 @@
+```{=html}
+<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:1.1em;align-items:center;">
+
+  <div style="background:#1E1E2E;border-radius:14px;padding:0.85em 1.05em 0.95em;font-family:'Maple Mono',monospace;font-size:0.55em;line-height:1.85;text-align:left;color:#F8F7F0;box-shadow:0 8px 24px rgba(0,0,0,0.18);">
+   <div style="display:flex;gap:0.35em;margin-bottom:0.65em;">
+    <span style="width:0.5em;height:0.5em;border-radius:50%;background:#FF5F56;"></span>
+    <span style="width:0.5em;height:0.5em;border-radius:50%;background:#FFBD2E;"></span>
+    <span style="width:0.5em;height:0.5em;border-radius:50%;background:#27C93F;"></span>
+   </div>
+   <div><span style="color:#69B4F0;font-weight:700;">ph-slide/</span></div>
+   <div><span style="color:#5C6B80;">├── </span><span style="color:#FFB84D;">SKILL.md</span></div>
+   <div><span style="color:#5C6B80;">├── </span><span style="color:#69B4F0;font-weight:700;">assets/</span> <span style="color:#5C6B80;">// deterministic</span></div>
+   <div><span style="color:#5C6B80;">│&nbsp;&nbsp; ├── </span>slides.scss</div>
+   <div><span style="color:#5C6B80;">│&nbsp;&nbsp; ├── </span>_shared.yml</div>
+   <div><span style="color:#5C6B80;">│&nbsp;&nbsp; └── </span>render.sh</div>
+   <div><span style="color:#5C6B80;">└── </span><span style="color:#69B4F0;font-weight:700;">template/</span> <span style="color:#5C6B80;">// copy &amp; adapt</span></div>
+   <div><span style="color:#5C6B80;">&nbsp;&nbsp;&nbsp; ├── </span>index.qmd</div>
+   <div><span style="color:#5C6B80;">&nbsp;&nbsp;&nbsp; ├── </span>_quarto.yml</div>
+   <div><span style="color:#5C6B80;">&nbsp;&nbsp;&nbsp; └── </span><span style="color:#69B4F0;">resources/</span></div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:0.6em;text-align:left;">
+   <div style="background:#FFFFFF;border-radius:11px;padding:0.65em 0.9em;box-shadow:0 4px 14px rgba(58,125,201,0.1);border-left:3px solid #3A7DC9;">
+    <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.25em;">
+     <i data-lucide="package" style="width:0.95em;height:0.95em;stroke-width:1.9;color:#3A7DC9;"></i>
+     <code style="font-family:'Maple Mono',monospace;font-size:0.58em;color:#3A7DC9;font-weight:700;">assets/</code>
+    </div>
+    <div style="font-size:0.5em;color:#564232;line-height:1.5;">Fixed building blocks: stylesheet, config, render script.</div>
+   </div>
+   <div style="background:#FFFFFF;border-radius:11px;padding:0.65em 0.9em;box-shadow:0 4px 14px rgba(86,84,162,0.1);border-left:3px solid #5654A2;">
+    <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.25em;">
+     <i data-lucide="copy" style="width:0.95em;height:0.95em;stroke-width:1.9;color:#5654A2;"></i>
+     <code style="font-family:'Maple Mono',monospace;font-size:0.58em;color:#5654A2;font-weight:700;">template/</code>
+    </div>
+    <div style="font-size:0.5em;color:#564232;line-height:1.5;">A complete working project to copy and adapt each time.</div>
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

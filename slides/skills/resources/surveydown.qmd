@@ -1,0 +1,42 @@
+```{=html}
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+
+ <div style="border:1.5px solid #5654A2;border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(86,84,162,0.16);">
+
+  <div style="display:flex;align-items:center;justify-content:center;gap:0.55em;background:#5654A2;padding:0.55em 1em;">
+   <div style="width:1.7em;height:1.7em;border-radius:0.45em;background:rgba(248,247,240,0.2);display:flex;align-items:center;justify-content:center;color:#F8F7F0;"><i data-lucide="layers" style="width:0.85em;height:0.85em;stroke-width:1.9;"></i></div>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.6em;font-weight:700;color:#F8F7F0;letter-spacing:0.06em;">/surveydown</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#D4D3EE;">
+
+   <div style="background:#FFFFFF;display:flex;flex-direction:column;align-items:center;gap:0.5em;padding:1em 0.7em;">
+    <div style="width:2.4em;height:2.4em;border-radius:0.6em;background:#EEEDF8;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="square-pen" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;color:#5654A2;text-align:center;line-height:1.3;">Create<br>survey</div>
+   </div>
+
+   <div style="background:#FFFFFF;display:flex;flex-direction:column;align-items:center;gap:0.5em;padding:1em 0.7em;">
+    <div style="width:2.4em;height:2.4em;border-radius:0.6em;background:#EEEDF8;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="database" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;color:#5654A2;text-align:center;line-height:1.3;">Connect<br>database</div>
+   </div>
+
+   <div style="background:#FFFFFF;display:flex;flex-direction:column;align-items:center;gap:0.5em;padding:1em 0.7em;">
+    <div style="width:2.4em;height:2.4em;border-radius:0.6em;background:#EEEDF8;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="cloud-upload" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;color:#5654A2;text-align:center;line-height:1.3;">Deploy<br>online</div>
+   </div>
+
+   <div style="background:#FFFFFF;display:flex;flex-direction:column;align-items:center;gap:0.5em;padding:1em 0.7em;">
+    <div style="width:2.4em;height:2.4em;border-radius:0.6em;background:#EEEDF8;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="video" style="width:1.1em;height:1.1em;stroke-width:1.8;"></i></div>
+    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;color:#5654A2;text-align:center;line-height:1.3;">Record<br>video</div>
+   </div>
+
+  </div>
+
+ </div>
+
+ <div style="margin-top:0.9em;text-align:center;font-size:0.5em;color:#9B8EA0;line-height:1.5;">
+  Four full workflows, one skill name. Each is a complete workflow, not a loose hint.
+ </div>
+
+</div>
+```

@@ -1,357 +1,158 @@
-# Skill Usage and Design — Speaker Script
+# Skill Usage and Design: Speaker Script
 
 Speaking script for **Part 2: Skill Usage and Design** of the 2026 Agentic Engineering Workshop.
 
 Organized into the three sections defined in `resources/part-2-overview.qmd`:
 
-1. **Common Skills**
-2. **Skill Design**
-3. **Skill Symlinks**
+1. **Using Skills**
+2. **Installing Skills**
+3. **Authoring Skills**
 
-Sources:
-- Pingfan's "Agentic Engineering" blog series (parts 2 and 3)
-- Anthropic's [Best Practices for Claude Code](https://code.claude.com/docs/en/best-practices) (skills section)
-- Anthropic's [Extend Claude with skills](https://code.claude.com/docs/en/skills) docs
-- tw93's [Waza](https://github.com/tw93/waza) skill collection and accompanying blog post
+Source of truth: Pingfan's blog post [Agentic Skills](https://pingfanhu.com/blog/2026-06-24-agentic-skills/).
+
+Pacing target: ~25 minutes, ~25 slides. Section dividers are not used; the roadmap previews the three parts once, and every content slide self-explains which part it belongs to.
 
 ---
 
-## Section recap from Part 1
+## Opening
 
-_[~1 minute — quick re-anchor]_
+### Recap _(slide: Recap)_
 
-In Part 1 we placed **skills** in the "Behaviors" component of the four-component model:
+_[~1 min]_
 
-> Skills are reusable slash commands (e.g. `/commit`, `/review`) stored as `.md` files. They load a prompt template into the session to guide a structured workflow.
+In Part 1 you built a website with an agent, then turned it into a skill. That last step is the whole of Part 2. In the four-component picture, this is the **Skills** box, and we are spending the next 25 minutes inside it.
 
-Part 2 zooms in on that one box. Three things to cover:
+### Today _(slide: Today)_
 
-1. **What skills people actually use** — survey the community.
-2. **How to design your own** — the structural anatomy of a skill, plus two design principles.
-3. **How to share skills across projects** — symlinks as the lightweight pattern.
+Everything about a skill splits into three things you do with it, and that is the shape of today:
 
----
+1. **Using:** summon a workflow by name with a slash.
+2. **Installing:** borrow general-purpose skills from the open-source market.
+3. **Authoring:** encapsulate your own workflow, once.
 
-## 1. Common Skills
+### Why wrap work in a skill? _(slide: Why wrap work in a skill?)_
 
-### What "skills" really are
-
-_[Slide: skill = SKILL.md in a directory]_
-
-A skill is a **directory** under `.claude/skills/` containing a `SKILL.md` file. Optionally it can hold scripts, assets, data, additional reference files. The agent discovers, explores, and uses all of it.
-
-Minimal example, straight from Anthropic's docs:
-
-```markdown
-.claude/skills/api-conventions/SKILL.md
----
-name: api-conventions
-description: REST API design conventions for our services
----
-# API Conventions
-- Use kebab-case for URL paths
-- Use camelCase for JSON properties
-- Always include pagination for list endpoints
-- Version APIs in the URL path (/v1/, /v2/)
-```
-
-Two ways skills run:
-- **Auto-trigger** — Claude detects matching context and applies the skill itself. No slash command needed.
-- **Manual invoke** — `/skill-name [args]` triggers it explicitly. Use `disable-model-invocation: true` in the frontmatter for skills with side effects you want to gate behind a manual call.
-
-### Where skills come from
-
-_[Slide: ecosystem map]_
-
-Skills land in your project from three sources:
-
-1. **Plugins** — install via `/plugin`. Plugins bundle skills + MCPs + hooks + config.
-   - **`everything-claude-code`** — community kitchen sink. Comprehensive, opinionated, covers most workflows.
-   - **`claude-plugins-official`** — Anthropic-maintained. The four I personally use:
-     - `claude-md-management` — manage CLAUDE.md across projects.
-     - `code-review` — adds `/review`.
-     - `code-simplifier` — refactor for readability.
-     - `context7` — up-to-date library docs on demand.
-
-2. **Curated collections** — focused skill sets shared as repos.
-   - **[Waza](https://github.com/tw93/waza)** by tw93 — eight skills, deliberately small surface area:
-     `/think`, `/design`, `/hunt`, `/check`, `/write`, `/learn`, `/read`, `/health`.
-   - The author's two design principles (we'll come back to these in Section 2):
-     - **Less is more** — fewer skills, shorter names, easier recall.
-     - **Negative examples** — define what the skill should *not* do; constraint sharpens targeting.
-
-3. **Your own** — the most important source. Skills you've written from your own workflows. After a few months of use, this is usually 60–80% of what you actually invoke.
-
-### What people use them for
-
-_[Slide: skill use-case categories]_
-
-Patterns I see across active Claude Code users:
-
-| Category | Example skills |
-|---|---|
-| **Code review** | `/review`, `/security-review`, language-specific reviewers |
-| **Refactoring & cleanup** | `/simplify`, `/refactor-clean`, `/dead-code` |
-| **Test discipline** | `/tdd`, `/test-coverage`, `/e2e` |
-| **Build / verify** | `/build-fix`, `/verify`, `/quality-gate` |
-| **Documentation** | `/update-docs`, `/codemap`, `/init` |
-| **PR & git workflow** | `/commit`, `/prp-pr`, `/checkpoint` |
-| **Knowledge / research** | `/think`, `/learn`, `/read`, `/docs-lookup` |
-| **Domain-specific** | DSL helpers, domain validators, custom build steps |
-
-> The 80/20 rule kicks in fast. A handful of skills do most of your daily work. Optimize that handful.
-
-### Plugins vs. standalone skills
-
-_[Slide: when to use which]_
-
-- **Standalone skill** (`SKILL.md` in `.claude/skills/`) — quick, self-contained, easy to write and share.
-- **Plugin** — when you need to bundle several related skills + MCPs + hooks together, especially for distribution to a team.
-
-Most people start with standalone skills and graduate to plugins once they've built three or four related skills that belong together.
+Much of daily work is the same task repeated: image generation, document formatting, HTML content, app release steps. Without a skill, each repetition re-issues essentially the same long instructions to the agent. That is wasteful. A skill designs the workflow **once** and invokes it by name forever after.
 
 ---
 
-## 2. Skill Design
+## 1. Using Skills
 
-### The structural anatomy of a `SKILL.md`
+### What is a skill? _(slide: What is a skill?)_
 
-_[Slide: frontmatter + body]_
+Three facts and you know what a skill is:
 
-Every `SKILL.md` is two parts: **frontmatter** (YAML, who you are) and **body** (markdown, what you do).
+- It is a **directory**, named after the skill.
+- Inside is a **`SKILL.md`**, a prompt loaded into context on invocation.
+- You summon it by name with a **slash**: `/name`.
 
-```markdown
----
-name: fix-issue
-description: Fix a GitHub issue
-disable-model-invocation: true
----
-Analyze and fix the GitHub issue: $ARGUMENTS.
+That is the entire mental model. Everything else is detail.
 
-1. Use `gh issue view` to get the issue details
-2. Understand the problem described in the issue
-3. Search the codebase for relevant files
-4. Implement the necessary changes to fix the issue
-5. Write and run tests to verify the fix
-6. Ensure code passes linting and type checking
-7. Create a descriptive commit message
-8. Push and create a PR
-```
+### Invoking a skill _(slide: Invoking a skill)_
 
-Three frontmatter keys to know:
-- **`name`** — what you call it. Becomes `/name`. Keep short.
-- **`description`** — what it does, one sentence. Used by the model to decide auto-trigger.
-- **`disable-model-invocation: true`** — opt out of auto-trigger. Use for skills with real side effects (deploy, push, send mail).
+In practice you type the slash command and add a short request. I have a `ph-image` skill that generates images in a consistent style for my blog; I invoke it by typing `/ph-image` (the command text gets a color highlight in Claude Code) plus one short line about what I want.
 
-Body uses `$ARGUMENTS` to receive whatever the user typed after the slash command.
+Internally the skill reads its `SKILL.md`, enhances my short prompt into a sophisticated one, calls the image API, and returns a finished, on-brand asset. One short request in; a consistent asset out. The hard part lives inside the skill, designed once.
 
-### The single most valuable section: Gotchas
+### One consistent visual family _(slide: One consistent visual family)_
 
-_[Slide: gotchas as the load-bearing section]_
+You can see the payoff across my whole site. Every banner (recipes, cocktails, blog posts, these slides) comes from `/ph-image`, so they read as one matched set drawn by a single hand, even though each was generated separately.
 
-The Anthropic guide makes a strong claim, and I agree with it:
+### Practice 01 _(slide: dark, practice 01)_
 
-> "The most valuable content in any skill is the **Gotchas** section containing common mistakes based on real problems Claude encounters when using your skill."
-
-A `SKILL.md` for a non-trivial workflow should look like:
-
-```markdown
----
-name: deploy-staging
-description: Deploy current branch to staging environment
-disable-model-invocation: true
----
-
-## Steps
-1. ...
-2. ...
-3. ...
-
-## Gotchas
-- The migration must complete before the API redeploys, or requests
-  hit the new schema with the old code.
-- `npm run build` succeeds even if env vars are missing — verify
-  with `npm run build:check` before deploying.
-- The CDN cache takes 90 seconds to purge; do not declare success
-  until the smoke test passes.
-```
-
-Gotchas are where your tribal knowledge lives. They're the difference between a skill that "kind of works" and one that's actually reliable.
-
-### Two design principles (from Waza)
-
-_[Slide: less is more / negative examples]_
-
-These come from tw93's design notes, and they generalize well.
-
-#### Principle 1: Less is more
-
-> "Fewer skills with shorter names means less to memorize and easier recall when you need them."
-
-The `everything-claude-code` plugin tries to cover everything. Waza deliberately leaves room for you. In practice, the smaller set wins for daily use because you can actually remember what's installed.
-
-Heuristics:
-- If a skill needs a long name to disambiguate it from another skill, you probably have one too many skills.
-- Names are slash commands you type. Aim for 4–8 characters.
-- 6–10 active skills is a sweet spot. More than that and you stop reaching for them.
-
-#### Principle 2: Negative examples
-
-> "LLMs tend to be broad, which makes many skills 'generally useful' but imprecise. Building skills around what they should *not* do cuts false positives and sharpens targeting."
-
-A skill described as *"code review for security issues"* will trigger on every code change. A skill described as *"code review for security issues — do NOT run on documentation changes, refactors, or formatting-only diffs"* triggers when you actually want it.
-
-This is underused. Steal it.
-
-### How to actually write a skill
-
-_[Slide: extract-from-success workflow]_
-
-The hard part of skill design is starting from a blank page. The trick: **don't.**
-
-The workflow that works:
-
-1. **Do the task by hand once**, with Claude Code, in a normal session. Get it right.
-2. **Ask Claude to extract a `SKILL.md`** from the session: *"Based on what we just did, write a `SKILL.md` that captures this workflow. Include a Gotchas section based on what went wrong before we got it right."*
-3. **Drop it in `.claude/skills/<name>/SKILL.md`**. Test on the next similar task.
-4. **Refine over time.** Every time the skill misfires, update the Gotchas. Every time it does extra work, tighten the description with negative examples.
-
-This is the same loop Pingfan describes in the blog: *complete a full output first, then ask Claude in the same session to extract a rule from it.*
-
-### Skills vs. CLAUDE.md vs. rules
-
-_[Slide: where things go]_
-
-Common confusion. Decision rule:
-
-| Use | When | Loaded |
-|---|---|---|
-| **`CLAUDE.md`** | Applies to *every* session in this project | Always |
-| **`rules/*.md`** | Topical knowledge (style guides, API conventions) | On demand by Claude |
-| **Skills** | Reusable workflows (steps to do something) | On invocation (manual or auto) |
-
-Rule of thumb:
-- *"Always behave this way"* → CLAUDE.md (short).
-- *"When you need to know about X"* → `rules/X.md`.
-- *"When you need to *do* X"* → `skills/X/SKILL.md`.
-
-### Skill anti-patterns
-
-_[Slide: what to avoid]_
-
-- **The kitchen-sink skill.** A `/do-everything` that branches into ten different workflows. Split it.
-- **The duplicate-of-CLAUDE.md skill.** If a skill restates rules that already live in CLAUDE.md, delete one.
-- **The auto-trigger landmine.** A side-effect skill (deploy, push, delete) without `disable-model-invocation: true`. The model will call it.
-- **The unverified skill.** A skill with steps but no verification. Without a "how to confirm it worked" section, you'll catch failures by hand.
+_[~5 min]_ Type `/` in Claude Code to list every installed skill, pick one, run it, and watch the workflow it loads into the session.
 
 ---
 
-## 3. Skill Symlinks
+## 2. Installing Skills
 
-### The problem
+### Where to install skills from _(slide: Where to install skills from)_
 
-_[Slide: same skill, three projects]_
+For general work (editing, coding, reading) you should borrow rather than build. Two sources I use most:
 
-You write a great `/commit` skill in Project A. Project B needs the same skill. Project C also.
+- **Everything Claude Code (ECC):** an expansive, all-inclusive plugin. Its own README advises installing selectively; it is a kitchen sink.
+- **Waza** (by tw93): deliberately minimal, eight skills, covering the common cases of everyday development, coding and otherwise.
 
-You could:
-- **Copy-paste** the SKILL.md three times → drift the moment you improve one.
-- **Bundle as a plugin** → real solution for big skill sets, overkill for one or two skills.
-- **Symlink from a single source of truth** → the lightweight middle path.
+Anything specific to *your* workflow you author yourself. That is the rest of the talk.
 
-### How symlinks work in Claude Code
+### Practice 02 _(slide: dark, practice 02)_
 
-_[Slide: symlink pattern]_
+_[~8 min]_ Install Waza following its README, then run one of its skills: `/read` on a link, or `/think` on an idea.
 
-> Claude Code follows symlinks transparently. It reads and edits the **target** file, not the link.
-
-This means you can keep one canonical copy of a skill anywhere on disk and link to it from any project's `.claude/skills/`.
-
-The two common arrangements:
-
-**Pattern A — global skills folder as the source.**
-- Canonical copy lives in `~/.claude/skills/<name>/`.
-- Each project links it in: `ln -s ~/.claude/skills/<name> .claude/skills/<name>`.
-- Add the symlink to the project's `.gitignore` so collaborators don't get a broken link to your home directory.
-
-**Pattern B — dedicated skills repo as the source.**
-- Canonical copies live in a personal repo, e.g. `~/code/my-skills/`.
-- Each project links the skills it wants: `ln -s ~/code/my-skills/commit .claude/skills/commit`.
-- Same `.gitignore` rule.
-- Bonus: the skills repo is version-controlled and shareable.
-
-### A complete example
-
-_[Slide: terminal flow]_
-
-```bash
-# One-time: create a global skills folder if you don't have one
-mkdir -p ~/.claude/skills/commit
-cat > ~/.claude/skills/commit/SKILL.md <<'EOF'
 ---
-name: commit
-description: Stage relevant files and create a conventional commit
----
-Stage the relevant changes and create a commit message
-following conventional-commits format. Do NOT amend.
-EOF
 
-# Per project: link it in
-cd ~/code/my-project
-mkdir -p .claude/skills
-ln -s ~/.claude/skills/commit .claude/skills/commit
+## 3. Authoring Skills
 
-# Tell git not to ship the link
-echo ".claude/skills/commit" >> .gitignore
-```
+### The minimal skill _(slide: The minimal skill)_
 
-Now `/commit` works in this project. Update the canonical SKILL.md once, every linked project gets the change.
+At minimum a skill is a directory bearing the skill's name, holding a single `SKILL.md`. That is the only hard requirement. My `/ph-html` skill has only this one file, yet it produces every styled HTML component across my blog and slides.
 
-### Important guardrails
+### Inside a `SKILL.md` _(slide: Inside a SKILL.md)_
 
-_[Slide: do this / don't do this]_
+`SKILL.md` is two parts:
 
-✅ **Do** symlink **individual skill folders**:
-```bash
-ln -s ~/.claude/skills/commit .claude/skills/commit
-```
+- a **YAML header** declaring `name` and `description` (this powers discovery), and
+- a **body**, the prompt loaded on invocation, stating the rules, conventions, and examples the agent should follow.
 
-❌ **Don't** symlink the entire `.claude/` directory. It contains project-specific config (`settings.json`, hooks, permissions, project-only skills) that should stay local.
+### Minimal in form, not in function _(slide: Minimal in form, not in function)_
 
-✅ **Do** add symlinked skills to `.gitignore`. The link points to your home directory; collaborators don't have your home directory.
+Minimal in form does not mean minimal in function; `ph-html` proves that. A small naming habit: I prefix every skill I author with my initials, `ph-`. Inside the `skills/` folder, everything I wrote sits together, separate from what I installed.
 
-✅ **Do** track the canonical skill in git (in `~/.claude/skills/`'s repo or your `my-skills/` repo).
+### Add templates and scripts _(slide: Add templates and scripts)_
 
-❌ **Don't** symlink across machines without a sync strategy. Symlinks store an absolute path. If your home directory is `/Users/pingfan` on one machine and `/home/pingfan` on another, the link breaks. Either sync the canonical skills folder to the same path on each machine, or rely on a cross-machine tool.
+A skill can carry more than the master `SKILL.md`. Because an LLM is stochastic, an instruction-only skill drifts between runs. Solidified resource files pin down what should not vary. My `/ph-slide` ships two folders:
 
-### When to graduate to a plugin
+- `assets/`: the deterministic building blocks, a shared stylesheet, the deck config, a render script.
+- `template/`: a complete Quarto slide project to copy and adapt each time.
 
-_[Slide: symlink → plugin progression]_
+### These slides were built with `/ph-slide` _(slide: These slides were built with /ph-slide)_
 
-Symlinks are great for 1–5 personal skills. Past that, the maintenance overhead of `ln -s` and `.gitignore` per project starts to add up. The signal that it's time to graduate:
+You are looking at the output right now. All three parts of this workshop were built with `/ph-slide`: one theme, one taste, three decks. The template does the holding-still.
 
-- You have a coherent set of skills that belong together (e.g., a "git workflow" set: commit, branch, pr, review).
-- You want to share with a teammate or publish.
-- You want to bundle skills + an MCP + a hook into one install.
+### Randomness vs determinism _(slide: Randomness vs determinism)_
 
-When that hits, package the set as a plugin and `/plugin install` it instead. Same source of truth, plus distribution.
+At their core LLMs are probability machines. Every output is sampled, not computed, so randomness is baked into everything an agent makes. Sometimes that is welcome; often it is not, and a banner should match its siblings. You build determinism in on purpose with two levers: **templates** (fixed examples the agent copies) and **scripts** (the pre- and post-processing that must never vary).
 
-### Cross-tool sharing (brief mention)
+### Pinned down by a template and a script _(slide: Pinned down by a template and a script)_
 
-_[Slide: skillshare-style tools]_
+Here are two ingredient icons. Everything deterministic is shared: the bottle, the cork, the framing, and the label text composited on afterward by a script (image models are unreliable with text, so the words live in code and are never garbled). The bottle comes from an image-to-image pass against a saved reference. Only the liquid, the part that should differ, is left random. The reader just sees a matched set.
 
-If you also use Codex, OpenClaw, or other CLI agents, there are community tools (e.g., [skillshare](https://github.com/runkids/skillshare)) that maintain a single skills directory and create symlinks into each agent's expected location. Worth knowing about; not required to start.
+### Nest another agent _(slide: Nest another agent)_
+
+No model is good at everything. A skill can call another agent that is better at a specific task, while your master agent keeps your context and setup. `/ph-image` does this: I give Claude Code a loose prompt; it enhances the prompt and sends it to Gemini; Gemini generates; Claude Code reviews and loops back if the result is wrong; the final image returns to me. I stay in the loop; the agents handle the prompt engineering and API calls.
+
+### One skill, many workflows _(slide: One skill, many workflows)_
+
+For a whole project, design one skill that embraces as many aspects as possible. Two reasons:
+
+1. **One name to recall:** memorizing many skill names is inefficient; one name for the project is enough.
+2. **Cheap to load:** the agent reads `SKILL.md`, then selectively picks only the related files, so token cost stays small.
+
+### `/surveydown`: four workflows, one name _(slide: /surveydown)_
+
+My `/surveydown` skill is the example. surveydown is an open-source survey platform (R, Quarto, Shiny, PostgreSQL). The skill bundles four full workflows under one name: create a survey, connect a database, deploy online, and record a video walkthrough. Each is a complete workflow, not a loose hint.
+
+### Practice 03 _(slide: dark, practice 03)_
+
+_[~10 min]_ Author a skill from your Part 1 website: ask Claude to look at the folder and turn it into a reusable skill, a `SKILL.md` plus a `template/` folder with the pages and `styles.css`, so you can rebuild that style anytime.
 
 ---
 
 ## Closing & transition
 
-_[Slide: recap]_
+### Four shapes of a skill _(slide: Four shapes of a skill)_
 
-Three takeaways from Part 2:
+The only requirement is a `SKILL.md`; everything beside it is optional, and takes a few recurring shapes:
 
-1. **Common skills.** Most useful skills come from your own work. Plugins (`everything-claude-code`, official Anthropic ones) and curated sets (Waza) are the seed. Optimize the 6–10 you actually use daily.
-2. **Skill design.** `SKILL.md` = frontmatter (`name`, `description`, optional `disable-model-invocation`) + body. The Gotchas section is the load-bearing piece. Two principles: **less is more**, **define the negatives**. Don't start from blank — extract from a successful session.
-3. **Skill symlinks.** One canonical source, `ln -s` into each project, `.gitignore` the link. Symlink individual skills, never the whole `.claude/`. Graduate to plugins when the set grows.
+1. **Start minimal:** one `SKILL.md` is enough to begin.
+2. **Pin the deterministic parts:** templates and scripts keep what must hold still.
+3. **Bundle workflows:** one skill can hold many abilities under one theme.
+4. **Nest other agents:** delegate the task your agent is weak at.
 
-Hand-off to Part 3: skills make agents reproducible — but reproducible isn't the same as *correct*. Part 3 is about **Data Safety with AI**: where AI assistance helps a data-science workflow, where it quietly hurts it, and how to keep the data scientist in the loop as the gatekeeper.
+### Skills are for humans _(slide: dark pull-quote)_
+
+One conceptual point to close on. A skill is not for the agent's benefit. The agent does not distinguish a skill from a temporary prompt; it only reads files, context, and prompts wherever they are. We make skills for the **humans**, to encapsulate a workflow worth keeping.
+
+### Up next _(slide: Up next)_
+
+Hand-off to Part 3, **Data Safety with AI**: where AI helps a data-science workflow, where it quietly hurts, and how to keep the data scientist in the loop as the gatekeeper.

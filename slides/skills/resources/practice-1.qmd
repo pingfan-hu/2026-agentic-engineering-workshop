@@ -1,0 +1,37 @@
+```{=html}
+<div class="practice-timer" data-minutes="5"></div>
+
+<div style="width:92%;margin:0 auto;text-align:left;">
+
+ <div style="background:rgba(255,184,77,0.08);border-left:6px solid #FFB84D;border-radius:0 16px 16px 0;padding:1.7em 2.1em 1.8em;">
+
+  <div style="font-family:'Maple Mono',monospace;font-size:0.82em;color:#FFB84D;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.55em;">— practice 01 —</div>
+
+  <div style="font-size:0.85em;font-weight:800;color:#F8F7F0;line-height:1.15;margin-bottom:1.1em;letter-spacing:-0.01em;">
+   Invoke a skill you already have.
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8em;">
+
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.7em 0.85em;">
+    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.35em;">
+     <i data-lucide="slash" style="width:1em;height:1em;stroke-width:2;color:#FFB84D;"></i>
+     <span style="font-size:0.56em;font-weight:700;color:#FFD27F;">Step 1</span>
+    </div>
+    <div style="font-size:0.5em;color:#C9C4BC;line-height:1.5;">Type <code style="font-family:'Maple Mono',monospace;color:#FFB84D;">/</code> in Claude Code to list every skill installed.</div>
+   </div>
+
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.7em 0.85em;">
+    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.35em;">
+     <i data-lucide="play" style="width:1em;height:1em;stroke-width:2;color:#FFB84D;"></i>
+     <span style="font-size:0.56em;font-weight:700;color:#FFD27F;">Step 2</span>
+    </div>
+    <div style="font-size:0.5em;color:#C9C4BC;line-height:1.5;">Pick one, run it, and watch the workflow it loads into the session.</div>
+   </div>
+
+  </div>
+
+ </div>
+
+</div>
+```

@@ -1,0 +1,35 @@
+```{=html}
+<div style="width:80%;margin:0 auto;text-align:left;">
+
+ <div style="font-size:0.5em;color:#9B8EA0;margin-bottom:1em;text-align:center;line-height:1.5;">Everything about a skill splits into three things you do with it.</div>
+
+ <div style="display:flex;flex-direction:column;gap:0.6em;">
+
+  <div style="display:flex;align-items:center;gap:1.1em;background:rgba(93,212,188,0.08);border-left:5px solid #5DD4BC;border-radius:0 12px 12px 0;padding:0.8em 1.1em;">
+   <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:rgba(93,212,188,0.16);display:flex;align-items:center;justify-content:center;color:#5DD4BC;flex-shrink:0;"><i data-lucide="play" style="width:0.95em;height:0.95em;stroke-width:2;"></i></div>
+   <div style="flex:1;">
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Using Skills</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">Summon a workflow by name with <code style="font-family:'Maple Mono',monospace;color:#5DD4BC;">/</code></div>
+   </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:1.1em;background:rgba(123,181,240,0.08);border-left:5px solid #7BB5F0;border-radius:0 12px 12px 0;padding:0.8em 1.1em;">
+   <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:rgba(123,181,240,0.16);display:flex;align-items:center;justify-content:center;color:#7BB5F0;flex-shrink:0;"><i data-lucide="download" style="width:0.95em;height:0.95em;stroke-width:2;"></i></div>
+   <div style="flex:1;">
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Installing Skills</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">Borrow from the open-source market</div>
+   </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:1.1em;background:rgba(255,184,77,0.08);border-left:5px solid #FFB84D;border-radius:0 12px 12px 0;padding:0.8em 1.1em;">
+   <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:rgba(255,184,77,0.16);display:flex;align-items:center;justify-content:center;color:#FFB84D;flex-shrink:0;"><i data-lucide="pencil-ruler" style="width:0.95em;height:0.95em;stroke-width:2;"></i></div>
+   <div style="flex:1;">
+    <div style="font-size:0.7em;font-weight:700;color:#F8F7F0;line-height:1.2;">Authoring Skills</div>
+    <div style="font-size:0.45em;color:#9B8EA0;line-height:1.45;margin-top:0.3em;">Encapsulate your own workflow, once</div>
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

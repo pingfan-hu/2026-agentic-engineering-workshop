@@ -1,0 +1,27 @@
+```{=html}
+<div class="practice-timer" data-minutes="10"></div>
+
+<div style="width:92%;margin:0 auto;text-align:left;">
+
+ <div style="background:rgba(255,184,77,0.08);border-left:6px solid #FFB84D;border-radius:0 16px 16px 0;padding:1.6em 2.1em 1.7em;">
+
+  <div style="font-family:'Maple Mono',monospace;font-size:0.82em;color:#FFB84D;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.55em;">— practice 03 —</div>
+
+  <div style="font-size:0.85em;font-weight:800;color:#F8F7F0;line-height:1.15;margin-bottom:1em;letter-spacing:-0.01em;">
+   Author a skill from your Part 1 website.
+  </div>
+
+  <div style="background:rgba(248,247,240,0.05);border:1px solid rgba(255,184,77,0.25);border-radius:12px;padding:0.85em 1em;">
+   <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.5em;">
+    <i data-lucide="message-square-quote" style="width:0.95em;height:0.95em;stroke-width:1.9;color:#FFB84D;"></i>
+    <span style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#FFD27F;letter-spacing:0.1em;text-transform:uppercase;">Prompt to try</span>
+   </div>
+   <div style="font-size:0.58em;color:#F3EEE6;line-height:1.65;font-family:'Georgia',serif;">
+    Look at this website folder and turn it into a reusable skill: write a <span style="color:#FFD27F;font-weight:600;">SKILL.md</span> plus a <span style="color:#FFD27F;font-weight:600;">template/</span> folder holding the pages and <code style="font-family:'Maple Mono',monospace;color:#FFD27F;">styles.css</code>, so I can rebuild this style anytime.
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

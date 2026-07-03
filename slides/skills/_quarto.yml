@@ -2,6 +2,8 @@ project:
   type: website
   render:
     - index.qmd
+  resources:
+    - figs/
 
 metadata-files:
   - ../_shared.yml
