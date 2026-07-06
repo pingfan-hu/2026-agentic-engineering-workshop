@@ -10,17 +10,17 @@ title-slide-attributes:
   style: text-align:left;
 ---
 
-## Recap {.light-centered .center}
-
-{{< include resources/recap.qmd >}}
-
 ## Today {.dark-centered .center}
 
 {{< include resources/roadmap.qmd >}}
 
-## Why wrap work in a skill? {.light-centered .center}
+## Without vs with a skill {.light-centered .center}
 
 {{< include resources/motivation.qmd >}}
+
+## Without vs with a skill {.light-centered .center}
+
+{{< include resources/motivation-image.qmd >}}
 
 ## What is a skill? {.light-centered .center}
 

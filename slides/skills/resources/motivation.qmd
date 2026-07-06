@@ -1,31 +1,41 @@
 ```{=html}
-<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:0.8em 1em 0.9em;border-radius:18px;">
 
- <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0.9em;align-items:stretch;">
+ <!-- T-bar: the shared example -->
+ <div style="display:flex;align-items:center;justify-content:center;gap:0.55em;">
+  <div style="display:flex;align-items:center;gap:0.6em;background:#FFFFFF;border:1px solid #D8CFE0;border-radius:12px;padding:0.4em 1.1em;box-shadow:0 6px 18px rgba(86,84,162,0.12);">
+   <div style="width:1.8em;height:1.8em;border-radius:0.5em;background:#F0EDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="rocket" style="width:1em;height:1em;stroke-width:1.9;"></i></div>
+   <div style="font-size:0.75em;font-weight:700;color:#2C3E50;line-height:1.1;"><span style="color:#9B8EA0;">Example:</span> Deploying a Mac app</div>
+  </div>
+ </div>
 
-  <div style="background:#FFFFFF;border-radius:16px;padding:1.1em 1em 1.2em;text-align:left;border-top:4px solid #D45F47;box-shadow:0 10px 26px rgba(212,95,71,0.16);">
-   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.7em;">
-    <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="repeat" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
-    <div style="font-size:0.62em;font-weight:700;color:#D45F47;">Without a skill</div>
+ <!-- divider -->
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:0.6em 0 0;"></div>
+
+ <!-- two groups: Without (coral) | With (teal) -->
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85em;align-items:stretch;margin-top:1em;">
+
+  <!-- LEFT: Without a skill -->
+  <div style="position:relative;background:#FDF3F1;border-top:3px solid #D45F47;border-radius:14px;padding:0.9em 0.8em 0.75em;box-shadow:0 8px 24px rgba(212,95,71,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#E07257,#D45F47);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(212,95,71,0.4);white-space:nowrap;z-index:2;"><i data-lucide="list-checks" style="width:1em;height:1em;stroke-width:2.2;"></i>Without a skill</div>
+
+   <div style="display:flex;flex-direction:column;gap:0.35em;flex:1;">
+    <div style="display:grid;grid-template-columns:1.4em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:9px;padding:0.4em 0.65em;box-shadow:0 2px 8px rgba(212,95,71,0.07);"><span style="width:1.4em;height:1.4em;border-radius:50%;background:#FCEEEC;color:#D45F47;font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;display:flex;align-items:center;justify-content:center;">1</span><span style="font-size:0.52em;color:#2C3E50;line-height:1.2;">Update the version number</span></div>
+    <div style="display:grid;grid-template-columns:1.4em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:9px;padding:0.4em 0.65em;box-shadow:0 2px 8px rgba(212,95,71,0.07);"><span style="width:1.4em;height:1.4em;border-radius:50%;background:#FCEEEC;color:#D45F47;font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;display:flex;align-items:center;justify-content:center;">2</span><span style="font-size:0.52em;color:#2C3E50;line-height:1.2;">Build the release</span></div>
+    <div style="display:grid;grid-template-columns:1.4em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:9px;padding:0.4em 0.65em;box-shadow:0 2px 8px rgba(212,95,71,0.07);"><span style="width:1.4em;height:1.4em;border-radius:50%;background:#FCEEEC;color:#D45F47;font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;display:flex;align-items:center;justify-content:center;">3</span><span style="font-size:0.52em;color:#2C3E50;line-height:1.2;">Sign &amp; notarize with Apple</span></div>
+    <div style="display:grid;grid-template-columns:1.4em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:9px;padding:0.4em 0.65em;box-shadow:0 2px 8px rgba(212,95,71,0.07);"><span style="width:1.4em;height:1.4em;border-radius:50%;background:#FCEEEC;color:#D45F47;font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;display:flex;align-items:center;justify-content:center;">4</span><span style="font-size:0.52em;color:#2C3E50;line-height:1.2;">Wire up auto-updating</span></div>
+    <div style="display:grid;grid-template-columns:1.4em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:9px;padding:0.4em 0.65em;box-shadow:0 2px 8px rgba(212,95,71,0.07);"><span style="width:1.4em;height:1.4em;border-radius:50%;background:#FCEEEC;color:#D45F47;font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;display:flex;align-items:center;justify-content:center;">5</span><span style="font-size:0.52em;color:#2C3E50;line-height:1.2;">Publish the release on GitHub</span></div>
    </div>
-   <div style="display:flex;flex-direction:column;gap:0.4em;">
-    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;background:#FBF5F4;border-radius:7px;padding:0.4em 0.6em;line-height:1.4;">"Generate a banner, 16:9, flat clean style, these colors, this taste..."</div>
-    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;background:#FBF5F4;border-radius:7px;padding:0.4em 0.6em;line-height:1.4;">"Generate a banner, 16:9, flat clean style, these colors..."</div>
-    <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#C9A89F;background:#FBF5F4;border-radius:7px;padding:0.4em 0.6em;line-height:1.4;">"Generate a banner, 16:9, flat clean..."</div>
-   </div>
-   <div style="margin-top:0.7em;font-size:0.5em;color:#9B7068;line-height:1.45;">Same instructions, re-typed every time. Wasteful.</div>
   </div>
 
-  <div style="display:flex;align-items:center;color:#B5A78F;"><i data-lucide="arrow-right" style="width:1.4em;height:1.4em;stroke-width:2.2;"></i></div>
+  <!-- RIGHT: With a skill -->
+  <div style="position:relative;background:#F4FBF8;border-top:3px solid #2C8475;border-radius:14px;padding:0.9em 0.8em 0.75em;box-shadow:0 8px 24px rgba(44,132,117,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#3DA890,#2C8475);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(44,132,117,0.4);white-space:nowrap;z-index:2;"><i data-lucide="sparkles" style="width:1em;height:1em;stroke-width:2.2;"></i>With a skill</div>
 
-  <div style="background:#FFFBF3;border-radius:16px;padding:1.1em 1em 1.2em;text-align:left;border-top:4px solid #2C8475;box-shadow:0 10px 26px rgba(44,132,117,0.18);border:1.5px solid #C8E6C9;">
-   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.7em;">
-    <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#E8F5E9;border:1px solid #C8E6C9;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="sparkles" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
-    <div style="font-size:0.62em;font-weight:700;color:#2C8475;">With a skill</div>
-   </div>
-   <div style="display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:0.6em;min-height:5.4em;">
-    <div style="font-family:'Maple Mono',monospace;font-size:0.85em;font-weight:700;color:#2C8475;background:#E8F5E9;border:1px solid #C8E6C9;border-radius:9px;padding:0.45em 0.9em;">/ph-image</div>
-    <div style="font-size:0.55em;color:#564232;line-height:1.5;">The workflow is designed <strong>once</strong>, then invoked by name forever after.</div>
+   <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;text-align:center;">
+    <div style="width:85%;box-sizing:border-box;background:#FFFFFF;border:1px solid #C8E6C9;border-radius:12px;padding:0.75em 1.1em;box-shadow:0 4px 14px rgba(44,132,117,0.1);">
+     <div style="font-size:0.52em;color:#7A8C86;line-height:1.7;font-family:'Maple Mono',monospace;">Use the <span style="color:#2C8475;font-weight:700;background:#E5F2EE;padding:0.05em 0.4em;border-radius:5px;">/mac-app</span> skill<br>to deploy the Mac app.</div>
+    </div>
    </div>
   </div>
 
