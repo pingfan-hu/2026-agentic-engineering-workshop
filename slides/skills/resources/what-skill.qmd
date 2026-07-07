@@ -1,28 +1,68 @@
 ```{=html}
-<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.1em 1em 1.2em;border-radius:18px;">
 
- <div style="text-align:center;font-size:0.62em;color:#564232;line-height:1.5;margin-bottom:1.1em;">
-  A skill is a <strong style="color:#5654A2;">folder</strong> holding a <strong style="color:#5654A2;">SKILL.md</strong>, summoned by name with a <strong style="color:#2C8475;">slash</strong>.
+ <!-- T-bar: the definition -->
+ <div style="background:#FCEEEC;border:1px solid #F3D4CC;border-radius:14px;padding:0.5em 0.95em;display:flex;align-items:center;gap:0.8em;box-shadow:0 4px 16px rgba(212,95,71,0.1);text-align:left;">
+  <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#FFFFFF;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;flex-shrink:0;"><i data-lucide="package" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
+  <div style="flex:1;">
+   <div style="font-size:0.62em;font-weight:700;color:#2C3E50;line-height:1.25;">A <span style="color:#2C8475;">slash command</span> that wraps a reusable, multi-step process.</div>
+  </div>
  </div>
 
- <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.7em;">
+ <!-- divider -->
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:0.8em 0 0;"></div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.95em 0.9em 1em;text-align:center;box-shadow:0 4px 14px rgba(86,84,162,0.12);border-top:3px solid #5654A2;">
-   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;margin:0 auto 0.55em;color:#5654A2;"><i data-lucide="folder" style="width:1.15em;height:1.15em;stroke-width:1.8;"></i></div>
-   <div style="font-size:0.62em;font-weight:700;color:#5654A2;line-height:1.2;">A directory</div>
-   <div style="font-size:0.48em;color:#9B8EA0;line-height:1.45;margin-top:0.4em;">named after the skill</div>
+ <!-- two columns: file structure (purple) | invoke it (teal) -->
+ <div style="display:grid;grid-template-columns:1.12fr 0.88fr;gap:0.9em;align-items:stretch;margin-top:1.2em;">
+
+  <!-- LEFT: file structure -->
+  <div style="position:relative;background:#F5F4FB;border-top:3px solid #5654A2;border-radius:14px;padding:0.95em 0.8em 0.85em;box-shadow:0 8px 24px rgba(86,84,162,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#6462B4,#5654A2);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(86,84,162,0.4);white-space:nowrap;z-index:2;"><i data-lucide="folder-tree" style="width:1em;height:1em;stroke-width:2.2;"></i>File Structure</div>
+
+   <div style="background:#FFFFFF;border-radius:11px;padding:0.85em 0.9em 0.85em;box-shadow:0 3px 10px rgba(86,84,162,0.08);flex:1;">
+    <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.65em;">
+     <div style="width:1.45em;height:1.45em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="folder-git-2" style="width:0.8em;height:0.8em;stroke-width:1.8;"></i></div>
+     <div style="font-family:'Maple Mono',monospace;font-size:0.56em;font-weight:700;color:#5654A2;line-height:1.1;">my-skill/</div>
+    </div>
+    <!-- Whole tree + connectors + labels as one SVG so every dotted line is a single
+         continuous <path> (dashes flow around corners, no stitched seams). -->
+    <svg viewBox="0 0 205 100" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
+     <!-- file tree -->
+     <g font-family="'Maple Mono',monospace" font-size="10" xml:space="preserve">
+      <text x="0" y="14"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#5654A2" font-weight="700">SKILL.md</tspan></text>
+      <text x="0" y="30"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#D45F47" font-weight="700">script.R</tspan></text>
+      <text x="0" y="46"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#D45F47" font-weight="700">script.py</tspan></text>
+      <text x="0" y="62"><tspan fill="#C4B8C9">└─ </tspan><tspan fill="#C4881A" font-weight="700">assets/</tspan></text>
+      <text x="18" y="78"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#C4881A" font-weight="700">example.html</tspan></text>
+      <text x="18" y="94"><tspan fill="#C4B8C9">└─ </tspan><tspan fill="#C4881A" font-weight="700">styles.css</tspan></text>
+     </g>
+     <!-- connectors: one continuous dotted path per group -->
+     <g fill="none" stroke="#BAB3D5" stroke-width="1.05" stroke-linecap="round" stroke-dasharray="0.01 3">
+      <path d="M72,11 L150,11"/>
+      <path d="M72,27 L122,27 L122,43 L78,43"/>
+      <path d="M122,35 L150,35"/>
+      <path d="M66,59 L122,59 L122,91 L102,91"/>
+      <path d="M122,75 L150,75"/>
+     </g>
+     <!-- labels -->
+     <g font-family="'Maple Mono',monospace" font-size="10" font-style="italic" fill="#9B8EA0">
+      <text x="154" y="14">main</text>
+      <text x="154" y="38">scripts</text>
+      <text x="154" y="78">files</text>
+     </g>
+    </svg>
+   </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.95em 0.9em 1em;text-align:center;box-shadow:0 4px 14px rgba(86,84,162,0.12);border-top:3px solid #5654A2;">
-   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;margin:0 auto 0.55em;color:#5654A2;"><i data-lucide="file-text" style="width:1.15em;height:1.15em;stroke-width:1.8;"></i></div>
-   <div style="font-size:0.62em;font-weight:700;color:#5654A2;line-height:1.2;"><code style="font-family:'Maple Mono',monospace;">SKILL.md</code></div>
-   <div style="font-size:0.48em;color:#9B8EA0;line-height:1.45;margin-top:0.4em;">a prompt loaded into context</div>
-  </div>
+  <!-- RIGHT: invoke it -->
+  <div style="position:relative;background:#F4FBF8;border-top:3px solid #2C8475;border-radius:14px;padding:0.95em 0.8em 0.85em;box-shadow:0 8px 24px rgba(44,132,117,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#3DA890,#2C8475);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(44,132,117,0.4);white-space:nowrap;z-index:2;"><i data-lucide="terminal" style="width:1em;height:1em;stroke-width:2.2;"></i>Invoke it</div>
 
-  <div style="background:#FFFBF3;border-radius:14px;padding:0.95em 0.9em 1em;text-align:center;box-shadow:0 8px 22px rgba(44,132,117,0.16);border-top:3px solid #2C8475;border:1px solid #C8E6C9;">
-   <div style="width:2.4em;height:2.4em;border-radius:0.55em;background:#E8F5E9;border:1px solid #C8E6C9;display:flex;align-items:center;justify-content:center;margin:0 auto 0.55em;color:#2C8475;"><i data-lucide="terminal" style="width:1.15em;height:1.15em;stroke-width:1.8;"></i></div>
-   <div style="font-size:0.62em;font-weight:700;color:#2C8475;line-height:1.2;"><code style="font-family:'Maple Mono',monospace;">/name</code></div>
-   <div style="font-size:0.48em;color:#9B8EA0;line-height:1.45;margin-top:0.4em;">summons the workflow</div>
+   <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+    <div style="background:#FFFFFF;border-radius:11px;padding:1.1em 1em;box-shadow:0 3px 10px rgba(44,132,117,0.08);text-align:center;font-family:'Maple Mono',monospace;font-size:0.62em;color:#2C3E50;line-height:1.9;">
+     Use <span style="background:#E5F2EE;color:#2C8475;font-weight:700;padding:0.05em 0.4em;border-radius:5px;">/my-skill</span><br>to do something...
+    </div>
+   </div>
   </div>
 
  </div>

@@ -1,0 +1,58 @@
+```{=html}
+<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.1em 1.05em 1.2em;border-radius:18px;">
+
+ <!-- T-bar: the source -->
+ <div class="read-src-btn" role="link" tabindex="0" onclick="window.open('https://www.jhelvy.com/blog/2026-05-12-quarto-optimal-claude-output/','_blank','noopener')" style="display:flex;align-items:center;gap:0.7em;background:#DCE9FA;border:1px solid #A6C4EA;border-radius:12px;padding:0.32em 0.9em;box-shadow:0 4px 16px rgba(58,125,201,0.1);text-align:left;">
+  <div style="width:1.55em;height:1.55em;border-radius:0.42em;background:#FFFFFF;border:1px solid #A6C4EA;display:flex;align-items:center;justify-content:center;color:#3A7DC9;flex-shrink:0;"><i data-lucide="newspaper" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
+  <div style="flex:1;font-size:0.62em;font-weight:700;color:#2C3E50;line-height:1.25;"><span style="color:#2160B4;text-decoration:underline;text-underline-offset:2px;">Blog post</span> of Prof. Helveston about the effectiveness of <span style="color:#D45F47;">Quarto</span></div>
+  <i data-lucide="arrow-up-right" style="width:0.95em;height:0.95em;stroke-width:2;color:#7FA8D6;flex-shrink:0;"></i>
+ </div>
+
+ <!-- divider -->
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:0.7em 0 0;"></div>
+
+ <!-- two columns: prompt (purple) | takeaways (teal) -->
+ <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0.9em;align-items:stretch;margin-top:1.0em;">
+
+  <!-- LEFT: the prompt -->
+  <div style="position:relative;background:#F5F4FB;border-top:3px solid #5654A2;border-radius:14px;padding:1.05em 0.85em 0.95em;box-shadow:0 8px 24px rgba(86,84,162,0.14);display:flex;flex-direction:column;justify-content:center;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#6462B4,#5654A2);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(86,84,162,0.4);white-space:nowrap;z-index:2;"><i data-lucide="message-square-quote" style="width:1em;height:1em;stroke-width:2.2;"></i>Prompt</div>
+
+   <div style="background:#FFFFFF;border-radius:11px;padding:0.85em 0.95em;box-shadow:0 3px 10px rgba(86,84,162,0.08);font-size:0.62em;color:#2C3E50;line-height:1.55;">
+    Use the <code style="font-family:'Maple Mono',monospace;background:#E5F2EE;color:#2C8475;font-weight:700;padding:0.05em 0.4em;border-radius:5px;">/read</code> skill to read through the url of this blog post and summarize the takeaways.
+   </div>
+  </div>
+
+  <!-- RIGHT: the takeaways -->
+  <div style="position:relative;background:#F4FBF8;border-top:3px solid #2C8475;border-radius:14px;padding:1.05em 0.8em 0.85em;box-shadow:0 8px 24px rgba(44,132,117,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#3DA890,#2C8475);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(44,132,117,0.4);white-space:nowrap;z-index:2;"><i data-lucide="list-checks" style="width:1em;height:1em;stroke-width:2.2;"></i>Takeaways</div>
+
+   <div style="display:flex;flex-direction:column;gap:0.4em;flex:1;justify-content:center;">
+
+    <div style="display:grid;grid-template-columns:1.5em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.36em 0.7em;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:50%;background:#E5F2EE;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="layers" style="width:0.82em;height:0.82em;stroke-width:1.9;"></i></div>
+     <div style="font-size:0.52em;font-weight:700;color:#2C3E50;line-height:1.25;">One source, any format</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.5em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.36em 0.7em;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:50%;background:#E5F2EE;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="coins" style="width:0.82em;height:0.82em;stroke-width:1.9;"></i></div>
+     <div style="font-size:0.52em;font-weight:700;color:#2C3E50;line-height:1.25;">Up to 7&times; fewer tokens</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.5em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.36em 0.7em;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:50%;background:#E5F2EE;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="refresh-cw" style="width:0.82em;height:0.82em;stroke-width:1.9;"></i></div>
+     <div style="font-size:0.52em;font-weight:700;color:#2C3E50;line-height:1.25;">Always current at render time</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.5em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:10px;padding:0.36em 0.7em;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
+     <div style="width:1.5em;height:1.5em;border-radius:50%;background:#E5F2EE;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="git-branch" style="width:0.82em;height:0.82em;stroke-width:1.9;"></i></div>
+     <div style="font-size:0.52em;font-weight:700;color:#2C3E50;line-height:1.25;">Plain text, clean Git diffs</div>
+    </div>
+
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

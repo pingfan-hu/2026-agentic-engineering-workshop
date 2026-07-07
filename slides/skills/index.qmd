@@ -14,11 +14,11 @@ title-slide-attributes:
 
 {{< include resources/roadmap.qmd >}}
 
-## Without vs with a skill {.light-centered .center}
+## [Without]{.coral} vs [with]{.teal} a skill {.light-centered .center}
 
 {{< include resources/motivation.qmd >}}
 
-## Without vs with a skill {.light-centered .center}
+## [Without]{.coral} vs [with]{.teal} a skill {.light-centered .center}
 
 {{< include resources/motivation-image.qmd >}}
 
@@ -26,21 +26,29 @@ title-slide-attributes:
 
 {{< include resources/what-skill.qmd >}}
 
-## Invoking a skill {.light-centered .center}
+## Skill usage example: the <a class="waza-btn" role="link" tabindex="0" onclick="window.open('https://github.com/tw93/Waza','_blank','noopener')">Waza</a> plugin {.light-centered .center}
 
-{{< include resources/invoke.qmd >}}
+{{< include resources/waza-skills.qmd >}}
 
-## One consistent visual family {.light-centered .center}
+## Let's use `/read` to summarize {.light-centered .center}
 
-{{< include resources/banner-family.qmd >}}
+{{< include resources/read-demo.qmd >}}
 
 ## &nbsp; {.dark-centered .center}
 
 {{< include resources/practice-1.qmd >}}
 
+## Skill authoring {.light-centered .center}
+
+{{< include resources/skill-authoring.qmd >}}
+
 ## Where to install skills from {.light-centered .center}
 
 {{< include resources/install-sources.qmd >}}
+
+## Keep it in a repo, symlink it in {.light-centered .center}
+
+{{< include resources/install-symlink.qmd >}}
 
 ## &nbsp; {.dark-centered .center}
 
@@ -49,10 +57,6 @@ title-slide-attributes:
 ## The minimal skill {.light-centered .center}
 
 {{< include resources/minimal-tree.qmd >}}
-
-## Inside a `SKILL.md` {.light-centered .center}
-
-{{< include resources/anatomy.qmd >}}
 
 ## Minimal in form, not in function {.light-centered .center}
 

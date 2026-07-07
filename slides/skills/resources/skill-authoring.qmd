@@ -1,22 +1,32 @@
 ```{=html}
-<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.05em 1em 1.2em;border-radius:18px;">
 
- <div style="display:grid;grid-template-columns:1.25fr 0.85fr;gap:1em;align-items:start;">
+ <!-- T-bar: the authoring pitch -->
+ <div style="display:flex;align-items:center;gap:0.8em;background:#EEEDF8;border:1px solid #C7C1E5;border-radius:12px;padding:0.4em 0.95em;box-shadow:0 4px 16px rgba(86,84,162,0.1);text-align:left;">
+  <div style="width:1.7em;height:1.7em;border-radius:0.45em;background:#FFFFFF;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="hammer" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
+  <div style="flex:1;font-size:0.62em;font-weight:700;color:#2C3E50;line-height:1.25;">Create a skill to meet your own needs</div>
+ </div>
+
+ <!-- divider -->
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:0.75em 0 0;"></div>
+
+ <!-- Inside a SKILL.md -->
+ <div style="display:grid;grid-template-columns:1.25fr 0.85fr;gap:1em;align-items:start;margin-top:1.15em;">
 
   <div style="border-radius:12px;overflow:hidden;background:#1E1E2E;box-shadow:0 8px 22px rgba(0,0,0,0.18);">
-   <div style="background:linear-gradient(180deg,#3A3950,#2A2940);padding:0.4em 0.7em;display:flex;align-items:center;gap:0.35em;">
+   <div style="background:linear-gradient(180deg,#3A3950,#2A2940);padding:0.35em 0.7em;display:flex;align-items:center;gap:0.35em;">
     <span style="width:0.5em;height:0.5em;border-radius:50%;background:#FF5F56;"></span>
     <span style="width:0.5em;height:0.5em;border-radius:50%;background:#FFBD2E;"></span>
     <span style="width:0.5em;height:0.5em;border-radius:50%;background:#27C93F;"></span>
-    <span style="margin-left:0.5em;font-family:'Maple Mono',monospace;font-size:0.45em;color:#9B8EA0;">ph-html/SKILL.md</span>
+    <span style="margin-left:0.5em;font-family:'Maple Mono',monospace;font-size:0.42em;color:#9B8EA0;">ph-html/SKILL.md</span>
    </div>
-   <div style="padding:0.85em 1.1em;font-family:'Maple Mono',monospace;font-size:0.55em;line-height:1.7;text-align:left;color:#F8F7F0;">
-    <div style="background:rgba(86,84,162,0.15);margin:-0.85em -1.1em 0.4em;padding:0.3em 1.1em;border-left:3px solid #5654A2;color:#C4C3E8;font-size:0.85em;font-style:italic;">— YAML header —</div>
+   <div style="padding:0.75em 1em;font-family:'Maple Mono',monospace;font-size:0.5em;line-height:1.6;text-align:left;color:#F8F7F0;">
+    <div style="background:rgba(86,84,162,0.15);margin:-0.75em -1em 0.4em;padding:0.28em 1em;border-left:3px solid #5654A2;color:#C4C3E8;font-size:0.85em;font-style:italic;">— YAML header —</div>
     <div style="color:#5C6B80;">---</div>
     <div><span style="color:#69B4F0;">name:</span> <span style="color:#27C93F;">ph-html</span></div>
     <div><span style="color:#69B4F0;">description:</span> <span style="color:#FFB84D;">Styled HTML components</span></div>
     <div style="color:#5C6B80;">---</div>
-    <div style="background:rgba(255,184,77,0.12);margin:0.4em -1.1em;padding:0.3em 1.1em;border-left:3px solid #FFB84D;color:#FFE5B0;font-size:0.85em;font-style:italic;">— body —</div>
+    <div style="background:rgba(255,184,77,0.12);margin:0.4em -1em;padding:0.28em 1em;border-left:3px solid #FFB84D;color:#FFE5B0;font-size:0.85em;font-style:italic;">— body —</div>
     <div style="color:#FF6F8E;font-weight:700;"># Conventions</div>
     <div>- styles live in one .scss</div>
     <div>- 1-space indent per level</div>

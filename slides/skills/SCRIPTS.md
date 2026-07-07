@@ -40,27 +40,23 @@ Much of daily work is the same task repeated: image generation, document formatt
 
 ### What is a skill? _(slide: What is a skill?)_
 
-Three facts and you know what a skill is:
+Two halves and you know both what a skill is and how you use it.
 
-- It is a **directory**, named after the skill.
-- Inside is a **`SKILL.md`**, a prompt loaded into context on invocation.
-- You summon it by name with a **slash**: `/name`.
+**On disk:** a skill is a **directory** named after the skill, holding a **`SKILL.md`**: a prompt loaded into context when you call it. That is the entire mental model.
 
-That is the entire mental model. Everything else is detail.
+**In use:** you summon it by name with a **slash**. I have a `ph-image` skill that generates images in a consistent style for my blog; I type `/ph-image` plus one short line about what I want. Internally the skill reads its `SKILL.md`, enhances my short prompt, calls the image API, and returns a finished, on-brand asset. One short request in; a consistent asset out. The hard part lives inside the skill, designed once.
 
-### Invoking a skill _(slide: Invoking a skill)_
+### Eight skills from Waza _(slide: Skill usage example: the Waza plugin)_
 
-In practice you type the slash command and add a short request. I have a `ph-image` skill that generates images in a consistent style for my blog; I invoke it by typing `/ph-image` (the command text gets a color highlight in Claude Code) plus one short line about what I want.
+You do not start from zero. Install one small plugin, [Waza](https://github.com/tw93/Waza) by tw93, and eight general-purpose skills are ready to invoke. They cover most everyday work: `/think` plans before you build, `/ui` crafts frontends, `/hunt` tracks a bug to its root cause, `/check` reviews diffs and releases; `/write` makes prose sound natural, `/read` digests URLs and PDFs, `/learn` researches a topic end-to-end, and `/health` audits your agent setup. Waza stays deliberately small: eight skills, each with one clear purpose. This is the fastest way to feel what using skills is like, and we will install it together shortly.
 
-Internally the skill reads its `SKILL.md`, enhances my short prompt into a sophisticated one, calls the image API, and returns a finished, on-brand asset. One short request in; a consistent asset out. The hard part lives inside the skill, designed once.
+### Let's use /read to summarize _(slide: Let's use /read to summarize)_
 
-### One consistent visual family _(slide: One consistent visual family)_
-
-You can see the payoff across my whole site. Every banner (recipes, cocktails, blog posts, these slides) comes from `/ph-image`, so they read as one matched set drawn by a single hand, even though each was generated separately.
+A concrete example of using a skill. The source is John's blog post, "The Unreasonable Effectiveness of Quarto." The prompt is one line: use `/read` to read through the URL and summarize the takeaways. The skill fetches the page, and here is the whole post boiled down to four: **one source, any format** (a single `.qmd` renders to HTML, PDF, Word, and slides); **up to 7x fewer tokens** than asking Claude for the finished format directly; **always current**, because code runs at render time so the data stays live; and **plain text**, so it lives in Git with clean diffs and easy edits. One short request in, a page distilled to what matters. (These very slides are a `.qmd`.)
 
 ### Practice 01 _(slide: dark, practice 01)_
 
-_[~5 min]_ Type `/` in Claude Code to list every installed skill, pick one, run it, and watch the workflow it loads into the session.
+_[~10 min]_ Three steps. **Install** the Waza plugin, following its README. **Use** one of its skills on a real task and judge the quality of the result. Then **inspect**: ask your agent to walk you through the pipeline encapsulated in that skill, so you see why it boosts efficiency, the long, careful process runs once inside the skill, and you summon it with a slash.
 
 ---
 
@@ -83,16 +79,16 @@ _[~8 min]_ Install Waza following its README, then run one of its skills: `/read
 
 ## 3. Authoring Skills
 
-### The minimal skill _(slide: The minimal skill)_
+### Skill authoring _(slide: Skill authoring)_
 
-At minimum a skill is a directory bearing the skill's name, holding a single `SKILL.md`. That is the only hard requirement. My `/ph-html` skill has only this one file, yet it produces every styled HTML component across my blog and slides.
-
-### Inside a `SKILL.md` _(slide: Inside a SKILL.md)_
-
-`SKILL.md` is two parts:
+Now you know how to use a skill and how one works; time to create your own to meet your own needs. It all centers on the `SKILL.md`, which is two parts:
 
 - a **YAML header** declaring `name` and `description` (this powers discovery), and
 - a **body**, the prompt loaded on invocation, stating the rules, conventions, and examples the agent should follow.
+
+### The minimal skill _(slide: The minimal skill)_
+
+At minimum a skill is a directory bearing the skill's name, holding a single `SKILL.md`. That is the only hard requirement. My `/ph-html` skill has only this one file, yet it produces every styled HTML component across my blog and slides.
 
 ### Minimal in form, not in function _(slide: Minimal in form, not in function)_
 

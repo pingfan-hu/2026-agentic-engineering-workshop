@@ -126,6 +126,14 @@ Each deck has a `SCRIPTS.md` (speaker script) and an `index.qmd` (slide content)
 
 It does **not** auto-restart `quarto preview` — restart manually when you want to view changes. Output is logged to `/tmp/quarto-refresh.log`.
 
+## Stale `.quarto/idx` after editing `slides/_shared.yml`
+
+Changes to **format-level** options in `slides/_shared.yml` (the shared revealjs config) may not take effect on the next render, because Quarto bakes those values into each deck's `.quarto/idx` cache, and the `Stop` hook above deliberately **preserves `idx/`** for fast rebuilds. The compiled `_site/index.html` then keeps re-emitting the old value no matter how many times you restart `quarto preview` — the source config looks right but the behavior doesn't change.
+
+Symptom seen once: flipping `preview-links: auto` → `false` correctly set reveal's `previewLinks: false`, but Quarto's separate `previewLinksAuto` (the fullscreen link-preview handler that produces the "Unable to load iframe … x-frame-options" overlay when a slide links to an external site like GitHub) stayed `true` from cache, so external links kept opening in a failing iframe instead of a new tab.
+
+Fix: force a clean render of the affected deck(s) — `rm -rf slides/<deck>/.quarto slides/<deck>/_site && (cd slides/<deck> && quarto render)`. If the option lives in `_shared.yml`, it affects all three decks, so clear and re-render **all** of `slides/*/`. Verify with `grep -o "previewLinksAuto': [a-z]*" slides/<deck>/_site/index.html`. Content-only edits (qmd/scss) don't hit this — only shared **format metadata** does.
+
 ## Gitignore behavior
 
 `.gitignore` has a bare `_site` entry, which matches `_site/` anywhere in the tree (parent's `_site/` and each deck's `slides/<deck>/_site/`). Don't change this to `/_site` — the nested build outputs would start getting committed.
