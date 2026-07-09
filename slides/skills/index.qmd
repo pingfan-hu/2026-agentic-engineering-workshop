@@ -38,9 +38,21 @@ title-slide-attributes:
 
 {{< include resources/practice-1.qmd >}}
 
-## Skill authoring {.light-centered .center}
+## Let's create a skill! {.light-centered .center}
+
+{{< include resources/skill-setup.qmd >}}
+
+## Let's create a skill! {.light-centered .center}
 
 {{< include resources/skill-authoring.qmd >}}
+
+## Create symlinks {.light-centered .center}
+
+{{< include resources/link-skills.qmd >}}
+
+## A more sophisticated skill {.light-centered .center}
+
+
 
 ## Where to install skills from {.light-centered .center}
 

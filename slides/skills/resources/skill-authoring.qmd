@@ -1,51 +1,84 @@
 ```{=html}
-<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.05em 1em 1.2em;border-radius:18px;">
+<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.1em 1.05em 1.15em;border-radius:18px;">
 
- <!-- T-bar: the authoring pitch -->
- <div style="display:flex;align-items:center;gap:0.8em;background:#EEEDF8;border:1px solid #C7C1E5;border-radius:12px;padding:0.4em 0.95em;box-shadow:0 4px 16px rgba(86,84,162,0.1);text-align:left;">
-  <div style="width:1.7em;height:1.7em;border-radius:0.45em;background:#FFFFFF;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="hammer" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
-  <div style="flex:1;font-size:0.62em;font-weight:700;color:#2C3E50;line-height:1.25;">Create a skill to meet your own needs</div>
- </div>
+ <!-- hidden canonical template, copied verbatim by the Copy button (textContent) -->
+<pre id="skill-template-src" style="display:none;">---
+name: my-skill
+description: What it does and when to use it.
+---
 
- <!-- divider -->
- <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:0.75em 0 0;"></div>
+# My Skill
 
- <!-- Inside a SKILL.md -->
- <div style="display:grid;grid-template-columns:1.25fr 0.85fr;gap:1em;align-items:start;margin-top:1.15em;">
+State the goal in one line.
 
+## Steps
+
+1. First step here.
+2. Next step here.
+
+## Notes
+
+- A rule or example to follow.
+</pre>
+
+ <!-- two columns: SKILL.md template (left) | what each part is (right) -->
+ <div style="display:grid;grid-template-columns:1.2fr 0.85fr;gap:1em;align-items:stretch;">
+
+  <!-- LEFT: the copyable SKILL.md -->
   <div style="border-radius:12px;overflow:hidden;background:#1E1E2E;box-shadow:0 8px 22px rgba(0,0,0,0.18);">
-   <div style="background:linear-gradient(180deg,#3A3950,#2A2940);padding:0.35em 0.7em;display:flex;align-items:center;gap:0.35em;">
+   <div style="background:linear-gradient(180deg,#3A3950,#2A2940);padding:0.32em 0.7em;display:flex;align-items:center;gap:0.4em;">
     <span style="width:0.5em;height:0.5em;border-radius:50%;background:#FF5F56;"></span>
     <span style="width:0.5em;height:0.5em;border-radius:50%;background:#FFBD2E;"></span>
     <span style="width:0.5em;height:0.5em;border-radius:50%;background:#27C93F;"></span>
-    <span style="margin-left:0.5em;font-family:'Maple Mono',monospace;font-size:0.42em;color:#9B8EA0;">ph-html/SKILL.md</span>
+    <span style="margin-left:0.5em;font-family:'Maple Mono',monospace;font-size:0.42em;color:#9B8EA0;">my-skill/SKILL.md</span>
+    <button class="copy-prompt-btn" aria-label="Copy SKILL.md template" style="margin-left:auto;color:#8FC7FF;background:rgba(58,125,201,0.18);border-color:rgba(143,199,255,0.35);" onclick="var b=this;navigator.clipboard.writeText(document.getElementById('skill-template-src').textContent).then(function(){var l=b.querySelector('.copy-label');l.textContent='Copied!';setTimeout(function(){l.textContent='Copy';},1500);});">
+     <i data-lucide="copy" style="width:0.8em;height:0.8em;stroke-width:1.8;"></i><span class="copy-label">Copy</span>
+    </button>
    </div>
-   <div style="padding:0.75em 1em;font-family:'Maple Mono',monospace;font-size:0.5em;line-height:1.6;text-align:left;color:#F8F7F0;">
-    <div style="background:rgba(86,84,162,0.15);margin:-0.75em -1em 0.4em;padding:0.28em 1em;border-left:3px solid #5654A2;color:#C4C3E8;font-size:0.85em;font-style:italic;">— YAML header —</div>
+   <div style="padding:0.7em 1em 0.85em;font-family:'Maple Mono',monospace;font-size:0.48em;line-height:1.55;text-align:left;color:#F8F7F0;">
     <div style="color:#5C6B80;">---</div>
-    <div><span style="color:#69B4F0;">name:</span> <span style="color:#27C93F;">ph-html</span></div>
-    <div><span style="color:#69B4F0;">description:</span> <span style="color:#FFB84D;">Styled HTML components</span></div>
+    <div><span style="color:#69B4F0;">name:</span> <span style="color:#27C93F;">my-skill</span></div>
+    <div><span style="color:#69B4F0;">description:</span> <span style="color:#FFB84D;">What it does and when to use it.</span></div>
     <div style="color:#5C6B80;">---</div>
-    <div style="background:rgba(255,184,77,0.12);margin:0.4em -1em;padding:0.28em 1em;border-left:3px solid #FFB84D;color:#FFE5B0;font-size:0.85em;font-style:italic;">— body —</div>
-    <div style="color:#FF6F8E;font-weight:700;"># Conventions</div>
-    <div>- styles live in one .scss</div>
-    <div>- 1-space indent per level</div>
-    <div style="color:#FF6F8E;font-weight:700;margin-top:0.2em;"># intro-links</div>
-    <div>&lt;example markup&gt;</div>
+    <div style="height:0.45em;"></div>
+    <div style="color:#FF6F8E;font-weight:700;"># My Skill</div>
+    <div style="height:0.25em;"></div>
+    <div style="color:#B8B2C0;">State the goal in one line.</div>
+    <div style="height:0.35em;"></div>
+    <div style="color:#FF6F8E;font-weight:700;">## Steps</div>
+    <div style="color:#B8B2C0;">1. First step here.</div>
+    <div style="color:#B8B2C0;">2. Next step here.</div>
+    <div style="height:0.35em;"></div>
+    <div style="color:#FF6F8E;font-weight:700;">## Notes</div>
+    <div style="color:#B8B2C0;">- A rule or example to follow.</div>
    </div>
   </div>
 
-  <div style="display:flex;flex-direction:column;gap:0.55em;text-align:left;">
-   <div style="background:#FFFFFF;border-radius:10px;padding:0.6em 0.85em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border-left:3px solid #5654A2;">
-    <div style="font-size:0.58em;font-weight:700;color:#5654A2;margin-bottom:0.2em;">Header</div>
-    <div style="font-size:0.5em;color:#564232;line-height:1.45;">Declares <code style="font-family:'Maple Mono',monospace;color:#5654A2;">name</code> and <code style="font-family:'Maple Mono',monospace;color:#5654A2;">description</code>. Powers discovery.</div>
+  <!-- RIGHT: what each part is for -->
+  <div style="display:flex;flex-direction:column;gap:0.5em;text-align:left;">
+   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border-left:3px solid #5654A2;">
+    <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.15em;"><i data-lucide="tag" style="width:0.85em;height:0.85em;stroke-width:2;color:#5654A2;"></i><span style="font-size:0.56em;font-weight:700;color:#5654A2;">name</span></div>
+    <div style="font-size:0.48em;color:#564232;line-height:1.4;">The skill's id and slash command. Lowercase, kebab-case.</div>
    </div>
-   <div style="background:#FFFFFF;border-radius:10px;padding:0.6em 0.85em;box-shadow:0 4px 14px rgba(196,136,26,0.08);border-left:3px solid #C4881A;">
-    <div style="font-size:0.58em;font-weight:700;color:#C4881A;margin-bottom:0.2em;">Body</div>
-    <div style="font-size:0.5em;color:#564232;line-height:1.45;">The prompt loaded on invocation: rules, conventions, examples to follow.</div>
+   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border-left:3px solid #2C8475;">
+    <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.15em;"><i data-lucide="search" style="width:0.85em;height:0.85em;stroke-width:2;color:#2C8475;"></i><span style="font-size:0.56em;font-weight:700;color:#2C8475;">description</span></div>
+    <div style="font-size:0.48em;color:#564232;line-height:1.4;">One line. How the AI decides when to reach for the skill.</div>
+   </div>
+   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(196,136,26,0.08);border-left:3px solid #C4881A;">
+    <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.15em;"><i data-lucide="file-text" style="width:0.85em;height:0.85em;stroke-width:2;color:#C4881A;"></i><span style="font-size:0.56em;font-weight:700;color:#C4881A;">body</span></div>
+    <div style="font-size:0.48em;color:#564232;line-height:1.4;">The prompt loaded on invocation: steps, rules, examples to follow.</div>
    </div>
   </div>
 
+ </div>
+
+ <!-- divider -->
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:1em 0 0;"></div>
+
+ <!-- closing line -->
+ <div style="display:flex;align-items:center;justify-content:center;gap:0.55em;margin-top:0.8em;font-size:0.58em;color:#2C3E50;line-height:1.4;text-align:left;">
+  <i data-lucide="sparkles" style="width:1.1em;height:1.1em;stroke-width:2;color:#5654A2;flex-shrink:0;"></i>
+  <span>Start from this template and build your skill with the help of <span style="color:#5654A2;font-weight:700;">AI</span>.</span>
  </div>
 
 </div>

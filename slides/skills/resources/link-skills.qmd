@@ -1,0 +1,69 @@
+```{=html}
+<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em 1.3em;border-radius:18px;">
+
+ <!-- two columns: repo structure (purple) | keep in sync (teal) -->
+ <div style="display:grid;grid-template-columns:1.12fr 0.88fr;gap:0.9em;align-items:stretch;margin-top:0.9em;">
+
+  <!-- LEFT: repo structure -->
+  <div style="position:relative;background:#F5F4FB;border-top:3px solid #5654A2;border-radius:14px;padding:0.95em 0.85em 0.9em;box-shadow:0 8px 24px rgba(86,84,162,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#6462B4,#5654A2);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(86,84,162,0.4);white-space:nowrap;z-index:2;"><i data-lucide="folder-tree" style="width:1em;height:1em;stroke-width:2.2;"></i>Skills Repo</div>
+
+   <div style="background:#FFFFFF;border-radius:11px;padding:0.9em 0.95em;box-shadow:0 3px 10px rgba(86,84,162,0.08);flex:1;display:flex;flex-direction:column;justify-content:center;">
+
+    <!-- folder header -->
+    <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.7em;">
+     <div style="width:1.45em;height:1.45em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="folder-git-2" style="width:0.8em;height:0.8em;stroke-width:1.8;"></i></div>
+     <div style="font-family:'Maple Mono',monospace;font-size:0.56em;font-weight:700;color:#5654A2;line-height:1.1;">my-skills/</div>
+    </div>
+
+    <!-- tree + connectors + labels as one SVG (continuous dotted paths) -->
+    <svg viewBox="0 0 250 70" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
+     <g font-family="'Maple Mono',monospace" font-size="10" xml:space="preserve">
+      <text x="0" y="14"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#5654A2" font-weight="700">my-skill-1/</tspan></text>
+      <text x="0" y="30"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#5654A2" font-weight="700">my-skill-2/</tspan></text>
+      <text x="0" y="46"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#5654A2" font-weight="700">my-skill-3/</tspan></text>
+      <text x="0" y="62"><tspan fill="#C4B8C9">└─ </tspan><tspan fill="#2C8475" font-weight="700">sync-skills.sh</tspan></text>
+     </g>
+     <g fill="none" stroke="#BAB3D5" stroke-width="1.05" stroke-linecap="round" stroke-dasharray="0.01 3">
+      <path d="M92,11 L112,11 L112,43 L92,43"/>
+      <path d="M92,27 L112,27"/>
+      <path d="M112,27 L150,27"/>
+      <path d="M104,59 L150,59"/>
+     </g>
+     <g font-family="'Maple Mono',monospace" font-size="10" font-style="italic" fill="#9B8EA0">
+      <text x="154" y="30">your skills</text>
+      <text x="154" y="62">symlink command</text>
+     </g>
+    </svg>
+
+   </div>
+
+   <!-- summary caption -->
+   <div style="margin-top:0.6em;display:flex;align-items:center;justify-content:center;gap:0.5em;font-size:0.5em;color:#2C3E50;line-height:1.2;">
+    <span style="display:flex;align-items:center;gap:0.3em;"><i data-lucide="layers" style="width:1.1em;height:1.1em;stroke-width:1.9;color:#5654A2;"></i><span style="font-weight:700;">multiple skills</span></span>
+    <span style="color:#9B8EA0;font-weight:700;">+</span>
+    <span style="display:flex;align-items:center;gap:0.3em;"><i data-lucide="terminal" style="width:1.1em;height:1.1em;stroke-width:1.9;color:#2C8475;"></i><span style="font-weight:700;">a shell command</span></span>
+   </div>
+
+  </div>
+
+  <!-- RIGHT: keep in sync -->
+  <div style="position:relative;background:#F4FBF8;border-top:3px solid #2C8475;border-radius:14px;padding:0.95em 0.8em 0.85em;box-shadow:0 8px 24px rgba(44,132,117,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#3DA890,#2C8475);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(44,132,117,0.4);white-space:nowrap;z-index:2;"><i data-lucide="refresh-cw" style="width:1em;height:1em;stroke-width:2.2;"></i>Stay in sync</div>
+
+   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.75em;">
+
+    <div style="font-size:0.6em;color:#2C3E50;line-height:1.55;text-align:left;">Every time you author a new skill, just ask Claude Code to <span style="color:#2C8475;font-weight:700;">run the command again</span>.</div>
+
+    <div style="background:#FFFFFF;border-radius:10px;padding:0.75em 0.85em;box-shadow:0 3px 10px rgba(44,132,117,0.09);border-left:3px solid #2C8475;">
+     <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.4em;"><i data-lucide="bot" style="width:1em;height:1em;stroke-width:1.9;color:#2C8475;"></i><span style="font-size:0.52em;font-weight:700;color:#2C8475;">Just ask Claude Code</span></div>
+     <div style="font-family:'Georgia',serif;font-size:0.54em;color:#2C3E50;line-height:1.55;">Run <code style="font-family:'Maple Mono',monospace;background:#E5F2EE;color:#2C8475;font-weight:700;padding:0.05em 0.35em;border-radius:5px;">sync-skills.sh</code> to update my skill symlinks in the skills folder.</div>
+    </div>
+
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```
