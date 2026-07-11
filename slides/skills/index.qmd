@@ -58,7 +58,7 @@ title-slide-attributes:
 
 {{< include resources/case-pipeline.qmd >}}
 
-## Skill for image generation {.light-centered .center}
+## Skill for multi-agents {.light-centered .center}
 
 {{< include resources/case-models.qmd >}}
 
