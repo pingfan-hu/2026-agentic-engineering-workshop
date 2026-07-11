@@ -55,7 +55,7 @@
 
     <div style="font-size:0.6em;color:#2C3E50;line-height:1.55;text-align:left;">Every time you author a new skill, just ask Claude Code to <span style="color:#2C8475;font-weight:700;">run the command again</span>.</div>
 
-    <div style="background:#FFFFFF;border-radius:10px;padding:0.75em 0.85em;box-shadow:0 3px 10px rgba(44,132,117,0.09);border-left:3px solid #2C8475;">
+    <div style="background:#FFFFFF;border-radius:10px;padding:0.75em 0.85em;box-shadow:0 3px 10px rgba(44,132,117,0.09);border:1px solid rgba(44,132,117,0.22);">
      <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.4em;"><i data-lucide="bot" style="width:1em;height:1em;stroke-width:1.9;color:#2C8475;"></i><span style="font-size:0.52em;font-weight:700;color:#2C8475;">Just ask Claude Code</span></div>
      <div style="font-family:'Georgia',serif;font-size:0.54em;color:#2C3E50;line-height:1.55;">Run <code style="font-family:'Maple Mono',monospace;background:#E5F2EE;color:#2C8475;font-weight:700;padding:0.05em 0.35em;border-radius:5px;">sync-skills.sh</code> to update my skill symlinks in the skills folder.</div>
     </div>

@@ -1,0 +1,68 @@
+```{=html}
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:0.8em 1em 0.9em;border-radius:18px;">
+
+ <!-- T-bar: the shared example (full-width bar, one line) -->
+ <div style="background:#FFFFFF;border:1px solid #D8CFE0;border-radius:14px;padding:0.55em 1.1em;box-shadow:0 4px 16px rgba(86,84,162,0.1);display:flex;align-items:center;justify-content:center;gap:0.7em;">
+  <div style="width:1.8em;height:1.8em;border-radius:0.5em;background:#F0EDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="rocket" style="width:1em;height:1em;stroke-width:1.9;"></i></div>
+  <div style="font-size:0.62em;font-weight:700;color:#2C3E50;line-height:1.25;white-space:nowrap;">A <span style="font-family:'Maple Mono',monospace;color:#5654A2;background:#EEEDF8;padding:0.05em 0.4em;border-radius:5px;">/mac-app</span> skill for the full deployment pipeline</div>
+ </div>
+
+ <!-- divider -->
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:0.6em 0 0;"></div>
+
+ <!-- two groups: File structure (purple) | Skill pipeline (teal) -->
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85em;align-items:stretch;margin-top:1em;">
+
+  <!-- LEFT: File structure tree (same card design as the "What is a skill?" slide) -->
+  <div style="position:relative;background:#F5F4FB;border:1px solid rgba(86,84,162,0.22);border-radius:14px;padding:0.95em 0.8em 0.85em;box-shadow:0 8px 24px rgba(86,84,162,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#6462B4,#5654A2);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(86,84,162,0.4);white-space:nowrap;z-index:2;"><i data-lucide="folder-tree" style="width:1em;height:1em;stroke-width:2.2;"></i>File structure</div>
+
+   <div style="background:#FFFFFF;border-radius:11px;padding:0.85em 0.9em 0.85em;box-shadow:0 3px 10px rgba(86,84,162,0.08);flex:1;">
+    <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.65em;">
+     <div style="width:1.45em;height:1.45em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="folder-git-2" style="width:0.8em;height:0.8em;stroke-width:1.8;"></i></div>
+     <div style="font-family:'Maple Mono',monospace;font-size:0.56em;font-weight:700;color:#5654A2;line-height:1.1;">mac-app/</div>
+    </div>
+    <!-- Whole tree + connectors + labels as one SVG so every dotted line is a single
+         continuous <path> (dashes flow around corners, no stitched seams). -->
+    <svg viewBox="0 0 205 90" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
+     <!-- file tree -->
+     <g font-family="'Maple Mono',monospace" font-size="10" xml:space="preserve">
+      <text x="0" y="14"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#5654A2" font-weight="700">SKILL.md</tspan></text>
+      <text x="0" y="30"><tspan fill="#C4B8C9">└─ </tspan><tspan fill="#CB6A43" font-weight="700">resources/</tspan></text>
+      <text x="18" y="46"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#CB6A43" font-weight="700">ui.md</tspan></text>
+      <text x="18" y="62"><tspan fill="#C4B8C9">├─ </tspan><tspan fill="#CB6A43" font-weight="700">update.md</tspan></text>
+      <text x="18" y="78"><tspan fill="#C4B8C9">└─ </tspan><tspan fill="#CB6A43" font-weight="700">release.md</tspan></text>
+     </g>
+     <!-- connectors: one continuous dotted path per group -->
+     <g fill="none" stroke="#BAB3D5" stroke-width="1.05" stroke-linecap="round" stroke-dasharray="0.01 3">
+      <path d="M72,11 L150,11"/>
+      <path d="M72,43 L126,43 L126,75 L102,75"/>
+      <path d="M96,59 L126,59"/>
+      <path d="M126,59 L150,59"/>
+     </g>
+     <!-- labels -->
+     <g font-family="'Maple Mono',monospace" font-size="10" font-style="italic" fill="#9B8EA0">
+      <text x="154" y="14">main</text>
+      <text x="154" y="62">guides</text>
+     </g>
+    </svg>
+   </div>
+  </div>
+
+  <!-- RIGHT: Skill pipeline -->
+  <div style="position:relative;background:#F4FBF8;border:1px solid rgba(44,132,117,0.22);border-radius:14px;padding:0.9em 0.8em 0.75em;box-shadow:0 8px 24px rgba(44,132,117,0.14);display:flex;flex-direction:column;text-align:left;">
+   <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#3DA890,#2C8475);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(44,132,117,0.4);white-space:nowrap;z-index:2;"><i data-lucide="git-branch" style="width:1em;height:1em;stroke-width:2.2;"></i>Skill pipeline</div>
+
+   <div style="display:flex;flex-direction:column;gap:0.35em;flex:1;">
+    <div style="display:grid;grid-template-columns:1.4em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:9px;padding:0.4em 0.65em;box-shadow:0 2px 8px rgba(44,132,117,0.07);"><span style="width:1.4em;height:1.4em;border-radius:50%;background:#E5F2EE;color:#2C8475;font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;display:flex;align-items:center;justify-content:center;">1</span><span style="font-size:0.52em;color:#2C3E50;line-height:1.2;">Update the version number</span></div>
+    <div style="display:grid;grid-template-columns:1.4em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:9px;padding:0.4em 0.65em;box-shadow:0 2px 8px rgba(44,132,117,0.07);"><span style="width:1.4em;height:1.4em;border-radius:50%;background:#E5F2EE;color:#2C8475;font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;display:flex;align-items:center;justify-content:center;">2</span><span style="font-size:0.52em;color:#2C3E50;line-height:1.2;">Build the release</span></div>
+    <div style="display:grid;grid-template-columns:1.4em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:9px;padding:0.4em 0.65em;box-shadow:0 2px 8px rgba(44,132,117,0.07);"><span style="width:1.4em;height:1.4em;border-radius:50%;background:#E5F2EE;color:#2C8475;font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;display:flex;align-items:center;justify-content:center;">3</span><span style="font-size:0.52em;color:#2C3E50;line-height:1.2;">Sign &amp; notarize with Apple</span></div>
+    <div style="display:grid;grid-template-columns:1.4em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:9px;padding:0.4em 0.65em;box-shadow:0 2px 8px rgba(44,132,117,0.07);"><span style="width:1.4em;height:1.4em;border-radius:50%;background:#E5F2EE;color:#2C8475;font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;display:flex;align-items:center;justify-content:center;">4</span><span style="font-size:0.52em;color:#2C3E50;line-height:1.2;">Wire up auto-updating</span></div>
+    <div style="display:grid;grid-template-columns:1.4em 1fr;gap:0.55em;align-items:center;background:#FFFFFF;border-radius:9px;padding:0.4em 0.65em;box-shadow:0 2px 8px rgba(44,132,117,0.07);"><span style="width:1.4em;height:1.4em;border-radius:50%;background:#E5F2EE;color:#2C8475;font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;display:flex;align-items:center;justify-content:center;">5</span><span style="font-size:0.52em;color:#2C3E50;line-height:1.2;">Publish the release on GitHub</span></div>
+   </div>
+  </div>
+
+ </div>
+
+</div>
+```

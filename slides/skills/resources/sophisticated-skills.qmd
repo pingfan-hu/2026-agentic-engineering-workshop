@@ -1,0 +1,30 @@
+```{=html}
+<div style="width:82%;margin:0 auto;text-align:left;">
+
+ <div style="display:flex;flex-direction:column;gap:0.7em;">
+
+  <!-- Case 1: full pipeline (purple) -->
+  <div style="display:flex;align-items:center;gap:1.1em;background:rgba(157,154,224,0.08);border-left:5px solid #9D9AE0;border-radius:0 12px 12px 0;padding:0.9em 1.1em;">
+   <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:rgba(157,154,224,0.16);display:flex;align-items:center;justify-content:center;color:#9D9AE0;flex-shrink:0;"><i data-lucide="git-branch" style="width:0.95em;height:0.95em;stroke-width:2;"></i></div>
+   <div style="flex:1;font-size:0.72em;font-weight:700;color:#F8F7F0;line-height:1.2;">A full pipeline</div>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;color:#9D9AE0;background:rgba(157,154,224,0.16);padding:0.35em 0.75em;border-radius:999px;white-space:nowrap;flex-shrink:0;">App Deployment</span>
+  </div>
+
+  <!-- Case 2: multiple AI agents (blue) -->
+  <div style="display:flex;align-items:center;gap:1.1em;background:rgba(123,181,240,0.08);border-left:5px solid #7BB5F0;border-radius:0 12px 12px 0;padding:0.9em 1.1em;">
+   <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:rgba(123,181,240,0.16);display:flex;align-items:center;justify-content:center;color:#7BB5F0;flex-shrink:0;"><i data-lucide="cpu" style="width:0.95em;height:0.95em;stroke-width:2;"></i></div>
+   <div style="flex:1;font-size:0.72em;font-weight:700;color:#F8F7F0;line-height:1.2;">Multiple AI agents</div>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;color:#7BB5F0;background:rgba(123,181,240,0.16);padding:0.35em 0.75em;border-radius:999px;white-space:nowrap;flex-shrink:0;">Image Generation</span>
+  </div>
+
+  <!-- Case 3: subsections for a same topic (amber) -->
+  <div style="display:flex;align-items:center;gap:1.1em;background:rgba(255,184,77,0.08);border-left:5px solid #FFB84D;border-radius:0 12px 12px 0;padding:0.9em 1.1em;">
+   <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:rgba(255,184,77,0.16);display:flex;align-items:center;justify-content:center;color:#FFB84D;flex-shrink:0;"><i data-lucide="folder-tree" style="width:0.95em;height:0.95em;stroke-width:2;"></i></div>
+   <div style="flex:1;font-size:0.72em;font-weight:700;color:#F8F7F0;line-height:1.2;">Subsections for a same topic</div>
+   <span style="font-family:'Maple Mono',monospace;font-size:0.5em;font-weight:700;color:#FFB84D;background:rgba(255,184,77,0.16);padding:0.35em 0.75em;border-radius:999px;white-space:nowrap;flex-shrink:0;">/surveydown-skill</span>
+  </div>
+
+ </div>
+
+</div>
+```

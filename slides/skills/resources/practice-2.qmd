@@ -1,5 +1,5 @@
 ```{=html}
-<div class="practice-timer" data-minutes="8"></div>
+<div class="practice-timer" data-minutes="20"></div>
 
 <div style="width:92%;margin:0 auto;text-align:left;">
 
@@ -8,25 +8,33 @@
   <div style="font-family:'Maple Mono',monospace;font-size:0.82em;color:#FFB84D;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.55em;">— practice 02 —</div>
 
   <div style="font-size:0.85em;font-weight:800;color:#F8F7F0;line-height:1.15;margin-bottom:1.1em;letter-spacing:-0.01em;">
-   Install a skill set, then run one.
+   Build your own skill, end to end.
   </div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8em;">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8em;">
 
-   <a class="tool-card" href="https://github.com/tw93/Waza" target="_blank" rel="noopener" style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.7em 0.85em;">
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.7em 0.85em;">
     <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.35em;">
-     <i data-lucide="download" style="width:1em;height:1em;stroke-width:2;color:#FFB84D;"></i>
-     <span style="font-size:0.56em;font-weight:700;color:#FFD27F;">Install Waza</span>
+     <i data-lucide="folder-git-2" style="width:1em;height:1em;stroke-width:2;color:#FFB84D;"></i>
+     <span style="font-size:0.56em;font-weight:700;color:#FFD27F;">Create repo</span>
     </div>
-    <div style="font-size:0.5em;color:#C9C4BC;line-height:1.5;">Follow its README to add the eight skills to your setup.</div>
-   </a>
+    <div style="font-size:0.5em;color:#C9C4BC;line-height:1.5;">Hold your skills, plus the symlink shell command.</div>
+   </div>
+
+   <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.7em 0.85em;">
+    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.35em;">
+     <i data-lucide="hammer" style="width:1em;height:1em;stroke-width:2;color:#FFB84D;"></i>
+     <span style="font-size:0.56em;font-weight:700;color:#FFD27F;">Author a skill</span>
+    </div>
+    <div style="font-size:0.5em;color:#C9C4BC;line-height:1.5;">Make one that matches your own needs.</div>
+   </div>
 
    <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.7em 0.85em;">
     <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.35em;">
      <i data-lucide="play" style="width:1em;height:1em;stroke-width:2;color:#FFB84D;"></i>
-     <span style="font-size:0.56em;font-weight:700;color:#FFD27F;">Try one</span>
+     <span style="font-size:0.56em;font-weight:700;color:#FFD27F;">Load and test</span>
     </div>
-    <div style="font-size:0.5em;color:#C9C4BC;line-height:1.5;">Run <code style="font-family:'Maple Mono',monospace;color:#FFB84D;">/read</code> on a link, or <code style="font-family:'Maple Mono',monospace;color:#FFB84D;">/think</code> on an idea.</div>
+    <div style="font-size:0.5em;color:#C9C4BC;line-height:1.5;">Load it in your agent session and try it out.</div>
    </div>
 
   </div>

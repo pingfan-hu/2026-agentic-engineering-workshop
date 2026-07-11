@@ -56,15 +56,15 @@ State the goal in one line.
 
   <!-- RIGHT: what each part is for -->
   <div style="display:flex;flex-direction:column;gap:0.5em;text-align:left;">
-   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border-left:3px solid #5654A2;">
+   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border:1px solid rgba(86,84,162,0.22);">
     <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.15em;"><i data-lucide="tag" style="width:0.85em;height:0.85em;stroke-width:2;color:#5654A2;"></i><span style="font-size:0.56em;font-weight:700;color:#5654A2;">name</span></div>
     <div style="font-size:0.48em;color:#564232;line-height:1.4;">The skill's id and slash command. Lowercase, kebab-case.</div>
    </div>
-   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border-left:3px solid #2C8475;">
+   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border:1px solid rgba(44,132,117,0.22);">
     <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.15em;"><i data-lucide="search" style="width:0.85em;height:0.85em;stroke-width:2;color:#2C8475;"></i><span style="font-size:0.56em;font-weight:700;color:#2C8475;">description</span></div>
     <div style="font-size:0.48em;color:#564232;line-height:1.4;">One line. How the AI decides when to reach for the skill.</div>
    </div>
-   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(196,136,26,0.08);border-left:3px solid #C4881A;">
+   <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(196,136,26,0.08);border:1px solid rgba(196,136,26,0.22);">
     <div style="display:flex;align-items:center;gap:0.4em;margin-bottom:0.15em;"><i data-lucide="file-text" style="width:0.85em;height:0.85em;stroke-width:2;color:#C4881A;"></i><span style="font-size:0.56em;font-weight:700;color:#C4881A;">body</span></div>
     <div style="font-size:0.48em;color:#564232;line-height:1.4;">The prompt loaded on invocation: steps, rules, examples to follow.</div>
    </div>

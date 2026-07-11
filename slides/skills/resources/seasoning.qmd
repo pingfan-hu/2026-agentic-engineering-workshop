@@ -13,11 +13,11 @@
   </div>
 
   <div style="text-align:left;display:flex;flex-direction:column;gap:0.55em;">
-   <div style="display:flex;align-items:flex-start;gap:0.6em;background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border-left:3px solid #2C8475;">
+   <div style="display:flex;align-items:flex-start;gap:0.6em;background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border:1px solid rgba(44,132,117,0.22);">
     <i data-lucide="lock" style="width:1em;height:1em;stroke-width:1.9;color:#2C8475;flex-shrink:0;margin-top:0.1em;"></i>
     <div style="font-size:0.5em;color:#564232;line-height:1.5;"><strong style="color:#2C8475;">Held still:</strong> the bottle, cork, framing, and the label text composited on by a script.</div>
    </div>
-   <div style="display:flex;align-items:flex-start;gap:0.6em;background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(212,95,71,0.08);border-left:3px solid #D45F47;">
+   <div style="display:flex;align-items:flex-start;gap:0.6em;background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(212,95,71,0.08);border:1px solid rgba(212,95,71,0.22);">
     <i data-lucide="shuffle" style="width:1em;height:1em;stroke-width:1.9;color:#D45F47;flex-shrink:0;margin-top:0.1em;"></i>
     <div style="font-size:0.5em;color:#564232;line-height:1.5;"><strong style="color:#D45F47;">Left random:</strong> only the liquid, which should differ in color and texture.</div>
    </div>

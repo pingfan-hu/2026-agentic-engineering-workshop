@@ -48,6 +48,7 @@ $sage:            #4A7A5A;
 $slate:           #5A6B80;
 $gold:            #C4881A;
 $blue:            #3A7DC9;
+$terracotta:      #CB6A43;   // gold + red, a warm coral
 
 // === Fonts ===
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/maple-mono@5.2.5/index.min.css');
@@ -635,6 +636,7 @@ th { font-size: 24px; }
 .slate  { color: $slate !important; }
 .gold   { color: $gold !important; }
 .blue   { color: $blue !important; }
+.terracotta { color: $terracotta !important; }
 
 // === Text Size Utilities ===
 .small  { font-size: 0.7em; }

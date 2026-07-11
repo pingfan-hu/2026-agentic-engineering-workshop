@@ -18,7 +18,7 @@
    <div style="font-size:0.78em;color:#2C3E50;line-height:1.5;margin-bottom:0.75em;">
     A folder bearing the skill's name, holding a single <code style="font-family:'Maple Mono',monospace;color:#C4881A;background:#FEF5E7;padding:0.1em 0.4em;border-radius:5px;">SKILL.md</code>.
    </div>
-   <div style="background:#FFFFFF;border-radius:10px;padding:0.6em 0.85em;font-size:0.55em;color:#564232;line-height:1.5;box-shadow:0 4px 14px rgba(86,84,162,0.1);border-left:3px solid #2C8475;">
+   <div style="background:#FFFFFF;border-radius:10px;padding:0.6em 0.85em;font-size:0.55em;color:#564232;line-height:1.5;box-shadow:0 4px 14px rgba(86,84,162,0.1);border:1px solid rgba(44,132,117,0.22);">
     My <code style="font-family:'Maple Mono',monospace;color:#2C8475;">/ph-html</code> has only this one file, yet it styles every HTML component across my blog and slides.
    </div>
   </div>

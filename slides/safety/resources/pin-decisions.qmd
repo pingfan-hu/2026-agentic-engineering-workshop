@@ -21,12 +21,12 @@
 
  <div style="margin-top:0.95em;display:grid;grid-template-columns:1fr 1fr;gap:0.5em;text-align:left;">
 
-  <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.85em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border-left:3px solid #2C8475;">
+  <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.85em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border:1px solid rgba(44,132,117,0.22);">
    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#2C8475;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">defensible later</div>
    <div style="font-size:0.55em;color:#564232;line-height:1.45;margin-top:0.15em;">Reviewers six months from now can read your reasoning.</div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.85em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border-left:3px solid #5654A2;">
+  <div style="background:#FFFFFF;border-radius:10px;padding:0.55em 0.85em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border:1px solid rgba(86,84,162,0.22);">
    <div style="font-family:'Maple Mono',monospace;font-size:0.45em;color:#5654A2;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">guardrail for AI</div>
    <div style="font-size:0.55em;color:#564232;line-height:1.45;margin-top:0.15em;">Stops the next session from "helpfully" rewriting it.</div>
   </div>

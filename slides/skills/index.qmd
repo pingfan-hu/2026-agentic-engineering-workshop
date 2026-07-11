@@ -50,17 +50,21 @@ title-slide-attributes:
 
 {{< include resources/link-skills.qmd >}}
 
-## A more sophisticated skill {.light-centered .center}
+## More sophisticated skills {.dark-centered .center}
 
+{{< include resources/sophisticated-skills.qmd >}}
 
+## Skill for a full pipeline {.light-centered .center}
 
-## Where to install skills from {.light-centered .center}
+{{< include resources/case-pipeline.qmd >}}
 
-{{< include resources/install-sources.qmd >}}
+## Skill for image generation {.light-centered .center}
 
-## Keep it in a repo, symlink it in {.light-centered .center}
+{{< include resources/case-models.qmd >}}
 
-{{< include resources/install-symlink.qmd >}}
+## Skill for a same topic {.light-centered .center}
+
+{{< include resources/case-subsections.qmd >}}
 
 ## &nbsp; {.dark-centered .center}
 

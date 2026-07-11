@@ -2,7 +2,7 @@
 <div style="width:82%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.3em 1.2em;border-radius:18px;display:flex;flex-direction:column;gap:0.85em;">
 
  <!-- step 1: GitHub repo (orange) -->
- <div style="display:grid;grid-template-columns:1.9em 2.6em 1fr;gap:0.85em;align-items:center;background:#FFFFFF;border-radius:13px;border-left:4px solid #E07B39;padding:0.75em 1em;box-shadow:0 6px 18px rgba(224,123,57,0.12);text-align:left;">
+ <div style="display:grid;grid-template-columns:1.9em 2.6em 1fr;gap:0.85em;align-items:center;background:#FFFFFF;border-radius:13px;border:1px solid rgba(224,123,57,0.22);padding:0.75em 1em;box-shadow:0 6px 18px rgba(224,123,57,0.12);text-align:left;">
   <div style="width:1.9em;height:1.9em;border-radius:50%;background:linear-gradient(135deg,#F3A24C,#E07B39);color:#FFFFFF;font-family:'Maple Mono',monospace;font-weight:700;font-size:0.62em;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(224,123,57,0.32);">1</div>
   <div style="width:2.6em;height:2.6em;border-radius:0.62em;background:linear-gradient(135deg,#F3A24C,#E07B39);display:flex;align-items:center;justify-content:center;color:#FFFFFF;box-shadow:0 5px 14px rgba(224,123,57,0.28);"><i data-lucide="folder-git-2" style="width:1.4em;height:1.4em;stroke-width:1.9;"></i></div>
   <div>
@@ -12,7 +12,7 @@
  </div>
 
  <!-- step 2: open in Positron (blue) -->
- <div style="display:grid;grid-template-columns:1.9em 2.6em 1fr;gap:0.85em;align-items:center;background:#FFFFFF;border-radius:13px;border-left:4px solid #3A7DC9;padding:0.75em 1em;box-shadow:0 6px 18px rgba(58,125,201,0.1);text-align:left;">
+ <div style="display:grid;grid-template-columns:1.9em 2.6em 1fr;gap:0.85em;align-items:center;background:#FFFFFF;border-radius:13px;border:1px solid rgba(58,125,201,0.22);padding:0.75em 1em;box-shadow:0 6px 18px rgba(58,125,201,0.1);text-align:left;">
   <div style="width:1.9em;height:1.9em;border-radius:50%;background:linear-gradient(135deg,#5A97D8,#3A7DC9);color:#FFFFFF;font-family:'Maple Mono',monospace;font-weight:700;font-size:0.62em;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(58,125,201,0.3);">2</div>
   <div role="img" aria-label="Positron" style="width:2.6em;height:2.6em;background-image:url(figs/positron-icon.png);background-size:contain;background-repeat:no-repeat;background-position:center;filter:drop-shadow(0 4px 10px rgba(58,125,201,0.28));"></div>
   <div>
@@ -22,7 +22,7 @@
  </div>
 
  <!-- step 3: launch Claude Code (teal) -->
- <div style="display:grid;grid-template-columns:1.9em 2.6em 1fr;gap:0.85em;align-items:center;background:#FFFFFF;border-radius:13px;border-left:4px solid #2C8475;padding:0.75em 1em;box-shadow:0 6px 18px rgba(44,132,117,0.1);text-align:left;">
+ <div style="display:grid;grid-template-columns:1.9em 2.6em 1fr;gap:0.85em;align-items:center;background:#FFFFFF;border-radius:13px;border:1px solid rgba(44,132,117,0.22);padding:0.75em 1em;box-shadow:0 6px 18px rgba(44,132,117,0.1);text-align:left;">
   <div style="width:1.9em;height:1.9em;border-radius:50%;background:linear-gradient(135deg,#3DA890,#2C8475);color:#FFFFFF;font-family:'Maple Mono',monospace;font-weight:700;font-size:0.62em;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(44,132,117,0.3);">3</div>
   <div style="width:2.6em;height:2.6em;border-radius:0.62em;background:linear-gradient(135deg,#3DA890,#2C8475);display:flex;align-items:center;justify-content:center;color:#FFFFFF;box-shadow:0 5px 14px rgba(44,132,117,0.26);"><i data-lucide="bot" style="width:1.4em;height:1.4em;stroke-width:1.9;"></i></div>
   <div>

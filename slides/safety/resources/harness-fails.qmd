@@ -39,7 +39,7 @@
 
  </div>
 
- <div style="background:#FFFFFF;border-radius:12px;padding:0.7em 1em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border-left:3px solid #5654A2;text-align:left;">
+ <div style="background:#FFFFFF;border-radius:12px;padding:0.7em 1em;box-shadow:0 4px 14px rgba(86,84,162,0.08);border:1px solid rgba(86,84,162,0.22);text-align:left;">
   <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#5654A2;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.2em;">why it fails</div>
   <div style="font-size:0.6em;color:#564232;line-height:1.5;">No verifier with ground truth &nbsp;→&nbsp; reviewer is just another generator &nbsp;→&nbsp; <strong style="color:#D45F47;">two LLMs agreeing is not evidence</strong>.</div>
  </div>
