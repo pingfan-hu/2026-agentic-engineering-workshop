@@ -3,7 +3,7 @@
 
  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.7em;">
 
-  <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(86,84,162,0.1);text-align:left;border-top:4px solid #5654A2;">
+  <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(86,84,162,0.1);text-align:left;border:1px solid rgba(86,84,162,0.22);">
    <div style="display:flex;align-items:center;gap:0.55em;margin-bottom:0.55em;">
     <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="rotate-ccw" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div>
@@ -18,7 +18,7 @@
    </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(212,95,71,0.1);text-align:left;border-top:4px solid #D45F47;">
+  <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.1em 1.05em;box-shadow:0 6px 22px rgba(212,95,71,0.1);text-align:left;border:1px solid rgba(212,95,71,0.22);">
    <div style="display:flex;align-items:center;gap:0.55em;margin-bottom:0.55em;">
     <div style="width:2.2em;height:2.2em;border-radius:0.55em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="mic" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div>

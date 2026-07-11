@@ -69,6 +69,8 @@ th { font-size: 24px; }
 // === Reveal.js ===
 .reveal {
   font-family: 'TsangerJinKai', sans-serif;
+  // Let optical-sizing tune the face to its rendered size where the font supports it.
+  font-optical-sizing: auto;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'TsangerJinKai', sans-serif;
@@ -76,6 +78,16 @@ th { font-size: 24px; }
     code { color: $teal; }
     a code { color: inherit; }
   }
+
+  // Size-specific tracking & leading (apple-design §15). Large display type
+  // reads too loose, so tracking tightens as size grows; leading is tight on
+  // big headings and stays comfortable on body (via $presentation-line-height:
+  // 1.3). Values are modest because TsangerJinKai is a brush face with generous
+  // default metrics, so heavy negative tracking would collide the strokes.
+  h1 { letter-spacing: -0.015em; line-height: 1.1; }
+  h2 { letter-spacing: -0.01em;  line-height: 1.15; }
+  h3 { letter-spacing: -0.006em; line-height: 1.2; }
+  h4 { letter-spacing: 0;        line-height: 1.25; }
 
   code, pre, pre code {
     font-family: 'Maple Mono', monospace;

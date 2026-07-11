@@ -5,7 +5,7 @@
 
  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8em;">
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.2em 1fr;gap:0.85em;align-items:center;box-shadow:0 4px 14px rgba(86,84,162,0.1);border-top:3px solid #5654A2;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.2em 1fr;gap:0.85em;align-items:center;box-shadow:0 4px 14px rgba(86,84,162,0.1);border:1px solid rgba(86,84,162,0.22);">
    <div style="width:2.1em;height:2.1em;border-radius:0.5em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="file-text" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
    <div>
     <div style="font-size:0.6em;font-weight:700;color:#5654A2;margin-bottom:0.15em;">Start minimal</div>
@@ -13,7 +13,7 @@
    </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.2em 1fr;gap:0.85em;align-items:center;box-shadow:0 4px 14px rgba(44,132,117,0.1);border-top:3px solid #2C8475;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.2em 1fr;gap:0.85em;align-items:center;box-shadow:0 4px 14px rgba(44,132,117,0.1);border:1px solid rgba(44,132,117,0.22);">
    <div style="width:2.1em;height:2.1em;border-radius:0.5em;background:#E8F5E9;border:1px solid #C8E6C9;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="anchor" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
    <div>
     <div style="font-size:0.6em;font-weight:700;color:#2C8475;margin-bottom:0.15em;">Pin the deterministic parts</div>
@@ -21,7 +21,7 @@
    </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.2em 1fr;gap:0.85em;align-items:center;box-shadow:0 4px 14px rgba(196,136,26,0.1);border-top:3px solid #C4881A;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.2em 1fr;gap:0.85em;align-items:center;box-shadow:0 4px 14px rgba(196,136,26,0.1);border:1px solid rgba(196,136,26,0.22);">
    <div style="width:2.1em;height:2.1em;border-radius:0.5em;background:#FEF5E7;border:1px solid #FAE9C8;display:flex;align-items:center;justify-content:center;color:#C4881A;"><i data-lucide="layers" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
    <div>
     <div style="font-size:0.6em;font-weight:700;color:#C4881A;margin-bottom:0.15em;">Bundle workflows</div>
@@ -29,7 +29,7 @@
    </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.2em 1fr;gap:0.85em;align-items:center;box-shadow:0 4px 14px rgba(58,125,201,0.1);border-top:3px solid #3A7DC9;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 1em;display:grid;grid-template-columns:2.2em 1fr;gap:0.85em;align-items:center;box-shadow:0 4px 14px rgba(58,125,201,0.1);border:1px solid rgba(58,125,201,0.22);">
    <div style="width:2.1em;height:2.1em;border-radius:0.5em;background:#DCE9FA;border:1px solid #A6C4EA;display:flex;align-items:center;justify-content:center;color:#3A7DC9;"><i data-lucide="bot" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
    <div>
     <div style="font-size:0.6em;font-weight:700;color:#3A7DC9;margin-bottom:0.15em;">Nest other agents</div>

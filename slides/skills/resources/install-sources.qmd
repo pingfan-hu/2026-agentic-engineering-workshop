@@ -7,7 +7,7 @@
 
  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.9em;align-items:stretch;">
 
-  <a class="tool-card" href="https://github.com/affaan-m/ecc" target="_blank" rel="noopener" style="background:#FFFFFF;border-radius:16px;padding:1em 1.05em 1.1em;text-align:left;border-top:4px solid #5654A2;box-shadow:0 8px 22px rgba(86,84,162,0.16);">
+  <a class="tool-card" href="https://github.com/affaan-m/ecc" target="_blank" rel="noopener" style="background:#FFFFFF;border-radius:16px;padding:1em 1.05em 1.1em;text-align:left;border:1px solid rgba(86,84,162,0.22);box-shadow:0 8px 22px rgba(86,84,162,0.16);">
    <div style="display:flex;align-items:center;gap:0.55em;margin-bottom:0.55em;">
     <div style="width:2em;height:2em;border-radius:0.5em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="boxes" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div style="font-size:0.66em;font-weight:700;color:#5654A2;">Everything Claude Code</div>
@@ -16,7 +16,7 @@
    <div style="font-size:0.5em;color:#564232;line-height:1.55;">Expansive, all-inclusive. Its own README advises installing <strong style="color:#5654A2;">selectively</strong>.</div>
   </a>
 
-  <a class="tool-card" href="https://github.com/tw93/Waza" target="_blank" rel="noopener" style="background:#FFFBF3;border-radius:16px;padding:1em 1.05em 1.1em;text-align:left;border-top:4px solid #2C8475;box-shadow:0 8px 22px rgba(44,132,117,0.16);border:1px solid #C8E6C9;">
+  <a class="tool-card" href="https://github.com/tw93/Waza" target="_blank" rel="noopener" style="background:#FFFBF3;border-radius:16px;padding:1em 1.05em 1.1em;text-align:left;box-shadow:0 8px 22px rgba(44,132,117,0.16);border:1px solid #C8E6C9;">
    <div style="display:flex;align-items:center;gap:0.55em;margin-bottom:0.55em;">
     <div style="width:2em;height:2em;border-radius:0.5em;background:#E8F5E9;border:1px solid #C8E6C9;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="feather" style="width:1em;height:1em;stroke-width:1.8;"></i></div>
     <div style="font-size:0.66em;font-weight:700;color:#2C8475;">Waza</div>

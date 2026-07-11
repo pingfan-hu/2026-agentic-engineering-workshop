@@ -3,7 +3,7 @@
 
  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.7em;">
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border-top:4px solid #2C8475;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border:1px solid rgba(44,132,117,0.22);">
    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45em;">
     <div style="display:flex;align-items:center;gap:0.5em;">
      <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="recycle" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
@@ -18,7 +18,7 @@
    </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border-top:4px solid #2C8475;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border:1px solid rgba(44,132,117,0.22);">
    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45em;">
     <div style="display:flex;align-items:center;gap:0.5em;">
      <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="git-branch" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
@@ -33,7 +33,7 @@
    </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border-top:4px solid #2C8475;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border:1px solid rgba(44,132,117,0.22);">
    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45em;">
     <div style="display:flex;align-items:center;gap:0.5em;">
      <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="file-text" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
@@ -48,7 +48,7 @@
    </div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border-top:4px solid #2C8475;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.95em;text-align:left;box-shadow:0 6px 22px rgba(44,132,117,0.1);border:1px solid rgba(44,132,117,0.22);">
    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45em;">
     <div style="display:flex;align-items:center;gap:0.5em;">
      <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="search" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>

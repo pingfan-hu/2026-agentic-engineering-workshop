@@ -5,7 +5,7 @@
  <div style="display:grid;grid-template-columns:1.12fr 0.88fr;gap:0.9em;align-items:stretch;margin-top:0.9em;">
 
   <!-- LEFT: repo structure -->
-  <div style="position:relative;background:#F5F4FB;border-top:3px solid #5654A2;border-radius:14px;padding:0.95em 0.85em 0.9em;box-shadow:0 8px 24px rgba(86,84,162,0.14);display:flex;flex-direction:column;text-align:left;">
+  <div style="position:relative;background:#F5F4FB;border:1px solid rgba(86,84,162,0.22);border-radius:14px;padding:0.95em 0.85em 0.9em;box-shadow:0 8px 24px rgba(86,84,162,0.14);display:flex;flex-direction:column;text-align:left;">
    <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#6462B4,#5654A2);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(86,84,162,0.4);white-space:nowrap;z-index:2;"><i data-lucide="folder-tree" style="width:1em;height:1em;stroke-width:2.2;"></i>Skills Repo</div>
 
    <div style="background:#FFFFFF;border-radius:11px;padding:0.9em 0.95em;box-shadow:0 3px 10px rgba(86,84,162,0.08);flex:1;display:flex;flex-direction:column;justify-content:center;">
@@ -48,7 +48,7 @@
   </div>
 
   <!-- RIGHT: keep in sync -->
-  <div style="position:relative;background:#F4FBF8;border-top:3px solid #2C8475;border-radius:14px;padding:0.95em 0.8em 0.85em;box-shadow:0 8px 24px rgba(44,132,117,0.14);display:flex;flex-direction:column;text-align:left;">
+  <div style="position:relative;background:#F4FBF8;border:1px solid rgba(44,132,117,0.22);border-radius:14px;padding:0.95em 0.8em 0.85em;box-shadow:0 8px 24px rgba(44,132,117,0.14);display:flex;flex-direction:column;text-align:left;">
    <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.3em;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;background:linear-gradient(135deg,#3DA890,#2C8475);padding:0.45em 1em;border-radius:999px;box-shadow:0 5px 16px rgba(44,132,117,0.4);white-space:nowrap;z-index:2;"><i data-lucide="refresh-cw" style="width:1em;height:1em;stroke-width:2.2;"></i>Stay in sync</div>
 
    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.75em;">

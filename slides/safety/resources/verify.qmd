@@ -5,7 +5,7 @@
 
  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.65em;">
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.9em;text-align:left;box-shadow:0 4px 14px rgba(44,132,117,0.12);border-top:4px solid #2C8475;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.9em;text-align:left;box-shadow:0 4px 14px rgba(44,132,117,0.12);border:1px solid rgba(44,132,117,0.22);">
    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.5em;">
     <div style="width:1.7em;height:1.7em;border-radius:0.4em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="book-open" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
     <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">check 01</div>
@@ -14,7 +14,7 @@
    <div style="font-size:0.5em;color:#564232;line-height:1.5;">Codebook, prior paper, official table.</div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.9em;text-align:left;box-shadow:0 4px 14px rgba(44,132,117,0.12);border-top:4px solid #2C8475;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.9em;text-align:left;box-shadow:0 4px 14px rgba(44,132,117,0.12);border:1px solid rgba(44,132,117,0.22);">
    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.5em;">
     <div style="width:1.7em;height:1.7em;border-radius:0.4em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="scale" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
     <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">check 02</div>
@@ -23,7 +23,7 @@
    <div style="font-size:0.5em;color:#564232;line-height:1.5;">Done by hand. No model, no AI.</div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.9em;text-align:left;box-shadow:0 4px 14px rgba(44,132,117,0.12);border-top:4px solid #2C8475;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.85em 0.9em;text-align:left;box-shadow:0 4px 14px rgba(44,132,117,0.12);border:1px solid rgba(44,132,117,0.22);">
    <div style="display:flex;align-items:center;gap:0.45em;margin-bottom:0.5em;">
     <div style="width:1.7em;height:1.7em;border-radius:0.4em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="users" style="width:0.85em;height:0.85em;stroke-width:1.8;"></i></div>
     <div style="font-family:'Maple Mono',monospace;font-size:0.5em;color:#9B8EA0;letter-spacing:0.1em;text-transform:uppercase;">check 03</div>

@@ -7,7 +7,7 @@
 
  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.9em;">
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:1em 1.05em 1.05em;text-align:left;box-shadow:0 6px 18px rgba(86,84,162,0.12);border-top:3px solid #5654A2;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:1em 1.05em 1.05em;text-align:left;box-shadow:0 6px 18px rgba(86,84,162,0.12);border:1px solid rgba(86,84,162,0.22);">
    <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.5em;">
     <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;"><i data-lucide="brain" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
     <div style="font-size:0.6em;font-weight:700;color:#5654A2;">One name to recall</div>
@@ -15,7 +15,7 @@
    <div style="font-size:0.52em;color:#564232;line-height:1.55;">Memorizing many skill names is inefficient. One name for the whole project is more than enough.</div>
   </div>
 
-  <div style="background:#FFFFFF;border-radius:14px;padding:1em 1.05em 1.05em;text-align:left;box-shadow:0 6px 18px rgba(44,132,117,0.12);border-top:3px solid #2C8475;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:1em 1.05em 1.05em;text-align:left;box-shadow:0 6px 18px rgba(44,132,117,0.12);border:1px solid rgba(44,132,117,0.22);">
    <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.5em;">
     <div style="width:1.8em;height:1.8em;border-radius:0.45em;background:#E8F5E9;border:1px solid #C8E6C9;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="gauge" style="width:0.9em;height:0.9em;stroke-width:1.8;"></i></div>
     <div style="font-size:0.6em;font-weight:700;color:#2C8475;">Cheap to load</div>

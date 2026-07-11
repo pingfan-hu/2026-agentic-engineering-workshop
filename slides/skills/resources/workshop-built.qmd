@@ -1,7 +1,7 @@
 ```{=html}
 <div style="width:80%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.7em 1.2em;border-radius:18px;">
 
- <div style="background:#FFFFFF;border-radius:16px;padding:1.3em 1.5em 1.4em;box-shadow:0 12px 30px rgba(86,84,162,0.16);border-top:4px solid #5654A2;text-align:center;">
+ <div style="background:#FFFFFF;border-radius:16px;padding:1.3em 1.5em 1.4em;box-shadow:0 12px 30px rgba(86,84,162,0.16);border:1px solid rgba(86,84,162,0.22);text-align:center;">
 
   <div style="width:2.8em;height:2.8em;border-radius:0.7em;background:linear-gradient(135deg,#EEEDF8,#E1DFF5);border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;margin:0 auto 0.7em;color:#5654A2;box-shadow:0 6px 16px rgba(86,84,162,0.18);"><i data-lucide="presentation" style="width:1.4em;height:1.4em;stroke-width:1.7;"></i></div>
 
