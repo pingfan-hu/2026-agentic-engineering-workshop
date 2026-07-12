@@ -8,7 +8,7 @@
   <div style="font-family:'Maple Mono',monospace;font-size:0.82em;color:#FFB84D;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.55em;">— practice 02 —</div>
 
   <div style="font-size:0.85em;font-weight:800;color:#F8F7F0;line-height:1.15;margin-bottom:1.1em;letter-spacing:-0.01em;">
-   Build your own skill, end to end.
+   Build and test your own skill.
   </div>
 
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8em;">
@@ -18,7 +18,7 @@
      <i data-lucide="folder-git-2" style="width:1em;height:1em;stroke-width:2;color:#FFB84D;"></i>
      <span style="font-size:0.56em;font-weight:700;color:#FFD27F;">Create repo</span>
     </div>
-    <div style="font-size:0.5em;color:#C9C4BC;line-height:1.5;">Hold your skills, plus the symlink shell command.</div>
+    <div style="font-size:0.5em;color:#C9C4BC;line-height:1.5;">Stores your skills and the symlink shell command.</div>
    </div>
 
    <div style="background:rgba(248,247,240,0.04);border:1px solid rgba(255,184,77,0.2);border-radius:12px;padding:0.7em 0.85em;">

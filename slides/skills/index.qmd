@@ -70,41 +70,21 @@ title-slide-attributes:
 
 {{< include resources/practice-2.qmd >}}
 
-## The minimal skill {.light-centered .center}
-
-{{< include resources/minimal-tree.qmd >}}
-
-## Minimal in form, not in function {.light-centered .center}
-
-{{< include resources/ph-prefix.qmd >}}
-
-## Add templates and scripts {.light-centered .center}
-
-{{< include resources/complex-structure.qmd >}}
-
-## These slides were built with `/ph-slide` {.light-centered .center}
-
-{{< include resources/workshop-built.qmd >}}
-
 ## Randomness vs determinism {.light-centered .center}
 
 {{< include resources/determinism.qmd >}}
+
+## Randomness naturally exists in LLMs {.light-centered .center}
+
+{{< include resources/randomness-gift.qmd >}}
 
 ## Pinned down by a template and a script {.light-centered .center}
 
 {{< include resources/seasoning.qmd >}}
 
-## Nest another agent {.light-centered .center}
+## Determinism and randomness, mixed {.light-centered .center}
 
-{{< include resources/nested-agents.qmd >}}
-
-## One skill, many workflows {.light-centered .center}
-
-{{< include resources/bundled.qmd >}}
-
-## `/surveydown`: four workflows, one name {.light-centered .center}
-
-{{< include resources/surveydown.qmd >}}
+{{< include resources/reference-mechanism.qmd >}}
 
 ## &nbsp; {.dark-centered .center}
 

@@ -4,7 +4,7 @@
  <!-- T-bar: the shared example (full-width bar, one line) -->
  <div style="background:#FFFFFF;border:1px solid #D8CFE0;border-radius:14px;padding:0.5em 1.1em;box-shadow:0 4px 16px rgba(86,84,162,0.1);display:flex;align-items:center;justify-content:center;gap:0.7em;">
   <div style="width:1.7em;height:1.7em;border-radius:0.5em;background:#F0EDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;"><i data-lucide="clipboard-list" style="width:0.95em;height:0.95em;stroke-width:1.9;"></i></div>
-  <div style="font-size:0.6em;font-weight:700;color:#2C3E50;line-height:1.25;white-space:nowrap;">A <span style="font-family:'Maple Mono',monospace;color:#5654A2;background:#EEEDF8;padding:0.05em 0.4em;border-radius:5px;">/surveydown-skill</span> with six focused sections</div>
+  <div style="font-size:0.6em;font-weight:700;color:#2C3E50;line-height:1.25;white-space:nowrap;">A <span style="font-family:'Maple Mono',monospace;color:#5654A2;background:#EEEDF8;padding:0.05em 0.4em;border-radius:5px;">/surveydown-skill</span> that wraps up multiple usages of <a href="https://surveydown.org" target="_blank" rel="noopener noreferrer" class="sd-link">surveydown</a>.</div>
  </div>
 
  <!-- divider -->
@@ -45,7 +45,7 @@
 
     <div style="display:flex;align-items:center;gap:0.55em;">
      <div style="width:1.8em;height:1.8em;border-radius:0.5em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;flex-shrink:0;"><i data-lucide="clipboard-list" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
-     <div style="font-size:0.66em;font-weight:700;color:#2C8475;line-height:1.15;">surveydown</div>
+     <div style="font-size:0.66em;font-weight:700;line-height:1.15;"><a href="https://surveydown.org" target="_blank" rel="noopener noreferrer" class="sd-link">surveydown</a></div>
     </div>
 
     <div style="height:1px;background:#EDEAE2;"></div>

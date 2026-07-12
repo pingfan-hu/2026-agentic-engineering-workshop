@@ -730,3 +730,36 @@ th { font-size: 24px; }
 
   &:active { background: rgba(255, 184, 77, 0.32); }
 }
+
+// ---- Inline "surveydown" links (case-subsections slide) ----
+// Teal light-slide twin of `.waza-btn-dark` above: same crisp badge layout
+// (small radius, subtle tint, thin full inset border), retinted for teal on
+// a light surface. Scoped as `.reveal a.` so it beats Quarto's global teal.
+.reveal a.sd-link {
+  display: inline;
+  cursor: pointer;
+  color: #2C8475 !important;
+  background: rgba(44, 132, 117, 0.1);
+  border-radius: 0.28em;
+  // The font reserves more room above the baseline than this lowercase word
+  // uses, so symmetric padding makes the text hug the bottom. line-height:1
+  // removes the inherited leading; the asymmetric vertical padding (small
+  // top, larger bottom) then lifts the text to the optical center WITHOUT
+  // growing the badge past its original size.
+  line-height: 1;
+  padding: 0.06em 0.3em 0.14em;
+  margin: 0 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-decoration: none !important;
+  box-shadow: inset 0 0 0 1px rgba(44, 132, 117, 0.35);
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: rgba(44, 132, 117, 0.18);
+    box-shadow: inset 0 0 0 1px rgba(44, 132, 117, 0.6);
+    color: #205F53 !important;
+  }
+
+  &:active { background: rgba(44, 132, 117, 0.26); }
+}

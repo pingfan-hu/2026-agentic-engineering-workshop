@@ -86,47 +86,21 @@ Now you know how to use a skill and how one works; time to create your own to me
 - a **YAML header** declaring `name` and `description` (this powers discovery), and
 - a **body**, the prompt loaded on invocation, stating the rules, conventions, and examples the agent should follow.
 
-### The minimal skill _(slide: The minimal skill)_
-
-At minimum a skill is a directory bearing the skill's name, holding a single `SKILL.md`. That is the only hard requirement. My `/ph-html` skill has only this one file, yet it produces every styled HTML component across my blog and slides.
-
-### Minimal in form, not in function _(slide: Minimal in form, not in function)_
-
-Minimal in form does not mean minimal in function; `ph-html` proves that. A small naming habit: I prefix every skill I author with my initials, `ph-`. Inside the `skills/` folder, everything I wrote sits together, separate from what I installed.
-
-### Add templates and scripts _(slide: Add templates and scripts)_
-
-A skill can carry more than the master `SKILL.md`. Because an LLM is stochastic, an instruction-only skill drifts between runs. Solidified resource files pin down what should not vary. My `/ph-slide` ships two folders:
-
-- `assets/`: the deterministic building blocks, a shared stylesheet, the deck config, a render script.
-- `template/`: a complete Quarto slide project to copy and adapt each time.
-
-### These slides were built with `/ph-slide` _(slide: These slides were built with /ph-slide)_
-
-You are looking at the output right now. All three parts of this workshop were built with `/ph-slide`: one theme, one taste, three decks. The template does the holding-still.
-
 ### Randomness vs determinism _(slide: Randomness vs determinism)_
 
-At their core LLMs are probability machines. Every output is sampled, not computed, so randomness is baked into everything an agent makes. Sometimes that is welcome; often it is not, and a banner should match its siblings. You build determinism in on purpose with two levers: **templates** (fixed examples the agent copies) and **scripts** (the pre- and post-processing that must never vary).
+At their core, LLMs are probability machines: every output is sampled, not computed, so randomness is baked into everything an agent makes. Often that is exactly what you want; other times it is not. Authoring a skill comes down to one judgment: deciding what should stay **random** and what must be **pinned down**.
+
+### When randomness is a gift _(slide: When randomness is a gift)_
+
+Sometimes the randomness is the creativity. Take `/create-image`, a stand-in for my real `/ph-image`. I give it one loose line, "a warm banner for a Chinese recipe blog," and run it three times. I get three different images, all on theme. I never described every pixel, and I did not want to: here the variety is the whole point.
 
 ### Pinned down by a template and a script _(slide: Pinned down by a template and a script)_
 
-Here are two ingredient icons. Everything deterministic is shared: the bottle, the cork, the framing, and the label text composited on afterward by a script (image models are unreliable with text, so the words live in code and are never garbled). The bottle comes from an image-to-image pass against a saved reference. Only the liquid, the part that should differ, is left random. The reader just sees a matched set.
+Other times precision matters. When I build recipe pages, the little seasoning bottles have to match across every dish, or the set looks sloppy. Here are two of them: cooking oil and light soy sauce. Both are liquids in the same bottle and cork, yet the color, texture, and background differ. Everything that must hold still (the bottle, the cork, the framing, and the label text composited on by a script) is shared; only the liquid, which should differ, is left free.
 
-### Nest another agent _(slide: Nest another agent)_
+### Determinism and randomness, mixed _(slide: Determinism and randomness, mixed)_
 
-No model is good at everything. A skill can call another agent that is better at a specific task, while your master agent keeps your context and setup. `/ph-image` does this: I give Claude Code a loose prompt; it enhances the prompt and sends it to Gemini; Gemini generates; Claude Code reviews and loops back if the result is wrong; the final image returns to me. I stay in the loop; the agents handle the prompt engineering and API calls.
-
-### One skill, many workflows _(slide: One skill, many workflows)_
-
-For a whole project, design one skill that embraces as many aspects as possible. Two reasons:
-
-1. **One name to recall:** memorizing many skill names is inefficient; one name for the project is enough.
-2. **Cheap to load:** the agent reads `SKILL.md`, then selectively picks only the related files, so token cost stays small.
-
-### `/surveydown`: four workflows, one name _(slide: /surveydown)_
-
-My `/surveydown` skill is the example. surveydown is an open-source survey platform (R, Quarto, Shiny, PostgreSQL). The skill bundles four full workflows under one name: create a survey, connect a database, deploy online, and record a video walkthrough. Each is a complete workflow, not a loose hint.
+How do you get both at once? A saved **reference image** plus an **image-to-image script**. The reference locks the parts I care about (the container and the seal); the script fills in the rest, a different liquid, color, and texture each run. Determinism and randomness in a single asset: the reader just sees a consistent, matched set. Knowing which parts to lock and which to leave free is the whole craft of authoring a skill.
 
 ### Practice 03 _(slide: dark, practice 03)_
 

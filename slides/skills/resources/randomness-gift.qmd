@@ -1,0 +1,35 @@
+```{=html}
+<div style="width:82%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.2em 1em 1.3em;border-radius:18px;">
+
+ <!-- the loose one-line prompt -->
+ <div style="background:#1E1E2E;border-radius:12px;padding:0.55em 0.9em;box-shadow:0 8px 22px rgba(0,0,0,0.18);display:flex;align-items:center;gap:0.6em;text-align:left;">
+  <span style="font-family:'Maple Mono',monospace;font-size:0.52em;font-weight:700;color:#FF9E80;flex-shrink:0;">/create-image</span>
+  <span style="font-family:'Maple Mono',monospace;font-size:0.47em;color:#C9C4BC;line-height:1.4;">"a white cat, vintage Japanese travel poster"</span>
+ </div>
+
+ <!-- divider -->
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:0.75em 0;"></div>
+
+ <!-- three results from the same prompt: similar theme, different every run -->
+ <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75em;">
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.4em;border:1px solid #F0C5BA;box-shadow:0 6px 18px rgba(212,95,71,0.14);line-height:0;">
+   <img src="figs/create-image-run1.png" alt="run 1" style="display:block;width:100%;height:auto;max-width:none;max-height:none;margin:0;border:none;box-shadow:none;border-radius:8px;" />
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.4em;border:1px solid #F0C5BA;box-shadow:0 6px 18px rgba(212,95,71,0.14);line-height:0;">
+   <img src="figs/create-image-run2.png" alt="run 2" style="display:block;width:100%;height:auto;max-width:none;max-height:none;margin:0;border:none;box-shadow:none;border-radius:8px;" />
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.4em;border:1px solid #F0C5BA;box-shadow:0 6px 18px rgba(212,95,71,0.14);line-height:0;">
+   <img src="figs/create-image-run3.png" alt="run 3" style="display:block;width:100%;height:auto;max-width:none;max-height:none;margin:0;border:none;box-shadow:none;border-radius:8px;" />
+  </div>
+
+ </div>
+
+ <div style="margin-top:0.85em;text-align:center;font-size:0.52em;color:#564232;line-height:1.55;">
+  <strong style="color:#2C8475;">Consistent theme</strong> but <strong style="color:#D45F47;">varied details</strong>.
+ </div>
+
+</div>
+```

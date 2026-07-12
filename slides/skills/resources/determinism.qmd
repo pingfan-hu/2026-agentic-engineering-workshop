@@ -1,33 +1,34 @@
 ```{=html}
-<div style="width:92%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.5em 1em;border-radius:18px;">
+<div style="width:90%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.4em 1em;border-radius:18px;">
 
- <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:0.9em;align-items:stretch;">
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.9em;align-items:stretch;">
 
-  <div style="background:#FFFFFF;border-radius:16px;padding:1.1em 1em 1.2em;text-align:left;border:1px solid rgba(212,95,71,0.22);box-shadow:0 10px 26px rgba(212,95,71,0.14);">
-   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.6em;">
+  <!-- Randomness (coral) -->
+  <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.05em 1.1em;text-align:left;border:1px solid rgba(212,95,71,0.22);box-shadow:0 10px 26px rgba(212,95,71,0.14);">
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.55em;">
     <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;"><i data-lucide="dices" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
-    <div style="font-size:0.6em;font-weight:700;color:#D45F47;">Random by default</div>
+    <div style="font-size:0.6em;font-weight:700;color:#D45F47;">Randomness</div>
+    <span style="margin-left:auto;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#D45F47;background:#FCEEEC;border:1px solid #F0C5BA;border-radius:999px;padding:0.22em 0.65em;white-space:nowrap;">creative</span>
    </div>
-   <div style="font-size:0.52em;color:#564232;line-height:1.6;">LLMs are probability machines. Every output is <strong style="color:#D45F47;">sampled</strong>, not computed. Ask for an apple ten times, get ten different apples.</div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.6;">Every output is <strong style="color:#D45F47;">sampled</strong>, not computed. Welcome when you want range: ask for a banner on a theme and get a fresh take each run, no need to describe every pixel.</div>
   </div>
 
-  <div style="background:#FFFBF3;border-radius:16px;padding:1.1em 1.05em 1.2em;text-align:left;box-shadow:0 10px 26px rgba(44,132,117,0.16);border:1px solid #C8E6C9;">
-   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.7em;">
+  <!-- Determinism (teal) -->
+  <div style="background:#FFFFFF;border-radius:16px;padding:1em 1.05em 1.1em;text-align:left;border:1px solid rgba(44,132,117,0.22);box-shadow:0 10px 26px rgba(44,132,117,0.14);">
+   <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.55em;">
     <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#E8F5E9;border:1px solid #C8E6C9;display:flex;align-items:center;justify-content:center;color:#2C8475;"><i data-lucide="anchor" style="width:0.95em;height:0.95em;stroke-width:1.8;"></i></div>
-    <div style="font-size:0.6em;font-weight:700;color:#2C8475;">Deterministic on purpose</div>
+    <div style="font-size:0.6em;font-weight:700;color:#2C8475;">Determinism</div>
+    <span style="margin-left:auto;font-family:'Maple Mono',monospace;font-size:0.4em;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2C8475;background:#E8F5E9;border:1px solid #C8E6C9;border-radius:999px;padding:0.22em 0.65em;white-space:nowrap;">precise</span>
    </div>
-   <div style="display:flex;flex-direction:column;gap:0.5em;">
-    <div style="display:flex;align-items:center;gap:0.6em;background:#FFFFFF;border-radius:9px;padding:0.5em 0.75em;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
-     <i data-lucide="copy" style="width:1.1em;height:1.1em;stroke-width:1.9;color:#2C8475;flex-shrink:0;"></i>
-     <div style="font-size:0.5em;color:#564232;line-height:1.45;"><strong style="color:#2C8475;">Templates:</strong> fixed examples the agent copies, never regenerates.</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:0.6em;background:#FFFFFF;border-radius:9px;padding:0.5em 0.75em;box-shadow:0 3px 10px rgba(44,132,117,0.08);">
-     <i data-lucide="terminal" style="width:1.1em;height:1.1em;stroke-width:1.9;color:#2C8475;flex-shrink:0;"></i>
-     <div style="font-size:0.5em;color:#564232;line-height:1.45;"><strong style="color:#2C8475;">Scripts:</strong> the pre- and post-processing that must never vary.</div>
-    </div>
-   </div>
+   <div style="font-size:0.5em;color:#564232;line-height:1.6;">Some work must follow <strong style="color:#2C8475;">exact rules</strong>, identical every run: a Mac-app release, a deploy pipeline, a matched set of icons. No surprises allowed.</div>
   </div>
 
+ </div>
+
+ <!-- punchline bar -->
+ <div style="margin-top:0.9em;background:#FFFBF3;border:1px solid #EFE6D6;border-radius:12px;padding:0.72em 1em;display:flex;align-items:center;justify-content:center;gap:0.6em;box-shadow:0 4px 14px rgba(86,84,162,0.08);">
+  <i data-lucide="scale" style="width:1.15em;height:1.15em;stroke-width:1.9;color:#5654A2;flex-shrink:0;"></i>
+  <div style="font-size:0.54em;color:#2C3E50;line-height:1.45;">Authoring a skill is deciding <strong style="color:#D45F47;">what stays random</strong> and <strong style="color:#2C8475;">what gets pinned down</strong>.</div>
  </div>
 
 </div>
