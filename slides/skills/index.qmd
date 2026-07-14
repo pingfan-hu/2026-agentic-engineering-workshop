@@ -70,11 +70,11 @@ title-slide-attributes:
 
 {{< include resources/practice-2.qmd >}}
 
-## Randomness vs determinism {.light-centered .center}
+## &nbsp; {.light-centered .center}
 
 {{< include resources/determinism.qmd >}}
 
-## Randomness naturally exists in LLMs {.light-centered .center}
+## [Randomness]{.coral} naturally exists in LLMs {.light-centered .center}
 
 {{< include resources/randomness-gift.qmd >}}
 
