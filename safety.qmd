@@ -13,6 +13,8 @@ grid:
   </a>
 </p>
 
+<p class="rotate-hint">Rotate your phone sideways for a full-size view</p>
+
 <div class="slide-embed">
   <iframe
     src="slides/safety/"

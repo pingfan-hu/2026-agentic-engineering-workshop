@@ -42,8 +42,8 @@ Navbar order is the source of truth (`_quarto.yml` → `website.navbar.left`):
 
 | Page | File | Role |
 |---|---|---|
-| Home | `index.qmd` | Landing — author cards (`resources/authors.qmd`), GW affiliation, three Part-N section grids (`resources/part-{1,2,3}-overview.qmd`) |
-| 0. Installation | `installation.qmd` | Pre-workshop setup — two sections (Agents, Software) pulled in from `resources/agents.qmd` and `resources/software.qmd` |
+| Home | `index.qmd` | Landing — author cards (`resources/authors.qmd`), GW affiliation, four Part-N section grids (`resources/part-{0,1,2,3}-overview.qmd`; Part 0 links to the installation page) |
+| 0. Installation | `installation.qmd` | Pre-workshop setup — three sections (Essentials, Agents, Software) pulled in from `resources/essentials.qmd`, `resources/agents.qmd`, and `resources/software.qmd` |
 | 1. Agentic Basics | `basics.qmd` | iframes `slides/basics/` |
 | 2. Skill Usage and Design | `skills.qmd` | iframes `slides/skills/` |
 | 3. Data Safety with AI | `safety.qmd` | iframes `slides/safety/` |
@@ -61,7 +61,7 @@ Slide page filenames and their deck directories under `slides/` share the same s
 - `slides/<deck>/_quarto.yml` — `project:` + `resources: figs/` + `metadata-files: [../_shared.yml]`. ~6 lines.
 - `slides/<deck>/index.qmd` — front matter (`pagetitle`, `title`, **per-deck** `title-slide-attributes` for the banner image), then slide content.
 - `slides/<deck>/figs/banner.png` — round PNG (transparent corners) used as the title slide's `data-background-image`. See "Title slide & banner mechanics".
-- `slides/<deck>/SCRIPTS.md` — speaker script for the deck, organized into the same three sections as `resources/part-N-overview.qmd`. Source for slide content.
+- `slides/<deck>/SCRIPTS.md` — speaker script for the deck, organized into the same three sections as `resources/part-N-overview.qmd`. Source for slide content. Present for the `skills` and `safety` decks; the `basics` deck currently has none.
 - `styles/styles.scss` — parent **website** styles. All component CSS lives here (see "Component CSS conventions") — never inline `<style>` blocks in qmd files.
 - `styles/styles.js` — parent-website JS entry, loaded via `include-after-body` in `_quarto.yml` alongside the Lucide icons CDN. Touch this for landing-page behavior or icon rendering changes.
 - `images/` — parent website static assets, registered as a Quarto resource in `_quarto.yml` so it's copied into `_site/` as-is. `images/software/` holds the app icons used by `resources/software.qmd`; `images/{pingfan-hu,john-helveston}.png` are the author headshots.
@@ -80,7 +80,7 @@ For tables, card grids, author cards, etc.:
 Current component families in `styles/styles.scss`:
 - `.swtbl-*` — two-column tables in `resources/agents.qmd` and `resources/software.qmd` (icon + name on left, description on right, with a head/body layout that flips on mobile)
 - `.auth-*` — author headshot cards in `resources/authors.qmd`
-- `.section-*` — colored Part-N section grids in `resources/part-{1,2,3}-overview.qmd`
+- `.section-*` — colored Part-N section grids in `resources/part-{0,1,2,3}-overview.qmd`
 - `.slide-embed*` — iframe wrapper used by the three slide pages
 - `.affiliation*` — GW affiliation row at the top of `index.qmd`
 
@@ -109,7 +109,7 @@ If you change banner position or size, edit each deck's `index.qmd` front matter
 
 ## Speaker scripts → slide content
 
-Each deck has a `SCRIPTS.md` (speaker script) and an `index.qmd` (slide content). They evolve together:
+A deck's `SCRIPTS.md` (speaker script) and its `index.qmd` (slide content) evolve together (the `skills` and `safety` decks have a `SCRIPTS.md`; `basics` does not):
 
 - `SCRIPTS.md` is the source of truth for what to *say*; structured into the three sections defined in `resources/part-N-overview.qmd`
 - `index.qmd` is the slide deck; bullets/short paragraphs that match the script

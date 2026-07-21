@@ -1855,3 +1855,59 @@ body:has(.slide-embed) #quarto-content > * {
   outline: 2px solid #FFB84D;
   outline-offset: 2px;
 }
+
+// "Rotate your phone" hint. Hidden everywhere except portrait phones, where the
+// deck below is rotated to landscape (see the mobile block). Muted teal reads on
+// both the light parchment and the dark navy page background.
+.rotate-hint {
+  display: none;
+  margin: 0 0 0.85rem;
+  text-align: center;
+  font-family: 'Maple Mono', monospace;
+  font-size: 0.82rem;
+  color: #0A6E86;
+}
+
+// ---- Mobile: full-width deck + rotate-to-landscape ----
+// A reveal.js deck is inherently landscape, so on a portrait phone the fixed
+// 16:9 embed is tiny. On phones we (1) let the deck column go full-bleed, and
+// (2) in portrait only, rotate the iframe 90deg so it renders as a large
+// landscape slide the viewer reads by turning the phone sideways. Turning the
+// phone flips the browser to landscape, this portrait block stops applying, and
+// the deck shows upright at full width. The grid override below repeats the
+// base selector (styles.scss ~line 1775) at equal specificity so later source
+// order wins on phones without !important.
+@media (max-width: 640px) {
+  body:has(.slide-embed).fullcontent:not(.floating):not(.docked) .page-columns {
+    grid-template-columns:
+      [screen-start screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0, 1fr)
+      [body-content-end body-end body-end-outset page-end-inset page-end screen-end-inset screen-end];
+  }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .rotate-hint {
+    display: block;
+  }
+
+  .slide-embed {
+    // Short edge of the landscape slide: fit to viewport width, but cap it so the
+    // long edge (16/9 taller) still clears the navbar + hint inside the dynamic
+    // viewport height. dvh tracks mobile browser chrome; 160px ~ navbar + hint.
+    --deck-short: min(94vw, calc((100dvh - 160px) * 9 / 16));
+    width: 100%;
+    aspect-ratio: auto;
+    height: calc(var(--deck-short) * 16 / 9);
+    margin-inline: auto;
+  }
+
+  .slide-embed iframe {
+    // Pre-rotation dimensions; rotate 90deg swaps them into a landscape footprint
+    // that reveal.js scales its content to fill.
+    width: calc(var(--deck-short) * 16 / 9);
+    height: var(--deck-short);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
