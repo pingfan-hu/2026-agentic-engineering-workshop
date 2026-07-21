@@ -78,26 +78,14 @@ title-slide-attributes:
 
 {{< include resources/randomness-gift.qmd >}}
 
-## Pinned down by a template and a script {.light-centered .center}
+## Workarounds for [Determinism]{.teal} {.light-centered .center}
 
 {{< include resources/seasoning.qmd >}}
 
-## Determinism and randomness, mixed {.light-centered .center}
-
-{{< include resources/reference-mechanism.qmd >}}
-
-## &nbsp; {.dark-centered .center}
-
-{{< include resources/practice-3.qmd >}}
-
-## Four shapes of a skill {.light-centered .center}
+## Skills, in summary {.dark-centered .center}
 
 {{< include resources/takeaways.qmd >}}
 
-## &nbsp; {.dark-centered .center}
+## My takeaway {.dark-centered .center}
 
 {{< include resources/for-humans.qmd >}}
-
-## Up next {.dark-centered .center}
-
-{{< include resources/up-next.qmd >}}

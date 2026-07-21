@@ -1,44 +1,58 @@
 ```{=html}
-<div style="width:84%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.2em 1em 1.3em;border-radius:18px;">
+<div style="width:86%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.3em 1.2em;border-radius:18px;">
 
- <!-- premise: randomness can't be removed, only cornered -->
- <div style="background:#FFFBF3;border:1px solid #EFE6D6;border-radius:12px;padding:0.6em 1em;display:flex;align-items:center;justify-content:center;gap:0.6em;box-shadow:0 4px 14px rgba(86,84,162,0.08);">
-  <i data-lucide="lightbulb" style="width:1.1em;height:1.1em;stroke-width:1.9;color:#5654A2;flex-shrink:0;"></i>
-  <div style="font-size:0.52em;color:#2C3E50;line-height:1.45;">Randomness <strong style="color:#D45F47;">can't be turned off</strong>. The workaround: <strong style="color:#2C8475;">shrink the space</strong> it can act in.</div>
+ <!-- the effect: three bottles in one matched set -->
+ <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.85em;">
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.5em;box-shadow:0 8px 22px rgba(44,62,80,0.12);border:1px solid #EFE6D6;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.42em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5654A2;text-align:center;padding:0.35em 0 0.5em;">Cooking Oil</div>
+   <img src="figs/cooking-oil.png" alt="Cooking oil" style="display:block;width:100%;height:auto;border-radius:9px;" />
+  </div>
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.5em;box-shadow:0 8px 22px rgba(44,62,80,0.12);border:1px solid #EFE6D6;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.42em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5654A2;text-align:center;padding:0.35em 0 0.5em;">Light Soy Sauce</div>
+   <img src="figs/light-soy-sauce.png" alt="Light soy sauce" style="display:block;width:100%;height:auto;border-radius:9px;" />
+  </div>
+  <div style="background:#FFFFFF;border-radius:14px;padding:0.5em;box-shadow:0 8px 22px rgba(44,62,80,0.12);border:1px solid #EFE6D6;">
+   <div style="font-family:'Maple Mono',monospace;font-size:0.42em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5654A2;text-align:center;padding:0.35em 0 0.5em;">Tomato Paste</div>
+   <img src="figs/tomato-paste.png" alt="Tomato paste" style="display:block;width:100%;height:auto;border-radius:9px;" />
+  </div>
  </div>
 
- <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:1em;align-items:center;margin-top:0.9em;">
+ <!-- divider -->
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin:1em 0 0.9em;"></div>
 
-  <!-- the matched set -->
-  <div style="display:flex;gap:0.8em;justify-content:center;">
-   <div style="background:#FFFFFF;border-radius:14px;padding:0.6em;box-shadow:0 8px 22px rgba(44,62,80,0.12);border:1px solid #EFE6D6;">
-    <img src="figs/cooking-oil.png" alt="Cooking oil icon" style="width:5.2em;height:5.2em;object-fit:contain;display:block;border-radius:9px;" />
+ <!-- the three moves that pin everything but the liquid -->
+ <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.8em;">
+
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.75em 0.85em;border:1px solid rgba(44,132,117,0.22);box-shadow:0 8px 20px rgba(44,132,117,0.10);text-align:left;">
+   <div style="display:flex;align-items:center;gap:0.55em;">
+    <div style="width:1.9em;height:1.9em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;flex-shrink:0;">
+     <i data-lucide="image" style="width:1em;height:1em;stroke-width:1.8;"></i>
+    </div>
+    <div style="font-size:0.5em;font-weight:700;color:#2C8475;white-space:nowrap;">Template</div>
    </div>
-   <div style="background:#FFFFFF;border-radius:14px;padding:0.6em;box-shadow:0 8px 22px rgba(44,62,80,0.12);border:1px solid #EFE6D6;">
-    <img src="figs/light-soy-sauce.png" alt="Light soy sauce icon" style="width:5.2em;height:5.2em;object-fit:contain;display:block;border-radius:9px;" />
-   </div>
+   <div style="font-size:0.46em;color:#564232;line-height:1.5;margin-top:0.5em;">One base bottle for every cooking liquid.</div>
   </div>
 
-  <!-- how each part gets pinned -->
-  <div style="text-align:left;display:flex;flex-direction:column;gap:0.5em;">
-   <div style="display:flex;align-items:flex-start;gap:0.6em;background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border:1px solid rgba(44,132,117,0.22);">
-    <i data-lucide="image" style="width:1em;height:1em;stroke-width:1.9;color:#2C8475;flex-shrink:0;margin-top:0.1em;"></i>
-    <div style="font-size:0.5em;color:#564232;line-height:1.5;"><strong style="color:#2C8475;">Template:</strong> image-to-image against a reference pins the bottle, cork, and framing.</div>
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.75em 0.85em;border:1px solid rgba(44,132,117,0.22);box-shadow:0 8px 20px rgba(44,132,117,0.10);text-align:left;">
+   <div style="display:flex;align-items:center;gap:0.55em;">
+    <div style="width:1.9em;height:1.9em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;flex-shrink:0;">
+     <i data-lucide="file-code" style="width:1em;height:1em;stroke-width:1.8;"></i>
+    </div>
+    <div style="font-size:0.5em;font-weight:700;color:#2C8475;white-space:nowrap;">Script</div>
    </div>
-   <div style="display:flex;align-items:flex-start;gap:0.6em;background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(44,132,117,0.08);border:1px solid rgba(44,132,117,0.22);">
-    <i data-lucide="file-code" style="width:1em;height:1em;stroke-width:1.9;color:#2C8475;flex-shrink:0;margin-top:0.1em;"></i>
-    <div style="font-size:0.5em;color:#564232;line-height:1.5;"><strong style="color:#2C8475;">Script:</strong> a Python script composites the label text, identical every run.</div>
-   </div>
-   <div style="display:flex;align-items:flex-start;gap:0.6em;background:#FFFFFF;border-radius:10px;padding:0.55em 0.8em;box-shadow:0 4px 14px rgba(212,95,71,0.08);border:1px solid rgba(212,95,71,0.22);">
-    <i data-lucide="shuffle" style="width:1em;height:1em;stroke-width:1.9;color:#D45F47;flex-shrink:0;margin-top:0.1em;"></i>
-    <div style="font-size:0.5em;color:#564232;line-height:1.5;"><strong style="color:#D45F47;">Left random:</strong> only the liquid, which should differ in color and texture.</div>
-   </div>
+   <div style="font-size:0.46em;color:#564232;line-height:1.5;margin-top:0.5em;">Image-to-image scripts based on the template.</div>
   </div>
 
- </div>
+  <div style="background:#FFFFFF;border-radius:12px;padding:0.75em 0.85em;border:1px solid rgba(44,132,117,0.22);box-shadow:0 8px 20px rgba(44,132,117,0.10);text-align:left;">
+   <div style="display:flex;align-items:center;gap:0.55em;">
+    <div style="width:1.9em;height:1.9em;border-radius:0.45em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;flex-shrink:0;">
+     <i data-lucide="pen-line" style="width:1em;height:1em;stroke-width:1.8;"></i>
+    </div>
+    <div style="font-size:0.5em;font-weight:700;color:#2C8475;white-space:nowrap;">Post-processing</div>
+   </div>
+   <div style="font-size:0.46em;color:#564232;line-height:1.5;margin-top:0.5em;">Label stamped afterwards: fixed font, size, and color.</div>
+  </div>
 
- <div style="margin-top:0.85em;text-align:center;font-size:0.48em;color:#9B8EA0;line-height:1.5;">
-  The reader just sees a matched set.
  </div>
 
 </div>
