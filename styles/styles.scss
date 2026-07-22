@@ -702,8 +702,13 @@ body.quarto-dark nav.sidebar.sidebar-navigation:not(.rollup) { background-color:
 
 .sidebar-title { color: #ECF0F1; }
 
-// Show site title only when navbar is collapsed (mobile)
-@media (min-width: 992px) {
+// Show the site title only when the navbar is collapsed (hamburger). This
+// breakpoint MUST match the navbar's EFFECTIVE collapse breakpoint (1100px). Quarto
+// ships `navbar-expand-lg` (native collapse below 992px); the force-collapse block
+// below extends that up to 1100px, since 1100 is not a native Bootstrap breakpoint.
+// Above 1100px the nav is expanded and the title is hidden; below 1100px it is
+// collapsed and the title shows (as it does on phones).
+@media (min-width: 1100px) {
   .navbar-brand-container,
   .navbar .navbar-brand { display: none !important; }
 }
@@ -746,6 +751,75 @@ body.quarto-dark nav.sidebar.sidebar-navigation:not(.rollup) { background-color:
 // navbar content otherwise wraps and overlaps the page below.
 @media (max-width: 575.98px) {
   .navbar-gw-link { display: none !important; }
+}
+
+// ---- Custom 1100px collapse breakpoint ----
+// The desired collapse point is 1100px, which is NOT a native Bootstrap breakpoint
+// (lg = 992, xl = 1200). Quarto ships `navbar-expand-lg`, so the nav is natively
+// expanded at >=992px. In the 992–1099 band we force it back to the collapsed
+// (hamburger) layout by reversing the five rules `.navbar-expand-lg` applies at
+// >=992px. Below 992px the nav is already collapsed natively, and at >=1100px it is
+// expanded natively — so only this band needs overriding.
+@media (min-width: 992px) and (max-width: 1099.98px) {
+  .navbar-expand-lg { flex-wrap: wrap !important; }                 // let the menu drop below
+  .navbar-expand-lg .navbar-nav { flex-direction: column !important; }
+  .navbar-expand-lg .navbar-toggler { display: inline-block !important; }  // show hamburger
+  .navbar-expand-lg .navbar-collapse { display: none !important; flex-basis: 100% !important; }
+  // Keep the open/animating menu visible (the plain rule above would hide it).
+  .navbar-expand-lg .navbar-collapse.show,
+  .navbar-expand-lg .navbar-collapse.collapsing { display: block !important; }
+}
+
+// ---- Collapsed navbar: reduce Quarto's many stages to ONE stable layout ----
+// Goal: only three states exist — (A) narrow phone: hamburger + title + tools, GW
+// logo hidden; (B) wider phone: same, plus the GW logo on the right; (C) >=1100px:
+// full desktop nav. Quarto's default instead shuffles the GW logo and tools around
+// as the width changes. This block covers the whole collapsed range (< 1100px).
+//
+// Root cause: .navbar-container is a flex-WRAP row. Quarto gives the tools
+// `order: 900` and the GW logo `order: 9999` — both HIGHER than the collapse menu,
+// which takes a full-width row when the hamburger opens, so they wrap BELOW the menu
+// (the GW logo's -100px margins then float it over the page). Pin every top-bar item
+// to a low order and force the collapse menu last, so the top bar is always row 1 and
+// the dropdown always sits on its own row 2 beneath it.
+//
+// `!important` is REQUIRED on every order: Quarto's own `.quarto-navbar-tools
+// {order:900}` loads later in the cascade with equal specificity, so without it the
+// tools keep order 900 — which both puts them right of the GW logo (900 > logo's 4)
+// and drops them below the open menu (900 > the menu's 5). That was an extra state.
+@media (max-width: 1099.98px) {
+  .navbar-brand-container { order: 2 !important; }               // title
+  .navbar-gw-link {
+    order: 4 !important;                 // GW logo, right of tools
+    margin-left: 12px !important;        // tools↔GW gap == the hamburger↔title gap
+  }
+  .navbar-container > .navbar-collapse { order: 5 !important; }  // dropdown always wraps below
+
+  .navbar-toggler {
+    order: 1 !important;                 // hamburger, far left
+    margin-right: 12px !important;       // gap to the title == the tools↔GW logo gap
+    // Shrink the hamburger so the collapsed top bar is as short as the desktop nav.
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  .quarto-navbar-tools {
+    order: 3 !important;                 // GitHub + theme toggle
+    // Push the tools + GW logo to the right edge. Quarto's container uses
+    // `justify-content: space-between`, which would otherwise strand the tools mid-bar;
+    // an auto left margin absorbs the free space so the tools sit flush against the GW
+    // logo, and the title stays hard against the hamburger on the left.
+    margin-left: auto !important;
+  }
+
+  // Flatten the brand's vertical padding so the title row is as short as the desktop
+  // nav (whose links use reduced padding). This is what made stages A/B taller.
+  .navbar-brand-container,
+  .navbar-brand-container .navbar-brand {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }
 
 nav.navbar {
@@ -801,7 +875,12 @@ nav.navbar {
 }
 
 .navbar-nav {
-  @media (min-width: 768px) {
+  // Horizontal nav styling (single row, gaps, vertical dividers) belongs only to the
+  // EXPANDED desktop nav. This breakpoint must match the navbar's EFFECTIVE collapse
+  // point (1100px, set by the force-collapse block above); below it, the vertical
+  // dropdown must NOT get the horizontal-bar styling (that caused the "larger line
+  // spacing / dividers" seen in the collapsed range).
+  @media (min-width: 1100px) {
     flex-wrap: nowrap !important;
     white-space: nowrap;
     .nav-item { flex-shrink: 1; }
@@ -1844,5 +1923,74 @@ body:has(.slide-embed) .footer {
     height: 100vw;
     transform-origin: top left;
     transform: translateX(100vw) rotate(90deg);
+  }
+}
+
+// ---- Deck home button (jump to the first slide) ----
+// Injected by styles.js only on deck pages. Fixed at the deck's top-left corner:
+// like .slide-embed it is position:fixed, so in portrait the transformed body is
+// its containing block and it rides the rotated page to the same corner. It floats
+// over slide content (navy title or light body), so it is styled to read on
+// either: frosted surface, subtle border, soft shadow. Per the repo's hover rule
+// there is no hover translate (avoids the retina layer-promotion shake); hover
+// changes surface/shadow/color only, and the press lives on :active.
+.deck-home-btn {
+  position: fixed;
+  top: calc(var(--nav-h) + 12px);
+  left: 12px;
+  z-index: 20;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+
+  border: 1px solid rgba(1, 61, 91, 0.14);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: #013D5B;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(1, 61, 91, 0.18);
+
+  // Pre-promote so the :active scale does not spin up its compositor layer on the
+  // fly (same shake-avoidance reason as the hover rule above).
+  will-change: transform;
+  transition:
+    background-color 150ms ease,
+    box-shadow 150ms ease,
+    color 150ms ease,
+    transform 100ms ease;
+
+  svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+
+  // Invert on hover: static is a light surface + navy stroke, hover flips to the
+  // deck's purple fill + white stroke. Purple (#5654A2) is the deck's heading and
+  // link color, used across both the light (cream) and dark (navy) slides, so it
+  // harmonizes with both themes; being violet, it also stays distinct from the
+  // navy title slide. Border matches the fill so the swatch reads as one tile.
+  &:hover {
+    background: #5654A2;
+    border-color: #5654A2;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(1, 61, 91, 0.30);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #5654A2;
+    outline-offset: 2px;
+  }
+
+  // Momentary press; a transform on :active is fine (it does not shake siblings).
+  &:active {
+    transform: scale(0.92);
+    box-shadow: 0 1px 4px rgba(1, 61, 91, 0.22);
   }
 }

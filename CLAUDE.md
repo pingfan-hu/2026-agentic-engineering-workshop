@@ -118,17 +118,13 @@ A deck's `SCRIPTS.md` (speaker script) and its `index.qmd` (slide content) evolv
 
 ## Project hooks
 
-`.claude/settings.local.json` defines a **`Stop`** hook that runs `scripts/refresh-preview.sh` after every Claude turn. The script:
+There are **no project-level hooks**. `.claude/settings.local.json` is an empty file, and there is no `scripts/refresh-preview.sh` (the only file in `scripts/` is `render-slides.sh`, the post-render glue). Nothing auto-cleans `_site/` or restarts `quarto preview`.
 
-1. Stops any running `quarto preview` processes
-2. Removes `_site/` from the parent + each `slides/*/` subproject
-3. Cleans accumulating `quarto-session-temp*` cruft inside each `.quarto/` (preserves `xref/`, `idx/`, `project-cache/` for fast incremental rebuilds)
-
-It does **not** auto-restart `quarto preview` — restart manually when you want to view changes. Output is logged to `/tmp/quarto-refresh.log`.
+**Do not delete `_site/`** as a cleanup step. The user may have a live `quarto preview` build there; removing it wipes their served output. If you need Quarto's compiled output to inspect (e.g. the generated CSS), render into a throwaway location or leave the existing `_site/` in place, and never `rm -rf _site` in this repo.
 
 ## Stale `.quarto/idx` after editing `slides/_shared.yml`
 
-Changes to **format-level** options in `slides/_shared.yml` (the shared revealjs config) may not take effect on the next render, because Quarto bakes those values into each deck's `.quarto/idx` cache, and the `Stop` hook above deliberately **preserves `idx/`** for fast rebuilds. The compiled `_site/index.html` then keeps re-emitting the old value no matter how many times you restart `quarto preview` — the source config looks right but the behavior doesn't change.
+Changes to **format-level** options in `slides/_shared.yml` (the shared revealjs config) may not take effect on the next render, because Quarto bakes those values into each deck's `.quarto/idx` cache and reuses it for fast incremental rebuilds. The compiled `_site/index.html` then keeps re-emitting the old value no matter how many times you restart `quarto preview` — the source config looks right but the behavior doesn't change.
 
 Symptom seen once: flipping `preview-links: auto` → `false` correctly set reveal's `previewLinks: false`, but Quarto's separate `previewLinksAuto` (the fullscreen link-preview handler that produces the "Unable to load iframe … x-frame-options" overlay when a slide links to an external site like GitHub) stayed `true` from cache, so external links kept opening in a failing iframe instead of a new tab.
 
@@ -140,4 +136,4 @@ Fix: force a clean render of the affected deck(s) — `rm -rf slides/<deck>/.qua
 
 ## Settings file
 
-`.claude/settings.local.json` is intentionally minimal — only the `Stop` hook lives there. The user runs in auto mode, so accumulated permission allowlists aren't kept around. Don't add a `permissions.allow` block back unless explicitly asked.
+`.claude/settings.local.json` is intentionally an **empty file** — no hooks, no permissions. The user runs in auto mode, so accumulated permission allowlists aren't kept around. Don't add a `permissions.allow` block (or any other config) back unless explicitly asked.
