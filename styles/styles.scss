@@ -1780,8 +1780,11 @@ body.quarto-dark {
 }
 
 // Lock the deck page to the viewport: no page scroll (the deck owns the screen).
+// Navy background fills the sliver behind iOS Safari's toolbar in portrait (see
+// the svh note below) so it never flashes white.
 html:has(.slide-embed) {
   overflow: hidden;
+  background: #2C3E50;
 }
 
 body:has(.slide-embed) {
@@ -1830,7 +1833,14 @@ body:has(.slide-embed) .footer {
     position: absolute;
     top: 0;
     left: 0;
+    // The body width becomes the screen's vertical extent after rotation. iOS
+    // Safari's `vh` is the LARGE viewport (toolbar hidden), so `100vh` would push
+    // the deck's far edge behind the bottom toolbar. `svh` is the visible height
+    // with the toolbar shown, which is stable here since the page never scrolls.
+    // `vh` stays as the fallback for browsers without small-viewport units; on
+    // desktop svh == vh, so there is no change there.
     width: 100vh;
+    width: 100svh;
     height: 100vw;
     transform-origin: top left;
     transform: translateX(100vw) rotate(90deg);
