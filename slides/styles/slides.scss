@@ -513,10 +513,21 @@ th { font-size: 24px; }
   text-align: center;
 }
 
-// Title slide uses Reveal's data-background layer so the banner image can show through.
-// Override .dark-centered's solid fill on the title-slide section only.
+// Title slide banner. The banner is a CSS background ON the #title-slide section
+// (image set per-deck via `style: "... background-image: url(figs/banner.png)"` in
+// each deck's title-slide-attributes), NOT Reveal's data-background layer. That
+// keeps it INSIDE the scaled .slides stage, so it sizes and positions relative to
+// the slide content and scales with it, exactly like a body slide. Size/position
+// live here (shared, one place to tune). The section stays transparent so the navy
+// `data-background-color` layer shows behind the circular banner.
 #title-slide.dark-centered {
   background-color: transparent !important;
+}
+
+#title-slide {
+  background-repeat: no-repeat;
+  background-size: 28%;
+  background-position: right 12% center;
 }
 
 .black-centered {
@@ -762,4 +773,25 @@ th { font-size: 24px; }
   }
 
   &:active { background: rgba(44, 132, 117, 0.26); }
+}
+
+// ---- Footer + slide number: scale with reveal's stage ----
+// Reveal scales the .slides stage (1050x700) by S = min(availW/1050, availH/700)
+// to fit the viewport, but the footer and slide number are position:fixed to the
+// .reveal container OUTSIDE that scaled stage, so they keep a fixed px size. On a
+// short (height-limited) viewport the stage nearly fills the height while these
+// stay large, so they overlap the shrunken content. Reproduce reveal's own scale
+// with min(designPx, designPx*vw/10.5, designPx*vh/7): capped at the design size
+// (normal and large viewports unchanged) and shrinking in lockstep with the
+// content below that. `div.reveal` outranks the quarto footer plugin's
+// `.reveal .footer` so this wins regardless of stylesheet order.
+div.reveal .footer {
+  font-size: min(18px, 1.714vw, 2.571vh);
+  bottom: min(18px, 1.714vw, 2.571vh);
+}
+
+div.reveal .slide-number {
+  font-size: min(16px, 1.524vw, 2.286vh);
+  bottom: min(10px, 0.952vw, 1.429vh);
+  right: min(10px, 0.952vw, 1.429vh);
 }

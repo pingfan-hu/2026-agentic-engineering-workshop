@@ -3,11 +3,8 @@ pagetitle: "Skill Usage and Design"
 title: "[Skill Usage and Design]{.amber}"
 title-slide-attributes:
   data-background-color: "#2C3E50"
-  data-background-image: figs/banner.png
-  data-background-size: 24%
-  data-background-position: right 20% center
   class: dark-centered
-  style: text-align:left;
+  style: "text-align:left; background-image: url(figs/banner.png);"
 ---
 
 ## Today {.dark-centered .center}
