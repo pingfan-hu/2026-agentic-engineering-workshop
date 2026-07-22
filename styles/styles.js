@@ -97,6 +97,27 @@ document.addEventListener('click', function (e) {
   if (e.target.closest('.code-copy-button')) e.target.closest('.code-copy-button').blur();
 });
 
+// ---- Full-bleed deck: sync --nav-h to the real navbar height ----
+// Deck pages (.slide-embed present) render the slide iframe full-bleed beneath
+// the fixed navbar, pinned with `inset: var(--nav-h) 0 0 0`. Keep --nav-h equal
+// to the actual rendered navbar height across breakpoints and orientation. In
+// portrait the whole page is CSS-rotated; offsetHeight is the pre-transform
+// layout height, which is exactly what the inset resolves against.
+(function () {
+  var embed = document.querySelector('.slide-embed');
+  if (!embed) return;
+  var header = document.querySelector('#quarto-header');
+  if (!header) return;
+  function syncNavH() {
+    var h = header.offsetHeight;
+    if (h) document.documentElement.style.setProperty('--nav-h', h + 'px');
+  }
+  syncNavH();
+  window.addEventListener('resize', syncNavH);
+  window.addEventListener('orientationchange', syncNavH);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncNavH);
+})();
+
 // ---- GW Seal Logo (navbar far-right) ----
 // Inject directly into .navbar-container so `order: 9999` (in CSS) pushes it
 // past the search/toggle group, matching how quarto.org places its Posit logo.

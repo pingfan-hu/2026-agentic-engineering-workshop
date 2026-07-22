@@ -1764,33 +1764,45 @@ body.quarto-dark {
 }
 
 // === Slide deck embed (used on per-part pages) ===
-// The content column always spans 80% of the viewport (10% breathing room on
-// each side) — no fixed pixels. Quarto bakes the front-matter `body-width`
-// into a hardcoded `.page-columns` grid (not a CSS variable), so we re-declare
-// that grid with a `70vw` body column and equal `1fr` margins to center it.
-// The full `:has().fullcontent:not(.floating):not(.docked)` chain matches
-// Quarto's own selector specificity, so this wins on source order without
-// `!important`. Title, the "open in new tab" button, and the iframe all live
-// in this column, so they scale and stay aligned together.
-body:has(.slide-embed).fullcontent:not(.floating):not(.docked) .page-columns {
-  grid-template-columns:
-    [screen-start screen-start-inset page-start page-start-inset body-start-outset] 1fr
-    [body-start body-content-start] 70vw
-    [body-content-end body-end body-end-outset page-end-inset page-end] 1fr
-    [screen-end-inset screen-end];
+// Each per-part page presents the standalone reveal.js deck full-bleed: the site
+// navbar stays pinned at the top and the deck (an iframe of slides/<deck>/) fills
+// the entire viewport beneath it. No window, no border, no button, no scroll, so
+// the page reads as "the slide, with the navbar on top". In portrait (viewport
+// taller than wide) the whole page rotates 90deg clockwise so the landscape deck
+// fills the tall screen; turning the phone to landscape drops the rotation and
+// the deck shows upright and full screen natively.
+
+// Height of the fixed site navbar (#quarto-header). The full-bleed deck starts
+// just below it. styles.js keeps this in sync with the real rendered navbar
+// height (per breakpoint/orientation); this value is only the pre-JS fallback.
+:root {
+  --nav-h: 54px;
 }
 
-.slide-embed {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin: 0 0 1.5rem;
-  border: 1px solid rgba(1, 61, 91, 0.18);
-  border-radius: 8px;
+// Lock the deck page to the viewport: no page scroll (the deck owns the screen).
+html:has(.slide-embed) {
   overflow: hidden;
-  box-shadow:
-    0 1px 2px rgba(1, 61, 91, 0.08),
-    0 8px 24px rgba(1, 61, 91, 0.12);
+}
+
+body:has(.slide-embed) {
+  overflow: hidden;
+  // The fixed deck clears the navbar via `inset`, so drop Quarto's nav padding.
+  padding-top: 0;
+}
+
+// The deck fills the viewport under the navbar. Fixed positioning keeps it
+// independent of Quarto's content grid; in portrait the transformed body (below)
+// becomes its containing block, so it fills the same region of the rotated page.
+.slide-embed {
+  position: fixed;
+  inset: var(--nav-h) 0 0 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  // Deck navy, shown for the instant before the iframe paints.
+  background: #2C3E50;
 }
 
 .slide-embed iframe {
@@ -1801,113 +1813,26 @@ body:has(.slide-embed).fullcontent:not(.floating):not(.docked) .page-columns {
   border: 0;
 }
 
-// Hide the redundant page title on deck pages — the slide itself shows it.
-body:has(.slide-embed) #title-block-header {
+// The slide carries its own title, and the parent-site footer would break the
+// full-bleed, so hide both on deck pages.
+body:has(.slide-embed) #title-block-header,
+body:has(.slide-embed) .footer {
   display: none;
 }
 
-// With the title gone, pull the deck content toward the top: drop Quarto's
-// 14px content-block top padding and trim the fixed-navbar clearance (default
-// 82px) to just clear the single-row navbar. Scoped to deck pages only.
-body.nav-fixed:has(.slide-embed) {
-  padding-top: 70px;
-}
-
-body:has(.slide-embed) #quarto-content > * {
-  padding-top: 0;
-}
-
-// "Open slides in a new tab" button: a squared tab centered on the top edge of
-// the deck. The container is a flex box (NOT a text line) so there's no
-// line-height leading below the button — its bottom sits flush on the iframe.
-.slide-embed-link {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-// Font scales with the viewport via clamp() so the button stays proportional
-// to the 80vw deck instead of staying a fixed width and ballooning when the
-// viewport narrows (low-res / mobile). Floor keeps it readable; cap stops it
-// growing on large screens. Padding is in `em` so it tracks the font.
-.slide-embed-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35em 1.3em;
-  background: #E5F0F7;
-  color: #013D5B !important;
-  font-family: 'Maple Mono', monospace;
-  font-size: clamp(0.62rem, 1.1vw, 0.78rem);
-  line-height: 1.4;
-  text-decoration: none !important;
-  border-radius: 6px 6px 0 0;
-  border: 1.5px solid #013D5B;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.slide-embed-button:hover {
-  background: #013D5B;
-  color: #F8F7F0 !important;
-  text-decoration: none !important;
-}
-
-.slide-embed-button:focus-visible {
-  outline: 2px solid #FFB84D;
-  outline-offset: 2px;
-}
-
-// "Rotate your phone" hint. Hidden everywhere except portrait phones, where the
-// deck below is rotated to landscape (see the mobile block). Muted teal reads on
-// both the light parchment and the dark navy page background.
-.rotate-hint {
-  display: none;
-  margin: 0 0 0.85rem;
-  text-align: center;
-  font-family: 'Maple Mono', monospace;
-  font-size: 0.82rem;
-  color: #0A6E86;
-}
-
-// ---- Mobile: full-width deck + rotate-to-landscape ----
-// A reveal.js deck is inherently landscape, so on a portrait phone the fixed
-// 16:9 embed is tiny. On phones we (1) let the deck column go full-bleed, and
-// (2) in portrait only, rotate the iframe 90deg so it renders as a large
-// landscape slide the viewer reads by turning the phone sideways. Turning the
-// phone flips the browser to landscape, this portrait block stops applying, and
-// the deck shows upright at full width. The grid override below repeats the
-// base selector (styles.scss ~line 1775) at equal specificity so later source
-// order wins on phones without !important.
-@media (max-width: 640px) {
-  body:has(.slide-embed).fullcontent:not(.floating):not(.docked) .page-columns {
-    grid-template-columns:
-      [screen-start screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0, 1fr)
-      [body-content-end body-end body-end-outset page-end-inset page-end screen-end-inset screen-end];
-  }
-}
-
-@media (max-width: 640px) and (orientation: portrait) {
-  .rotate-hint {
-    display: block;
-  }
-
-  .slide-embed {
-    // Short edge of the landscape slide: fit to viewport width, but cap it so the
-    // long edge (16/9 taller) still clears the navbar + hint inside the dynamic
-    // viewport height. dvh tracks mobile browser chrome; 160px ~ navbar + hint.
-    --deck-short: min(94vw, calc((100dvh - 160px) * 9 / 16));
-    width: 100%;
-    aspect-ratio: auto;
-    height: calc(var(--deck-short) * 16 / 9);
-    margin-inline: auto;
-  }
-
-  .slide-embed iframe {
-    // Pre-rotation dimensions; rotate 90deg swaps them into a landscape footprint
-    // that reveal.js scales its content to fill.
-    width: calc(var(--deck-short) * 16 / 9);
-    height: var(--deck-short);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
+// Portrait: rotate the whole page (navbar + deck) 90deg clockwise so the
+// landscape composition fills a taller-than-wide screen. The body is sized to the
+// swapped viewport (100vh wide x 100vw tall) and shifted back into view.
+// #quarto-header and .slide-embed are position:fixed, so the transformed body
+// becomes their containing block and both ride along on the rotated page.
+@media (orientation: portrait) {
+  body:has(.slide-embed) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vw;
+    transform-origin: top left;
+    transform: translateX(100vw) rotate(90deg);
   }
 }

@@ -7,14 +7,6 @@ grid:
 ---
 
 ```{=html}
-<p class="slide-embed-link">
-  <a class="slide-embed-button" href="slides/basics/" target="_blank" rel="noopener">
-    Open slides in a new tab
-  </a>
-</p>
-
-<p class="rotate-hint">Rotate your phone sideways for a full-size view</p>
-
 <div class="slide-embed">
   <iframe
     src="slides/basics/"
