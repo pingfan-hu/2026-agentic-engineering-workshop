@@ -798,9 +798,12 @@ body.quarto-dark nav.sidebar.sidebar-navigation:not(.rollup) { background-color:
   .navbar-toggler {
     order: 1 !important;                 // hamburger, far left
     margin-right: 12px !important;       // gap to the title == the tools↔GW logo gap
-    // Shrink the hamburger so the collapsed top bar is as short as the desktop nav.
-    padding-top: 0.2rem !important;
-    padding-bottom: 0.2rem !important;
+    // Shrink the hamburger UNDER the shared row height set on .navbar-container
+    // below: icon 1.5em x 1.1rem (28.05px) + 2 x 0.15rem padding + 2px border
+    // = 35.15px < 35.85px. At 0.2rem padding it was 36.85px, the tallest item
+    // in the collapsed row, which made stages A/B render 1px taller than desktop.
+    padding-top: 0.15rem !important;
+    padding-bottom: 0.15rem !important;
     font-size: 1.1rem !important;
   }
 
@@ -826,6 +829,17 @@ nav.navbar {
   padding-top: 0.6rem !important;
   padding-bottom: 0.6rem !important;
   min-height: 0;
+}
+
+// One shared content-row height for ALL navbar stages, benchmarked to the
+// EXPANDED widescreen nav's tallest item: a .nav-item (1px top padding from
+// Bootstrap) wrapping a .nav-link (1.65em line-height + 0.2rem vertical padding
+// each side) = 35.85px. The collapsed stages' tallest items (site title at
+// 35.06px, shrunk hamburger at 35.15px) all fit under this, so the min-height
+// is what pins stages A/B to exactly the desktop bar height. Items stay
+// vertically centered via Bootstrap's align-items: center on the container.
+.navbar-container {
+  min-height: calc(1.65em + 0.4rem + 1px);
 }
 
 // Shared hover/active "block" effect for left-side nav items and right-side tools.
